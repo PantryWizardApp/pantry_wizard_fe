@@ -13,5 +13,11 @@ RSpec.describe "Welcome Page" do
       expect(page).to have_content("We're on a mission to reduce food waste and alleviate food insecurity by providing personalized meal planning that simplifies the decision-making process and empowers individuals to take control of their nutrition.")
       expect(page).to have_content("Our app is designed to meet the needs of neurodivergent individuals, picky eaters, and anyone facing time or resource constraints, so they can focus on what really matters in their lives. Join us in making a positive impact on our communities, one meal at a time.")
     end
+
+    it "Will have a link to login" do 
+      visit "/"
+
+      expect(page).to have_button("Log in with Google")
+    end
   end
 end

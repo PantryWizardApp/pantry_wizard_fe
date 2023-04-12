@@ -1,5 +1,6 @@
 class SessionsController < ApplicationController
   def create
+    require 'pry'; binding.pry
     user = User.new(user_info)
     if user.valid?
       session[:id] = user.id
