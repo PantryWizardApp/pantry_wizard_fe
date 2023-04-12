@@ -60,6 +60,7 @@ group :development, :test do
   gem "simplecov"  
   gem "faker"
   gem "factory_bot"
+  gem "capybara"
 end
 
 group :development do
