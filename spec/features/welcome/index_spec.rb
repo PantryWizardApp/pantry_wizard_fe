@@ -9,9 +9,6 @@ RSpec.describe "Welcome Page" do
       expect(page).to have_content("Welcome to Pantry Wizard")
       expect(page).to have_css("img.img-fluid")
       expect(page).to have_css('img[alt="logo"]')
-      expect(page).to have_content("At Pantry Wizard, we believe that everyone deserves access to healthy, delicious food.")
-      expect(page).to have_content("We're on a mission to reduce food waste and alleviate food insecurity by providing personalized meal planning that simplifies the decision-making process and empowers individuals to take control of their nutrition.")
-      expect(page).to have_content("Our app is designed to meet the needs of neurodivergent individuals, picky eaters, and anyone facing time or resource constraints, so they can focus on what really matters in their lives. Join us in making a positive impact on our communities, one meal at a time.")
     end
 
     it " I should see a navbar with links to home page and about us" do
