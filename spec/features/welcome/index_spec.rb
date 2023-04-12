@@ -8,7 +8,7 @@ RSpec.describe "Welcome Page" do
       expect(current_path).to eq(root_path)
       expect(page).to have_content("Welcome to Pantry Wizard")
       expect(page).to have_css("img.img-fluid")
-      # expect(page).to have_css("img[src*='/assets/images/pantry_wizzard_with_color.png']")
+      # expect(page).to have_css("img[src*='/assets/images/pantry_wizard_transparent_no_color.png']") cant get this to pass.
       expect(page).to have_css('img[alt="logo"]')
       expect(page).to have_content("At Pantry Wizard, we believe that everyone deserves access to healthy, delicious food.")
       expect(page).to have_content("We're on a mission to reduce food waste and alleviate food insecurity by providing personalized meal planning that simplifies the decision-making process and empowers individuals to take control of their nutrition.")
