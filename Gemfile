@@ -60,6 +60,12 @@ group :development, :test do
   gem "simplecov"  
   gem "faker"
   gem "factory_bot"
+  gem "dotenv-rails"
+  gem "omniauth"
+  gem "omniauth-google-oauth2"
+  gem "omniauth-rails_csrf_protection"
+  gem "launchy"
+  gem "capybara"
 end
 
 group :development do
