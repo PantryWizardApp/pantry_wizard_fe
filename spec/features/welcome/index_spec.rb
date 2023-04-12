@@ -13,5 +13,15 @@ RSpec.describe "Welcome Page" do
       expect(page).to have_content("We're on a mission to reduce food waste and alleviate food insecurity by providing personalized meal planning that simplifies the decision-making process and empowers individuals to take control of their nutrition.")
       expect(page).to have_content("Our app is designed to meet the needs of neurodivergent individuals, picky eaters, and anyone facing time or resource constraints, so they can focus on what really matters in their lives. Join us in making a positive impact on our communities, one meal at a time.")
     end
+
+    it " I should see a navbar with links to home page and about us" do
+      visit root_path
+      expect(page).to have_link("Home")
+      expect(page).to have_link("About Us")
+      click_link "Home"
+      expect(current_path).to eq(root_path)
+      click_link "About Us"
+      expect(current_path).to eq(about_path)
+    end
   end
 end
