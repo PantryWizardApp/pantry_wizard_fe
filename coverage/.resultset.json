@@ -200,6 +200,13 @@
           null
         ]
       },
+      "/Users/calebthomas/Desktop/turing_work/3mod/projects/pantry_wizard/pantry_wizard_fe/config/initializers/omniauth.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
       "/Users/calebthomas/Desktop/turing_work/3mod/projects/pantry_wizard/pantry_wizard_fe/config/initializers/permissions_policy.rb": {
         "lines": [
           null,
@@ -223,6 +230,8 @@
           null,
           null,
           1,
+          null,
+          1,
           null
         ]
       },
@@ -243,10 +252,30 @@
       "/Users/calebthomas/Desktop/turing_work/3mod/projects/pantry_wizard/pantry_wizard_fe/app/controllers/application_controller.rb": {
         "lines": [
           1,
+          1,
+          1,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          0,
+          0,
+          null,
+          null
+        ]
+      },
+      "/Users/calebthomas/Desktop/turing_work/3mod/projects/pantry_wizard/pantry_wizard_fe/app/controllers/about_controller.rb": {
+        "lines": [
+          1,
+          1,
           null
         ]
       }
     },
-    "timestamp": 1681273328
+    "timestamp": 1681326881
   }
 }
