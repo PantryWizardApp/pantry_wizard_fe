@@ -232,6 +232,7 @@
           null,
           1,
           1,
+          1,
           null
         ]
       },
@@ -241,21 +242,39 @@
           null
         ]
       },
-      "/Users/BrianHayes/3mod/projects/pantry_wizard_fe/pantry_wizard_fe/app/controllers/welcome_controller.rb": {
+      "/Users/BrianHayes/3mod/projects/pantry_wizard_fe/pantry_wizard_fe/app/poros/user.rb": {
         "lines": [
           1,
           1,
           null,
-          null
-        ]
-      },
-      "/Users/BrianHayes/3mod/projects/pantry_wizard_fe/pantry_wizard_fe/app/controllers/application_controller.rb": {
-        "lines": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
           1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          null,
+          null,
+          1,
+          null,
+          3,
+          null,
+          null,
+          null,
+          null,
           null
         ]
       }
     },
-    "timestamp": 1681341207
+    "timestamp": 1681401994
   }
 }

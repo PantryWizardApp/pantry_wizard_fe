@@ -17,9 +17,7 @@ RSpec.describe "Welcome Page" do
     it "Will have a link to login" do 
       visit "/"
 
-      expect(page).to have_button("Log in with Google")
-
-      click_on "Log in with Google" 
+      expect(page).to have_link("Log in with Google")
     end
   end
 end
