@@ -1,31 +1,28 @@
 class User 
   attr_reader :id,
-              :uid,
+              :google_id,
               :username, 
               :email, 
               :intolerances, 
               :likes, 
+              :dislikes,
               :dietary_restrictions
 
-  def initialize(response)
-    @id = response[:id]
-    @uid = response[:uid]
-    @username = response[:username]
-    @email = response[:email]
-    @intolerances = response[:intolerances]
-    @likes = response[:likes]
-    @dietary_restrictions = response[:dietary_restrictions]
+  def initialize(data)
+    @google_id = [:uid]
+    @username = [:username]
+    @email = [:email]
+    @intolerances = [:intolerances]
+    @likes = [:likes]
+    @dislikees = [:dislikes]
+    @dietary_restrictions = [:dietary_restrictions]
   end
 
-  def raw_data
+  def self.raw_google_data(data)
     {
-      uid: @uid,
-      username: @username,
-      email: @email,
-      intolerances: @intolerances,
-      likes: @likes,
-      dietary_restrictions: @dietary_restrictions
-
+      google_id: data[:uid],
+      username: data[:info][:name],
+      email: data[:info][:email],
     }
   end
 end
