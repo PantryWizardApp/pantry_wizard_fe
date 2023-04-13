@@ -96,10 +96,6 @@ GEM
       reline (>= 0.3.1)
     diff-lcs (1.5.0)
     docile (1.4.0)
-    dotenv (2.8.1)
-    dotenv-rails (2.8.1)
-      dotenv (= 2.8.1)
-      railties (>= 3.2)
     erubi (1.12.0)
     execjs (2.8.1)
     factory_bot (6.2.1)
@@ -179,9 +175,6 @@ GEM
       omniauth-oauth2 (~> 1.8.0)
     omniauth-oauth2 (1.8.0)
       oauth2 (>= 1.4, < 3)
-      omniauth (~> 2.0)
-    omniauth-rails_csrf_protection (1.0.1)
-      actionpack (>= 4.2)
       omniauth (~> 2.0)
     pg (1.4.6)
     popper_js (2.11.6)
@@ -302,7 +295,6 @@ DEPENDENCIES
   bootstrap (~> 5.2.2)
   capybara
   debug
-  dotenv-rails
   factory_bot
   faker
   faraday
@@ -311,9 +303,7 @@ DEPENDENCIES
   jbuilder
   jquery-rails
   launchy
-  omniauth
   omniauth-google-oauth2
-  omniauth-rails_csrf_protection
   pg (~> 1.1)
   pry
   puma (~> 5.0)

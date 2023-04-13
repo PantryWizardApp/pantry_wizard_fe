@@ -204,7 +204,8 @@
         "lines": [
           1,
           1,
-          null
+          null,
+          1
         ]
       },
       "/Users/BrianHayes/3mod/projects/pantry_wizard_fe/pantry_wizard_fe/config/initializers/permissions_policy.rb": {
@@ -230,6 +231,7 @@
           null,
           null,
           1,
+          1,
           null
         ]
       },
@@ -254,6 +256,6 @@
         ]
       }
     },
-    "timestamp": 1681315047
+    "timestamp": 1681341207
   }
 }

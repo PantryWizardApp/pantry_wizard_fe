@@ -16,4 +16,16 @@ class User
     @likes = response[:likes]
     @dietary_restrictions = response[:dietary_restrictions]
   end
+
+  def raw_data
+    {
+      uid: @uid,
+      username: @username,
+      email: @email,
+      intolerances: @intolerances,
+      likes: @likes,
+      dietary_restrictions: @dietary_restrictions
+
+    }
+  end
 end

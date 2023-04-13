@@ -51,6 +51,7 @@ gem "faraday"
 gem "figaro"
 gem 'bootstrap', '~> 5.2.2'
 gem 'jquery-rails'
+gem "omniauth-google-oauth2"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
@@ -60,10 +61,6 @@ group :development, :test do
   gem "simplecov"  
   gem "faker"
   gem "factory_bot"
-  gem "dotenv-rails"
-  gem "omniauth"
-  gem "omniauth-google-oauth2"
-  gem "omniauth-rails_csrf_protection"
   gem "launchy"
   gem "capybara"
 end

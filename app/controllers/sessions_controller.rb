@@ -1,13 +1,12 @@
 class SessionsController < ApplicationController
   def create
-    require 'pry'; binding.pry
     user = User.new(user_info)
-    if user.valid?
-      session[:id] = user.id
-      redirect_to "/users/#{user.id}/"
+    require 'pry'; binding.pry
+    session[:user] = user.
     else 
       redirect_to "/"
-  end
+    end
+  end 
 
   private
 
