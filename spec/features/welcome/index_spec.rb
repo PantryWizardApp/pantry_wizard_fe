@@ -20,5 +20,22 @@ RSpec.describe "Welcome Page" do
       click_link "About Us"
       expect(current_path).to eq(about_path)
     end
+
+    it "Will have a link to login" do 
+      visit "/"
+
+      expect(page).to have_link("Log in with Google")
+    end
+
+    it "Will have a link to logout if a user is in session" do
+      @user = {email: "bh1200@gmail.com", name: "Bob", google_id: "12345"}
+
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
+
+      visit "/"
+
+      expect(page).to have_button("Log Out")
+
+    end
   end
 end

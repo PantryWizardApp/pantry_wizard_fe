@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   root "welcome#index"
-
+  get "dashboard", to: "users#show"
+  get "/auth/:provider/callback", to: "sessions#create"
+  delete "/logout", to: "sessions#log_out"
   get "/about", to: "about#index"
 end
