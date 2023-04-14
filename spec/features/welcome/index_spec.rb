@@ -34,8 +34,6 @@ RSpec.describe "Welcome Page" do
 
       visit "/"
 
-      save_and_open_page
-
       expect(page).to have_button("Log Out")
 
     end
