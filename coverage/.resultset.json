@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/calebthomas/Desktop/turing_work/3mod/projects/pantry_wizard/pantry_wizard_fe/config/environment.rb": {
+      "/Users/connervanloan/Desktop/turing/3mod/projects/pantry-wizard/pantry_wizard_fe/config/environment.rb": {
         "lines": [
           null,
           1,
@@ -10,7 +10,7 @@
           1
         ]
       },
-      "/Users/calebthomas/Desktop/turing_work/3mod/projects/pantry_wizard/pantry_wizard_fe/config/application.rb": {
+      "/Users/connervanloan/Desktop/turing/3mod/projects/pantry-wizard/pantry_wizard_fe/config/application.rb": {
         "lines": [
           1,
           null,
@@ -51,7 +51,7 @@
           null
         ]
       },
-      "/Users/calebthomas/Desktop/turing_work/3mod/projects/pantry_wizard/pantry_wizard_fe/config/boot.rb": {
+      "/Users/connervanloan/Desktop/turing/3mod/projects/pantry-wizard/pantry_wizard_fe/config/boot.rb": {
         "lines": [
           1,
           null,
@@ -59,7 +59,7 @@
           1
         ]
       },
-      "/Users/calebthomas/Desktop/turing_work/3mod/projects/pantry_wizard/pantry_wizard_fe/config/environments/test.rb": {
+      "/Users/connervanloan/Desktop/turing/3mod/projects/pantry-wizard/pantry_wizard_fe/config/environments/test.rb": {
         "lines": [
           1,
           null,
@@ -123,7 +123,7 @@
           null
         ]
       },
-      "/Users/calebthomas/Desktop/turing_work/3mod/projects/pantry_wizard/pantry_wizard_fe/config/initializers/assets.rb": {
+      "/Users/connervanloan/Desktop/turing/3mod/projects/pantry-wizard/pantry_wizard_fe/config/initializers/assets.rb": {
         "lines": [
           null,
           null,
@@ -139,7 +139,7 @@
           null
         ]
       },
-      "/Users/calebthomas/Desktop/turing_work/3mod/projects/pantry_wizard/pantry_wizard_fe/config/initializers/content_security_policy.rb": {
+      "/Users/connervanloan/Desktop/turing/3mod/projects/pantry-wizard/pantry_wizard_fe/config/initializers/content_security_policy.rb": {
         "lines": [
           null,
           null,
@@ -150,38 +150,6 @@
           null,
           null,
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/calebthomas/Desktop/turing_work/3mod/projects/pantry_wizard/pantry_wizard_fe/config/initializers/filter_parameter_logging.rb": {
-        "lines": [
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null
-        ]
-      },
-      "/Users/calebthomas/Desktop/turing_work/3mod/projects/pantry_wizard/pantry_wizard_fe/config/initializers/inflections.rb": {
-        "lines": [
           null,
           null,
           null,
@@ -200,20 +168,30 @@
           null
         ]
       },
-      "/Users/calebthomas/Desktop/turing_work/3mod/projects/pantry_wizard/pantry_wizard_fe/config/initializers/omniauth.rb": {
-        "lines": [
-          1,
-          1,
-          null
-        ]
-      },
-      "/Users/calebthomas/Desktop/turing_work/3mod/projects/pantry_wizard/pantry_wizard_fe/config/initializers/permissions_policy.rb": {
+      "/Users/connervanloan/Desktop/turing/3mod/projects/pantry-wizard/pantry_wizard_fe/config/initializers/filter_parameter_logging.rb": {
         "lines": [
           null,
           null,
           null,
           null,
           null,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/connervanloan/Desktop/turing/3mod/projects/pantry-wizard/pantry_wizard_fe/config/initializers/inflections.rb": {
+        "lines": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
           null,
           null,
           null,
@@ -222,7 +200,29 @@
           null
         ]
       },
-      "/Users/calebthomas/Desktop/turing_work/3mod/projects/pantry_wizard/pantry_wizard_fe/config/routes.rb": {
+      "/Users/connervanloan/Desktop/turing/3mod/projects/pantry-wizard/pantry_wizard_fe/config/initializers/omniauth.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/connervanloan/Desktop/turing/3mod/projects/pantry-wizard/pantry_wizard_fe/config/initializers/permissions_policy.rb": {
+        "lines": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/connervanloan/Desktop/turing/3mod/projects/pantry-wizard/pantry_wizard_fe/config/routes.rb": {
         "lines": [
           1,
           null,
@@ -235,21 +235,97 @@
           null
         ]
       },
-      "/Users/calebthomas/Desktop/turing_work/3mod/projects/pantry_wizard/pantry_wizard_fe/app/helpers/application_helper.rb": {
+      "/Users/connervanloan/Desktop/turing/3mod/projects/pantry-wizard/pantry_wizard_fe/app/helpers/application_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/calebthomas/Desktop/turing_work/3mod/projects/pantry_wizard/pantry_wizard_fe/app/controllers/welcome_controller.rb": {
+      "/Users/connervanloan/Desktop/turing/3mod/projects/pantry-wizard/pantry_wizard_fe/spec/features/welcome/index_spec.rb": {
         "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/connervanloan/Desktop/turing/3mod/projects/pantry-wizard/pantry_wizard_fe/spec/poros/user_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
           1,
           1,
           null,
           null
         ]
       },
-      "/Users/calebthomas/Desktop/turing_work/3mod/projects/pantry_wizard/pantry_wizard_fe/app/controllers/application_controller.rb": {
+      "/Users/connervanloan/Desktop/turing/3mod/projects/pantry-wizard/pantry_wizard_fe/app/poros/user.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/connervanloan/Desktop/turing/3mod/projects/pantry-wizard/pantry_wizard_fe/app/controllers/about_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/connervanloan/Desktop/turing/3mod/projects/pantry-wizard/pantry_wizard_fe/app/controllers/application_controller.rb": {
         "lines": [
           1,
           1,
@@ -268,14 +344,15 @@
           null
         ]
       },
-      "/Users/calebthomas/Desktop/turing_work/3mod/projects/pantry_wizard/pantry_wizard_fe/app/controllers/about_controller.rb": {
+      "/Users/connervanloan/Desktop/turing/3mod/projects/pantry-wizard/pantry_wizard_fe/app/controllers/welcome_controller.rb": {
         "lines": [
           1,
           1,
+          null,
           null
         ]
       }
     },
-    "timestamp": 1681326881
+    "timestamp": 1681489385
   }
 }
