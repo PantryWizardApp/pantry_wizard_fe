@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController
   def create
-    UserFacade.create_user(user_info)
+    UserFacade.create_user(user_info) unless UserFacade.find_user_by_google_id(user_info[:google_id])
     user = UserFacade.find_user_by_google_id(user_info[:google_id])
     session[:user] = user
 
