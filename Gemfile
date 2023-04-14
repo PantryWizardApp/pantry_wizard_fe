@@ -50,6 +50,7 @@ gem "bootsnap", require: false
 gem "faraday"
 gem "figaro"
 gem 'bootstrap', '~> 5.2.2'
+
 gem 'jquery-rails'
 gem "omniauth"
 gem "omniauth-google-oauth2"
