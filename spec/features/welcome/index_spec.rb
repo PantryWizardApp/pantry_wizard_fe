@@ -3,7 +3,7 @@ require "rails_helper"
 RSpec.describe "Welcome Page" do
   describe "as a visitor" do
     it "When I visit '/' I see an about Pantry Wizard Statement" do
-      visit "/"
+      visit root_path
       
       expect(current_path).to eq(root_path)
       expect(page).to have_content("Welcome to Pantry Wizard")
@@ -22,22 +22,19 @@ RSpec.describe "Welcome Page" do
     end
 
     it "Will have a link to login" do 
-      visit "/"
+      visit root_path
 
       expect(page).to have_link("Log in with Google")
     end
 
     it "Will have a link to logout if a user is in session" do
       @user = {email: "bh1200@gmail.com", name: "Bob", google_id: "12345"}
-
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
-
-      visit "/"
-
-      save_and_open_page
-
+      require 'pry'; binding.pry
+      
+      visit root_path
+      # save_and_open_page
       expect(page).to have_button("Log Out")
-
     end
   end
 end

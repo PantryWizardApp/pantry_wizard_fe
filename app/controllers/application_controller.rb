@@ -6,7 +6,6 @@ class ApplicationController < ActionController::Base
   end
 
   def validate_user
-    # require 'pry'; binding.pry
     if current_user == nil
       flash[:error] = "You must be logged in to access this page"
       redirect_to root_path 
