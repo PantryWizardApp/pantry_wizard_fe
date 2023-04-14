@@ -1,7 +1,7 @@
 class User 
   attr_reader :id,
               :google_id,
-              :first_name, 
+              :name, 
               :email, 
               :intolerances, 
               :likes, 
@@ -10,7 +10,7 @@ class User
 
   def initialize(data)
     @google_id = data[:uid]
-    @first_name = data[:first_name]
+    @name = data[:name]
     @email = data[:email]
     @intolerances = data[:intolerances]
     @likes = data[:likes]
@@ -21,7 +21,7 @@ class User
   def self.raw_google_data(data)
     {
       google_id: data[:uid],
-      first_name: data[:info][:first_name],
+      name: data[:info][:name],
       email: data[:info][:email],
     }
   end

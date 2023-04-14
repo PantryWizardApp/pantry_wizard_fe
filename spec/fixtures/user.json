@@ -1,4 +1,16 @@
 {
-
-  
+  "data": {
+      "id": "1234567890a",
+      "type": "user",
+      "attributes": {
+          "email": "bh@gmail.com",
+          "name": "Brian",
+          "google_id": "1234567890a",
+          "id": "1234567890a",
+          "intolerances": "dairy, gluten",
+          "likes": null,
+          "dislikes": null,
+          "dietary_restrictions": "vegan"
+      }
+  }
 }

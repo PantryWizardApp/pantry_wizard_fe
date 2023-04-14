@@ -64,6 +64,7 @@ group :development, :test do
   gem "factory_bot"
   gem "launchy"
   gem "capybara"
+  gem "webmock"
 end
 
 group :development do

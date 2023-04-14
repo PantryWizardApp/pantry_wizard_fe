@@ -6,11 +6,17 @@ class SessionsController < ApplicationController
 
     redirect_to "/dashboard"
   end 
-
+  
+  def log_out
+    session.clear
+    redirect_to root_path
+  end
+  
   private
 
   def user_info
     user_info = request.env["omniauth.auth"]
     User.raw_google_data(user_info)
   end
+
 end
