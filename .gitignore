@@ -26,7 +26,7 @@
 !/tmp/storage/.keep
 
 /public/assets
-app/.env
+.env
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 coverage
