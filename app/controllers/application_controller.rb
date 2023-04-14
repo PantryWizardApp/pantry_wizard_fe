@@ -2,6 +2,7 @@ class ApplicationController < ActionController::Base
   before_action :validate_user, only: %i[show]
   helper_method :current_user
   def current_user
+    # require 'pry'; binding.pry
     @current_user ||= session[:user] if session[:user]
   end
 

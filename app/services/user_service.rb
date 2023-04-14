@@ -6,7 +6,6 @@ class UserService
   end
 
   def self.create_new_user(user)
-    require 'pry'; binding.pry
     response = conn.post("api/v1/users", user)
   end
 

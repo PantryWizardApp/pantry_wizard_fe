@@ -32,4 +32,4 @@
 coverage
 
 /config/application.yml
-.env
+
