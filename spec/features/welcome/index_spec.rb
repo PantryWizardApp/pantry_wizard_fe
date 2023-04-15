@@ -13,12 +13,17 @@ RSpec.describe "Welcome Page" do
 
     it " I should see a navbar with links to home page and about us" do
       visit root_path
-      expect(page).to have_link("Home")
-      expect(page).to have_link("About Us")
-      click_link "Home"
+      within(".navbar-brand") {
+        expect(page).to have_css("img[src*='https://user-images.githubusercontent.com/117066950/232183034-e5b89b91-e0e0-4b99-8380-27b44bc12dfb.png']")
+      }
+      find(".navbar-brand").click
       expect(current_path).to eq(root_path)
-      click_link "About Us"
-      expect(current_path).to eq(about_path)
+      
+      within(".navbar-nav") {
+        expect(page).to have_link("About Us")
+        click_link "About Us"
+        expect(current_path).to eq(about_path)
+      }
     end
 
     it "Will have a link to login" do 
