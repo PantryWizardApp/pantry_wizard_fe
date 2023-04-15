@@ -20,9 +20,9 @@ class User
 
   def self.raw_google_data(data)
     {
-      google_id: data[:google_id],
-      name: data[:info][:name],
-      email: data[:info][:email],
+      google_id: data[:data][:attributes][:google_id],
+      name: data[:data][:attributes][:name],
+      email: data[:data][:attributes][:email],
     }
   end
 end
