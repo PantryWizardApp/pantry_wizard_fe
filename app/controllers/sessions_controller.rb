@@ -7,7 +7,6 @@ class SessionsController < ApplicationController
   end 
   
   def log_out
-    require 'pry'; binding.pry
     session.clear
     redirect_to root_path
   end
