@@ -4,9 +4,8 @@ class UserService
     response = conn.get("/api/v1/users/#{google_id}")
     JSON.parse(response.body, symbolize_names: true)
   end
-
+  
   def self.create_new_user(user)
-    require 'pry'; binding.pry
     response = conn.post("api/v1/users", user)
   end
 

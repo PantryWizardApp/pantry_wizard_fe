@@ -189,6 +189,9 @@ GEM
     omniauth-oauth2 (1.8.0)
       oauth2 (>= 1.4, < 3)
       omniauth (~> 2.0)
+    omniauth-rails_csrf_protection (1.0.1)
+      actionpack (>= 4.2)
+      omniauth (~> 2.0)
     pg (1.4.6)
     popper_js (2.11.7)
     pry (0.14.2)
@@ -323,7 +326,9 @@ DEPENDENCIES
   jbuilder
   jquery-rails
   launchy
+  omniauth
   omniauth-google-oauth2
+  omniauth-rails_csrf_protection
   pg (~> 1.1)
   pry
   puma (~> 5.0)
