@@ -52,9 +52,9 @@ RSpec.describe RecipeService do
                   "name": "Brian",
                   "google_id": "1234567890a",
                   "id": "1234567890a",
-                  "intolerances": "gluten",
-                  "likes": "pizza",
-                  "dislikes": "beans",
+                  "intolerances": ["dairy", "egg"],
+                  "likes": ["american", "italian"],
+                  "dislikes": ["greek"],
                   "dietary_restrictions": "dairy"
               }
           }
