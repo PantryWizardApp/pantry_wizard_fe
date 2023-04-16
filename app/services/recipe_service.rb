@@ -17,4 +17,13 @@ class RecipeService
   def self.get_recipe(id)
     get_url("/recipes/#{id}/information")
   end
+
+  # def self.get_preferred_recipes(user)
+  #   params = {
+  #       cuisine: user.likes.join(","),
+  #       excludeCuisine: user.dislikes.join(","),
+  #       intolerances: user.intolerances.join(","),
+  #       diet: user.dietary_restrictions
+  #     }
+  # end
 end

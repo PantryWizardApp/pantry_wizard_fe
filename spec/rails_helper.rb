@@ -69,4 +69,8 @@ RSpec.configure do |config|
     config.filter_sensitive_data("X-RapidAPI-Key") { ENV["X-RapidAPI-Key"] }
     # config.configure_rspec_metadata!
   end
+
+  RSpec.configure do |config|
+    config.include FactoryBot::Syntax::Methods
+  end
 end

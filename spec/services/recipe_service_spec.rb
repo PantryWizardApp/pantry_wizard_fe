@@ -46,7 +46,9 @@ RSpec.describe RecipeService do
         user = create(:user)
 
         VCR.use_cassette("get_preferred_recipes") do
-          
+          service = RecipeService.get_preferred_recipes(user)
+
+          require 'pry'; binding.pry
         end
       end
     end
