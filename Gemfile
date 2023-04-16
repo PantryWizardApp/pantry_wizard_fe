@@ -70,7 +70,7 @@ group :development, :test do
   gem "rspec-rails"
   gem "simplecov"  
   gem "faker"
-  gem "factory_bot"
+  gem "factory_bot_rails"
   gem "launchy"
   gem "capybara"
 end
