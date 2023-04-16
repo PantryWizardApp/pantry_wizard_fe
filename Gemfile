@@ -68,6 +68,10 @@ group :development, :test do
   gem "factory_bot"
   gem "launchy"
   gem "capybara"
+end
+
+group :test do
+  gem "vcr"
   gem "webmock"
 end
 
