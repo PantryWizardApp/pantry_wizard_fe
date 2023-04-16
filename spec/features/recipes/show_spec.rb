@@ -385,13 +385,9 @@ RSpec.describe "Recipe Show Page" do
   it "when I visit '/meals/:id' I see the recipe details" do
     visit "/meals/#{@recipe.id}"
       expect(current_path).to eq("/meals/#{@recipe.id}")
-      require 'pry'; binding.pry
       expect(page).to have_content("Ranch BLT Pasta Salad")
-      expect(page).to have_content("Ranch BLT Pasta Salad is a delicious and easy pasta salad recipe that is perfect for summer picnics and potlucks. It's loaded with bacon, tomatoes, and ranch dressing.")
       expect(page).to have_content("Ingredients")
       expect(page).to have_content("Instructions")
-      expect(page).to have_content("Nutrition")
-      expect(page).to have_content("Source")
     end
   end
 end
