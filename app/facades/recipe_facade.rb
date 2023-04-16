@@ -1,6 +1,11 @@
-class RecipeFacade 
+class RecipeFacade
+   def initialize(recipe)
+    @recipe = recipe
+   end
+   
   def self.recipe(id)
-    RecipeService.get_recipe(id)
+    recipe = RecipeService.get_recipe(id)
+    Recipe.new(recipe)
   end
 
   private
