@@ -40,5 +40,15 @@ RSpec.describe RecipeService do
         expect(blt[:title]).to eq("Ranch BLT Pasta Salad")
       end
     end
+
+    context "get_preferred_recipes" do
+      it "returns a list of recipes based on user preferences" do
+        user = create(:user)
+
+        VCR.use_cassette("get_preferred_recipes") do
+          
+        end
+      end
+    end
   end
 end
