@@ -59,6 +59,7 @@ gem 'omniauth-rails_csrf_protection'
 gem "mini_racer"
 
 group :test do
+  gem "vcr"
   gem "webmock"
 end
 
