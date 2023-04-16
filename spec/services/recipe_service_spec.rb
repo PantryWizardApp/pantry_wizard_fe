@@ -43,7 +43,23 @@ RSpec.describe RecipeService do
 
     context "get_preferred_recipes" do
       it "returns a list of recipes based on user preferences" do
-        user = create(:user)
+        data = {
+          "data": {
+              "id": "1234567890a",
+              "type": "user",
+              "attributes": {
+                  "email": "bh@gmail.com",
+                  "name": "Brian",
+                  "google_id": "1234567890a",
+                  "id": "1234567890a",
+                  "intolerances": "gluten",
+                  "likes": "pizza",
+                  "dislikes": "beans",
+                  "dietary_restrictions": "dairy"
+              }
+          }
+        }
+        user = User.new(data)
 
         VCR.use_cassette("get_preferred_recipes") do
           service = RecipeService.get_preferred_recipes(user)
