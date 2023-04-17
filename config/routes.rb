@@ -8,4 +8,6 @@ Rails.application.routes.draw do
   get "/auth/:provider/callback", to: "sessions#create"
   delete "/logout", to: "sessions#log_out"
   get "/about", to: "about#index"
+  
+  get "/meals/:id", to: "recipes#show"
 end
