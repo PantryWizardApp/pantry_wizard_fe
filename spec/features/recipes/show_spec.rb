@@ -382,12 +382,16 @@ RSpec.describe "Recipe Show Page" do
            }).
          to_return(status: 200, body: blt_pasta, headers: {})
   end
+  
   it "when I visit '/meals/:id' I see the recipe details" do
     visit "/meals/#{@recipe.id}"
       expect(current_path).to eq("/meals/#{@recipe.id}")
       expect(page).to have_content("Ranch BLT Pasta Salad")
       expect(page).to have_content("Ingredients")
       expect(page).to have_content("Instructions")
+      expect(page).to have_content("Estimated Cooking Time: #{@recipe.cook_time} Minutes")
+      expect(page).to have_link("Add to My Meal Plan")
+      expect(page).to have_link("Generate New Meal")
     end
   end
 end
