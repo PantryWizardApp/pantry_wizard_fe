@@ -26,7 +26,13 @@ describe 'As a user, when I visit /preferences page' do
     save_and_open_page
     within("#intolerances") do
       check("dairy")
-      select('Vegan', from: "Diets")
     end
+    # select('Vegan', from: "Diets")
+    # click_button "Save Preferences"
+    # expect(current_user.intolerances).to eq(["dairy"])
+  end
+
+  it 'displays a button to save preferences' do
+    expect(page).to have_button("Save Preferences")
   end
 end 
