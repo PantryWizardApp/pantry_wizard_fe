@@ -8,7 +8,7 @@
   </head>
   <body>
     <div class = "container-xl">
-      <%= link_to "Edit My Preferences", "/preferences", method: :get, class: 'btn btn-success text-right' %>
+      <%= link_to "Edit My Preferences", "/preferences?id=#{@user.id}", method: :get, class: 'btn btn-success text-right' %>
       <h3 class = "display-5" >Welcome <%= @user.name %>!</h3>
       <p class = "display-5">You do not currently have any active meal plans. Please select “Create New Meal Plan” to get started!</p>
       <br>

@@ -8,4 +8,7 @@ Rails.application.routes.draw do
   get "/auth/:provider/callback", to: "sessions#create"
   delete "/logout", to: "sessions#log_out"
   get "/about", to: "about#index"
+
+  get "/preferences", to: "users#edit"
+  patch "/preferences", to: "users#update"
 end
