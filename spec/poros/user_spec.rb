@@ -18,6 +18,19 @@ RSpec.describe User do
           }
       }
     }
+
+    @google_data = { "provider": "google_oauth2",
+      "uid": "1234567890a",
+      "info": 
+      { "name": "Brian",
+        "email": "bh@gmail.com",
+        "unverified_email": "bh@gmail.com",
+        "email_verified": true,
+        "first_name": "Brian",
+        "last_name": "Hayes",
+        "image": "https://lh3.googleusercontent.com/a/AGNmyxZ25FObF_GqP2aDMsNQOyVA5cWWKHoCtMNRJMQarA=s96-c"
+      }
+    }
     @user = User.new(@data)
   end 
 
@@ -32,8 +45,8 @@ RSpec.describe User do
   end
 
   it "will have raw data method" do 
-    expect(User.raw_google_data(@data)[:google_id]).to eq("1234567890a")
-    expect(User.raw_google_data(@data)[:name]).to eq("Brian")
-    expect(User.raw_google_data(@data)[:email]).to eq("bh@gmail.com")
+    expect(User.raw_google_data(@google_data)[:google_id]).to eq("1234567890a")
+    expect(User.raw_google_data(@google_data)[:name]).to eq("Brian")
+    expect(User.raw_google_data(@google_data)[:email]).to eq("bh@gmail.com")
   end
 end
