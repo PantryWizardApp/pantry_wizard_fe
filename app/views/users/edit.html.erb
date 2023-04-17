@@ -11,7 +11,7 @@
     <h2>Edit My Preferences</h2>
       <div id="intolerances">
       <%= form_with url: preferences_path, method: :patch do |form| %>
-        <%= form.label :intolerances, "Intolerances" %><br>
+        <center><h4><%= form.label :intolerances, "Intolerances" %></h4><br></center>
         <% ['dairy', 'peanut', 'soy', 'egg', 'seafood', 'sulfite', 'gluten', 'sesame', 'tree nut', 'grain', 'shellfish', 'wheat'].each do |intolerance| %>
           <div class="form-check form-check-inline">
             <input class="form-check-input" type="checkbox" id=<%="#{intolerance}"%> value=<%="#{intolerance}"%>>
@@ -22,7 +22,7 @@
         <br>
         <br>
         <div id="diets">
-        <%= form.label :diets, "Dietary Restrictions" %><br>
+        <center><h4><%= form.label :diets, "Dietary Restrictions" %></h4></center><br><br>
         <select class="form-select" aria-label="diets">
           <option selected>Open this select menu</option>
           <option value="1">Gluten Free</option>
@@ -39,12 +39,13 @@
         </select>
         </div>
         <br>
+         <center><h4>Likes and Dislikes</h4></center>
         <div class="container text-center">
           <div class="row align-items-start">
             <div id="cuisines" class="row">
               <% ["african", "chinese", "japanese", "korean", "vietnamese", "thai", "indian", "british", "irish", "french", "italian", "mexican", "spanish", "middle eastern", "jewish", "american", "cajun", "southern", "greek", "german", "nordic", "eastern european", "caribbean", "latin american"].each do |cuisine| %>
                 <div class="col-md-4">
-                  <%= form.label :cuisine, "#{cuisine.capitalize}" %> <br>
+                  <strong><%= form.label :cuisine, "#{cuisine.capitalize}" %></strong> <br>
                   <select class="form-select" aria-label="preference">
                     <option value="1" selected>No Preference</option>
                     <option value="2">Dislike</option>
