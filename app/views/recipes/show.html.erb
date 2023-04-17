@@ -1,5 +1,8 @@
 <div class="container-xl">
   <h1 class = "display-2 text-center" ><%= @recipe.name %></h1>
+    <div class="cook-time text-center">
+      <h5 class ="card-title" >Estimated Cooking Time: <%=@recipe.cook_time %> Minutes </h5>
+    </div>
     <br>
     <div class="row">
       <div class="col-4">
@@ -32,4 +35,8 @@
           </div>
         </div>
       </div>
+  <div class="text-center d-grid gap-2 d-md-block">
+    <%= link_to "Add to My Meal Plan", "/meal_plan", method: :post, class: "btn btn-success"%>
+    <%= link_to "Generate New Meal", "/", method: :get, class: "btn btn-warning"%>
+  </div>
 </div>
