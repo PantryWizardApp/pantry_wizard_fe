@@ -41,19 +41,19 @@
         <br>
         <div class="container text-center">
           <div class="row align-items-start">
-            <div id="cuisines">
+            <div id="cuisines" class="row">
               <% ["african", "chinese", "japanese", "korean", "vietnamese", "thai", "indian", "british", "irish", "french", "italian", "mexican", "spanish", "middle eastern", "jewish", "american", "cajun", "southern", "greek", "german", "nordic", "eastern european", "caribbean", "latin american"].each do |cuisine| %>
-                <div class="col">
-                <%= form.label :cuisine, "#{cuisine}" %> <br>
-                <select class="form-select" aria-label="preference">
-                  <option value="1" selected>No Preference</option>
-                  <option value="2">Dislike</option>
-                  <option value="3">Like</option>
-                </select>
+                <div class="col-md-4">
+                  <%= form.label :cuisine, "#{cuisine.capitalize}" %> <br>
+                  <select class="form-select" aria-label="preference">
+                    <option value="1" selected>No Preference</option>
+                    <option value="2">Dislike</option>
+                    <option value="3">Like</option>
+                  </select>
                 </div>
               <% end %>
-              </div>
-              </div>
+            </div>
+          </div>
         </div>
         <%= form.submit "Save Preferences", class: "btn btn-primary" %>
       <% end %>
