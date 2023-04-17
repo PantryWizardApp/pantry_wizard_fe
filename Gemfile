@@ -58,6 +58,11 @@ gem "dotenv-rails"
 gem 'omniauth-rails_csrf_protection'
 gem "mini_racer"
 
+group :test do
+  gem "vcr"
+  gem "webmock"
+end
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
@@ -65,9 +70,10 @@ group :development, :test do
   gem "rspec-rails"
   gem "simplecov"  
   gem "faker"
-  gem "factory_bot"
+  gem "factory_bot_rails"
   gem "launchy"
   gem "capybara"
+
 end
 
 group :test do
