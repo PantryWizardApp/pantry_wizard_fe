@@ -8,35 +8,37 @@
   </head> 
   <body>   
     <form>
-    <h2>Edit My Preferences</h2>
+    <h2>Edit Your Preferences</h2>
       <div id="intolerances">
       <%= form_with url: preferences_path, method: :patch do |form| %>
-        <center><h4><%= form.label :intolerances, "Intolerances" %></h4><br></center>
-        <% ['dairy', 'peanut', 'soy', 'egg', 'seafood', 'sulfite', 'gluten', 'sesame', 'tree nut', 'grain', 'shellfish', 'wheat'].each do |intolerance| %>
+        <center><h4><%= form.label :intolerances, "Select Your Intolerances" %></h4><br></center>
+        <center><% ['dairy', 'peanut', 'soy', 'egg', 'seafood', 'sulfite', 'gluten', 'sesame', 'tree nut', 'grain', 'shellfish', 'wheat'].each do |intolerance| %>
           <div class="form-check form-check-inline">
             <input class="form-check-input" type="checkbox" id=<%="#{intolerance}"%> value=<%="#{intolerance}"%>>
             <label class="form-check-label" for=<%="#{intolerance}"%>><%="#{intolerance.capitalize}"%></label>
           </div>
         <% end %>
-        </div>
+        </div></center>
         <br>
         <br>
-        <div id="diets">
-        <center><h4><%= form.label :diets, "Dietary Restrictions" %></h4></center><br><br>
-        <center><select class="form-select-sm" aria-label="diets"></center>
-          <option selected>Open this select menu</option>
-          <option value="1">Gluten Free</option>
-          <option value="2">Ketogenic</option>
-          <option value="3">Vegetarian</option>
-          <option value="4">Vegan</option>
-          <option value="5">Lacto-Vegetarian</option>
-          <option value="6">Obo-Vegetarian</option>
-          <option value="7">Pescetarian</option>
-          <option value="8">Paleo</option>
-          <option value="9">Primal</option>
-          <option value="10">Low FODMAP</option>
-          <option value="11">Whole30</option>
-        </select>
+        <div id="diet preferences">
+        <center><h4><%= form.label :diets, "Select Your Diet" %></h4></center>
+          <div class="container text-center">
+            <div class="row align-items-start">
+              <div id="diet" class="row">
+                <% ["Gluten Free", "Ketogenic", "Vegetarian", "Vegan", "Lacto-Vegetarian", "Obo-Vegetarian", "Pescetarian", "Paleo", "Primal", "Low FODMAP", "Whole30"].each do |diet| %>
+                  <div class="col-md-4">
+                    <center><div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="diet" id=<%="#{diet}"%>>
+                      <label class="form-check-label" for="flexRadioDefault1">
+                        <%= "#{diet}" %>
+                      </label>
+                    </div></center>
+                  </div>
+                  <% end %>
+              </div>
+            </div>
+          </div>
         </div>
         <br>
          <center><h4>Likes and Dislikes</h4></center>

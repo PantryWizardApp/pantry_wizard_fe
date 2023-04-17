@@ -21,7 +21,7 @@ describe 'As a user, when I visit /preferences page' do
 
   it 'displays a form to edit my preferences' do
     expect(current_path).to eq("/preferences")
-    expect(page).to have_content("Edit My Preferences")
+    expect(page).to have_content("Edit Your Preferences")
     expect(page).to have_content("Intolerances")
     save_and_open_page
     within("#intolerances") do
