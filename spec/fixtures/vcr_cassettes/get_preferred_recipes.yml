@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/search?number=5&%7B:cuisine=%3E%22american,italian%22,%20:excludeCuisine=%3E%22greek%22,%20:intolerances=%3E%22dairy,egg%22,%20:diet=%3E%22null%22%7D
+    uri: https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/search?number=5&%7B:query=%3E%22*%22,%20:cuisine=%3E%22american,italian%22,%20:excludeCuisine=%3E%22greek%22,%20:intolerances=%3E%22dairy,egg%22,%20:diet=%3E%22null%22%7D
     body:
       encoding: US-ASCII
       string: ''
@@ -21,11 +21,11 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 18 Apr 2023 19:45:21 GMT
+      - Tue, 18 Apr 2023 20:51:28 GMT
       Content-Type:
       - application/json
       Content-Length:
-      - '619'
+      - '618'
       Connection:
       - keep-alive
       Nel:
@@ -39,13 +39,13 @@ http_interactions:
       Allow-Control-Allow-Methods:
       - GET, HEAD, POST, OPTIONS, DELETE, PUT
       Cf-Ray:
-      - 7b9f685b6827279c-SEA
+      - 7b9fc938fd03c539-SEA
       Allow-Control-Allow-Origin:
       - "*"
       Alt-Svc:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=SYwmfgFUdk8TZu8pe4uzUKiRjvJrSKau2mXczsI0itf%2Fr3ngogq0ONAdQ8k%2B0dqgWGpM%2F2sfH0phyXPqn7wdFfxtJLNBxKRn%2F1jvJi7CETMG0QBP8otWPmp5WFfMGr7lmHBiKw8%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=dn1zpug%2BLJvtBap%2FXBGC34OIcywop3uH6443X07v85ZQ9IOb%2F1a%2FaNIuYaIwb9j4FHdsUz%2B1YaOr%2F9LR1m7ME4ogDIYMuW76WF6SS%2BECebNor97vHTdNrYoRTtDu4RxqiT70t%2F0%3D"}],"group":"cf-nel","max_age":604800}'
       Access-Control-Allow-Headers:
       - Authorization, UserId, Hash, Name, Password, Accept, Accept-Language, x-api-key,
         Content-Language, Content-Type, Cache-Control, Origin, X-Requested-With
@@ -54,19 +54,19 @@ http_interactions:
       X-Ratelimit-Tinyrequests-Remaining:
       - '500'
       X-Ratelimit-Tinyrequests-Reset:
-      - '5457'
+      - '83506'
       X-Ratelimit-Requests-Limit:
       - '50'
       X-Ratelimit-Requests-Remaining:
-      - '29'
+      - '43'
       X-Ratelimit-Requests-Reset:
-      - '5457'
+      - '83506'
       X-Ratelimit-Results-Limit:
       - '500'
       X-Ratelimit-Results-Remaining:
-      - '467'
+      - '489'
       X-Ratelimit-Results-Reset:
-      - '5457'
+      - '83506'
       Server:
       - RapidAPI-1.2.8
       X-Rapidapi-Version:
@@ -80,6 +80,6 @@ http_interactions:
         Strawberry Smoothie"},{"readyInMinutes":16,"sourceUrl":"http://www.cookincanuck.com/2013/09/stuffed-sweet-potato-recipe-with-spinach-hummus-feta/","image":"Stuffed-Sweet-Potato-with-Spinach--Hummus---Feta-584549.jpg","servings":1,"id":584549,"title":"Stuffed
         Sweet Potato with Spinach, Hummus & Feta"},{"readyInMinutes":250,"sourceUrl":"http://thelemonbowl.com/2013/04/slow-cooker-vegetarian-chili-with-butternut-squash.html","image":"Slow-Cooker-Vegetarian-Chili-with-Butternut-Squash-482574.jpg","servings":4,"id":482574,"title":"Slow
         Cooker Vegetarian Chili with Butternut Squash"},{"readyInMinutes":20,"sourceUrl":"http://www.thegraciouspantry.com/clean-eating-cilantro-salsa/","image":"Cilantro-Salsa-667917.jpg","servings":2,"id":667917,"title":"Cilantro
-        Salsa"}],"baseUri":"https://spoonacular.com/recipeImages/","offset":0,"number":5,"totalResults":385626,"processingTimeMs":183,"expires":1682105134444,"isStale":false}'
-  recorded_at: Tue, 18 Apr 2023 19:45:21 GMT
+        Salsa"}],"baseUri":"https://spoonacular.com/recipeImages/","offset":0,"number":5,"totalResults":385626,"processingTimeMs":205,"expires":1682109158784,"isStale":false}'
+  recorded_at: Tue, 18 Apr 2023 20:51:28 GMT
 recorded_with: VCR 6.1.0

@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/search?number=5&%7B:cuisine=%3E%22american,italian%22,%20:excludeCuisine=%3E%22greek%22,%20:intolerances=%3E%22dairy,egg%22,%20:diet=%3E%22null%22,%20:type=%3E%22breakfast%22%7D
+    uri: https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/search?number=1&offset=474&%7B:cuisine=%3E%22american,italian%22,%20:excludeCuisine=%3E%22greek%22,%20:intolerances=%3E%22dairy,egg%22,%20:diet=%3E%22null%22,%20:type=%3E%22breakfast%22%7D
     body:
       encoding: US-ASCII
       string: ''
@@ -21,31 +21,31 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 18 Apr 2023 19:45:21 GMT
+      - Tue, 18 Apr 2023 20:53:23 GMT
       Content-Type:
       - application/json
       Content-Length:
-      - '619'
+      - '260'
       Connection:
       - keep-alive
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Cf-Cache-Status:
       - DYNAMIC
-      Access-Control-Allow-Methods:
+      Allow-Control-Allow-Methods:
       - GET, HEAD, POST, OPTIONS, DELETE, PUT
       Access-Control-Allow-Origin:
       - "*"
-      Allow-Control-Allow-Methods:
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=1HfmUi28F4mMUpDth3zH5aAgWUfnaiWdLd0y%2FVGknXZwU4lIlfYc%2BCHbOH2k6lvb2Mhk6qlquuqUlVk6dkBYa6yae2Agigs197cv0kY8j4E9kTmEPSRyKpkstt81eb%2F5XJ%2FH4B0%3D"}],"group":"cf-nel","max_age":604800}'
+      Access-Control-Allow-Methods:
       - GET, HEAD, POST, OPTIONS, DELETE, PUT
-      Cf-Ray:
-      - 7b9f685e2d1fc52d-SEA
-      Allow-Control-Allow-Origin:
-      - "*"
       Alt-Svc:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
-      Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=RxmpltjaKT4d2l24HF2jtsh9h2cjg%2FnmQd%2FN3iRIawOGy%2BWcmplIiMkqewPR6ScMSJ8gSBc1ZIBKtlBVf3N0RqFO78trSA2vzoULnxiRVU3UVgKeSYnkAjemUcuB%2BhPniRhgA94%3D"}],"group":"cf-nel","max_age":604800}'
+      Allow-Control-Allow-Origin:
+      - "*"
+      Cf-Ray:
+      - 7b9fcc005c48c52d-SEA
       Access-Control-Allow-Headers:
       - Authorization, UserId, Hash, Name, Password, Accept, Accept-Language, x-api-key,
         Content-Language, Content-Type, Cache-Control, Origin, X-Requested-With
@@ -54,19 +54,19 @@ http_interactions:
       X-Ratelimit-Tinyrequests-Remaining:
       - '500'
       X-Ratelimit-Tinyrequests-Reset:
-      - '5457'
+      - '83391'
       X-Ratelimit-Requests-Limit:
       - '50'
       X-Ratelimit-Requests-Remaining:
-      - '28'
+      - '41'
       X-Ratelimit-Requests-Reset:
-      - '5457'
+      - '83391'
       X-Ratelimit-Results-Limit:
       - '500'
       X-Ratelimit-Results-Remaining:
-      - '466'
+      - '487'
       X-Ratelimit-Results-Reset:
-      - '5457'
+      - '83391'
       Server:
       - RapidAPI-1.2.8
       X-Rapidapi-Version:
@@ -75,11 +75,7 @@ http_interactions:
       - AWS - us-west-2
     body:
       encoding: ASCII-8BIT
-      string: '{"results":[{"readyInMinutes":15,"sourceUrl":"http://naturallyella.com/cabbage-salad-with-peanuts/","image":"cabbage-salad-with-peanuts-723984.jpg","servings":2,"id":723984,"title":"Cabbage
-        Salad with Peanuts"},{"readyInMinutes":10,"sourceUrl":"http://shewearsmanyhats.com/2011/05/rhubarb-strawberry-smoothie/","image":"Rhubarb-Strawberry-Smoothie-537208.jpg","servings":2,"id":537208,"title":"Rhubarb
-        Strawberry Smoothie"},{"readyInMinutes":16,"sourceUrl":"http://www.cookincanuck.com/2013/09/stuffed-sweet-potato-recipe-with-spinach-hummus-feta/","image":"Stuffed-Sweet-Potato-with-Spinach--Hummus---Feta-584549.jpg","servings":1,"id":584549,"title":"Stuffed
-        Sweet Potato with Spinach, Hummus & Feta"},{"readyInMinutes":250,"sourceUrl":"http://thelemonbowl.com/2013/04/slow-cooker-vegetarian-chili-with-butternut-squash.html","image":"Slow-Cooker-Vegetarian-Chili-with-Butternut-Squash-482574.jpg","servings":4,"id":482574,"title":"Slow
-        Cooker Vegetarian Chili with Butternut Squash"},{"readyInMinutes":20,"sourceUrl":"http://www.thegraciouspantry.com/clean-eating-cilantro-salsa/","image":"Cilantro-Salsa-667917.jpg","servings":2,"id":667917,"title":"Cilantro
-        Salsa"}],"baseUri":"https://spoonacular.com/recipeImages/","offset":0,"number":5,"totalResults":385626,"processingTimeMs":183,"expires":1682105134444,"isStale":false}'
-  recorded_at: Tue, 18 Apr 2023 19:45:21 GMT
+      string: '{"results":[{"readyInMinutes":45,"sourceUrl":"https://kirbiecravings.com/2017/12/apple-rose-tarts.html","image":"apple-rose-tarts-956561.jpg","servings":12,"id":956561,"title":"Apple
+        Rose Tarts"}],"baseUri":"https://spoonacular.com/recipeImages/","offset":474,"number":1,"totalResults":385626,"processingTimeMs":304,"expires":1682110403328}'
+  recorded_at: Tue, 18 Apr 2023 20:53:23 GMT
 recorded_with: VCR 6.1.0

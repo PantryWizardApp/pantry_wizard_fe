@@ -58,8 +58,9 @@ RSpec.describe RecipeService do
       it "returns a list of breakfast recipes" do
         VCR.use_cassette("get_breakfast_recipes") do
           breakfast = RecipeService.get_preferred_breakfast_recipes(@user)
+          require 'pry'; binding.pry
           expect(breakfast).to be_a(Hash)
-          expect(breakfast[:results].size).to eq(5)
+          expect(breakfast[:results].size).to eq(1)
         end
       end
     end
@@ -69,8 +70,7 @@ RSpec.describe RecipeService do
         VCR.use_cassette("get_main_recipes") do
           main_course = RecipeService.get_preferred_main_recipes(@user)
           expect(main_course).to be_a(Hash)
-          require 'pry'; binding.pry
-          expect(main_course[:results].size).to eq(5)
+          expect(main_course[:results].size).to eq(1)
         end
       end
     end
