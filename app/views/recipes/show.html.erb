@@ -14,27 +14,31 @@
     </div>
     <br>
     <div class="row">
-      <div class="col-4">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Ingredients</h5>
-            <% @recipe.ingredients.each do |ingredient|%>
-              <p class= "card-text"><%= ingredient.values.first%>: <%= ingredient.values.second%> <%= ingredient.values.third%></p>
-            <% end %>
-          </div>
-        </div>
-      </div>
-      <div class="col-4">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Instructions</h5>
-            <% @recipe.instructions.each do |instruction| %>
-              <% instruction.each do |k| %>
-              <p class="card-text"><%= k.values.first%>.) <%= k.values.second%> </p>
+    <% cache("ingredients-list") do %>
+        <div class="col-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Ingredients</h5>
+              <% @recipe.ingredients.each do |ingredient|%>
+                <p class= "card-text"><%= ingredient.values.first%>: <%= ingredient.values.second%> <%= ingredient.values.third%></p>
               <% end %>
-            <% end %>
+            </div>
           </div>
         </div>
+      <% end %>
+      <div class="col-4">
+       <% cache("instructions-list") do %>
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Instructions</h5>
+              <% @recipe.instructions.each do |instruction| %>
+                <% instruction.each do |k| %>
+                <p class="card-text"><%= k.values.first%>.) <%= k.values.second%> </p>
+                <% end %>
+              <% end %>
+            </div>
+          </div>
+        <% end %>
       </div>     
       <div class="col-4">
         <div class="card">
@@ -46,9 +50,9 @@
     </div>
 </div>
   <div class="text-center d-grid gap-2 d-md-block">
-  <br>
-    <%= link_to "Add to My Meal Plan", "/meal_plan", method: :post, class: "btn btn-success"%>
-    <%= link_to "Generate New Meal", "/", method: :get, class: "btn btn-warning"%>
+    <br>
+      <%= button_to "Add to My Meal Plan", "/create_meal_plan", method: :post, class: "btn btn-success"%>
+      <%= button_to "Generate New Meal", "/", method: :get, class: "btn btn-warning"%>
   </div>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
     </body>
