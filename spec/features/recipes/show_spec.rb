@@ -394,15 +394,27 @@ RSpec.describe "Recipe Show Page" do
       end
     end
     
-    it "I should see a link to add the recipe to my day plan and a link to generate a new meal" do
+    it "I should see a link to add the recipe to my day plan" do
       VCR.use_cassette('search_recipe_id') do        
         visit "/meals/#{@recipe.id}"
-        expect(page).to have_link("Add to My Meal Plan", href: "/create_meal_plan")
-        expect(page).to have_link("Generate New Meal")
+        expect(page).to have_button("Add to My Meal Plan")
       end
       VCR.use_cassette('add_meal_plan') do
-        click_link "Add to My Meal Plan"
+        click_button "Add to My Meal Plan"
         expect(current_path).to eq(dashboard_path)
+      end
+    end
+
+    it "I should see a dropdown that allows me to select a new recipe" do
+      VCR.use_cassette('search_recipe_id') do
+        visit "/meals/#{@recipe.id}"
+            
+        expect(page).to have_button("Generate New Recipe")
+          within(".dropdown") do
+            expect(page).to have_content("Generate New Breakfast Recipe")
+            expect(page).to have_content("Generate New Lunch Recipe")
+            expect(page).to have_content("Generate New Dinner Recipe")
+        end
       end
     end
   end

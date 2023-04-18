@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/search?number=1&offset=673&%7B:query=%3E%22*%22,%20:cuisine=%3E%22american,italian%22,%20:excludeCuisine=%3E%22greek%22,%20:intolerances=%3E%22dairy,egg%22,%20:diet=%3E%22null%22,%20:type=%3E%22breakfast%22%7D
+    uri: https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/search?number=1&offset=379&%7B:query=%3E%22*%22,%20:cuisine=%3E%22american,italian%22,%20:excludeCuisine=%3E%22greek%22,%20:intolerances=%3E%22dairy,egg%22,%20:diet=%3E%22null%22,%20:type=%3E%22main%20course%22%7D
     body:
       encoding: US-ASCII
       string: ''
@@ -21,11 +21,11 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 18 Apr 2023 21:17:58 GMT
+      - Tue, 18 Apr 2023 21:17:59 GMT
       Content-Type:
       - application/json
       Content-Length:
-      - '276'
+      - '253'
       Connection:
       - keep-alive
       Nel:
@@ -37,7 +37,7 @@ http_interactions:
       Access-Control-Allow-Origin:
       - "*"
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=usOOTFdS4lB9%2BpqncIMPyWgiWbbNUjOh9tJEYZ6lHUoTVwuveCNsew81xx%2Bu1k6Vb%2FnBloMnqTHaxQoCZZfO7voYbBNZvOIIonhKe5P6CXZjX06AarNuM4vjafmL5%2B8Fhrg8f58%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=onCaDFysjaVedEz6%2BFqGJWo4OForRf%2FOaAfMay2bJHtrXOzg3KBcn224NAmAvPEm4TDMPS5z76x%2FuRE6zWV7Amo835l7NL71TNlE1eF%2BMzkT7pT7oRpervomK468LU3My4Yk%2FvE%3D"}],"group":"cf-nel","max_age":604800}'
       Access-Control-Allow-Methods:
       - GET, HEAD, POST, OPTIONS, DELETE, PUT
       Alt-Svc:
@@ -45,7 +45,7 @@ http_interactions:
       Allow-Control-Allow-Origin:
       - "*"
       Cf-Ray:
-      - 7b9ff0062da82763-SEA
+      - 7b9ff00a5bae08a1-SEA
       Access-Control-Allow-Headers:
       - Authorization, UserId, Hash, Name, Password, Accept, Accept-Language, x-api-key,
         Content-Language, Content-Type, Cache-Control, Origin, X-Requested-With
@@ -54,19 +54,19 @@ http_interactions:
       X-Ratelimit-Tinyrequests-Remaining:
       - '500'
       X-Ratelimit-Tinyrequests-Reset:
-      - '86300'
+      - '86299'
       X-Ratelimit-Requests-Limit:
       - '50'
       X-Ratelimit-Requests-Remaining:
-      - '49'
+      - '48'
       X-Ratelimit-Requests-Reset:
-      - '86300'
+      - '86299'
       X-Ratelimit-Results-Limit:
       - '500'
       X-Ratelimit-Results-Remaining:
-      - '499'
+      - '498'
       X-Ratelimit-Results-Reset:
-      - '86300'
+      - '86299'
       Server:
       - RapidAPI-1.2.8
       X-Rapidapi-Version:
@@ -75,7 +75,7 @@ http_interactions:
       - AWS - us-west-2
     body:
       encoding: ASCII-8BIT
-      string: '{"results":[{"readyInMinutes":75,"sourceUrl":"https://amandascookin.com/pineapple-upside-down-bundt-cake/","image":"pineapple-upside-down-bundt-cake-1824097.jpg","servings":12,"id":1824097,"title":"Pineapple
-        Upside Down Bundt Cake"}],"baseUri":"https://spoonacular.com/recipeImages/","offset":673,"number":1,"totalResults":385626,"processingTimeMs":193,"expires":1682111878403}'
-  recorded_at: Tue, 18 Apr 2023 21:17:58 GMT
+      string: '{"results":[{"readyInMinutes":30,"sourceUrl":"https://www.jessicagavin.com/kung-pao-shrimp/","image":"kung-pao-shrimp-1631921.jpg","servings":3,"id":1631921,"title":"Kung
+        Pao Shrimp"}],"baseUri":"https://spoonacular.com/recipeImages/","offset":379,"number":1,"totalResults":385626,"processingTimeMs":315,"expires":1682111879178}'
+  recorded_at: Tue, 18 Apr 2023 21:17:59 GMT
 recorded_with: VCR 6.1.0
