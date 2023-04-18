@@ -18,11 +18,33 @@ class RecipeService
     cuisine: user.likes.join(","),
     excludeCuisine: user.dislikes.join(","),
     intolerances: user.intolerances.join(","),
-    diet: user.dietary_restrictions
-  }
+    diet: user.dietary_restrictions 
+    }
   
-  get_url("/recipes/complexSearch?#{params}&number=5")
-end
+    get_url("/recipes/search?#{params}&number=5")
+  end
+
+  def self.get_preferred_breakfast_recipes(user)
+    params = {
+    cuisine: user.likes.join(","),
+    excludeCuisine: user.dislikes.join(","),
+    intolerances: user.intolerances.join(","),
+    diet: user.dietary_restrictions,
+    type: "breakfast"
+    }
+    get_url("/recipes/search?#{params}&number=5")
+  end
+
+  def self.get_preferred_main_recipes(user)
+    params = {
+    cuisine: user.likes.join(","),
+    excludeCuisine: user.dislikes.join(","),
+    intolerances: user.intolerances.join(","),
+    diet: user.dietary_restrictions,
+    type: "main course"
+    }
+    get_url("/recipes/search?#{params}&number=5")
+  end
 
   private 
   
