@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/search?number=5&%7B:cuisine=%3E%22american,italian%22,%20:excludeCuisine=%3E%22greek%22,%20:intolerances=%3E%22dairy,egg%22,%20:diet=%3E%22null%22%7D
+    uri: https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/search?number=5&%7B:cuisine=%3E%22american,italian%22,%20:excludeCuisine=%3E%22greek%22,%20:intolerances=%3E%22dairy,egg%22,%20:diet=%3E%22null%22,%20:type=%3E%22breakfast%22%7D
     body:
       encoding: US-ASCII
       string: ''
@@ -39,13 +39,13 @@ http_interactions:
       Allow-Control-Allow-Methods:
       - GET, HEAD, POST, OPTIONS, DELETE, PUT
       Cf-Ray:
-      - 7b9f685b6827279c-SEA
+      - 7b9f685e2d1fc52d-SEA
       Allow-Control-Allow-Origin:
       - "*"
       Alt-Svc:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=SYwmfgFUdk8TZu8pe4uzUKiRjvJrSKau2mXczsI0itf%2Fr3ngogq0ONAdQ8k%2B0dqgWGpM%2F2sfH0phyXPqn7wdFfxtJLNBxKRn%2F1jvJi7CETMG0QBP8otWPmp5WFfMGr7lmHBiKw8%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=RxmpltjaKT4d2l24HF2jtsh9h2cjg%2FnmQd%2FN3iRIawOGy%2BWcmplIiMkqewPR6ScMSJ8gSBc1ZIBKtlBVf3N0RqFO78trSA2vzoULnxiRVU3UVgKeSYnkAjemUcuB%2BhPniRhgA94%3D"}],"group":"cf-nel","max_age":604800}'
       Access-Control-Allow-Headers:
       - Authorization, UserId, Hash, Name, Password, Accept, Accept-Language, x-api-key,
         Content-Language, Content-Type, Cache-Control, Origin, X-Requested-With
@@ -58,13 +58,13 @@ http_interactions:
       X-Ratelimit-Requests-Limit:
       - '50'
       X-Ratelimit-Requests-Remaining:
-      - '29'
+      - '28'
       X-Ratelimit-Requests-Reset:
       - '5457'
       X-Ratelimit-Results-Limit:
       - '500'
       X-Ratelimit-Results-Remaining:
-      - '467'
+      - '466'
       X-Ratelimit-Results-Reset:
       - '5457'
       Server:
