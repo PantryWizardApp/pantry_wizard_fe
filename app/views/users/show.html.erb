@@ -54,29 +54,13 @@
         <br>
         <h3> My Upcoming Meal Plans: </h3>
         <div class="row align-items-start">
-          <div class="col h6">
-            <p> Meal Plan for: (Date) </p>
-            <br>
-            <p>
-          </div>
-          <div class="col h6">
-            <p> Meal Plan for: (Date) </p>
-          </div>
-          <div class="col h6">
-            <p> Meal Plan for: (Date) </p>
-          </div>
-          <div class="col h6">
-            <p> Meal Plan for: (Date) </p>
-          </div>
-          <div class="col h6">
-            <p> Meal Plan for: (Date) </p>
-          </div>
-          <div class="col h6">
-            <p> Meal Plan for: (Date) </p>
-          </div>
-          <div class="col h6">
-            <p> Meal Plan for: (Date) </p>
-          </div>
+          <% @user_day_plans[:data].each do |day_plan| %>
+            <div class="col h6">
+              <p> Meal Plan for: <%= day_plan[:attributes][:date] %> </p>
+              <br>
+              <p>
+            </div>
+          <% end %>
         </div>
       </div>
       <div class="text-center">
