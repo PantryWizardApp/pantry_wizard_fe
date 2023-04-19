@@ -16,8 +16,8 @@ class DayPlanService
     JSON.parse(response.body, symbolize_names: true)
   end
 
-  def self.delete_user_day_plan(google_id, day_plan_id)
-    response = conn.delete("/api/v1/users/#{google_id}/day_plans/#{day_plan_id}")
+  def self.delete_user_day_plan(user_id, day_plan_id)
+    response = conn.delete("/api/v1/users/#{user_id}/day_plans/#{day_plan_id}")
     JSON.parse(response.body, symbolize_names: true)
   end
 

@@ -17,8 +17,8 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 404
-      message: Not Found
+      code: 200
+      message: OK
     headers:
       X-Frame-Options:
       - SAMEORIGIN
@@ -36,19 +36,22 @@ http_interactions:
       - application/json; charset=utf-8
       Vary:
       - Accept
+      Etag:
+      - W/"9efb34bdd6cb4add21a677d5bc8c238b"
       Cache-Control:
-      - no-cache
+      - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 54be6363-c450-48da-b1c2-e591cea219a0
+      - 333d7d28-ff5f-4d22-baf2-30d1cea6f4f6
       X-Runtime:
-      - '0.189734'
+      - '0.128333'
       Server-Timing:
-      - sql.active_record;dur=53.75, start_processing.action_controller;dur=0.17,
-        instantiation.active_record;dur=0.02, process_action.action_controller;dur=23.61
+      - start_processing.action_controller;dur=0.25, sql.active_record;dur=56.15,
+        instantiation.active_record;dur=0.29, unpermitted_parameters.action_controller;dur=0.38,
+        process_action.action_controller;dur=97.67
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"errors":[{"status":"404","title":"Couldn''t find User with ''id''=5"}]}'
-  recorded_at: Wed, 19 Apr 2023 03:33:54 GMT
+      string: '{"data":{"id":"3","type":"day_plan","attributes":{"user_id":5,"date":"2023-04-22"}}}'
+  recorded_at: Wed, 19 Apr 2023 16:54:09 GMT
 recorded_with: VCR 6.1.0

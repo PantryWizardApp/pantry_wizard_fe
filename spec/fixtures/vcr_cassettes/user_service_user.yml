@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:4000/api/v1/users/1/day_plans/1
+    uri: http://localhost:4000/api/v1/users/1234567890a
     body:
       encoding: US-ASCII
       string: ''
@@ -35,20 +35,21 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"20dd8487a6098a6119bf97f8abde207e"
+      - W/"4ee75ed51041432157bc5b395f96bafa"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - b9c758fd-da3b-48f7-83d6-263ef4587c03
+      - 88f7b80c-518e-4a0b-a514-bf68d49877e4
       X-Runtime:
-      - '0.011589'
+      - '0.014663'
       Server-Timing:
-      - start_processing.action_controller;dur=0.09, sql.active_record;dur=2.25, instantiation.active_record;dur=0.05,
-        process_action.action_controller;dur=7.40
+      - start_processing.action_controller;dur=0.12, sql.active_record;dur=1.48, instantiation.active_record;dur=0.05,
+        process_action.action_controller;dur=9.59
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"1","type":"day_plan","attributes":{"user_id":1,"date":"2021-01-01"}}}'
-  recorded_at: Wed, 19 Apr 2023 17:18:23 GMT
+      string: '{"data":{"id":"1","type":"user","attributes":{"email":"bh@gmail.com","name":"Brian","google_id":"1234567890a","id":1,"intolerances":"dairy,
+        gluten","likes":null,"dislikes":null,"dietary_restrictions":"vegan"}}}'
+  recorded_at: Wed, 19 Apr 2023 17:26:08 GMT
 recorded_with: VCR 6.1.0

@@ -5,7 +5,7 @@ http_interactions:
     uri: http://localhost:4000/api/v1/users/1/day_plans
     body:
       encoding: UTF-8
-      string: date=2022-05-21&user_id=1
+      string: date=2022-06-21&user_id=1
     headers:
       User-Agent:
       - Faraday v2.7.4
@@ -17,8 +17,8 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 404
-      message: Not Found
+      code: 200
+      message: OK
     headers:
       X-Frame-Options:
       - SAMEORIGIN
@@ -36,21 +36,22 @@ http_interactions:
       - application/json; charset=utf-8
       Vary:
       - Accept
+      Etag:
+      - W/"0afade6125a0723d004c99a858f75cc2"
       Cache-Control:
-      - no-cache
+      - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 8596ed24-d41b-4a11-baee-7f79a08c68d4
+      - 0052d8ae-48b7-4182-b329-8214f63cfdea
       X-Runtime:
-      - '0.181123'
+      - '0.055251'
       Server-Timing:
-      - start_processing.action_controller;dur=0.16, sql.active_record;dur=19.71,
-        instantiation.active_record;dur=0.05, unpermitted_parameters.action_controller;dur=0.11,
-        process_action.action_controller;dur=174.44
+      - start_processing.action_controller;dur=0.24, sql.active_record;dur=26.41,
+        instantiation.active_record;dur=0.28, unpermitted_parameters.action_controller;dur=0.15,
+        process_action.action_controller;dur=43.43
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"errors":[{"status":"404","title":"Validation failed: Date has already
-        been taken"}]}'
-  recorded_at: Wed, 19 Apr 2023 03:34:04 GMT
+      string: '{"data":{"id":"5","type":"day_plan","attributes":{"user_id":1,"date":"2022-06-21"}}}'
+  recorded_at: Wed, 19 Apr 2023 17:29:38 GMT
 recorded_with: VCR 6.1.0

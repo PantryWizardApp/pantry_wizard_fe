@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pantry Wizard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  </head> 
+  <body>   
+    <h2>Edit Your Preferences</h2>
+      <%= form_with url: preferences_path, method: :patch do |form| %>
+        <div id="intolerances">
+        <center><h4><%= form.label :intolerances, "Select Your Intolerances" %></h4><br></center>
+        <center><% ['dairy', 'peanut', 'soy', 'egg', 'seafood', 'sulfite', 'gluten', 'sesame', 'tree nut', 'grain', 'shellfish', 'wheat'].each do |intolerance| %>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id=<%="#{intolerance}"%> name="user[intolerances][]" value=<%="#{intolerance}"%>>
+            <label class="form-check-label" for=<%="#{intolerance}"%>><%="#{intolerance.capitalize}"%></label>
+          </div>
+        <% end %>
+        </div></center>
+        <br>
+        <br>
+        <div id="diets">
+        <center><h4><%= form.label :diets, "Select Your Diet" %></h4></center>
+          <div class="container text-center">
+            <div class="row align-items-start">
+              <div id="diet" class="row">
+                <% ["Gluten Free", "Ketogenic", "Vegetarian", "Vegan", "Lacto-Vegetarian", "Obo-Vegetarian", "Pescetarian", "Paleo", "Primal", "Low FODMAP", "Whole30"].each do |diet| %>
+                  <div class="col-md-4">
+                    <center><div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name=<%="user[diet]"%> value=<%="#{diet}" %>>
+                      <label class="form-check-label" for="flexRadioDefault1">
+                        <%= "#{diet}" %>
+                      </label>
+                    </div></center>
+                  </div>
+                  <% end %>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <br>
+          <div class="container text-center">
+            <div class="row align-items-start">
+              <div id="cuisines" class="row">
+                <center><h4><%= form.label :cuisines, "Select Your Cuisine Preferences" %></h4> <br></center>
+                  <% ["african", "chinese", "japanese", "korean", "vietnamese", "thai", "indian", "british", "irish", "french", "italian", "mexican", "spanish", "middle eastern", "jewish", "american", "cajun", "southern", "greek", "german", "nordic", "eastern european", "caribbean", "latin american"].each do |cuisine| %>
+                    <div class="col-md-4">
+                      <strong><%= form.label :cuisine, "#{cuisine.capitalize}" %></strong> <br>
+                      <select class="form-select" name=<%="user[cuisines][#{cuisine}][]"%> aria-label="preference">
+                        <option selected>No Preference</option>
+                        <option value="Like">Like</option>
+                        <option value="Dislike">Dislike</option>
+                      </select>
+                    </div>
+                  <% end %>
+              </div>
+            </div>
+          </div>
+        <br>
+        <center><%= form.submit "Save Preferences", class: "btn btn-primary" %></center>
+      <% end %>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">    </script>
+  </body>
+</html>
