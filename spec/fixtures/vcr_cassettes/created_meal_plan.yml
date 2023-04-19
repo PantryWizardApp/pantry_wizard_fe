@@ -37,21 +37,21 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"3b39f6519f8cc32cc13bc97aee40c5fe"
+      - W/"9efb34bdd6cb4add21a677d5bc8c238b"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 067ff26a-4bb8-40db-ba1a-de9d74af8c72
+      - 333d7d28-ff5f-4d22-baf2-30d1cea6f4f6
       X-Runtime:
-      - '1.422634'
+      - '0.128333'
       Server-Timing:
-      - start_processing.action_controller;dur=0.28, sql.active_record;dur=535.39,
-        instantiation.active_record;dur=11.91, unpermitted_parameters.action_controller;dur=0.35,
-        process_action.action_controller;dur=653.63
+      - start_processing.action_controller;dur=0.25, sql.active_record;dur=56.15,
+        instantiation.active_record;dur=0.29, unpermitted_parameters.action_controller;dur=0.38,
+        process_action.action_controller;dur=97.67
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"12","type":"day_plan","attributes":{"user_id":5,"date":"2023-04-22"}}}'
-  recorded_at: Mon, 17 Apr 2023 21:25:50 GMT
+      string: '{"data":{"id":"3","type":"day_plan","attributes":{"user_id":5,"date":"2023-04-22"}}}'
+  recorded_at: Wed, 19 Apr 2023 16:54:09 GMT
 recorded_with: VCR 6.1.0

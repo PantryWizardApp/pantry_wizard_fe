@@ -13,11 +13,11 @@ RSpec.describe LocalRecipeService do
         
         recipe = data.first
 
-        expect(recipe[:id]).to eq("2")
-        expect(recipe[:attributes][:spoonacular_id]).to eq(123421512)
-        expect(recipe[:attributes][:name]).to eq("noodles2")
-        expect(recipe[:attributes][:ingredients]).to eq("noodles, water")
-        expect(recipe[:attributes][:instructions]).to eq("boil water, add noodles, cook til al dente")
+        expect(recipe[:id]).to eq("1")
+        expect(recipe[:attributes][:spoonacular_id]).to eq(1234567890)
+        expect(recipe[:attributes][:name]).to eq("oatmeal")
+        expect(recipe[:attributes][:ingredients]).to eq("oats, water, salt")
+        expect(recipe[:attributes][:instructions]).to eq("boil water, add oats, add salt, stir, eat")
         expect(recipe[:attributes][:image]).to eq("https://spoonacular.com/recipeImages/595736-556x370.jpg")
       end
     end
@@ -26,7 +26,7 @@ RSpec.describe LocalRecipeService do
     it "can create a new recipe asocciated with the user" do
       VCR.use_cassette('user_recipe_creation') do
         user_id = '1'
-        recipe_params = { name: 'brownies', ingredients: "sugar, chocolate, flour", instructions: "just throw it all in a bowl and mix, spread it out over a baking pan, bake unitl it no longer looks weird", spoonacular_id: "1234567890", image: "https://spoonacular.com/recipeImages/595736-556x370.jpg", day_plan_id: 1 }
+        recipe_params = { name: 'brownies', ingredients: "sugar, chocolate, flour", instructions: "just throw it all in a bowl and mix, spread it out over a baking pan, bake unitl it no longer looks weird", spoonacular_id: "2345678901", image: "https://spoonacular.com/recipeImages/595736-556x370.jpg", day_plan_id: 1 }
         recipes = LocalRecipeService.create_user_recipe(user_id, recipe_params)
         data = recipes[:data]
 
@@ -41,14 +41,14 @@ RSpec.describe LocalRecipeService do
         recipes = LocalRecipeService.user_recipes(user_id)
         data = recipes[:data]
 
-        expect(data.count).to eq(3)
+        expect(data.count).to eq(2)
         expect(data).to be_an Array
 
         newest_recipe = data.last
         expect(newest_recipe[:attributes][:name]).to eq('brownies')
         expect(newest_recipe[:attributes][:ingredients]).to eq("sugar, chocolate, flour")
         expect(newest_recipe[:attributes][:instructions]).to eq("just throw it all in a bowl and mix, spread it out over a baking pan, bake unitl it no longer looks weird")
-        expect(newest_recipe[:attributes][:spoonacular_id]).to eq(1234567890)
+        expect(newest_recipe[:attributes][:spoonacular_id]).to eq(2345678901)
         expect(newest_recipe[:attributes][:image]).to eq("https://spoonacular.com/recipeImages/595736-556x370.jpg")
       end
     end
@@ -57,29 +57,30 @@ RSpec.describe LocalRecipeService do
     it "deletes the given recipe" do
       VCR.use_cassette('user_recipe_deletion') do
         user_id = '1'
-        recipe_id = '4'
+        recipe_id = '7'
         recipe = LocalRecipeService.delete_user_recipe(user_id, recipe_id)
         data = recipe[:data]
 
         expect(data[:attributes][:name]).to eq('brownies')
         expect(data[:attributes][:ingredients]).to eq("sugar, chocolate, flour")
         expect(data[:attributes][:instructions]).to eq("just throw it all in a bowl and mix, spread it out over a baking pan, bake unitl it no longer looks weird")
-        expect(data[:attributes][:spoonacular_id]).to eq(1234567890)
+        expect(data[:attributes][:spoonacular_id]).to eq(2345678901)
         expect(data[:attributes][:image]).to eq("https://spoonacular.com/recipeImages/595736-556x370.jpg")
       end
+
       VCR.use_cassette('user_recipes_after_deletion') do
         user_id = '1'
         recipes = LocalRecipeService.user_recipes(user_id)
         data = recipes[:data]
 
-        expect(data.count).to eq(2)
+        expect(data.count).to eq(1)
         expect(data).to be_an Array
 
         newest_recipe = data.last
         expect(newest_recipe[:attributes][:name]).to_not eq('brownies')
         expect(newest_recipe[:attributes][:ingredients]).to_not eq("sugar, chocolate, flour")
         expect(newest_recipe[:attributes][:instructions]).to_not eq("just throw it all in a bowl and mix, spread it out over a baking pan, bake unitl it no longer looks weird")
-        expect(newest_recipe[:attributes][:spoonacular_id]).to_not eq(1234567890)
+        expect(newest_recipe[:attributes][:spoonacular_id]).to_not eq(2345678901)
       end
     end
   end
