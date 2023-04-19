@@ -1,14 +1,16 @@
 ---
 http_interactions:
 - request:
-    method: get
-    uri: http://localhost:4000/api/v1/users/1/day_plans
+    method: post
+    uri: http://localhost:4000/api/v1/users/5/day_plans
     body:
-      encoding: US-ASCII
-      string: ''
+      encoding: UTF-8
+      string: date=2023-04-22
     headers:
       User-Agent:
       - Faraday v2.7.4
+      Content-Type:
+      - application/x-www-form-urlencoded
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -35,20 +37,21 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"17fa1fde2de9e5e86ca1d5d43154953f"
+      - W/"9efb34bdd6cb4add21a677d5bc8c238b"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 1c220700-9ef7-495b-bb19-8047fa354116
+      - 333d7d28-ff5f-4d22-baf2-30d1cea6f4f6
       X-Runtime:
-      - '0.023726'
+      - '0.128333'
       Server-Timing:
-      - start_processing.action_controller;dur=0.14, sql.active_record;dur=2.63, instantiation.active_record;dur=0.41,
-        process_action.action_controller;dur=15.24
+      - start_processing.action_controller;dur=0.25, sql.active_record;dur=56.15,
+        instantiation.active_record;dur=0.29, unpermitted_parameters.action_controller;dur=0.38,
+        process_action.action_controller;dur=97.67
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"1","type":"day_plan","attributes":{"user_id":1,"date":"2021-01-01"}},{"id":"4","type":"day_plan","attributes":{"user_id":1,"date":"2022-05-21"}}]}'
-  recorded_at: Wed, 19 Apr 2023 18:29:07 GMT
+      string: '{"data":{"id":"3","type":"day_plan","attributes":{"user_id":5,"date":"2023-04-22"}}}'
+  recorded_at: Wed, 19 Apr 2023 16:54:09 GMT
 recorded_with: VCR 6.1.0

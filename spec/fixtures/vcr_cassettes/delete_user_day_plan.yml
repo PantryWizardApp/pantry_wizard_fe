@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: delete
-    uri: http://localhost:5000/api/v1/users/1/day_plans/9
+    uri: http://localhost:4000/api/v1/users/1/day_plans/5
     body:
       encoding: US-ASCII
       string: ''
@@ -35,20 +35,20 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"cce72183c793c0c18678fbd22c4d6744"
+      - W/"86b0c24d0e0cdee40461b0a8c90d4ce7"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 45eec814-941e-4b1d-9488-17f267f096f1
+      - 411ab5bc-3b6b-480f-ae0b-2939ca543728
       X-Runtime:
-      - '0.266208'
+      - '0.086565'
       Server-Timing:
-      - start_processing.action_controller;dur=1.44, sql.active_record;dur=191.82,
-        instantiation.active_record;dur=1.25, process_action.action_controller;dur=226.59
+      - start_processing.action_controller;dur=0.17, sql.active_record;dur=38.71,
+        instantiation.active_record;dur=0.42, process_action.action_controller;dur=67.31
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"9","type":"day_plan","attributes":{"user_id":1,"date":"2022-02-21"}}}'
-  recorded_at: Sun, 16 Apr 2023 19:13:48 GMT
+      string: '{"data":{"id":"5","type":"day_plan","attributes":{"user_id":1,"date":"2022-07-21"}}}'
+  recorded_at: Wed, 19 Apr 2023 18:16:12 GMT
 recorded_with: VCR 6.1.0

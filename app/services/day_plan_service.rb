@@ -11,13 +11,13 @@ class DayPlanService
   end
 
   
-  def self.create_user_day_plan(google_id, day_plan)
-    response = conn.post("/api/v1/users/#{google_id}/day_plans", day_plan)
+  def self.create_user_day_plan(user_id, day_plan)
+    response = conn.post("/api/v1/users/#{user_id}/day_plans", day_plan)
     JSON.parse(response.body, symbolize_names: true)
   end
 
-  def self.delete_user_day_plan(google_id, day_plan_id)
-    response = conn.delete("/api/v1/users/#{google_id}/day_plans/#{day_plan_id}")
+  def self.delete_user_day_plan(user_id, day_plan_id)
+    response = conn.delete("/api/v1/users/#{user_id}/day_plans/#{day_plan_id}")
     JSON.parse(response.body, symbolize_names: true)
   end
 
@@ -29,6 +29,6 @@ class DayPlanService
   private 
   
   def self.conn 
-    Faraday.new(url: "http://localhost:5000")
+    Faraday.new(url: "http://localhost:4000")
   end
 end

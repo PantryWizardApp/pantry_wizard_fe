@@ -1,9 +1,8 @@
 require "rails_helper"
 
-RSpec.describe "Recipe Show Page" do
-  describe "as a user" do
-    before :each do
-      recipe1 = {
+RSpec.describe "New Recipe Page" do
+  before :each do
+    recipe1 = {
       "vegetarian": false,
       "vegan": false,
       "glutenFree": false,
@@ -381,36 +380,41 @@ RSpec.describe "Recipe Show Page" do
     data = {:data=>{:id=>"5", :type=>"user", :attributes=>{:email=>"dawsontimmons@gmail.com", :name=>"Dawson Timmons", :google_id=>"100378230956154024998", :id=>5, :intolerances=>nil, :likes=>nil, :dislikes=>nil, :dietary_restrictions=>nil}}}
     @user = User.new(data)
     allow(UserFacade).to receive(:find_user_by_google_id).with(current_user["google_id"]).and_return(@user)
-    end
-  
-    it "when I visit '/meals/:id' I see the recipe details" do
-      VCR.use_cassette('search_recipe1_id') do
-        visit "/meals/#{@recipe.id}"
-        expect(current_path).to eq("/meals/#{@recipe.id}")
-        expect(page).to have_content("Ranch BLT Pasta Salad")
-        expect(page).to have_content("Ingredients")
-        expect(page).to have_content("Instructions")
-        expect(page).to have_content("Estimated Cooking Time: #{@recipe.cook_time} Minutes")
-      end
-    end
-    
-    it "I should see a link to add the recipe to my day plan" do
-      VCR.use_cassette('search_recipe2_id') do        
-        visit "/meals/#{@recipe.id}"
-        expect(page).to have_button("Add to My Meal Plan")
-      end
-      VCR.use_cassette('add_meal_plan') do
-        click_button "Add to My Meal Plan"
-        expect(current_path).to eq(dashboard_path)
-      end
-    end
+    allow(RecipeService).to receive(:offset).and_return(162)
+  end
 
-    it "I should see a dropdown that allows me to select a new recipe" do
-      VCR.use_cassette('search_recipe3_id') do
-        visit "/meals/#{@recipe.id}"
-          expect(page).to have_button("Generate New Breakfast Recipe")
-          expect(page).to have_button("Generate New Lunch Recipe")
-          expect(page).to have_button("Generate New Dinner Recipe")
+  context "as a visitor" do
+    context "from the recipes show page" do
+      it "I can click a button to generate a new breakfast recipe" do
+        VCR.use_cassette("recipes_show_page") do
+          visit "meals/#{@recipe.id}"
+        end
+
+        VCR.use_cassette("breakfast_show_page") do
+          click_button "Generate New Breakfast Recipe"
+          expect(current_path).to_not eq("meals/#{@recipe.id}")
+          expect(current_path).to_not eq("meals/new")
+        end
+      end
+
+      it " I can click a button to generate a new lunch recipe" do
+        VCR.use_cassette("recipes_show_page") do
+          visit "meals/#{@recipe.id}"
+        end
+        VCR.use_cassette("lunch_show_page") do
+          click_button "Generate New Lunch Recipe"
+          expect(current_path).to_not eq("meals/#{@recipe.id}")
+        end
+      end
+
+      it " I can click a button to generate a new dinner recipe" do
+        VCR.use_cassette("recipes_show_page") do
+          visit "meals/#{@recipe.id}"
+        end
+        VCR.use_cassette("dinner_show_page") do
+          click_button "Generate New Dinner Recipe"
+          expect(current_path).to_not eq("meals/#{@recipe.id}")
+        end
       end
     end
   end

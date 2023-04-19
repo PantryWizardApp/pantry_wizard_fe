@@ -1,0 +1,81 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/search?instructionsRequired=True&number=1&offset=162&%7B:query=%3E%22*%22,%20:cuisine=%3E%22american,italian%22,%20:excludeCuisine=%3E%22greek%22,%20:intolerances=%3E%22dairy,egg%22,%20:diet=%3E%22null%22,%20:type=%3E%22breakfast%22%7D
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Rapidapi-Key:
+      - 94534da646mshde7e120c9bce392p139c9ejsnaf50e90c38bb
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 19 Apr 2023 16:54:26 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '298'
+      Connection:
+      - keep-alive
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Cf-Cache-Status:
+      - DYNAMIC
+      Allow-Control-Allow-Methods:
+      - GET, HEAD, POST, OPTIONS, DELETE, PUT
+      Access-Control-Allow-Origin:
+      - "*"
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=FNePeusMBp0rKnrKDR%2F%2FSUNjKx%2Ft%2FIHTh1hf4rekGJoiHJtxWqqd74QSADwWH2FQPl3hg2LbjcwKzl9eassIewWTtjUtH8gNcUlKl%2BysplujrtqjtN0oLnEIEEJBHnWX5oaZO0o%3D"}],"group":"cf-nel","max_age":604800}'
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, OPTIONS, DELETE, PUT
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+      Allow-Control-Allow-Origin:
+      - "*"
+      Cf-Ray:
+      - 7ba6ab571d2dc5b0-SEA
+      Access-Control-Allow-Headers:
+      - Authorization, UserId, Hash, Name, Password, Accept, Accept-Language, x-api-key,
+        Content-Language, Content-Type, Cache-Control, Origin, X-Requested-With
+      X-Ratelimit-Tinyrequests-Limit:
+      - '500'
+      X-Ratelimit-Tinyrequests-Remaining:
+      - '500'
+      X-Ratelimit-Tinyrequests-Reset:
+      - '85684'
+      X-Ratelimit-Requests-Limit:
+      - '50'
+      X-Ratelimit-Requests-Remaining:
+      - '33'
+      X-Ratelimit-Requests-Reset:
+      - '85684'
+      X-Ratelimit-Results-Limit:
+      - '500'
+      X-Ratelimit-Results-Remaining:
+      - '486'
+      X-Ratelimit-Results-Reset:
+      - '85684'
+      Server:
+      - RapidAPI-1.2.8
+      X-Rapidapi-Version:
+      - 1.2.8
+      X-Rapidapi-Region:
+      - AWS - us-west-2
+    body:
+      encoding: ASCII-8BIT
+      string: '{"results":[{"readyInMinutes":45,"sourceUrl":"http://www.epicurious.com/recipes/food/views/Roasted-Salt-and-Spice-Packed-Pork-Loin-356333","image":"roasted-salt-and-spice-packed-pork-loin-2-57714.jpg","servings":8,"id":57714,"title":"Roasted
+        Salt-and Spice-Packed Pork Loin"}],"baseUri":"https://spoonacular.com/recipeImages/","offset":162,"number":1,"totalResults":385626,"processingTimeMs":371,"expires":1682182466061}'
+  recorded_at: Wed, 19 Apr 2023 16:54:26 GMT
+recorded_with: VCR 6.1.0

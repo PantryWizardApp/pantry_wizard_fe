@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:4000/api/v1/users/1/day_plans
+    uri: http://localhost:4000/api/v1/users/1/recipes
     body:
       encoding: US-ASCII
       string: ''
@@ -35,20 +35,21 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"17fa1fde2de9e5e86ca1d5d43154953f"
+      - W/"7502f91e473d05672add9d192ae9c100"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 1c220700-9ef7-495b-bb19-8047fa354116
+      - aa9f7d1b-c9c1-4a36-a60f-9b4fccc0d520
       X-Runtime:
-      - '0.023726'
+      - '0.009152'
       Server-Timing:
-      - start_processing.action_controller;dur=0.14, sql.active_record;dur=2.63, instantiation.active_record;dur=0.41,
-        process_action.action_controller;dur=15.24
+      - start_processing.action_controller;dur=0.08, sql.active_record;dur=1.35, instantiation.active_record;dur=0.09,
+        process_action.action_controller;dur=3.58
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"1","type":"day_plan","attributes":{"user_id":1,"date":"2021-01-01"}},{"id":"4","type":"day_plan","attributes":{"user_id":1,"date":"2022-05-21"}}]}'
-  recorded_at: Wed, 19 Apr 2023 18:29:07 GMT
+      string: '{"data":[{"id":"1","type":"recipe","attributes":{"spoonacular_id":1234567890,"name":"oatmeal","ingredients":"oats,
+        water, salt","instructions":"boil water, add oats, add salt, stir, eat","image":"https://spoonacular.com/recipeImages/595736-556x370.jpg"}}]}'
+  recorded_at: Wed, 19 Apr 2023 18:28:58 GMT
 recorded_with: VCR 6.1.0

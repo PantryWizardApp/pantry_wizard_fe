@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:5000/api/v1/users/1/day_plans
+    uri: http://localhost:4000/api/v1/users/1/day_plans
     body:
       encoding: US-ASCII
       string: ''
@@ -35,20 +35,20 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"3805ae2ad1fb3350993cacc3b522094c"
+      - W/"f6f067afd2325c68d06e8519c6b6a37e"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 206a4cdd-f340-4450-ae41-676f3c820f4a
+      - 7587e892-dade-44e5-aa24-c9e9dc90532d
       X-Runtime:
-      - '0.223038'
+      - '0.008673'
       Server-Timing:
-      - start_processing.action_controller;dur=2.59, sql.active_record;dur=24.55,
-        instantiation.active_record;dur=5.22, process_action.action_controller;dur=167.00
+      - start_processing.action_controller;dur=0.09, sql.active_record;dur=2.19, instantiation.active_record;dur=0.14,
+        process_action.action_controller;dur=4.26
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"1","type":"day_plan","attributes":{"user_id":1,"date":"2021-01-01"}},{"id":"3","type":"day_plan","attributes":{"user_id":1,"date":"2021-01-21"}}]}'
-  recorded_at: Sun, 16 Apr 2023 18:15:37 GMT
+      string: '{"data":[{"id":"1","type":"day_plan","attributes":{"user_id":1,"date":"2021-01-01"}},{"id":"2","type":"day_plan","attributes":{"user_id":1,"date":"2022-02-21"}},{"id":"4","type":"day_plan","attributes":{"user_id":1,"date":"2022-05-21"}}]}'
+  recorded_at: Wed, 19 Apr 2023 17:18:23 GMT
 recorded_with: VCR 6.1.0

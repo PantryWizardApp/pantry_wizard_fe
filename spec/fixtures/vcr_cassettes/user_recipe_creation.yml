@@ -1,0 +1,59 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:4000/api/v1/users/1/recipes
+    body:
+      encoding: UTF-8
+      string: day_plan_id=1&image=https%3A%2F%2Fspoonacular.com%2FrecipeImages%2F595736-556x370.jpg&ingredients=sugar%2C+chocolate%2C+flour&instructions=just+throw+it+all+in+a+bowl+and+mix%2C+spread+it+out+over+a+baking+pan%2C+bake+unitl+it+no+longer+looks+weird&name=brownies&spoonacular_id=2345678901
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"9ad6ab23907d59f386de20fa331773a6"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 9eb5729a-5a3d-48e7-a87d-b765e0232d30
+      X-Runtime:
+      - '0.048253'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.18, sql.active_record;dur=17.85,
+        instantiation.active_record;dur=0.18, unpermitted_parameters.action_controller;dur=0.64,
+        process_action.action_controller;dur=33.55
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"7","type":"recipe","attributes":{"spoonacular_id":2345678901,"name":"brownies","ingredients":"sugar,
+        chocolate, flour","instructions":"just throw it all in a bowl and mix, spread
+        it out over a baking pan, bake unitl it no longer looks weird","image":"https://spoonacular.com/recipeImages/595736-556x370.jpg"}}}'
+  recorded_at: Wed, 19 Apr 2023 18:28:26 GMT
+recorded_with: VCR 6.1.0
