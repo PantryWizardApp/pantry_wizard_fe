@@ -391,6 +391,9 @@ RSpec.describe "Recipe Show Page" do
       expect(page).to have_content("Ranch BLT Pasta Salad")
       expect(page).to have_content("Ingredients")
       expect(page).to have_content("Instructions")
+      expect(page).to have_content("Estimated Cooking Time: #{@recipe.cook_time} Minutes")
+      expect(page).to have_link("Add to My Meal Plan")
+      expect(page).to have_link("Generate New Meal")
     end
   end
 end

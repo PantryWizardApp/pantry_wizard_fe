@@ -5,7 +5,8 @@ class Recipe
               :ingredients,
               :instructions,
               :image,
-              :source_url
+              :source_url,
+              :cook_time
 
   def initialize(recipe_data)
     @id = recipe_data[:id]
@@ -15,6 +16,7 @@ class Recipe
     @instructions = instruction_info(recipe_data[:analyzedInstructions])
     @image = recipe_data[:image]
     @source_url = recipe_data[:sourceUrl]
+    @cook_time = recipe_data[:readyInMinutes]
   end
 
   def ingredient_info(ingredient_array)
