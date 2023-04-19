@@ -1,7 +1,7 @@
 class RecipeService
   def self.conn
     Faraday.new(url:"https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com") do |faraday|
-      faraday.headers["X-RapidAPI-Key"] = ENV["X-RapidAPI-Key"]
+      faraday.headers["X-RapidAPI-Key"] = ENV["X_RapidAPI_Key"]
     end
   end
 
