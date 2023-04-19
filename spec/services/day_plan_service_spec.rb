@@ -44,7 +44,7 @@ RSpec.describe DayPlanService do
         new_day_plan = DayPlanService.create_user_day_plan(user_id, day_plan)
         data = new_day_plan[:data]
 
-        expect(data[:id]).to eq("9")
+        expect(data[:id]).to eq("15")
         expect(data[:attributes][:user_id]).to eq(1)
         expect(data[:attributes][:date]).to eq("2022-05-21")
       end
@@ -55,7 +55,7 @@ RSpec.describe DayPlanService do
         data = day_plans[:data]
 
         new_day_plan = data.last
-        expect(new_day_plan[:id]).to eq("9")
+        expect(new_day_plan[:id]).to eq("15")
         expect(new_day_plan[:attributes][:user_id]).to eq(1)
         expect(new_day_plan[:attributes][:date]).to eq("2022-05-21")
       end
@@ -64,14 +64,14 @@ RSpec.describe DayPlanService do
     it "can update a day plan" do
       VCR.use_cassette('update_user_day_plan') do
         user_id = '1'
-        day_plan_id = "9"
+        day_plan_id = "15"
         day_plan_changes = {
           date: "2022-02-21"
         }
         updated_day_plan = DayPlanService.update_user_day_plan(user_id, day_plan_id, day_plan_changes)
         data = updated_day_plan[:data]
 
-        expect(data[:id]).to eq("9")
+        expect(data[:id]).to eq("15")
         expect(data[:attributes][:user_id]).to eq(1)
         expect(data[:attributes][:date]).to eq("2022-02-21")
       end
@@ -80,11 +80,11 @@ RSpec.describe DayPlanService do
     it "can delete a day plan" do
       VCR.use_cassette('delete_user_day_plan') do
         user_id = '1'
-        day_plan_id = "9"
+        day_plan_id = "15"
         new_day_plan = DayPlanService.delete_user_day_plan(user_id, day_plan_id)
         data = new_day_plan[:data]
 
-        expect(data[:id]).to eq("9")
+        expect(data[:id]).to eq("15")
         expect(data[:attributes][:user_id]).to eq(1)
         expect(data[:attributes][:date]).to eq("2022-02-21")
       end
@@ -95,7 +95,7 @@ RSpec.describe DayPlanService do
         data = day_plans[:data]
 
         day_plan = data.last
-        expect(day_plan[:id]).to_not eq("9")
+        expect(day_plan[:id]).to_not eq("15")
         expect(day_plan[:attributes][:date]).to_not eq("2022-02-21")
       end
     end
