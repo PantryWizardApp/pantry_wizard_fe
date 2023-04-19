@@ -23,7 +23,6 @@ class User
   end
 
   def self.raw_google_data(data)
-    require 'pry'; binding.pry
     {
       google_id: data[:uid],
       name: data[:info][:name],

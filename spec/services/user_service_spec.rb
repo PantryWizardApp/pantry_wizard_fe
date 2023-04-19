@@ -25,7 +25,7 @@ RSpec.describe UserService do
   it 'can create a new user' do
     user = {email: "test@gmail.com", name: "Bob", google_id: "12345"}
 
-    user_creation = UserService.create_user(user)
+    user_creation = UserService.create_new_user(user)
 
     expect(user_creation[:data][:attributes][:email]).to eq("test@gmail.com")
     expect(user_creation[:data][:attributes][:name]).to eq("Bob")
