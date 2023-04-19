@@ -54,9 +54,9 @@
         <br>
         <h3> My Upcoming Meal Plans: </h3>
         <div class="row align-items-start">
-          <% @user_day_plans[:data].each do |day_plan| %>
+          <% @user_day_plans.each do |day_plan| %>
             <div class="col h6">
-              <p> Meal Plan for: <%= day_plan[:attributes][:date] %> </p>
+              <p> Meal Plan for: <%= day_plan.date %> </p>
               <br>
               <p>
             </div>
