@@ -17,14 +17,14 @@ RSpec.describe UserService do
   end
 
   it 'can create a new user' do
-    @user = {email: "test@gmail.com", name: "Bob", google_id: "12345"}
+    @user = {email: "test_2@gmail.com", name: "Bob", google_id: "1223456"}
     VCR.use_cassette("user_service_create_new_user") do
       response = UserService.create_new_user(@user)
       @user_creation = JSON.parse(response.body, symbolize_names: true)
     end
     
-    expect(@user_creation[:data][:attributes][:email]).to eq("test@gmail.com")
+    expect(@user_creation[:data][:attributes][:email]).to eq("test_2@gmail.com")
     expect(@user_creation[:data][:attributes][:name]).to eq("Bob")
-    expect(@user_creation[:data][:attributes][:google_id]).to eq("12345")
+    expect(@user_creation[:data][:attributes][:google_id]).to eq("1223456")
   end
 end

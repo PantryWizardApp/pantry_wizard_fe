@@ -35,22 +35,21 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"9c3edc5db86b13c23a0841532d412a29"
+      - W/"7502f91e473d05672add9d192ae9c100"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 206e85ac-94db-432f-90ef-13295d236636
+      - aa9f7d1b-c9c1-4a36-a60f-9b4fccc0d520
       X-Runtime:
-      - '0.069430'
+      - '0.009152'
       Server-Timing:
-      - start_processing.action_controller;dur=0.20, sql.active_record;dur=32.58,
-        instantiation.active_record;dur=3.62, process_action.action_controller;dur=49.39
+      - start_processing.action_controller;dur=0.08, sql.active_record;dur=1.35, instantiation.active_record;dur=0.09,
+        process_action.action_controller;dur=3.58
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"2","type":"recipe","attributes":{"spoonacular_id":123421512,"name":"noodles2","ingredients":"noodles,
-        water","instructions":"boil water, add noodles, cook til al dente","image":"https://spoonacular.com/recipeImages/595736-556x370.jpg"}},{"id":"3","type":"recipe","attributes":{"spoonacular_id":1234215343,"name":"oatmeal","ingredients":"oats,
-        water","instructions":"idk mannn, JUST THROw IT IN THE WATER","image":"https://spoonacular.com/recipeImages/595736-556x370.jpg"}}]}'
-  recorded_at: Wed, 19 Apr 2023 03:15:53 GMT
+      string: '{"data":[{"id":"1","type":"recipe","attributes":{"spoonacular_id":1234567890,"name":"oatmeal","ingredients":"oats,
+        water, salt","instructions":"boil water, add oats, add salt, stir, eat","image":"https://spoonacular.com/recipeImages/595736-556x370.jpg"}}]}'
+  recorded_at: Wed, 19 Apr 2023 18:28:58 GMT
 recorded_with: VCR 6.1.0

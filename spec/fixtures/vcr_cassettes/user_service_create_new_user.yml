@@ -5,7 +5,7 @@ http_interactions:
     uri: http://localhost:4000/api/v1/users
     body:
       encoding: UTF-8
-      string: email=test%40gmail.com&google_id=12345&name=Bob
+      string: email=test_2%40gmail.com&google_id=1223456&name=Bob
     headers:
       User-Agent:
       - Faraday v2.7.4
@@ -37,20 +37,20 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"685d276a9e0d4bf94acf7fc505783f5a"
+      - W/"87c6c53dd270ed66d50f413a57d22486"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - acf86d7f-a450-4e90-ab22-7fc2f2aeba28
+      - '008086b6-f109-4bba-a4e4-642e68790982'
       X-Runtime:
-      - '0.049105'
+      - '0.052730'
       Server-Timing:
-      - start_processing.action_controller;dur=0.20, sql.active_record;dur=26.83,
-        process_action.action_controller;dur=33.57
+      - start_processing.action_controller;dur=0.16, sql.active_record;dur=27.11,
+        process_action.action_controller;dur=39.94
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"5","type":"user","attributes":{"email":"test@gmail.com","name":"Bob","google_id":"12345","id":5,"intolerances":null,"likes":null,"dislikes":null,"dietary_restrictions":null}}}'
-  recorded_at: Wed, 19 Apr 2023 16:21:39 GMT
+      string: '{"data":{"id":"6","type":"user","attributes":{"email":"test_2@gmail.com","name":"Bob","google_id":"1223456","id":6,"intolerances":null,"likes":null,"dislikes":null,"dietary_restrictions":null}}}'
+  recorded_at: Wed, 19 Apr 2023 18:36:47 GMT
 recorded_with: VCR 6.1.0

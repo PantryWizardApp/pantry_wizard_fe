@@ -35,24 +35,23 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"c1e151b22e99eaa4caf24afdba1a6ba2"
+      - W/"28c23df4a1e7c323833835294e0f2cd9"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 683307fe-ca16-4449-99e7-af59758debfa
+      - 8716a1b1-765e-4146-9c96-ff90369cf6b9
       X-Runtime:
-      - '0.273670'
+      - '0.008770'
       Server-Timing:
-      - start_processing.action_controller;dur=0.62, sql.active_record;dur=39.68,
-        instantiation.active_record;dur=1.14, process_action.action_controller;dur=207.27
+      - start_processing.action_controller;dur=0.11, sql.active_record;dur=2.30, instantiation.active_record;dur=0.09,
+        process_action.action_controller;dur=3.85
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"2","type":"recipe","attributes":{"spoonacular_id":123421512,"name":"noodles2","ingredients":"noodles,
-        water","instructions":"boil water, add noodles, cook til al dente","image":"https://spoonacular.com/recipeImages/595736-556x370.jpg"}},{"id":"3","type":"recipe","attributes":{"spoonacular_id":1234215343,"name":"oatmeal","ingredients":"oats,
-        water","instructions":"idk mannn, JUST THROw IT IN THE WATER","image":"https://spoonacular.com/recipeImages/595736-556x370.jpg"}},{"id":"4","type":"recipe","attributes":{"spoonacular_id":1234567890,"name":"brownies","ingredients":"sugar,
+      string: '{"data":[{"id":"1","type":"recipe","attributes":{"spoonacular_id":1234567890,"name":"oatmeal","ingredients":"oats,
+        water, salt","instructions":"boil water, add oats, add salt, stir, eat","image":"https://spoonacular.com/recipeImages/595736-556x370.jpg"}},{"id":"7","type":"recipe","attributes":{"spoonacular_id":2345678901,"name":"brownies","ingredients":"sugar,
         chocolate, flour","instructions":"just throw it all in a bowl and mix, spread
         it out over a baking pan, bake unitl it no longer looks weird","image":"https://spoonacular.com/recipeImages/595736-556x370.jpg"}}]}'
-  recorded_at: Wed, 19 Apr 2023 03:09:24 GMT
+  recorded_at: Wed, 19 Apr 2023 18:28:26 GMT
 recorded_with: VCR 6.1.0

@@ -28,7 +28,7 @@ RSpec.describe RecipeService do
           pasta = RecipeService.search_recipes("query=pasta&number=5")
           expect(pasta).to be_a(Hash)
           expect(pasta[:results].size).to eq(5)
-          expect(pasta.keys).to eq([:results, :baseUri, :offset, :number, :totalResults, :processingTimeMs, :expires, :isStale])
+          expect(pasta.keys).to eq([:results, :baseUri, :offset, :number, :totalResults, :processingTimeMs, :expires])
         end
       end
     end
@@ -56,6 +56,7 @@ RSpec.describe RecipeService do
 
     context "get_breakfast_recipes" do
       it "returns a list of breakfast recipes" do
+        allow(RecipeService).to receive(:offset).and_return(162)
         VCR.use_cassette("get_breakfast_recipes") do
           breakfast = RecipeService.get_preferred_breakfast_recipes(@user)
           expect(breakfast).to be_a(Hash)
@@ -66,6 +67,7 @@ RSpec.describe RecipeService do
 
     context "get_main_recipes" do
       it "returns a list of main course recipes" do
+        allow(RecipeService).to receive(:offset).and_return(348)
         VCR.use_cassette("get_main_recipes") do
           main_course = RecipeService.get_preferred_main_recipes(@user)
           expect(main_course).to be_a(Hash)

@@ -2,10 +2,10 @@
 http_interactions:
 - request:
     method: patch
-    uri: http://localhost:4000/api/v1/users/1/day_plans/15
+    uri: http://localhost:4000/api/v1/users/1/day_plans/5
     body:
       encoding: UTF-8
-      string: date=2022-02-21
+      string: date=2022-07-21
     headers:
       User-Agent:
       - Faraday v2.7.4
@@ -17,8 +17,8 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 404
-      message: Not Found
+      code: 200
+      message: OK
     headers:
       X-Frame-Options:
       - SAMEORIGIN
@@ -36,19 +36,22 @@ http_interactions:
       - application/json; charset=utf-8
       Vary:
       - Accept
+      Etag:
+      - W/"86b0c24d0e0cdee40461b0a8c90d4ce7"
       Cache-Control:
-      - no-cache
+      - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 86d2c01c-23aa-4978-95f3-2b3588f75715
+      - 05c0c5c0-38f1-415a-a88a-60fbdd912784
       X-Runtime:
-      - '0.010689'
+      - '0.093032'
       Server-Timing:
-      - start_processing.action_controller;dur=0.16, sql.active_record;dur=1.75, instantiation.active_record;dur=0.08,
-        unpermitted_parameters.action_controller;dur=0.10, process_action.action_controller;dur=3.05
+      - start_processing.action_controller;dur=0.22, sql.active_record;dur=41.35,
+        instantiation.active_record;dur=0.38, unpermitted_parameters.action_controller;dur=0.18,
+        process_action.action_controller;dur=75.72
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"errors":[{"status":"404","title":"Couldn''t find DayPlan with ''id''=15"}]}'
-  recorded_at: Wed, 19 Apr 2023 03:34:04 GMT
+      string: '{"data":{"id":"5","type":"day_plan","attributes":{"user_id":1,"date":"2022-07-21"}}}'
+  recorded_at: Wed, 19 Apr 2023 18:15:08 GMT
 recorded_with: VCR 6.1.0

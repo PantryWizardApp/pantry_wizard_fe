@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: delete
-    uri: http://localhost:4000/api/v1/users/1/day_plans/15
+    uri: http://localhost:4000/api/v1/users/1/day_plans/5
     body:
       encoding: US-ASCII
       string: ''
@@ -15,8 +15,8 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 404
-      message: Not Found
+      code: 200
+      message: OK
     headers:
       X-Frame-Options:
       - SAMEORIGIN
@@ -34,19 +34,21 @@ http_interactions:
       - application/json; charset=utf-8
       Vary:
       - Accept
+      Etag:
+      - W/"86b0c24d0e0cdee40461b0a8c90d4ce7"
       Cache-Control:
-      - no-cache
+      - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 23f21916-2265-4ad6-aad9-29e87c3bfe94
+      - 411ab5bc-3b6b-480f-ae0b-2939ca543728
       X-Runtime:
-      - '0.026538'
+      - '0.086565'
       Server-Timing:
-      - start_processing.action_controller;dur=0.16, sql.active_record;dur=6.53, instantiation.active_record;dur=0.07,
-        process_action.action_controller;dur=18.44
+      - start_processing.action_controller;dur=0.17, sql.active_record;dur=38.71,
+        instantiation.active_record;dur=0.42, process_action.action_controller;dur=67.31
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"errors":[{"status":"404","title":"Couldn''t find DayPlan with ''id''=15"}]}'
-  recorded_at: Wed, 19 Apr 2023 03:34:04 GMT
+      string: '{"data":{"id":"5","type":"day_plan","attributes":{"user_id":1,"date":"2022-07-21"}}}'
+  recorded_at: Wed, 19 Apr 2023 18:16:12 GMT
 recorded_with: VCR 6.1.0

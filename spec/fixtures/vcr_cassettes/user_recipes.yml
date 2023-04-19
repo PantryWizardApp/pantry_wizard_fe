@@ -35,22 +35,23 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"9c3edc5db86b13c23a0841532d412a29"
+      - W/"43e10be1f126122572d6b070fe9e7347"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 475ed615-e7ca-409f-92a3-0f2dc0ac27a9
+      - 60e46cf9-83a2-4b24-8713-ed4366b53292
       X-Runtime:
-      - '0.110739'
+      - '0.057046'
       Server-Timing:
-      - start_processing.action_controller;dur=0.15, sql.active_record;dur=52.42,
-        instantiation.active_record;dur=4.11, process_action.action_controller;dur=96.88
+      - start_processing.action_controller;dur=0.18, sql.active_record;dur=18.63,
+        instantiation.active_record;dur=3.33, process_action.action_controller;dur=44.12
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"2","type":"recipe","attributes":{"spoonacular_id":123421512,"name":"noodles2","ingredients":"noodles,
-        water","instructions":"boil water, add noodles, cook til al dente","image":"https://spoonacular.com/recipeImages/595736-556x370.jpg"}},{"id":"3","type":"recipe","attributes":{"spoonacular_id":1234215343,"name":"oatmeal","ingredients":"oats,
-        water","instructions":"idk mannn, JUST THROw IT IN THE WATER","image":"https://spoonacular.com/recipeImages/595736-556x370.jpg"}}]}'
-  recorded_at: Wed, 19 Apr 2023 02:52:56 GMT
+      string: '{"data":[{"id":"1","type":"recipe","attributes":{"spoonacular_id":1234567890,"name":"oatmeal","ingredients":"oats,
+        water, salt","instructions":"boil water, add oats, add salt, stir, eat","image":"https://spoonacular.com/recipeImages/595736-556x370.jpg"}},{"id":"3","type":"recipe","attributes":{"spoonacular_id":1234567890,"name":"brownies","ingredients":"sugar,
+        chocolate, flour","instructions":"just throw it all in a bowl and mix, spread
+        it out over a baking pan, bake unitl it no longer looks weird","image":"https://spoonacular.com/recipeImages/595736-556x370.jpg"}}]}'
+  recorded_at: Wed, 19 Apr 2023 17:26:07 GMT
 recorded_with: VCR 6.1.0

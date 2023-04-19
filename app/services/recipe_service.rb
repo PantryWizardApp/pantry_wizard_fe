@@ -40,9 +40,8 @@ class RecipeService
       # intolerances: user.intolerances.any? ? user.intolerances.join(",") : "",
       # diet: user.dietary_restrictions,
       
-    
-    offset = rand(0..500)
-    get_url("/recipes/search?#{params}&number=1&offset=#{offset}&instructionsRequired=True")
+  
+    get_url("/recipes/search?#{params}&number=1&offset=#{self.offset}&instructionsRequired=True")
   end
 
   def self.get_preferred_main_recipes(user)
@@ -55,12 +54,15 @@ class RecipeService
       type: "main course"
       }
 
-      offset = rand(0..500)
-      get_url("/recipes/search?#{params}&number=1&offset=#{offset}&instructionsRequired=True")
+      get_url("/recipes/search?#{params}&number=1&offset=#{self.offset}&instructionsRequired=True")
+    end
+    
+    private 
+    
+  def self.offset
+    rand(0..500)
   end
 
-  private 
-  
   def self.conn
     Faraday.new(url:"https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com") do |faraday|
       faraday.headers["X-RapidAPI-Key"] = ENV["X_RapidAPI_Key"]

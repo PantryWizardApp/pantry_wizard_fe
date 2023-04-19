@@ -35,20 +35,20 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"9715f78fc8f0bb9106c26233c1b88398"
+      - W/"ac590ca59dfa6ffbbe89036c5d9b731f"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 5be3d68b-accb-4882-8dbd-c06188806f83
+      - 45fe498d-6dde-44cb-a5c9-1a0a56eec157
       X-Runtime:
-      - '0.020001'
+      - '0.006780'
       Server-Timing:
-      - start_processing.action_controller;dur=0.19, sql.active_record;dur=7.64, instantiation.active_record;dur=0.18,
-        process_action.action_controller;dur=10.79
+      - start_processing.action_controller;dur=0.10, sql.active_record;dur=1.74, instantiation.active_record;dur=0.05,
+        process_action.action_controller;dur=2.76
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"4","type":"user","attributes":{"email":"cdvanloan@gmail.com","name":"Conner","google_id":"106048413854356122337","id":4,"intolerances":null,"likes":null,"dislikes":null,"dietary_restrictions":null}}}'
-  recorded_at: Wed, 19 Apr 2023 16:14:10 GMT
+      string: '{"data":{"id":"4","type":"user","attributes":{"email":"cdvanloan@gmail.com","name":"Conner","google_id":"106048413854356122337","id":4,"intolerances":"dairy","likes":"chinese","dislikes":"irish","dietary_restrictions":"Vegan"}}}'
+  recorded_at: Wed, 19 Apr 2023 17:18:23 GMT
 recorded_with: VCR 6.1.0

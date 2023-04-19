@@ -39,17 +39,17 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 7086c3d9-6014-482f-aac1-6af5101a7386
+      - 88f7b80c-518e-4a0b-a514-bf68d49877e4
       X-Runtime:
-      - '0.023503'
+      - '0.014663'
       Server-Timing:
-      - start_processing.action_controller;dur=0.14, sql.active_record;dur=10.11,
-        instantiation.active_record;dur=0.19, process_action.action_controller;dur=14.37
+      - start_processing.action_controller;dur=0.12, sql.active_record;dur=1.48, instantiation.active_record;dur=0.05,
+        process_action.action_controller;dur=9.59
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"1","type":"user","attributes":{"email":"bh@gmail.com","name":"Brian","google_id":"1234567890a","id":1,"intolerances":"dairy,
         gluten","likes":null,"dislikes":null,"dietary_restrictions":"vegan"}}}'
-  recorded_at: Wed, 19 Apr 2023 16:20:09 GMT
+  recorded_at: Wed, 19 Apr 2023 17:26:08 GMT
 recorded_with: VCR 6.1.0

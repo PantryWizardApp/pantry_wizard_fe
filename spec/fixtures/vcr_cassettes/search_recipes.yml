@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       X-Rapidapi-Key:
-      - X-RapidAPI-Key
+      - 94534da646mshde7e120c9bce392p139c9ejsnaf50e90c38bb
       User-Agent:
       - Faraday v2.7.4
       Accept-Encoding:
@@ -21,31 +21,31 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 19 Apr 2023 03:37:26 GMT
+      - Wed, 19 Apr 2023 16:54:21 GMT
       Content-Type:
       - application/json
       Content-Length:
-      - '581'
+      - '571'
       Connection:
       - keep-alive
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Cf-Cache-Status:
       - DYNAMIC
-      Access-Control-Allow-Methods:
+      Allow-Control-Allow-Methods:
       - GET, HEAD, POST, OPTIONS, DELETE, PUT
       Access-Control-Allow-Origin:
       - "*"
-      Allow-Control-Allow-Methods:
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=OwaKizoGM5ooM%2Bt4HPRwOnTW1vfdvCmliXMMjcxRsj87EHID4KDjmAHFTxrLhA3DEb5O%2F6fIgxLqk3p1jQD5Exbnvpbtnuzoog4x%2B1Y2ux7wc9D7hHSqRDQCTlxCIahx2ow9xHM%3D"}],"group":"cf-nel","max_age":604800}'
+      Access-Control-Allow-Methods:
       - GET, HEAD, POST, OPTIONS, DELETE, PUT
-      Cf-Ray:
-      - 7ba21be0fee32427-IAD
-      Allow-Control-Allow-Origin:
-      - "*"
       Alt-Svc:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
-      Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=gHFa5LJRXAikegmetVPAmGEF75yWDG250ka9kwaj7TgOVu9M15TB0MzNlYLFCPiG2I1oCUs3OkdoUAQklGEhXZHuSzgd29VddNTFzXY%2BqM%2BzgE%2BRNw%2FuHwwZmEvYQsJ8aWBe6d0%3D"}],"group":"cf-nel","max_age":604800}'
+      Allow-Control-Allow-Origin:
+      - "*"
+      Cf-Ray:
+      - 7ba6ab3d1814ec38-SEA
       Access-Control-Allow-Headers:
       - Authorization, UserId, Hash, Name, Password, Accept, Accept-Language, x-api-key,
         Content-Language, Content-Type, Cache-Control, Origin, X-Requested-With
@@ -54,25 +54,25 @@ http_interactions:
       X-Ratelimit-Tinyrequests-Remaining:
       - '500'
       X-Ratelimit-Tinyrequests-Reset:
-      - '63532'
+      - '85689'
       X-Ratelimit-Requests-Limit:
       - '50'
       X-Ratelimit-Requests-Remaining:
-      - "-82"
+      - '36'
       X-Ratelimit-Requests-Reset:
-      - '63532'
+      - '85689'
       X-Ratelimit-Results-Limit:
       - '500'
       X-Ratelimit-Results-Remaining:
-      - '435'
+      - '492'
       X-Ratelimit-Results-Reset:
-      - '63532'
+      - '85689'
       Server:
       - RapidAPI-1.2.8
       X-Rapidapi-Version:
       - 1.2.8
       X-Rapidapi-Region:
-      - AWS - us-east-1
+      - AWS - us-west-2
     body:
       encoding: ASCII-8BIT
       string: '{"results":[{"readyInMinutes":45,"sourceUrl":"https://www.cinnamonspiceandeverythingnice.com/ranch-blt-pasta-salad/","image":"Ranch-BLT-Pasta-Salad-491786.jpg","servings":8,"id":491786,"title":"Ranch
@@ -80,6 +80,6 @@ http_interactions:
         Gnocchi Soup (Olive Garden Copycat)"},{"readyInMinutes":30,"sourceUrl":"http://www.loveandoliveoil.com/2015/03/soy-sauce-noodles.html","image":"soy-sauce-noodles-909570.jpg","servings":2,"id":909570,"title":"Soy
         Sauce Noodles"},{"readyInMinutes":45,"sourceUrl":"http://www.sheknows.com/food-and-recipes/articles/1027283/beef-orzo-skillet-recipe","image":"Beef-orzo-skillet-667384.jpg","servings":4,"id":667384,"title":"Beef
         orzo skillet"},{"readyInMinutes":63,"sourceUrl":"http://thewoksoflife.com/2014/03/ratatouille-pasta/","image":"roasted-ratatouille-pasta-709814.jpg","servings":3,"id":709814,"title":"Roasted
-        Ratatouille Pasta"}],"baseUri":"https://spoonacular.com/recipeImages/","offset":0,"number":5,"totalResults":828,"processingTimeMs":397,"expires":1682134358852,"isStale":false}'
-  recorded_at: Wed, 19 Apr 2023 03:37:26 GMT
+        Ratatouille Pasta"}],"baseUri":"https://spoonacular.com/recipeImages/","offset":0,"number":5,"totalResults":828,"processingTimeMs":465,"expires":1682182461877}'
+  recorded_at: Wed, 19 Apr 2023 16:54:21 GMT
 recorded_with: VCR 6.1.0
