@@ -1,0 +1,56 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:4000/api/v1/users/1/recipes
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"9c3edc5db86b13c23a0841532d412a29"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 206e85ac-94db-432f-90ef-13295d236636
+      X-Runtime:
+      - '0.069430'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.20, sql.active_record;dur=32.58,
+        instantiation.active_record;dur=3.62, process_action.action_controller;dur=49.39
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"2","type":"recipe","attributes":{"spoonacular_id":123421512,"name":"noodles2","ingredients":"noodles,
+        water","instructions":"boil water, add noodles, cook til al dente","image":"https://spoonacular.com/recipeImages/595736-556x370.jpg"}},{"id":"3","type":"recipe","attributes":{"spoonacular_id":1234215343,"name":"oatmeal","ingredients":"oats,
+        water","instructions":"idk mannn, JUST THROw IT IN THE WATER","image":"https://spoonacular.com/recipeImages/595736-556x370.jpg"}}]}'
+  recorded_at: Wed, 19 Apr 2023 03:15:53 GMT
+recorded_with: VCR 6.1.0
