@@ -2,12 +2,12 @@ class DayPlanService
 
   def self.user_day_plans(google_id)
     response = conn.get("/api/v1/users/#{google_id}/day_plans")
-    JSON.parse(response.body, symbolize_names: true)
+    day_plans = JSON.parse(response.body, symbolize_names: true)
   end
 
   def self.user_day_plan(google_id, day_plan_id)
     response = conn.get("/api/v1/users/#{google_id}/day_plans/#{day_plan_id}")
-    JSON.parse(response.body, symbolize_names: true)
+    day_plan = JSON.parse(response.body, symbolize_names: true)
   end
 
   
