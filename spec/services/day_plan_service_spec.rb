@@ -8,14 +8,14 @@ RSpec.describe DayPlanService do
         day_plans = DayPlanService.user_day_plans(user_id)
         data = day_plans[:data]
         
-        expect(data.count).to eq(2)
+        expect(data.count).to eq(1)
         expect(data).to be_an Array
   
         day_plan = data.first
   
-        expect(day_plan[:id]).to eq("1")
+        expect(day_plan[:id]).to eq("2")
         expect(day_plan[:attributes][:user_id]).to eq(1)
-        expect(day_plan[:attributes][:date]).to eq("2021-01-01")
+        expect(day_plan[:attributes][:date]).to eq("2023-04-17")
       end
     end
 
@@ -27,7 +27,7 @@ RSpec.describe DayPlanService do
 
         data = day_plan[:data]
         expect(data[:id]).to eq("1")
-        expect(data[:attributes][:user_id]).to eq(1)
+        expect(data[:attributes][:user_id]).to eq(4)
         expect(data[:attributes][:date]).to eq("2021-01-01")
       end
     end
@@ -83,7 +83,6 @@ RSpec.describe DayPlanService do
         day_plan_id = "15"
         new_day_plan = DayPlanService.delete_user_day_plan(user_id, day_plan_id)
         data = new_day_plan[:data]
-
         expect(data[:id]).to eq("15")
         expect(data[:attributes][:user_id]).to eq(1)
         expect(data[:attributes][:date]).to eq("2022-02-21")

@@ -1,0 +1,349 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/search?instructionsRequired=True&number=1&offset=15&%7B:query=%3E%22*%22,%20:cuisine=%3E%22%22,%20:excludeCuisine=%3E%22%22,%20:intolerances=%3E%22%22,%20:diet=%3Enil,%20:type=%3E%22main%20course%22%7D
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Rapidapi-Key:
+      - X-RapidAPI-Key
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 19 Apr 2023 03:33:59 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '271'
+      Connection:
+      - keep-alive
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Cf-Cache-Status:
+      - DYNAMIC
+      Allow-Control-Allow-Methods:
+      - GET, HEAD, POST, OPTIONS, DELETE, PUT
+      Access-Control-Allow-Origin:
+      - "*"
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=aaNP7IENhmcCaLMEU6Z%2BM3kxMp5s7QgYRzE85EtOupCWOb3t2svyB1R4cHRrnlEmTMqJOhV26kqGP84FTXkOn%2BmPf58V0QydNKnBfPF4fEC3yygz2lYvu5s5FVkELIi3Q%2FIcEMM%3D"}],"group":"cf-nel","max_age":604800}'
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, OPTIONS, DELETE, PUT
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+      Allow-Control-Allow-Origin:
+      - "*"
+      Cf-Ray:
+      - 7ba216d75c3d8212-IAD
+      Access-Control-Allow-Headers:
+      - Authorization, UserId, Hash, Name, Password, Accept, Accept-Language, x-api-key,
+        Content-Language, Content-Type, Cache-Control, Origin, X-Requested-With
+      X-Ratelimit-Tinyrequests-Limit:
+      - '500'
+      X-Ratelimit-Tinyrequests-Remaining:
+      - '500'
+      X-Ratelimit-Tinyrequests-Reset:
+      - '63739'
+      X-Ratelimit-Requests-Limit:
+      - '50'
+      X-Ratelimit-Requests-Remaining:
+      - "-69"
+      X-Ratelimit-Requests-Reset:
+      - '63739'
+      X-Ratelimit-Results-Limit:
+      - '500'
+      X-Ratelimit-Results-Remaining:
+      - '441'
+      X-Ratelimit-Results-Reset:
+      - '63739'
+      Server:
+      - RapidAPI-1.2.8
+      X-Rapidapi-Version:
+      - 1.2.8
+      X-Rapidapi-Region:
+      - AWS - us-east-1
+    body:
+      encoding: ASCII-8BIT
+      string: '{"results":[{"readyInMinutes":15,"sourceUrl":"http://civilizedcavemancooking.com/entrees/beef/stir-fry-beef-salad/","image":"Stir-Fry-Beef-Salad-473805.jpg","servings":4,"id":473805,"title":"Stir
+        Fry Beef Salad"}],"baseUri":"https://spoonacular.com/recipeImages/","offset":15,"number":1,"totalResults":385626,"processingTimeMs":181,"expires":1682134439823}'
+  recorded_at: Wed, 19 Apr 2023 03:33:59 GMT
+- request:
+    method: get
+    uri: https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/473805/information
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Rapidapi-Key:
+      - X-RapidAPI-Key
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 19 Apr 2023 03:34:00 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '2586'
+      Connection:
+      - keep-alive
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Cf-Cache-Status:
+      - DYNAMIC
+      Allow-Control-Allow-Methods:
+      - GET, HEAD, POST, OPTIONS, DELETE, PUT
+      Access-Control-Allow-Origin:
+      - "*"
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=oxWSHvTyp0BLLORjN0MLB9bX5D12egj8VWvs3ONPsod8xaIGJej280V2s8MTaJDkjhf39wkGZ4Vcf5ejKIddRZHmwiNvuYKaNO7imJ%2FMkRXIOb49rjIGdq7Z%2FK7gDJmpan2ZZyI%3D"}],"group":"cf-nel","max_age":604800}'
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, OPTIONS, DELETE, PUT
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+      Allow-Control-Allow-Origin:
+      - "*"
+      Cf-Ray:
+      - 7ba216db5c588f0a-IAD
+      Access-Control-Allow-Headers:
+      - Authorization, UserId, Hash, Name, Password, Accept, Accept-Language, x-api-key,
+        Content-Language, Content-Type, Cache-Control, Origin, X-Requested-With
+      X-Ratelimit-Tinyrequests-Limit:
+      - '500'
+      X-Ratelimit-Tinyrequests-Remaining:
+      - '500'
+      X-Ratelimit-Tinyrequests-Reset:
+      - '63738'
+      X-Ratelimit-Requests-Limit:
+      - '50'
+      X-Ratelimit-Requests-Remaining:
+      - "-70"
+      X-Ratelimit-Requests-Reset:
+      - '63738'
+      X-Ratelimit-Results-Limit:
+      - '500'
+      X-Ratelimit-Results-Remaining:
+      - '441'
+      X-Ratelimit-Results-Reset:
+      - '63738'
+      Server:
+      - RapidAPI-1.2.8
+      X-Rapidapi-Version:
+      - 1.2.8
+      X-Rapidapi-Region:
+      - AWS - us-east-1
+    body:
+      encoding: ASCII-8BIT
+      string: '{"vegetarian":false,"vegan":false,"glutenFree":true,"dairyFree":true,"veryHealthy":false,"cheap":false,"veryPopular":false,"sustainable":false,"lowFodmap":false,"weightWatcherSmartPoints":8,"gaps":"no","preparationMinutes":5,"cookingMinutes":10,"aggregateLikes":248,"healthScore":37,"creditsText":"Civilized
+        Caveman Cooking","sourceName":"Civilized Caveman Cooking","pricePerServing":341.43,"extendedIngredients":[{"id":23232,"aisle":"Meat","image":"ribeye-raw.jpg","consistency":"SOLID","name":"beef
+        tip steak","nameClean":"steak","original":"1 lb beef tip steak sliced into
+        thin strips","originalName":"beef tip steak sliced into thin strips","amount":1.0,"unit":"lb","meta":["sliced
+        into thin strips"],"measures":{"us":{"amount":1.0,"unitShort":"lb","unitLong":"pound"},"metric":{"amount":453.592,"unitShort":"g","unitLong":"grams"}}},{"id":10211821,"aisle":"Produce","image":"bell-pepper-orange.png","consistency":"SOLID","name":"bell
+        peppers","nameClean":"bell pepper","original":"1 1/2 cup sliced bell peppers","originalName":"sliced
+        bell peppers","amount":1.5,"unit":"cup","meta":["sliced"],"measures":{"us":{"amount":1.5,"unitShort":"cups","unitLong":"cups"},"metric":{"amount":354.882,"unitShort":"ml","unitLong":"milliliters"}}},{"id":1034053,"aisle":"Oil,
+        Vinegar, Salad Dressing","image":"olive-oil.jpg","consistency":"LIQUID","name":"extra
+        virgin olive oil","nameClean":"extra virgin olive oil","original":"2 tsp extra
+        virgin olive oil","originalName":"extra virgin olive oil","amount":2.0,"unit":"tsp","meta":[],"measures":{"us":{"amount":2.0,"unitShort":"tsps","unitLong":"teaspoons"},"metric":{"amount":2.0,"unitShort":"tsps","unitLong":"teaspoons"}}},{"id":21052,"aisle":"Produce","image":"mixed-greens-or-mesclun.jpg","consistency":"SOLID","name":"greens","nameClean":"mesclun","original":"1
+        bag of mixed greens","originalName":"mixed greens","amount":1.0,"unit":"bag","meta":["mixed"],"measures":{"us":{"amount":1.0,"unitShort":"bag","unitLong":"bag"},"metric":{"amount":1.0,"unitShort":"bag","unitLong":"bag"}}},{"id":1032009,"aisle":"Spices
+        and Seasonings","image":"red-pepper-flakes.jpg","consistency":"SOLID","name":"pepper
+        flakes","nameClean":"red pepper flakes","original":"1 tsp red pepper flakes
+        (optional)","originalName":"red pepper flakes (optional)","amount":1.0,"unit":"tsp","meta":["red"],"measures":{"us":{"amount":1.0,"unitShort":"tsp","unitLong":"teaspoon"},"metric":{"amount":1.0,"unitShort":"tsp","unitLong":"teaspoon"}}},{"id":10116124,"aisle":"Ethnic
+        Foods","image":"soy-sauce.jpg","consistency":"LIQUID","name":"tamari sauce","nameClean":"tamari","original":"1
+        tbsp tamari sauce","originalName":"tamari sauce","amount":1.0,"unit":"tbsp","meta":[],"measures":{"us":{"amount":1.0,"unitShort":"Tbsp","unitLong":"Tbsp"},"metric":{"amount":1.0,"unitShort":"Tbsp","unitLong":"Tbsp"}}},{"id":10611282,"aisle":"Produce","image":"white-onion.png","consistency":"SOLID","name":"onion","nameClean":"white
+        onion","original":"3/4 cup sliced white onion","originalName":"sliced white
+        onion","amount":0.75,"unit":"cup","meta":["white","sliced"],"measures":{"us":{"amount":0.75,"unitShort":"cups","unitLong":"cups"},"metric":{"amount":177.441,"unitShort":"ml","unitLong":"milliliters"}}}],"id":473805,"title":"Stir
+        Fry Beef Salad","readyInMinutes":15,"servings":4,"sourceUrl":"http://civilizedcavemancooking.com/entrees/beef/stir-fry-beef-salad/","image":"https://spoonacular.com/recipeImages/473805-556x370.jpg","imageType":"jpg","summary":"If
+        you have approximately <b>15 minutes</b> to spend in the kitchen, Stir Fry
+        Beef Salad might be a spectacular <b>gluten free, dairy free, and ketogenic</b>
+        recipe to try. One serving contains <b>291 calories</b>, <b>25g of protein</b>,
+        and <b>19g of fat</b>. For <b>$3.41 per serving</b>, you get a main course
+        that serves 4. 248 people have tried and liked this recipe. It is brought
+        to you by Civilized Caveman Cooking. If you have beef tip steak, bell peppers,
+        extra virgin olive oil, and a few other ingredients on hand, you can make
+        it. Overall, this recipe earns an <b>awesome spoonacular score of 97%</b>.
+        Similar recipes are <a href=\"https://spoonacular.com/recipes/stir-fry-beef-salad-1285005\">Stir
+        Fry Beef Salad</a>, <a href=\"https://spoonacular.com/recipes/stir-fry-beef-salad-1330967\">Stir
+        Fry Beef Salad</a>, and <a href=\"https://spoonacular.com/recipes/stir-fry-beef-salad-1247167\">Stir
+        Fry Beef Salad</a>.","cuisines":[],"dishTypes":["side dish","lunch","salad","main
+        course","main dish","dinner"],"diets":["gluten free","dairy free","ketogenic"],"occasions":[],"winePairing":{"pairedWines":["chardonnay","sauvignon
+        blanc","gruener veltliner"],"pairingText":"Salad works really well with Chardonnay,
+        Sauvignon Blanc, and Gruener Veltliner. Sauvignon Blanc and Gruner Veltliner
+        both have herby notes that complement salads with enough acid to match tart
+        vinaigrettes, while a Chardonnay can be a good pick for creamy salad dressings.
+        The Pedroncelli Signature Selection Chardonnay with a 4.4 out of 5 star rating
+        seems like a good match. It costs about 15 dollars per bottle.","productMatches":[{"id":451832,"title":"Pedroncelli
+        Signature Selection Chardonnay","description":"Rich lemon, pear and honey
+        notes in the bouquet lead to fresh flavors of apple, meyer lemon, and mango.
+        The blend of the two Chardonnay lots adds both fruit forward qualities and
+        toasted oak complexity. Highlighted by bright acidity, the wine finishes crisp
+        with a long lingering finish.","price":"$14.99","imageUrl":"https://spoonacular.com/productImages/451832-312x231.jpg","averageRating":0.8800000000000001,"ratingCount":5.0,"score":0.8175000000000001,"link":"https://click.linksynergy.com/deeplink?id=*QCiIS6t4gA&mid=2025&murl=https%3A%2F%2Fwww.wine.com%2Fproduct%2Fpedroncelli-signature-selection-chardonnay-2014%2F145699"}]},"instructions":"Add
+        olive oil to a skillet at a medium heatSaute onions until sweatingAdd beef
+        and tamari tossing and stirring oftenWhen your meat it almost fully cooked,
+        add the peppers and cook until softAdd mixed greens to your plate and top
+        with your stir fry or do what we did and steam some fresh veggies for the
+        sideEnjoy","analyzedInstructions":[{"name":"","steps":[{"number":1,"step":"Add
+        olive oil to a skillet at a medium heat","ingredients":[{"id":4053,"name":"olive
+        oil","localizedName":"olive oil","image":"olive-oil.jpg"}],"equipment":[{"id":404645,"name":"frying
+        pan","localizedName":"frying pan","image":"pan.png"}]},{"number":2,"step":"Saute
+        onions until sweating","ingredients":[{"id":11282,"name":"onion","localizedName":"onion","image":"brown-onion.png"}],"equipment":[]},{"number":3,"step":"Add
+        beef and tamari tossing and stirring often","ingredients":[{"id":10116124,"name":"tamari","localizedName":"tamari","image":"soy-sauce.jpg"},{"id":23572,"name":"beef","localizedName":"beef","image":"beef-cubes-raw.png"}],"equipment":[]},{"number":4,"step":"When
+        your meat it almost fully cooked, add the peppers and cook until soft","ingredients":[{"id":10111333,"name":"peppers","localizedName":"peppers","image":"green-pepper.jpg"},{"id":1065062,"name":"meat","localizedName":"meat","image":"whole-chicken.jpg"}],"equipment":[]},{"number":5,"step":"Add
+        mixed greens to your plate and top with your stir fry or do what we did and
+        steam some fresh veggies for the side","ingredients":[{"id":21052,"name":"mixed
+        greens","localizedName":"mixed greens","image":"mixed-greens-or-mesclun.jpg"}],"equipment":[]},{"number":6,"step":"Enjoy","ingredients":[],"equipment":[]}]}],"originalId":null}'
+  recorded_at: Wed, 19 Apr 2023 03:34:00 GMT
+- request:
+    method: get
+    uri: https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/473805/information
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Rapidapi-Key:
+      - X-RapidAPI-Key
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 19 Apr 2023 03:34:01 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '2660'
+      Connection:
+      - keep-alive
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Cf-Cache-Status:
+      - DYNAMIC
+      Allow-Control-Allow-Methods:
+      - GET, HEAD, POST, OPTIONS, DELETE, PUT
+      Access-Control-Allow-Origin:
+      - "*"
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=8LUw5RMMjT5IzoQorjZc7l5A0YiAllW2r91Ss%2BWQRAInAjEIc9ix26bk2xCc2nuO9EenLiZpiYGkrkYa2Opsz3I7hr%2FC%2FManJehLfWkR0lvX2IMGCBmMpTGUvhuIr1bQF2%2BoG3g%3D"}],"group":"cf-nel","max_age":604800}'
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, OPTIONS, DELETE, PUT
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+      Allow-Control-Allow-Origin:
+      - "*"
+      Cf-Ray:
+      - 7ba216e1a9fc07e3-IAD
+      Access-Control-Allow-Headers:
+      - Authorization, UserId, Hash, Name, Password, Accept, Accept-Language, x-api-key,
+        Content-Language, Content-Type, Cache-Control, Origin, X-Requested-With
+      X-Ratelimit-Tinyrequests-Limit:
+      - '500'
+      X-Ratelimit-Tinyrequests-Remaining:
+      - '500'
+      X-Ratelimit-Tinyrequests-Reset:
+      - '63737'
+      X-Ratelimit-Requests-Limit:
+      - '50'
+      X-Ratelimit-Requests-Remaining:
+      - "-71"
+      X-Ratelimit-Requests-Reset:
+      - '63737'
+      X-Ratelimit-Results-Limit:
+      - '500'
+      X-Ratelimit-Results-Remaining:
+      - '441'
+      X-Ratelimit-Results-Reset:
+      - '63737'
+      Server:
+      - RapidAPI-1.2.8
+      X-Rapidapi-Version:
+      - 1.2.8
+      X-Rapidapi-Region:
+      - AWS - us-east-1
+    body:
+      encoding: ASCII-8BIT
+      string: '{"vegetarian":false,"vegan":false,"glutenFree":true,"dairyFree":true,"veryHealthy":false,"cheap":false,"veryPopular":false,"sustainable":false,"lowFodmap":false,"weightWatcherSmartPoints":8,"gaps":"no","preparationMinutes":5,"cookingMinutes":10,"aggregateLikes":248,"healthScore":37,"creditsText":"Civilized
+        Caveman Cooking","sourceName":"Civilized Caveman Cooking","pricePerServing":341.43,"extendedIngredients":[{"id":23232,"aisle":"Meat","image":"ribeye-raw.jpg","consistency":"SOLID","name":"beef
+        tip steak","nameClean":"steak","original":"1 lb beef tip steak sliced into
+        thin strips","originalName":"beef tip steak sliced into thin strips","amount":1.0,"unit":"lb","meta":["sliced
+        into thin strips"],"measures":{"us":{"amount":1.0,"unitShort":"lb","unitLong":"pound"},"metric":{"amount":453.592,"unitShort":"g","unitLong":"grams"}}},{"id":10211821,"aisle":"Produce","image":"bell-pepper-orange.png","consistency":"SOLID","name":"bell
+        peppers","nameClean":"bell pepper","original":"1 1/2 cup sliced bell peppers","originalName":"sliced
+        bell peppers","amount":1.5,"unit":"cup","meta":["sliced"],"measures":{"us":{"amount":1.5,"unitShort":"cups","unitLong":"cups"},"metric":{"amount":354.882,"unitShort":"ml","unitLong":"milliliters"}}},{"id":1034053,"aisle":"Oil,
+        Vinegar, Salad Dressing","image":"olive-oil.jpg","consistency":"LIQUID","name":"extra
+        virgin olive oil","nameClean":"extra virgin olive oil","original":"2 tsp extra
+        virgin olive oil","originalName":"extra virgin olive oil","amount":2.0,"unit":"tsp","meta":[],"measures":{"us":{"amount":2.0,"unitShort":"tsps","unitLong":"teaspoons"},"metric":{"amount":2.0,"unitShort":"tsps","unitLong":"teaspoons"}}},{"id":21052,"aisle":"Produce","image":"mixed-greens-or-mesclun.jpg","consistency":"SOLID","name":"greens","nameClean":"mesclun","original":"1
+        bag of mixed greens","originalName":"mixed greens","amount":1.0,"unit":"bag","meta":["mixed"],"measures":{"us":{"amount":1.0,"unitShort":"bag","unitLong":"bag"},"metric":{"amount":1.0,"unitShort":"bag","unitLong":"bag"}}},{"id":1032009,"aisle":"Spices
+        and Seasonings","image":"red-pepper-flakes.jpg","consistency":"SOLID","name":"pepper
+        flakes","nameClean":"red pepper flakes","original":"1 tsp red pepper flakes
+        (optional)","originalName":"red pepper flakes (optional)","amount":1.0,"unit":"tsp","meta":["red"],"measures":{"us":{"amount":1.0,"unitShort":"tsp","unitLong":"teaspoon"},"metric":{"amount":1.0,"unitShort":"tsp","unitLong":"teaspoon"}}},{"id":10116124,"aisle":"Ethnic
+        Foods","image":"soy-sauce.jpg","consistency":"LIQUID","name":"tamari sauce","nameClean":"tamari","original":"1
+        tbsp tamari sauce","originalName":"tamari sauce","amount":1.0,"unit":"tbsp","meta":[],"measures":{"us":{"amount":1.0,"unitShort":"Tbsp","unitLong":"Tbsp"},"metric":{"amount":1.0,"unitShort":"Tbsp","unitLong":"Tbsp"}}},{"id":10611282,"aisle":"Produce","image":"white-onion.png","consistency":"SOLID","name":"onion","nameClean":"white
+        onion","original":"3/4 cup sliced white onion","originalName":"sliced white
+        onion","amount":0.75,"unit":"cup","meta":["white","sliced"],"measures":{"us":{"amount":0.75,"unitShort":"cups","unitLong":"cups"},"metric":{"amount":177.441,"unitShort":"ml","unitLong":"milliliters"}}}],"id":473805,"title":"Stir
+        Fry Beef Salad","readyInMinutes":15,"servings":4,"sourceUrl":"http://civilizedcavemancooking.com/entrees/beef/stir-fry-beef-salad/","image":"https://spoonacular.com/recipeImages/473805-556x370.jpg","imageType":"jpg","summary":"If
+        you have approximately <b>15 minutes</b> to spend in the kitchen, Stir Fry
+        Beef Salad might be a spectacular <b>gluten free, dairy free, and ketogenic</b>
+        recipe to try. One serving contains <b>291 calories</b>, <b>25g of protein</b>,
+        and <b>19g of fat</b>. For <b>$3.41 per serving</b>, you get a main course
+        that serves 4. 248 people have tried and liked this recipe. It is brought
+        to you by Civilized Caveman Cooking. If you have beef tip steak, bell peppers,
+        extra virgin olive oil, and a few other ingredients on hand, you can make
+        it. Overall, this recipe earns an <b>awesome spoonacular score of 97%</b>.
+        Similar recipes are <a href=\"https://spoonacular.com/recipes/stir-fry-beef-salad-1285005\">Stir
+        Fry Beef Salad</a>, <a href=\"https://spoonacular.com/recipes/stir-fry-beef-salad-1330967\">Stir
+        Fry Beef Salad</a>, and <a href=\"https://spoonacular.com/recipes/stir-fry-beef-salad-1247167\">Stir
+        Fry Beef Salad</a>.","cuisines":[],"dishTypes":["side dish","lunch","salad","main
+        course","main dish","dinner"],"diets":["gluten free","dairy free","ketogenic"],"occasions":[],"winePairing":{"pairedWines":["chardonnay","sauvignon
+        blanc","gruener veltliner"],"pairingText":"Chardonnay, Sauvignon Blanc, and
+        Gruener Veltliner are my top picks for Salad. Sauvignon Blanc and Gruner Veltliner
+        both have herby notes that complement salads with enough acid to match tart
+        vinaigrettes, while a Chardonnay can be a good pick for creamy salad dressings.
+        The Cycles Gladiator Chardonnay with a 4.5 out of 5 star rating seems like
+        a good match. It costs about 13 dollars per bottle.","productMatches":[{"id":449227,"title":"Cycles
+        Gladiator Chardonnay","description":"The aromatics really jump out of the
+        glass. Papaya, peaches, andpineapple on the nose with just a hint of toasted
+        oak. Nectarines and other stone fruit on the forepalate. Ripe, round flavors
+        of peach juice and pineapple. Soft acidity and a lush texture wrap around
+        the tongue towards the back of the palate.Pairs with rich, creamy flavors
+        such as scallops in an orange beurre blanc. Also chicken alfredo, seafood
+        fettuccine, or any pasta smothered in a cream sauce.","price":"$12.99","imageUrl":"https://spoonacular.com/productImages/449227-312x231.jpg","averageRating":0.9,"ratingCount":5.0,"score":0.8375,"link":"https://click.linksynergy.com/deeplink?id=*QCiIS6t4gA&mid=2025&murl=https%3A%2F%2Fwww.wine.com%2Fproduct%2Fcycles-gladiator-chardonnay-2014%2F150383"}]},"instructions":"Add
+        olive oil to a skillet at a medium heatSaute onions until sweatingAdd beef
+        and tamari tossing and stirring oftenWhen your meat it almost fully cooked,
+        add the peppers and cook until softAdd mixed greens to your plate and top
+        with your stir fry or do what we did and steam some fresh veggies for the
+        sideEnjoy","analyzedInstructions":[{"name":"","steps":[{"number":1,"step":"Add
+        olive oil to a skillet at a medium heat","ingredients":[{"id":4053,"name":"olive
+        oil","localizedName":"olive oil","image":"olive-oil.jpg"}],"equipment":[{"id":404645,"name":"frying
+        pan","localizedName":"frying pan","image":"pan.png"}]},{"number":2,"step":"Saute
+        onions until sweating","ingredients":[{"id":11282,"name":"onion","localizedName":"onion","image":"brown-onion.png"}],"equipment":[]},{"number":3,"step":"Add
+        beef and tamari tossing and stirring often","ingredients":[{"id":10116124,"name":"tamari","localizedName":"tamari","image":"soy-sauce.jpg"},{"id":23572,"name":"beef","localizedName":"beef","image":"beef-cubes-raw.png"}],"equipment":[]},{"number":4,"step":"When
+        your meat it almost fully cooked, add the peppers and cook until soft","ingredients":[{"id":10111333,"name":"peppers","localizedName":"peppers","image":"green-pepper.jpg"},{"id":1065062,"name":"meat","localizedName":"meat","image":"whole-chicken.jpg"}],"equipment":[]},{"number":5,"step":"Add
+        mixed greens to your plate and top with your stir fry or do what we did and
+        steam some fresh veggies for the side","ingredients":[{"id":21052,"name":"mixed
+        greens","localizedName":"mixed greens","image":"mixed-greens-or-mesclun.jpg"}],"equipment":[]},{"number":6,"step":"Enjoy","ingredients":[],"equipment":[]}]}],"originalId":null}'
+  recorded_at: Wed, 19 Apr 2023 03:34:01 GMT
+recorded_with: VCR 6.1.0

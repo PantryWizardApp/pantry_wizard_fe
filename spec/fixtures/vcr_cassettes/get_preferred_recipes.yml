@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/complexSearch?number=5&%7B:cuisine=%3E%22american,italian%22,%20:excludeCuisine=%3E%22greek%22,%20:intolerances=%3E%22dairy,egg%22,%20:diet=%3E%22dairy%22%7D
+    uri: https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/search?number=5&%7B:query=%3E%22*%22,%20:cuisine=%3E%22american,italian%22,%20:excludeCuisine=%3E%22greek%22,%20:intolerances=%3E%22dairy,egg%22,%20:diet=%3E%22null%22%7D
     body:
       encoding: US-ASCII
       string: ''
@@ -21,31 +21,31 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 16 Apr 2023 19:56:07 GMT
+      - Wed, 19 Apr 2023 03:37:27 GMT
       Content-Type:
       - application/json
       Content-Length:
-      - '314'
+      - '620'
       Connection:
       - keep-alive
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Cf-Cache-Status:
       - DYNAMIC
-      Allow-Control-Allow-Methods:
+      Access-Control-Allow-Methods:
       - GET, HEAD, POST, OPTIONS, DELETE, PUT
       Access-Control-Allow-Origin:
       - "*"
-      Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=kbrrEcaLiwJC9ZyiDY5ow0OyRm%2FtbWET7tRvVdGQrlypGXSN11L%2FsegFCsU2fv1rNRU5efyPT6cfmpPiyjrXBEAHfprIXZxUm40pDlUirIkUvXtWR7xEjxZsEF3KcvoGmyutixU%3D"}],"group":"cf-nel","max_age":604800}'
-      Access-Control-Allow-Methods:
+      Allow-Control-Allow-Methods:
       - GET, HEAD, POST, OPTIONS, DELETE, PUT
-      Alt-Svc:
-      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+      Cf-Ray:
+      - 7ba21be81bbc0853-IAD
       Allow-Control-Allow-Origin:
       - "*"
-      Cf-Ray:
-      - 7b8efd5ece4927fe-SEA
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=%2B%2BZNg8I20fowxX%2B0hYvdL2KnffJwkcb1S4Eq48JsJTDdYCsRC%2F%2BEMumLlg3GeOowilkgHWD7M2ceungQdUYT4lM1Oq0lr4KC2DR%2BL5YRilMmN3kD9edFRGKxriUKl6Q7gRMWEJc%3D"}],"group":"cf-nel","max_age":604800}'
       Access-Control-Allow-Headers:
       - Authorization, UserId, Hash, Name, Password, Accept, Accept-Language, x-api-key,
         Content-Language, Content-Type, Cache-Control, Origin, X-Requested-With
@@ -54,32 +54,32 @@ http_interactions:
       X-Ratelimit-Tinyrequests-Remaining:
       - '500'
       X-Ratelimit-Tinyrequests-Reset:
-      - '4811'
+      - '63531'
       X-Ratelimit-Requests-Limit:
       - '50'
       X-Ratelimit-Requests-Remaining:
-      - '47'
+      - "-84"
       X-Ratelimit-Requests-Reset:
-      - '4811'
+      - '63531'
       X-Ratelimit-Results-Limit:
       - '500'
       X-Ratelimit-Results-Remaining:
-      - '480'
+      - '434'
       X-Ratelimit-Results-Reset:
-      - '4811'
+      - '63531'
       Server:
       - RapidAPI-1.2.8
       X-Rapidapi-Version:
       - 1.2.8
       X-Rapidapi-Region:
-      - AWS - us-west-2
+      - AWS - us-east-1
     body:
       encoding: ASCII-8BIT
-      string: '{"results":[{"id":592479,"title":"Kale and Quinoa Salad with Black
-        Beans","image":"https://spoonacular.com/recipeImages/592479-312x231.jpg","imageType":"jpg"},{"id":495111,"title":"Citrus
-        Sesame Kale","image":"https://spoonacular.com/recipeImages/495111-312x231.jpg","imageType":"jpg"},{"id":582897,"title":"Mexican
-        Salad with Lime Dressing","image":"https://spoonacular.com/recipeImages/582897-312x231.jpg","imageType":"jpg"},{"id":1009573,"title":"Quinoa
-        Kale Tomato Corn Salad","image":"https://spoonacular.com/recipeImages/1009573-312x231.jpg","imageType":"jpg"},{"id":801710,"title":"Matcha
-        Green Tea and Pineapple Smoothie","image":"https://spoonacular.com/recipeImages/801710-312x231.jpg","imageType":"jpg"}],"offset":0,"number":5,"totalResults":385626}'
-  recorded_at: Sun, 16 Apr 2023 19:56:07 GMT
+      string: '{"results":[{"readyInMinutes":15,"sourceUrl":"http://naturallyella.com/cabbage-salad-with-peanuts/","image":"cabbage-salad-with-peanuts-723984.jpg","servings":2,"id":723984,"title":"Cabbage
+        Salad with Peanuts"},{"readyInMinutes":10,"sourceUrl":"http://shewearsmanyhats.com/2011/05/rhubarb-strawberry-smoothie/","image":"Rhubarb-Strawberry-Smoothie-537208.jpg","servings":2,"id":537208,"title":"Rhubarb
+        Strawberry Smoothie"},{"readyInMinutes":16,"sourceUrl":"http://www.cookincanuck.com/2013/09/stuffed-sweet-potato-recipe-with-spinach-hummus-feta/","image":"Stuffed-Sweet-Potato-with-Spinach--Hummus---Feta-584549.jpg","servings":1,"id":584549,"title":"Stuffed
+        Sweet Potato with Spinach, Hummus & Feta"},{"readyInMinutes":250,"sourceUrl":"http://thelemonbowl.com/2013/04/slow-cooker-vegetarian-chili-with-butternut-squash.html","image":"Slow-Cooker-Vegetarian-Chili-with-Butternut-Squash-482574.jpg","servings":4,"id":482574,"title":"Slow
+        Cooker Vegetarian Chili with Butternut Squash"},{"readyInMinutes":20,"sourceUrl":"http://www.thegraciouspantry.com/clean-eating-cilantro-salsa/","image":"Cilantro-Salsa-667917.jpg","servings":2,"id":667917,"title":"Cilantro
+        Salsa"}],"baseUri":"https://spoonacular.com/recipeImages/","offset":0,"number":5,"totalResults":385626,"processingTimeMs":193,"expires":1682134359895,"isStale":false}'
+  recorded_at: Wed, 19 Apr 2023 03:37:27 GMT
 recorded_with: VCR 6.1.0

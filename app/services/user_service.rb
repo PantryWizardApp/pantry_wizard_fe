@@ -12,6 +12,6 @@ class UserService
   private 
   
   def self.conn 
-    Faraday.new(url: "http://localhost:5000")
+    Faraday.new(url: "http://localhost:4000")
   end
 end

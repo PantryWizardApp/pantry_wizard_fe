@@ -1,0 +1,81 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/search?instructionsRequired=True&number=1&offset=470&%7B:query=%3E%22*%22,%20:cuisine=%3E%22american,italian%22,%20:excludeCuisine=%3E%22greek%22,%20:intolerances=%3E%22dairy,egg%22,%20:diet=%3E%22null%22,%20:type=%3E%22main%20course%22%7D
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Rapidapi-Key:
+      - X-RapidAPI-Key
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 19 Apr 2023 03:37:28 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '299'
+      Connection:
+      - keep-alive
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Cf-Cache-Status:
+      - DYNAMIC
+      Allow-Control-Allow-Methods:
+      - GET, HEAD, POST, OPTIONS, DELETE, PUT
+      Access-Control-Allow-Origin:
+      - "*"
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=EumxewYaeiF%2BKCeprxv5p71X%2FFvjW9Fg1qvc%2FeY2UZN%2FgiQS%2BzXHwUlIQeCfc%2B9OYwTRWhQsh3oDtAx6HHtSWRhRgOfjKlyVV1uQgMqWbyMp9Ic7nRSdqzb0r4tDb8LWdatTA8Y%3D"}],"group":"cf-nel","max_age":604800}'
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, OPTIONS, DELETE, PUT
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+      Allow-Control-Allow-Origin:
+      - "*"
+      Cf-Ray:
+      - 7ba21bef1cb707d9-IAD
+      Access-Control-Allow-Headers:
+      - Authorization, UserId, Hash, Name, Password, Accept, Accept-Language, x-api-key,
+        Content-Language, Content-Type, Cache-Control, Origin, X-Requested-With
+      X-Ratelimit-Tinyrequests-Limit:
+      - '500'
+      X-Ratelimit-Tinyrequests-Remaining:
+      - '500'
+      X-Ratelimit-Tinyrequests-Reset:
+      - '63530'
+      X-Ratelimit-Requests-Limit:
+      - '50'
+      X-Ratelimit-Requests-Remaining:
+      - "-86"
+      X-Ratelimit-Requests-Reset:
+      - '63530'
+      X-Ratelimit-Results-Limit:
+      - '500'
+      X-Ratelimit-Results-Remaining:
+      - '432'
+      X-Ratelimit-Results-Reset:
+      - '63530'
+      Server:
+      - RapidAPI-1.2.8
+      X-Rapidapi-Version:
+      - 1.2.8
+      X-Rapidapi-Region:
+      - AWS - us-east-1
+    body:
+      encoding: ASCII-8BIT
+      string: '{"results":[{"readyInMinutes":90,"sourceUrl":"http://www.seriouseats.com/recipes/2012/02/entenmanns-blueberry-crumb-cake-make-at-home-recipe.html","image":"Entenmanns-Blueberry-Crumb-Cake-205522.jpg","servings":9,"id":205522,"title":"Entenmann''s
+        Blueberry Crumb Cake"}],"baseUri":"https://spoonacular.com/recipeImages/","offset":470,"number":1,"totalResults":385626,"processingTimeMs":182,"expires":1682134648433}'
+  recorded_at: Wed, 19 Apr 2023 03:37:28 GMT
+recorded_with: VCR 6.1.0
