@@ -28,7 +28,7 @@ RSpec.describe RecipeService do
           pasta = RecipeService.search_recipes("query=pasta&number=5")
           expect(pasta).to be_a(Hash)
           expect(pasta[:results].size).to eq(5)
-          expect(pasta.keys).to eq([:results, :baseUri, :offset, :number, :totalResults, :processingTimeMs, :expires])
+          expect(pasta.keys).to eq([:results, :baseUri, :offset, :number, :totalResults, :processingTimeMs, :expires, :isStale])
         end
       end
     end
