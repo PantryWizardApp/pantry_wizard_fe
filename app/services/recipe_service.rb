@@ -28,29 +28,35 @@ class RecipeService
   def self.get_preferred_breakfast_recipes(user)
     params = {
       query: "*",
-      cuisine: user.likes.join(","),
-      excludeCuisine: user.dislikes.join(","),
-      intolerances: user.intolerances.join(","),
-      diet: user.dietary_restrictions,
-      type: "breakfast",
-    }
+      cuisine: user&.likes&.any? ? user&.likes.join(",") : "",
+      excludeCuisine: user&.dislikes&.any? ? user&.dislikes.join(",") : "",
+      intolerances: user&.intolerances&.any? ? user&.intolerances.join(",") : "",
+      diet: user&.dietary_restrictions,
+      type: "breakfast"
+      }
+      # query: "*",
+      # cuisine: user.likes.any? ? user.likes.join(",") : "",
+      # excludeCuisine: user.dislikes.any? ? user.dislikes.join(",") : "",
+      # intolerances: user.intolerances.any? ? user.intolerances.join(",") : "",
+      # diet: user.dietary_restrictions,
+      
     
-    offset = rand(0..900)
-    get_url("/recipes/search?#{params}&number=1&offset=#{offset}")
+    offset = rand(0..500)
+    get_url("/recipes/search?#{params}&number=1&offset=#{offset}&instructionsRequired=True")
   end
 
   def self.get_preferred_main_recipes(user)
     params = {
       query: "*",
-      cuisine: user.likes.join(","),
-      excludeCuisine: user.dislikes.join(","),
-      intolerances: user.intolerances.join(","),
-      diet: user.dietary_restrictions,
+      cuisine: user&.likes&.any? ? user&.likes.join(",") : "",
+      excludeCuisine: user&.dislikes&.any? ? user&.dislikes.join(",") : "",
+      intolerances: user&.intolerances&.any? ? user&.intolerances.join(",") : "",
+      diet: user&.dietary_restrictions,
       type: "main course"
       }
 
-      offset = rand(0..900)
-      get_url("/recipes/search?#{params}&number=1&offset=#{offset}")
+      offset = rand(0..500)
+      get_url("/recipes/search?#{params}&number=1&offset=#{offset}&instructionsRequired=True")
   end
 
   private 
