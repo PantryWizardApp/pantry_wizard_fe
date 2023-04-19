@@ -1,14 +1,16 @@
 ---
 http_interactions:
 - request:
-    method: get
-    uri: http://localhost:4000/api/v1/users/106048413854356122337
+    method: post
+    uri: http://localhost:4000/api/v1/users
     body:
-      encoding: US-ASCII
-      string: ''
+      encoding: UTF-8
+      string: email=test%40gmail.com&google_id=12345&name=Bob
     headers:
       User-Agent:
       - Faraday v2.7.4
+      Content-Type:
+      - application/x-www-form-urlencoded
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -35,20 +37,20 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"9715f78fc8f0bb9106c26233c1b88398"
+      - W/"685d276a9e0d4bf94acf7fc505783f5a"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 1fdbacc6-0a77-4eaa-8c5a-6cd6d258ab85
+      - acf86d7f-a450-4e90-ab22-7fc2f2aeba28
       X-Runtime:
-      - '0.032153'
+      - '0.049105'
       Server-Timing:
-      - start_processing.action_controller;dur=0.18, sql.active_record;dur=2.87, instantiation.active_record;dur=0.13,
-        process_action.action_controller;dur=20.39
+      - start_processing.action_controller;dur=0.20, sql.active_record;dur=26.83,
+        process_action.action_controller;dur=33.57
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"4","type":"user","attributes":{"email":"cdvanloan@gmail.com","name":"Conner","google_id":"106048413854356122337","id":4,"intolerances":null,"likes":null,"dislikes":null,"dietary_restrictions":null}}}'
-  recorded_at: Wed, 19 Apr 2023 16:13:55 GMT
+      string: '{"data":{"id":"5","type":"user","attributes":{"email":"test@gmail.com","name":"Bob","google_id":"12345","id":5,"intolerances":null,"likes":null,"dislikes":null,"dietary_restrictions":null}}}'
+  recorded_at: Wed, 19 Apr 2023 16:21:39 GMT
 recorded_with: VCR 6.1.0

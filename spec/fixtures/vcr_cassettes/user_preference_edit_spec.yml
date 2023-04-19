@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:5000/api/v1/users/106048413854356122337
+    uri: http://localhost:4000/api/v1/users/106048413854356122337
     body:
       encoding: US-ASCII
       string: ''
@@ -35,73 +35,20 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"3b38da505aeebf17e9d8ae90b6ddb0c3"
+      - W/"9715f78fc8f0bb9106c26233c1b88398"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - a8ad605b-9882-4104-b470-ff6f69659221
+      - 5be3d68b-accb-4882-8dbd-c06188806f83
       X-Runtime:
-      - '0.321838'
+      - '0.020001'
       Server-Timing:
-      - start_processing.action_controller;dur=2.78, sql.active_record;dur=57.24,
-        instantiation.active_record;dur=7.78, process_action.action_controller;dur=226.61
+      - start_processing.action_controller;dur=0.19, sql.active_record;dur=7.64, instantiation.active_record;dur=0.18,
+        process_action.action_controller;dur=10.79
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"1","type":"user","attributes":{"email":"cdvanloan@gmail.com","name":"Conner
-        Van Loan","google_id":"106048413854356122337","id":1,"intolerances":null,"likes":null,"dislikes":null,"dietary_restrictions":null}}}'
-  recorded_at: Mon, 17 Apr 2023 18:14:10 GMT
-- request:
-    method: get
-    uri: http://localhost:5000/api/v1/users/106048413854356122337
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v2.7.4
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - '0'
-      X-Content-Type-Options:
-      - nosniff
-      X-Download-Options:
-      - noopen
-      X-Permitted-Cross-Domain-Policies:
-      - none
-      Referrer-Policy:
-      - strict-origin-when-cross-origin
-      Content-Type:
-      - application/json; charset=utf-8
-      Vary:
-      - Accept
-      Etag:
-      - W/"3b38da505aeebf17e9d8ae90b6ddb0c3"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - afd1e20c-f30e-4e78-b6b4-86ed7eb54865
-      X-Runtime:
-      - '0.010604'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.06, sql.active_record;dur=3.50, instantiation.active_record;dur=0.04,
-        process_action.action_controller;dur=5.61
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: '{"data":{"id":"1","type":"user","attributes":{"email":"cdvanloan@gmail.com","name":"Conner
-        Van Loan","google_id":"106048413854356122337","id":1,"intolerances":null,"likes":null,"dislikes":null,"dietary_restrictions":null}}}'
-  recorded_at: Mon, 17 Apr 2023 18:14:11 GMT
+      string: '{"data":{"id":"4","type":"user","attributes":{"email":"cdvanloan@gmail.com","name":"Conner","google_id":"106048413854356122337","id":4,"intolerances":null,"likes":null,"dislikes":null,"dietary_restrictions":null}}}'
+  recorded_at: Wed, 19 Apr 2023 16:14:10 GMT
 recorded_with: VCR 6.1.0

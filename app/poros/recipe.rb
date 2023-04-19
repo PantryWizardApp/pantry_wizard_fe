@@ -18,15 +18,15 @@ class Recipe
   end
 
   def ingredient_info(ingredient_array)
-    x = ingredient_array.map do |ingredient|
+    ingredient_array.map do |ingredient|
       { name: ingredient[:name], amount: ingredient[:measures][:us][:amount], unit: ingredient[:measures][:us][:unitShort] }
     end
   end
 
   def instruction_info(instruction_array)
-    x = instruction_array.map do |instruction|
-          instruction[:steps].each do |step|
-            { step: step[:number], instruction: step[:step] }
+    instruction_array.map do |instruction|
+      instruction[:steps].each do |step|
+        { step: step[:number], instruction: step[:step] }
       end
     end
   end

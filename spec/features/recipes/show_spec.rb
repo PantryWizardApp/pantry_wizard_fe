@@ -382,8 +382,11 @@ RSpec.describe "Recipe Show Page" do
            }).
          to_return(status: 200, body: blt_pasta, headers: {})
   end
+  
   it "when I visit '/meals/:id' I see the recipe details" do
-    visit "/meals/#{@recipe.id}"
+    VCR.use_cassette("recipe_details") do
+      visit "/meals/#{@recipe.id}"
+    end
       expect(current_path).to eq("/meals/#{@recipe.id}")
       expect(page).to have_content("Ranch BLT Pasta Salad")
       expect(page).to have_content("Ingredients")
