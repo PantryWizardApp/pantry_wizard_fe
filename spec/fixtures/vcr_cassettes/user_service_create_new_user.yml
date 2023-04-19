@@ -1,14 +1,16 @@
 ---
 http_interactions:
 - request:
-    method: get
-    uri: http://localhost:4000/api/v1/users/1/day_plans/1
+    method: post
+    uri: http://localhost:4000/api/v1/users
     body:
-      encoding: US-ASCII
-      string: ''
+      encoding: UTF-8
+      string: email=test_2%40gmail.com&google_id=1223456&name=Bob
     headers:
       User-Agent:
       - Faraday v2.7.4
+      Content-Type:
+      - application/x-www-form-urlencoded
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -35,20 +37,20 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"20dd8487a6098a6119bf97f8abde207e"
+      - W/"87c6c53dd270ed66d50f413a57d22486"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - b9c758fd-da3b-48f7-83d6-263ef4587c03
+      - '008086b6-f109-4bba-a4e4-642e68790982'
       X-Runtime:
-      - '0.011589'
+      - '0.052730'
       Server-Timing:
-      - start_processing.action_controller;dur=0.09, sql.active_record;dur=2.25, instantiation.active_record;dur=0.05,
-        process_action.action_controller;dur=7.40
+      - start_processing.action_controller;dur=0.16, sql.active_record;dur=27.11,
+        process_action.action_controller;dur=39.94
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"1","type":"day_plan","attributes":{"user_id":1,"date":"2021-01-01"}}}'
-  recorded_at: Wed, 19 Apr 2023 17:18:23 GMT
+      string: '{"data":{"id":"6","type":"user","attributes":{"email":"test_2@gmail.com","name":"Bob","google_id":"1223456","id":6,"intolerances":null,"likes":null,"dislikes":null,"dietary_restrictions":null}}}'
+  recorded_at: Wed, 19 Apr 2023 18:36:47 GMT
 recorded_with: VCR 6.1.0

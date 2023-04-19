@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       X-Rapidapi-Key:
-      - X-RapidAPI-Key
+      - 94534da646mshde7e120c9bce392p139c9ejsnaf50e90c38bb
       User-Agent:
       - Faraday v2.7.4
       Accept-Encoding:
@@ -21,31 +21,31 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 19 Apr 2023 03:37:27 GMT
+      - Wed, 19 Apr 2023 16:54:24 GMT
       Content-Type:
       - application/json
       Content-Length:
-      - '620'
+      - '610'
       Connection:
       - keep-alive
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Cf-Cache-Status:
       - DYNAMIC
-      Access-Control-Allow-Methods:
+      Allow-Control-Allow-Methods:
       - GET, HEAD, POST, OPTIONS, DELETE, PUT
       Access-Control-Allow-Origin:
       - "*"
-      Allow-Control-Allow-Methods:
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=de%2B1ihnB8cd%2Fs9WB%2Bd%2FpsR17XNLIiWCj3prKEAxcMsTSmfaMaJRwiEUjd24uSLl9pLvNlvJuU%2BAZaPkw73b2fG3%2F%2BNpE4NEaLU8aTQeB0XBmkE4aDQ1uQTKsVg1g71Cq%2FFyPvx8%3D"}],"group":"cf-nel","max_age":604800}'
+      Access-Control-Allow-Methods:
       - GET, HEAD, POST, OPTIONS, DELETE, PUT
-      Cf-Ray:
-      - 7ba21be81bbc0853-IAD
-      Allow-Control-Allow-Origin:
-      - "*"
       Alt-Svc:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
-      Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=%2B%2BZNg8I20fowxX%2B0hYvdL2KnffJwkcb1S4Eq48JsJTDdYCsRC%2F%2BEMumLlg3GeOowilkgHWD7M2ceungQdUYT4lM1Oq0lr4KC2DR%2BL5YRilMmN3kD9edFRGKxriUKl6Q7gRMWEJc%3D"}],"group":"cf-nel","max_age":604800}'
+      Allow-Control-Allow-Origin:
+      - "*"
+      Cf-Ray:
+      - 7ba6ab4788ce2804-SEA
       Access-Control-Allow-Headers:
       - Authorization, UserId, Hash, Name, Password, Accept, Accept-Language, x-api-key,
         Content-Language, Content-Type, Cache-Control, Origin, X-Requested-With
@@ -54,25 +54,25 @@ http_interactions:
       X-Ratelimit-Tinyrequests-Remaining:
       - '500'
       X-Ratelimit-Tinyrequests-Reset:
-      - '63531'
+      - '85686'
       X-Ratelimit-Requests-Limit:
       - '50'
       X-Ratelimit-Requests-Remaining:
-      - "-84"
+      - '34'
       X-Ratelimit-Requests-Reset:
-      - '63531'
+      - '85686'
       X-Ratelimit-Results-Limit:
       - '500'
       X-Ratelimit-Results-Remaining:
-      - '434'
+      - '487'
       X-Ratelimit-Results-Reset:
-      - '63531'
+      - '85686'
       Server:
       - RapidAPI-1.2.8
       X-Rapidapi-Version:
       - 1.2.8
       X-Rapidapi-Region:
-      - AWS - us-east-1
+      - AWS - us-west-2
     body:
       encoding: ASCII-8BIT
       string: '{"results":[{"readyInMinutes":15,"sourceUrl":"http://naturallyella.com/cabbage-salad-with-peanuts/","image":"cabbage-salad-with-peanuts-723984.jpg","servings":2,"id":723984,"title":"Cabbage
@@ -80,6 +80,6 @@ http_interactions:
         Strawberry Smoothie"},{"readyInMinutes":16,"sourceUrl":"http://www.cookincanuck.com/2013/09/stuffed-sweet-potato-recipe-with-spinach-hummus-feta/","image":"Stuffed-Sweet-Potato-with-Spinach--Hummus---Feta-584549.jpg","servings":1,"id":584549,"title":"Stuffed
         Sweet Potato with Spinach, Hummus & Feta"},{"readyInMinutes":250,"sourceUrl":"http://thelemonbowl.com/2013/04/slow-cooker-vegetarian-chili-with-butternut-squash.html","image":"Slow-Cooker-Vegetarian-Chili-with-Butternut-Squash-482574.jpg","servings":4,"id":482574,"title":"Slow
         Cooker Vegetarian Chili with Butternut Squash"},{"readyInMinutes":20,"sourceUrl":"http://www.thegraciouspantry.com/clean-eating-cilantro-salsa/","image":"Cilantro-Salsa-667917.jpg","servings":2,"id":667917,"title":"Cilantro
-        Salsa"}],"baseUri":"https://spoonacular.com/recipeImages/","offset":0,"number":5,"totalResults":385626,"processingTimeMs":193,"expires":1682134359895,"isStale":false}'
-  recorded_at: Wed, 19 Apr 2023 03:37:27 GMT
+        Salsa"}],"baseUri":"https://spoonacular.com/recipeImages/","offset":0,"number":5,"totalResults":385626,"processingTimeMs":228,"expires":1682182464824}'
+  recorded_at: Wed, 19 Apr 2023 16:54:24 GMT
 recorded_with: VCR 6.1.0
