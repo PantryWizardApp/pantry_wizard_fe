@@ -309,6 +309,7 @@ RSpec.describe "Recipe Show Page" do
                   {
                       "number": 3,
                       "step": "In a large bowl toss the cold pasta with the tomatoes, Swiss, onions, bacon and lettuce.",
+                      
                       "ingredients": [
                           {
                               "id": 11529,
@@ -367,33 +368,50 @@ RSpec.describe "Recipe Show Page" do
           }
       ],
     }
-
     @recipe = Recipe.new(recipe1)
-    @user = User.new({data:{attributes:{email: "bh1200@gmail.com", name: "Bob", google_id: "1234567890a"}}})
-      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
-      blt_pasta = File.read("spec/fixtures/blt_pasta.json")
-      stub_request(:get, "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/491786/information").
-         with(
-           headers: {
-          'Accept'=>'*/*',
-          'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
-          'User-Agent'=>'Faraday v2.7.4',
-          'X-Rapidapi-Key'=>ENV["X-RapidAPI-Key"]
-           }).
-         to_return(status: 200, body: blt_pasta, headers: {})
-  end
-  
-  it "when I visit '/meals/:id' I see the recipe details" do
-    VCR.use_cassette("recipe_details") do
-      visit "/meals/#{@recipe.id}"
+    current_user = {"google_id"=>"100378230956154024998",
+      "name"=>"Dawson Timmons",
+      "email"=>"dawsontimmons@gmail.com",
+      "intolerances"=>nil,
+      "likes"=>nil,
+      "dislikes"=>nil,
+      "dietary_restrictions"=>nil
+    }
+    allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(current_user)
+    data = {:data=>{:id=>"5", :type=>"user", :attributes=>{:email=>"dawsontimmons@gmail.com", :name=>"Dawson Timmons", :google_id=>"100378230956154024998", :id=>5, :intolerances=>nil, :likes=>nil, :dislikes=>nil, :dietary_restrictions=>nil}}}
+    @user = User.new(data)
+    allow(UserFacade).to receive(:find_user_by_google_id).with(current_user["google_id"]).and_return(@user)
     end
-      expect(current_path).to eq("/meals/#{@recipe.id}")
-      expect(page).to have_content("Ranch BLT Pasta Salad")
-      expect(page).to have_content("Ingredients")
-      expect(page).to have_content("Instructions")
-      expect(page).to have_content("Estimated Cooking Time: #{@recipe.cook_time} Minutes")
-      expect(page).to have_link("Add to My Meal Plan")
-      expect(page).to have_link("Generate New Meal")
+  
+    it "when I visit '/meals/:id' I see the recipe details" do
+      VCR.use_cassette('search_recipe1_id') do
+        visit "/meals/#{@recipe.id}"
+        expect(current_path).to eq("/meals/#{@recipe.id}")
+        expect(page).to have_content("Ranch BLT Pasta Salad")
+        expect(page).to have_content("Ingredients")
+        expect(page).to have_content("Instructions")
+        expect(page).to have_content("Estimated Cooking Time: #{@recipe.cook_time} Minutes")
+      end
+    end
+    
+    it "I should see a link to add the recipe to my day plan" do
+      VCR.use_cassette('search_recipe2_id') do        
+        visit "/meals/#{@recipe.id}"
+        expect(page).to have_button("Add to My Meal Plan")
+      end
+      VCR.use_cassette('add_meal_plan') do
+        click_button "Add to My Meal Plan"
+        expect(current_path).to eq(dashboard_path)
+      end
+    end
+
+    it "I should see a dropdown that allows me to select a new recipe" do
+      VCR.use_cassette('search_recipe3_id') do
+        visit "/meals/#{@recipe.id}"
+          expect(page).to have_button("Generate New Breakfast Recipe")
+          expect(page).to have_button("Generate New Lunch Recipe")
+          expect(page).to have_button("Generate New Dinner Recipe")
+      end
     end
   end
 end

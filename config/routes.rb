@@ -12,6 +12,8 @@ Rails.application.routes.draw do
   get "/preferences", to: "users#edit"
   patch "/preferences", to: "users#update"
 
+  get "/meals/new_breakfast", to: "recipes#new_breakfast"
+  get "meals/new_main", to: "recipes#new_main"
   get "/meals/:id", to: "recipes#show"
 
   get "/create_meal_plan", to: "day_plans#new"
