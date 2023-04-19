@@ -10,4 +10,6 @@ Rails.application.routes.draw do
   get "/about", to: "about#index"
   
   get "/meals/:id", to: "recipes#show"
+  get "/create_meal_plan", to: "day_plans#new"
+  post "/create_meal_plan", to: "day_plans#create"
 end

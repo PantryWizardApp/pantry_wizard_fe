@@ -9,6 +9,7 @@ class User
               :dietary_restrictions
 
   def initialize(data)
+    @id = data[:data][:id]
     @google_id = data[:data][:attributes][:google_id]
     @name = data[:data][:attributes][:name]
     @email = data[:data][:attributes][:email]
