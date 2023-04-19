@@ -1,0 +1,161 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/users/106048413854356122337
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"d341d3c97da638f75347a9e5c44079a8"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 2c4189ef-17a9-4dea-abd6-0d567c99cb16
+      X-Runtime:
+      - '0.013665'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.10, sql.active_record;dur=3.90, instantiation.active_record;dur=0.22,
+        process_action.action_controller;dur=6.91
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"1","type":"user","attributes":{"email":"cdvanloan@gmail.com","name":"Conner
+        Van Loan","google_id":"106048413854356122337","id":1,"intolerances":"dairy","likes":"chinese","dislikes":"irish","dietary_restrictions":"Vegan"}}}'
+  recorded_at: Tue, 18 Apr 2023 22:33:20 GMT
+- request:
+    method: patch
+    uri: http://localhost:5000/api/v1/users/1
+    body:
+      encoding: UTF-8
+      string: dietary_restrictions=Vegan&dislikes=irish&intolerances=dairy&likes=chinese
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"d341d3c97da638f75347a9e5c44079a8"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - dca67c58-f2f5-460d-8de4-e99aa52ca014
+      X-Runtime:
+      - '0.008524'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.06, unpermitted_parameters.action_controller;dur=0.10,
+        sql.active_record;dur=2.71, instantiation.active_record;dur=0.02, process_action.action_controller;dur=5.38
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"1","type":"user","attributes":{"email":"cdvanloan@gmail.com","name":"Conner
+        Van Loan","google_id":"106048413854356122337","id":1,"intolerances":"dairy","likes":"chinese","dislikes":"irish","dietary_restrictions":"Vegan"}}}'
+  recorded_at: Tue, 18 Apr 2023 22:33:20 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/users/106048413854356122337
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"d341d3c97da638f75347a9e5c44079a8"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 3f5651b7-2a95-4a1b-b1dd-f7b44a0f53c5
+      X-Runtime:
+      - '0.004688'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.05, sql.active_record;dur=0.84, instantiation.active_record;dur=0.04,
+        process_action.action_controller;dur=1.63
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"1","type":"user","attributes":{"email":"cdvanloan@gmail.com","name":"Conner
+        Van Loan","google_id":"106048413854356122337","id":1,"intolerances":"dairy","likes":"chinese","dislikes":"irish","dietary_restrictions":"Vegan"}}}'
+  recorded_at: Tue, 18 Apr 2023 22:33:20 GMT
+recorded_with: VCR 6.1.0
