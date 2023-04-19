@@ -17,8 +17,8 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 200
-      message: OK
+      code: 404
+      message: Not Found
     headers:
       X-Frame-Options:
       - SAMEORIGIN
@@ -36,22 +36,21 @@ http_interactions:
       - application/json; charset=utf-8
       Vary:
       - Accept
-      Etag:
-      - W/"6915e7a328aef7f8f79774f70160d6bf"
       Cache-Control:
-      - max-age=0, private, must-revalidate
+      - no-cache
       X-Request-Id:
-      - cbc912af-afb8-470d-ad09-e805f68ca771
+      - 8596ed24-d41b-4a11-baee-7f79a08c68d4
       X-Runtime:
-      - '0.170820'
+      - '0.181123'
       Server-Timing:
-      - start_processing.action_controller;dur=0.18, sql.active_record;dur=81.93,
-        instantiation.active_record;dur=0.33, unpermitted_parameters.action_controller;dur=0.23,
-        process_action.action_controller;dur=135.00
+      - start_processing.action_controller;dur=0.16, sql.active_record;dur=19.71,
+        instantiation.active_record;dur=0.05, unpermitted_parameters.action_controller;dur=0.11,
+        process_action.action_controller;dur=174.44
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"15","type":"day_plan","attributes":{"user_id":1,"date":"2022-05-21"}}}'
-  recorded_at: Mon, 17 Apr 2023 23:43:28 GMT
+      string: '{"errors":[{"status":"404","title":"Validation failed: Date has already
+        been taken"}]}'
+  recorded_at: Wed, 19 Apr 2023 03:34:04 GMT
 recorded_with: VCR 6.1.0

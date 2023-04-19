@@ -1,22 +1,24 @@
 ---
 http_interactions:
 - request:
-    method: get
-    uri: http://localhost:5000/api/v1/users/106048413854356122337
+    method: post
+    uri: http://localhost:4000/api/v1/users/5/day_plans
     body:
-      encoding: US-ASCII
-      string: ''
+      encoding: UTF-8
+      string: date
     headers:
       User-Agent:
       - Faraday v2.7.4
+      Content-Type:
+      - application/x-www-form-urlencoded
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
       - "*/*"
   response:
     status:
-      code: 200
-      message: OK
+      code: 404
+      message: Not Found
     headers:
       X-Frame-Options:
       - SAMEORIGIN
@@ -34,21 +36,19 @@ http_interactions:
       - application/json; charset=utf-8
       Vary:
       - Accept
-      Etag:
-      - W/"ba5f3ea40e95f49bce11942f375ebd38"
       Cache-Control:
-      - max-age=0, private, must-revalidate
+      - no-cache
       X-Request-Id:
-      - f9d71c34-a04e-42a0-95ac-97836f23046f
+      - 38dcd003-22e7-41e8-b4aa-5ed44196995c
       X-Runtime:
-      - '0.113452'
+      - '0.012141'
       Server-Timing:
-      - start_processing.action_controller;dur=1.51, sql.active_record;dur=29.13,
-        instantiation.active_record;dur=0.23, process_action.action_controller;dur=93.34
+      - start_processing.action_controller;dur=0.25, sql.active_record;dur=1.79, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=3.59
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":null}'
-  recorded_at: Sun, 16 Apr 2023 21:27:37 GMT
+      string: '{"errors":[{"status":"404","title":"Couldn''t find User with ''id''=5"}]}'
+  recorded_at: Wed, 19 Apr 2023 03:34:03 GMT
 recorded_with: VCR 6.1.0

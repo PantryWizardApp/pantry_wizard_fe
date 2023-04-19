@@ -17,8 +17,8 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 200
-      message: OK
+      code: 404
+      message: Not Found
     headers:
       X-Frame-Options:
       - SAMEORIGIN
@@ -36,22 +36,19 @@ http_interactions:
       - application/json; charset=utf-8
       Vary:
       - Accept
-      Etag:
-      - W/"b0ca0c4ac5d08173c6fe46249855c8a7"
       Cache-Control:
-      - max-age=0, private, must-revalidate
+      - no-cache
       X-Request-Id:
-      - b5962df9-0a90-4c64-9c21-08e57970923c
+      - 86d2c01c-23aa-4978-95f3-2b3588f75715
       X-Runtime:
-      - '0.104872'
+      - '0.010689'
       Server-Timing:
-      - start_processing.action_controller;dur=0.84, sql.active_record;dur=41.32,
-        instantiation.active_record;dur=3.62, unpermitted_parameters.action_controller;dur=0.14,
-        process_action.action_controller;dur=85.89
+      - start_processing.action_controller;dur=0.16, sql.active_record;dur=1.75, instantiation.active_record;dur=0.08,
+        unpermitted_parameters.action_controller;dur=0.10, process_action.action_controller;dur=3.05
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"15","type":"day_plan","attributes":{"user_id":1,"date":"2022-02-21"}}}'
-  recorded_at: Mon, 17 Apr 2023 23:47:13 GMT
+      string: '{"errors":[{"status":"404","title":"Couldn''t find DayPlan with ''id''=15"}]}'
+  recorded_at: Wed, 19 Apr 2023 03:34:04 GMT
 recorded_with: VCR 6.1.0

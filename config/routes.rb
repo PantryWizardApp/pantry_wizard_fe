@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   delete "/logout", to: "sessions#log_out"
   get "/about", to: "about#index"
   
+  get "/meals/new_breakfast", to: "recipes#new_breakfast"
+  get "meals/new_main", to: "recipes#new_main"
   get "/meals/:id", to: "recipes#show"
   get "/create_meal_plan", to: "day_plans#new"
   post "/create_meal_plan", to: "day_plans#create"
