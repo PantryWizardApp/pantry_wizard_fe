@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/search?number=1&offset=673&%7B:query=%3E%22*%22,%20:cuisine=%3E%22american,italian%22,%20:excludeCuisine=%3E%22greek%22,%20:intolerances=%3E%22dairy,egg%22,%20:diet=%3E%22null%22,%20:type=%3E%22breakfast%22%7D
+    uri: https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/search?instructionsRequired=True&number=1&offset=280&%7B:query=%3E%22*%22,%20:cuisine=%3E%22american,italian%22,%20:excludeCuisine=%3E%22greek%22,%20:intolerances=%3E%22dairy,egg%22,%20:diet=%3E%22null%22,%20:type=%3E%22breakfast%22%7D
     body:
       encoding: US-ASCII
       string: ''
@@ -21,11 +21,11 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 18 Apr 2023 21:17:58 GMT
+      - Wed, 19 Apr 2023 03:37:27 GMT
       Content-Type:
       - application/json
       Content-Length:
-      - '276'
+      - '307'
       Connection:
       - keep-alive
       Nel:
@@ -37,7 +37,7 @@ http_interactions:
       Access-Control-Allow-Origin:
       - "*"
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=usOOTFdS4lB9%2BpqncIMPyWgiWbbNUjOh9tJEYZ6lHUoTVwuveCNsew81xx%2Bu1k6Vb%2FnBloMnqTHaxQoCZZfO7voYbBNZvOIIonhKe5P6CXZjX06AarNuM4vjafmL5%2B8Fhrg8f58%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=Ps6Y8fT57tmBZZCeDjLv2eHfkfbw2Dslq%2B%2FzX6cz%2Bi%2FOzQeeCYKA2xIVfphEGqJPJQKzoHORq9PcQkEC28tIDRhisFpxDTYA3gURjvV8isttE0TZ7AA8fX3Am8s8l9iwIQXhtGg%3D"}],"group":"cf-nel","max_age":604800}'
       Access-Control-Allow-Methods:
       - GET, HEAD, POST, OPTIONS, DELETE, PUT
       Alt-Svc:
@@ -45,7 +45,7 @@ http_interactions:
       Allow-Control-Allow-Origin:
       - "*"
       Cf-Ray:
-      - 7b9ff0062da82763-SEA
+      - 7ba21beafd8a3af9-IAD
       Access-Control-Allow-Headers:
       - Authorization, UserId, Hash, Name, Password, Accept, Accept-Language, x-api-key,
         Content-Language, Content-Type, Cache-Control, Origin, X-Requested-With
@@ -54,28 +54,28 @@ http_interactions:
       X-Ratelimit-Tinyrequests-Remaining:
       - '500'
       X-Ratelimit-Tinyrequests-Reset:
-      - '86300'
+      - '63531'
       X-Ratelimit-Requests-Limit:
       - '50'
       X-Ratelimit-Requests-Remaining:
-      - '49'
+      - "-85"
       X-Ratelimit-Requests-Reset:
-      - '86300'
+      - '63531'
       X-Ratelimit-Results-Limit:
       - '500'
       X-Ratelimit-Results-Remaining:
-      - '499'
+      - '433'
       X-Ratelimit-Results-Reset:
-      - '86300'
+      - '63531'
       Server:
       - RapidAPI-1.2.8
       X-Rapidapi-Version:
       - 1.2.8
       X-Rapidapi-Region:
-      - AWS - us-west-2
+      - AWS - us-east-1
     body:
       encoding: ASCII-8BIT
-      string: '{"results":[{"readyInMinutes":75,"sourceUrl":"https://amandascookin.com/pineapple-upside-down-bundt-cake/","image":"pineapple-upside-down-bundt-cake-1824097.jpg","servings":12,"id":1824097,"title":"Pineapple
-        Upside Down Bundt Cake"}],"baseUri":"https://spoonacular.com/recipeImages/","offset":673,"number":1,"totalResults":385626,"processingTimeMs":193,"expires":1682111878403}'
-  recorded_at: Tue, 18 Apr 2023 21:17:58 GMT
+      string: '{"results":[{"readyInMinutes":28,"sourceUrl":"http://www.tessadomesticdiva.com/2011/07/flourless-sugar-free-chocolate-chip.html","image":"Flourless--Date-Sweetened-Chocolate-Chip-Cookies-543079.jpg","servings":12,"id":543079,"title":"Flourless,
+        Date Sweetened Chocolate Chip Cookies"}],"baseUri":"https://spoonacular.com/recipeImages/","offset":280,"number":1,"totalResults":385626,"processingTimeMs":200,"expires":1682134647788}'
+  recorded_at: Wed, 19 Apr 2023 03:37:27 GMT
 recorded_with: VCR 6.1.0
