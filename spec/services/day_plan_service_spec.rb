@@ -83,7 +83,6 @@ RSpec.describe DayPlanService do
         day_plan_id = "15"
         new_day_plan = DayPlanService.delete_user_day_plan(user_id, day_plan_id)
         data = new_day_plan[:data]
-
         expect(data[:id]).to eq("15")
         expect(data[:attributes][:user_id]).to eq(1)
         expect(data[:attributes][:date]).to eq("2022-02-21")
