@@ -1,11 +1,11 @@
 ---
 http_interactions:
 - request:
-    method: patch
-    uri: http://localhost:4000/api/v1/users/1/day_plans/15
+    method: post
+    uri: http://localhost:4000/api/v1/users/5/day_plans
     body:
       encoding: UTF-8
-      string: date=2022-02-21
+      string: date=2023-04-22
     headers:
       User-Agent:
       - Faraday v2.7.4
@@ -37,21 +37,21 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"b0ca0c4ac5d08173c6fe46249855c8a7"
+      - W/"3b39f6519f8cc32cc13bc97aee40c5fe"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - b5962df9-0a90-4c64-9c21-08e57970923c
+      - 067ff26a-4bb8-40db-ba1a-de9d74af8c72
       X-Runtime:
-      - '0.104872'
+      - '1.422634'
       Server-Timing:
-      - start_processing.action_controller;dur=0.84, sql.active_record;dur=41.32,
-        instantiation.active_record;dur=3.62, unpermitted_parameters.action_controller;dur=0.14,
-        process_action.action_controller;dur=85.89
+      - start_processing.action_controller;dur=0.28, sql.active_record;dur=535.39,
+        instantiation.active_record;dur=11.91, unpermitted_parameters.action_controller;dur=0.35,
+        process_action.action_controller;dur=653.63
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"15","type":"day_plan","attributes":{"user_id":1,"date":"2022-02-21"}}}'
-  recorded_at: Mon, 17 Apr 2023 23:47:13 GMT
+      string: '{"data":{"id":"12","type":"day_plan","attributes":{"user_id":5,"date":"2023-04-22"}}}'
+  recorded_at: Mon, 17 Apr 2023 21:25:50 GMT
 recorded_with: VCR 6.1.0

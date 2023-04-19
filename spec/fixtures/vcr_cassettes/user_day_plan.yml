@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:5000/api/v1/users/1/day_plans/1
+    uri: http://localhost:4000/api/v1/users/1/day_plans/1
     body:
       encoding: US-ASCII
       string: ''
@@ -39,16 +39,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - c173c8ac-2530-4809-82cc-0f5a191af5f2
+      - 676e0f96-36e6-481f-8776-baf698d67725
       X-Runtime:
-      - '0.015116'
+      - '0.051301'
       Server-Timing:
-      - start_processing.action_controller;dur=0.10, sql.active_record;dur=3.70, instantiation.active_record;dur=0.07,
-        process_action.action_controller;dur=6.75
+      - start_processing.action_controller;dur=0.20, sql.active_record;dur=17.89,
+        instantiation.active_record;dur=0.28, process_action.action_controller;dur=30.92
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"1","type":"day_plan","attributes":{"user_id":1,"date":"2021-01-01"}}}'
-  recorded_at: Sun, 16 Apr 2023 18:00:12 GMT
+  recorded_at: Mon, 17 Apr 2023 23:42:41 GMT
 recorded_with: VCR 6.1.0
