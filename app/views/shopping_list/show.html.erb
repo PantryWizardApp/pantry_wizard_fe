@@ -1,0 +1,111 @@
+  <head>
+    <title>Grocery Store Search</title>
+    <%# <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script> %>
+    <style> 
+    html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#container {
+
+  height: 50%;
+  right: 0px;
+  display: flex;
+  padding: 50px;
+ 
+}
+
+
+#map {
+  flex-basis: 0;
+  flex-grow: 4;
+  height: 100%;
+}
+
+</style>
+  </head>
+    <script>
+    function initMap() {
+      var pyrmont = new google.maps.LatLng(-33.866, 151.196);
+    
+        map = new google.maps.Map(document.getElementById("map"),{
+          center: pyrmont,
+        zoom: 17
+      })
+
+      var input = document.getElementById("searchTextField")
+
+      let autocomplete = new google.maps.places.Autocomplete(input)
+
+      autocomplete.bindTo('bounds',map)
+
+      let marker = new google.maps.Marker({ 
+        map:map
+      })
+
+      google.maps.event.addListener(autocomplete, 'place_changed',() => {
+        let place = autocomplete.getPlace()
+        console.log(place)
+
+        if(place.geometry.viewport){
+          map.fitBounds(place.geometry.viewport)
+        }else{
+          map.setCenter(place.geometry.location)
+          map.setZoom(17)
+        }
+        marker.setPosition(place.geometry.location)
+        marker.setVisible(true)
+
+        var request = {
+          location:place.geometry.location, 
+          radius: '5000',
+          type: ['supermarket']
+        }
+
+        service = new google.maps.places.PlacesService(map)
+        service.nearbySearch(request,callback)
+      })
+
+      }
+
+      function callback(results,status) {
+        if (status == google.maps.places.PlacesServiceStatus.OK) {
+          for (var i = 0; i < results.length; i++) {
+            var place = results[i];
+            createMarker(results[i]);
+          }
+        }
+      }
+
+      function createMarker(place) { 
+        var marker = new google.maps.Marker({
+          map: map, 
+          position: place.geometry.location
+        }); 
+
+        google.maps.event.addListener(marker, 'click', function () {
+          alert(place.name);
+        });
+      }
+      
+
+window.initMap = initMap; </script>
+
+    <!-- 
+      The `defer` attribute causes the callback to execute after the full HTML
+      document has been parsed. For non-blocking uses, avoiding race conditions,
+      and consistent behavior across browsers, consider loading using Promises.
+      See https://developers.google.com/maps/documentation/javascript/load-maps-js-api
+      for more information.
+      -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_MAPS_API_KEY'] %>&callback=initMap&libraries=places" asnyc defer data-turbolinks-eval="false"></script>
+        <body>
+            <input id="searchTextField" type="text" size="50">
+          <div id="container">
+            <div id="map"></div>
+          </div>
+  </body>
+
