@@ -11,4 +11,7 @@ Rails.application.routes.draw do
 
   get "/preferences", to: "users#edit"
   patch "/preferences", to: "users#update"
+
+  get "/meals/:id", to: "recipes#show"
+
 end

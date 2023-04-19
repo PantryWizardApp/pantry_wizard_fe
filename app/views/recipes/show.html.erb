@@ -1,0 +1,35 @@
+<div class="container-xl">
+  <h1 class = "display-2 text-center" ><%= @recipe.name %></h1>
+    <br>
+    <div class="row">
+      <div class="col-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Ingredients</h5>
+            <% @recipe.ingredients.each do |ingredient|%>
+              <p class= "card-text"><%= ingredient.values.first%>: <%= ingredient.values.second%> <%= ingredient.values.third%></p>
+            <% end %>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Instructions</h5>
+            <% @recipe.instructions.each do |instruction| %>
+              <% instruction.each do |k| %>
+              <p class="card-text"><%= k.values.first%>.) <%= k.values.second%> </p>
+              <% end %>
+            <% end %>
+          </div>
+        </div>
+      </div>     
+      <div class="col-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title"><%= @recipe.name%> </h5>
+              <%= image_tag ("https://spoonacular.com/recipeImages/#{@recipe.id}-556x370.jpg"), class: "img-fluid", style: "width: 100%"%>
+          </div>
+        </div>
+      </div>
+</div>
