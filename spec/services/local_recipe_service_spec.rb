@@ -27,8 +27,8 @@ RSpec.describe LocalRecipeService do
       VCR.use_cassette('user_recipe_creation') do
         user_id = '1'
         recipe_params = { name: 'brownies', ingredients: "sugar, chocolate, flour", instructions: "just throw it all in a bowl and mix, spread it out over a baking pan, bake unitl it no longer looks weird", spoonacular_id: "2345678901", image: "https://spoonacular.com/recipeImages/595736-556x370.jpg", day_plan_id: 1 }
-        recipes = LocalRecipeService.create_user_recipe(user_id, recipe_params)
-        data = recipes[:data]
+        recipe = LocalRecipeService.create_recipe(recipe_params)
+        data = recipe[:data]
 
         expect(data[:attributes][:name]).to eq(recipe_params[:name])
         expect(data[:attributes][:ingredients]).to eq(recipe_params[:ingredients])

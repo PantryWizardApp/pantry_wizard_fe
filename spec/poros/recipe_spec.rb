@@ -353,7 +353,7 @@ RSpec.describe Recipe do
 
   it "exists" do
     expect(@recipe).to be_a(Recipe)
-    expect(@recipe.id).to eq(801710)
+    expect(@recipe.spoonacular_id).to eq(801710)
     
     expect(@recipe.ingredients).to be_a(Array)
     expect(@recipe.ingredients).to eq([

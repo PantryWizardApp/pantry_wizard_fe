@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:4000/api/v1/users/5/day_plans?q=upcoming
+    uri: http://localhost:4000/api/v1/users/4/day_plans?q=upcoming
     body:
       encoding: US-ASCII
       string: ''
@@ -35,20 +35,20 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      - W/"a92d7014867ba27065caad322933e7c5"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - '09b4f417-2e45-4049-8ec0-b1a462ddbb37'
+      - fd20b6c4-6cc4-4b84-bf00-c7b2134dff3a
       X-Runtime:
-      - '0.979067'
+      - '0.038862'
       Server-Timing:
-      - start_processing.action_controller;dur=3.89, sql.active_record;dur=259.61,
-        instantiation.active_record;dur=13.64, process_action.action_controller;dur=784.62
+      - start_processing.action_controller;dur=0.28, sql.active_record;dur=5.00, instantiation.active_record;dur=0.39,
+        process_action.action_controller;dur=24.74
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":[]}'
-  recorded_at: Thu, 20 Apr 2023 02:52:50 GMT
+      string: '{"data":[{"id":"12","type":"day_plan","attributes":{"user_id":4,"date":"2023-04-20","recipes":[]}}]}'
+  recorded_at: Thu, 20 Apr 2023 22:22:35 GMT
 recorded_with: VCR 6.1.0

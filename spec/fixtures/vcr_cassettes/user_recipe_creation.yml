@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: http://localhost:4000/api/v1/users/1/recipes
+    uri: http://localhost:4000/api/v1/recipes
     body:
       encoding: UTF-8
       string: day_plan_id=1&image=https%3A%2F%2Fspoonacular.com%2FrecipeImages%2F595736-556x370.jpg&ingredients=sugar%2C+chocolate%2C+flour&instructions=just+throw+it+all+in+a+bowl+and+mix%2C+spread+it+out+over+a+baking+pan%2C+bake+unitl+it+no+longer+looks+weird&name=brownies&spoonacular_id=2345678901
@@ -17,8 +17,8 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 200
-      message: OK
+      code: 404
+      message: Not Found
     headers:
       X-Frame-Options:
       - SAMEORIGIN
@@ -36,24 +36,20 @@ http_interactions:
       - application/json; charset=utf-8
       Vary:
       - Accept
-      Etag:
-      - W/"9ad6ab23907d59f386de20fa331773a6"
       Cache-Control:
-      - max-age=0, private, must-revalidate
+      - no-cache
       X-Request-Id:
-      - 9eb5729a-5a3d-48e7-a87d-b765e0232d30
+      - bd0c7151-6dc2-459f-b2cb-588998ee0413
       X-Runtime:
-      - '0.048253'
+      - '0.010548'
       Server-Timing:
-      - start_processing.action_controller;dur=0.18, sql.active_record;dur=17.85,
-        instantiation.active_record;dur=0.18, unpermitted_parameters.action_controller;dur=0.64,
-        process_action.action_controller;dur=33.55
+      - start_processing.action_controller;dur=0.12, unpermitted_parameters.action_controller;dur=0.85,
+        process_action.action_controller;dur=2.03
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"7","type":"recipe","attributes":{"spoonacular_id":2345678901,"name":"brownies","ingredients":"sugar,
-        chocolate, flour","instructions":"just throw it all in a bowl and mix, spread
-        it out over a baking pan, bake unitl it no longer looks weird","image":"https://spoonacular.com/recipeImages/595736-556x370.jpg"}}}'
-  recorded_at: Wed, 19 Apr 2023 18:28:26 GMT
+      string: '{"errors":[{"status":"404","title":"unknown attribute ''spoonacular_id''
+        for Recipe.\n\n          raise UnknownAttributeError.new(self, k.to_s)\n          ^^^^^"}]}'
+  recorded_at: Thu, 20 Apr 2023 21:47:26 GMT
 recorded_with: VCR 6.1.0

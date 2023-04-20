@@ -2,10 +2,554 @@
 http_interactions:
 - request:
     method: post
-    uri: http://localhost:4000/api/v1/users/5/day_plans
+    uri: http://localhost:4000/api/v1/users/4/day_plans
     body:
       encoding: UTF-8
       string: date=2023-04-22
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"e815ffc058295cc07ad2680aa0573f4e"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 3f3373c2-e18c-4853-8809-589cf7563367
+      X-Runtime:
+      - '0.034817'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.13, sql.active_record;dur=18.26,
+        instantiation.active_record;dur=0.07, unpermitted_parameters.action_controller;dur=0.13,
+        process_action.action_controller;dur=26.83
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"13","type":"day_plan","attributes":{"user_id":4,"date":"2023-04-22","recipes":[]}}}'
+  recorded_at: Thu, 20 Apr 2023 22:22:37 GMT
+- request:
+    method: get
+    uri: https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/search?instructionsRequired=True&number=1&offset=331&%7B:query=%3E%22*%22,%20:cuisine=%3E%22%22,%20:excludeCuisine=%3E%22%22,%20:intolerances=%3E%5B%5D,%20:diet=%3E%22%22,%20:type=%3E%22breakfast%22%7D
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Rapidapi-Key:
+      - 76fdb7e5d0msh48a690592566607p137418jsn84ec9de08957
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 20 Apr 2023 22:22:38 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '278'
+      Connection:
+      - keep-alive
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Cf-Cache-Status:
+      - DYNAMIC
+      Allow-Control-Allow-Methods:
+      - GET, HEAD, POST, OPTIONS, DELETE, PUT
+      Access-Control-Allow-Origin:
+      - "*"
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=oArA2GKzATIEp8i3Opv%2Fea5a4Cd139G5hWi4uLAdSc4pbnAwkMr8Zj7owF3bE9PwN%2B%2Bhh4tAtYab%2B55GCxkDQ05oPCCQAJCyN6rXHP82gL2%2BVHwWt5edB7%2BVn0k2qaViL0Mcc20%3D"}],"group":"cf-nel","max_age":604800}'
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, OPTIONS, DELETE, PUT
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+      Allow-Control-Allow-Origin:
+      - "*"
+      Cf-Ray:
+      - 7bb0c97d6dff30d7-SEA
+      Access-Control-Allow-Headers:
+      - Authorization, UserId, Hash, Name, Password, Accept, Accept-Language, x-api-key,
+        Content-Language, Content-Type, Cache-Control, Origin, X-Requested-With
+      X-Ratelimit-Tinyrequests-Limit:
+      - '500'
+      X-Ratelimit-Tinyrequests-Remaining:
+      - '500'
+      X-Ratelimit-Tinyrequests-Reset:
+      - '82420'
+      X-Ratelimit-Requests-Limit:
+      - '50'
+      X-Ratelimit-Requests-Remaining:
+      - '28'
+      X-Ratelimit-Requests-Reset:
+      - '82420'
+      X-Ratelimit-Results-Limit:
+      - '500'
+      X-Ratelimit-Results-Remaining:
+      - '487'
+      X-Ratelimit-Results-Reset:
+      - '82420'
+      Server:
+      - RapidAPI-1.2.8
+      X-Rapidapi-Version:
+      - 1.2.8
+      X-Rapidapi-Region:
+      - AWS - us-west-2
+    body:
+      encoding: ASCII-8BIT
+      string: '{"results":[{"readyInMinutes":25,"sourceUrl":"https://www.bettycrocker.com/recipes/portabella-tacos/14e483e0-1a19-4e52-b87c-ee931503ccc5","image":"Portabella-Tacos-182552.jpg","servings":4,"id":182552,"title":"Portabella
+        Tacos"}],"baseUri":"https://spoonacular.com/recipeImages/","offset":331,"number":1,"totalResults":385626,"processingTimeMs":208,"expires":1682288557977}'
+  recorded_at: Thu, 20 Apr 2023 22:22:37 GMT
+- request:
+    method: get
+    uri: https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/search?instructionsRequired=True&number=2&offset=410&%7B:query=%3E%22*%22,%20:cuisine=%3E%22%22,%20:excludeCuisine=%3E%22%22,%20:intolerances=%3E%5B%5D,%20:diet=%3E%22%22,%20:type=%3E%22main%20course%22%7D
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Rapidapi-Key:
+      - 76fdb7e5d0msh48a690592566607p137418jsn84ec9de08957
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 20 Apr 2023 22:22:38 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '373'
+      Connection:
+      - keep-alive
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Cf-Cache-Status:
+      - DYNAMIC
+      Allow-Control-Allow-Methods:
+      - GET, HEAD, POST, OPTIONS, DELETE, PUT
+      Access-Control-Allow-Origin:
+      - "*"
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=gWAXMRqPLSEoe2xO37gx0r%2FSjekBB9oyM5xBkZ2F3UeNycZpOOYaW7GlqqpWkWRktOjt%2BxgUBTamPEeSI2rg3yhb9aiXCfoSci0eAf1MUx6bQMuQeOZlaMhmjzDUUNLZ2V8E49g%3D"}],"group":"cf-nel","max_age":604800}'
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, OPTIONS, DELETE, PUT
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+      Allow-Control-Allow-Origin:
+      - "*"
+      Cf-Ray:
+      - 7bb0c981ec15c6fd-SEA
+      Access-Control-Allow-Headers:
+      - Authorization, UserId, Hash, Name, Password, Accept, Accept-Language, x-api-key,
+        Content-Language, Content-Type, Cache-Control, Origin, X-Requested-With
+      X-Ratelimit-Tinyrequests-Limit:
+      - '500'
+      X-Ratelimit-Tinyrequests-Remaining:
+      - '500'
+      X-Ratelimit-Tinyrequests-Reset:
+      - '82420'
+      X-Ratelimit-Requests-Limit:
+      - '50'
+      X-Ratelimit-Requests-Remaining:
+      - '27'
+      X-Ratelimit-Requests-Reset:
+      - '82420'
+      X-Ratelimit-Results-Limit:
+      - '500'
+      X-Ratelimit-Results-Remaining:
+      - '485'
+      X-Ratelimit-Results-Reset:
+      - '82420'
+      Server:
+      - RapidAPI-1.2.8
+      X-Rapidapi-Version:
+      - 1.2.8
+      X-Rapidapi-Region:
+      - AWS - us-west-2
+    body:
+      encoding: ASCII-8BIT
+      string: '{"results":[{"readyInMinutes":55,"sourceUrl":"http://www.bettycrocker.com/recipes/crescent-topped-turkey-chili-mole/2e6ab58c-6ca0-48ee-a3d5-db92f3086517","image":"crescent-topped-turkey-chili-mole-172318.jpg","servings":6,"id":172318,"title":"Crescent-Topped
+        Turkey Chili Mole"},{"readyInMinutes":45,"sourceUrl":"https://kirbiecravings.com/2017/12/apple-rose-tarts.html","image":"apple-rose-tarts-956561.jpg","servings":12,"id":956561,"title":"Apple
+        Rose Tarts"}],"baseUri":"https://spoonacular.com/recipeImages/","offset":410,"number":2,"totalResults":385626,"processingTimeMs":182,"expires":1682288558677}'
+  recorded_at: Thu, 20 Apr 2023 22:22:38 GMT
+- request:
+    method: get
+    uri: https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/182552/information
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Rapidapi-Key:
+      - 76fdb7e5d0msh48a690592566607p137418jsn84ec9de08957
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 20 Apr 2023 22:22:39 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '3031'
+      Connection:
+      - keep-alive
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Cf-Cache-Status:
+      - DYNAMIC
+      Allow-Control-Allow-Methods:
+      - GET, HEAD, POST, OPTIONS, DELETE, PUT
+      Access-Control-Allow-Origin:
+      - "*"
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=EdNIow78c3FiPYlcNrGCHVACq%2BzDUi6ipsakJhy%2F2aevuj1KDw%2BDA63cqIXvmsHV0axKfhe9YIjiHoy2VN9Zv7TonpZ1JxTFo2kTCeYvQISvfQh8C0jE%2FNL3QZX0sPQ7GSTN5To%3D"}],"group":"cf-nel","max_age":604800}'
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, OPTIONS, DELETE, PUT
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+      Allow-Control-Allow-Origin:
+      - "*"
+      Cf-Ray:
+      - 7bb0c985be9cebdf-SEA
+      Access-Control-Allow-Headers:
+      - Authorization, UserId, Hash, Name, Password, Accept, Accept-Language, x-api-key,
+        Content-Language, Content-Type, Cache-Control, Origin, X-Requested-With
+      X-Ratelimit-Tinyrequests-Limit:
+      - '500'
+      X-Ratelimit-Tinyrequests-Remaining:
+      - '500'
+      X-Ratelimit-Tinyrequests-Reset:
+      - '82419'
+      X-Ratelimit-Requests-Limit:
+      - '50'
+      X-Ratelimit-Requests-Remaining:
+      - '26'
+      X-Ratelimit-Requests-Reset:
+      - '82419'
+      X-Ratelimit-Results-Limit:
+      - '500'
+      X-Ratelimit-Results-Remaining:
+      - '485'
+      X-Ratelimit-Results-Reset:
+      - '82419'
+      Server:
+      - RapidAPI-1.2.8
+      X-Rapidapi-Version:
+      - 1.2.8
+      X-Rapidapi-Region:
+      - AWS - us-west-2
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJ2ZWdldGFyaWFuIjpmYWxzZSwidmVnYW4iOmZhbHNlLCJnbHV0ZW5GcmVlIjpmYWxzZSwiZGFpcnlGcmVlIjp0cnVlLCJ2ZXJ5SGVhbHRoeSI6ZmFsc2UsImNoZWFwIjpmYWxzZSwidmVyeVBvcHVsYXIiOmZhbHNlLCJzdXN0YWluYWJsZSI6ZmFsc2UsImxvd0ZvZG1hcCI6ZmFsc2UsIndlaWdodFdhdGNoZXJTbWFydFBvaW50cyI6MTEsImdhcHMiOiJubyIsInByZXBhcmF0aW9uTWludXRlcyI6MjUsImNvb2tpbmdNaW51dGVzIjowLCJhZ2dyZWdhdGVMaWtlcyI6MCwiaGVhbHRoU2NvcmUiOjE0LCJjcmVkaXRzVGV4dCI6IkJldHR5IENyb2NrZXIiLCJzb3VyY2VOYW1lIjoiQmV0dHkgQ3JvY2tlciIsInByaWNlUGVyU2VydmluZyI6MTg3LjEyLCJleHRlbmRlZEluZ3JlZGllbnRzIjpbeyJpZCI6MTE5NTksImFpc2xlIjoiUHJvZHVjZSIsImltYWdlIjoiYXJ1Z3VsYS1vci1yb2NrZXQtc2FsYWQuanBnIiwiY29uc2lzdGVuY3kiOiJTT0xJRCIsIm5hbWUiOiJhcnVndWxhIiwibmFtZUNsZWFuIjoiYXJ1Z3VsYSIsIm9yaWdpbmFsIjoiNCBjdXBzIGFydWd1bGEiLCJvcmlnaW5hbE5hbWUiOiJhcnVndWxhIiwiYW1vdW50Ijo0LjAsInVuaXQiOiJjdXBzIiwibWV0YSI6W10sIm1lYXN1cmVzIjp7InVzIjp7ImFtb3VudCI6NC4wLCJ1bml0U2hvcnQiOiJjdXBzIiwidW5pdExvbmciOiJjdXBzIn0sIm1ldHJpYyI6eyJhbW91bnQiOjk0Ni4zNTIsInVuaXRTaG9ydCI6Im1sIiwidW5pdExvbmciOiJtaWxsaWxpdGVycyJ9fX0seyJpZCI6MjA2OSwiYWlzbGUiOiJPaWwsIFZpbmVnYXIsIFNhbGFkIERyZXNzaW5nIiwiaW1hZ2UiOiJiYWxzYW1pYy12aW5lZ2FyLmpwZyIsImNvbnNpc3RlbmN5IjoiTElRVUlEIiwibmFtZSI6ImJhbHNhbWljIHZpbmVnYXIiLCJuYW1lQ2xlYW4iOiJiYWxzYW1pYyB2aW5lZ2FyIiwib3JpZ2luYWwiOiIyIHRhYmxlc3Bvb25zIGJhbHNhbWljIHZpbmVnYXIiLCJvcmlnaW5hbE5hbWUiOiJiYWxzYW1pYyB2aW5lZ2FyIiwiYW1vdW50IjoyLjAsInVuaXQiOiJ0YWJsZXNwb29ucyIsIm1ldGEiOltdLCJtZWFzdXJlcyI6eyJ1cyI6eyJhbW91bnQiOjIuMCwidW5pdFNob3J0IjoiVGJzcHMiLCJ1bml0TG9uZyI6IlRic3BzIn0sIm1ldHJpYyI6eyJhbW91bnQiOjIuMCwidW5pdFNob3J0IjoiVGJzcHMiLCJ1bml0TG9uZyI6IlRic3BzIn19fSx7ImlkIjoxMDIxODM2NCwiYWlzbGUiOiJCYWtlcnkvQnJlYWQ7UGFzdGEgYW5kIFJpY2U7RXRobmljIEZvb2RzIiwiaW1hZ2UiOiJmbG91ci10b3J0aWxsYS5qcGciLCJjb25zaXN0ZW5jeSI6IlNPTElEIiwibmFtZSI6ImZsb3VyIHRvcnRpbGxhcyApIiwibmFtZUNsZWFuIjoiZmxvdXIgdG9ydGlsbGEiLCJvcmlnaW5hbCI6IjggT2xkIEVsIFBhc2/CriBmbG91ciB0b3J0aWxsYXMgZm9yIHNvZnQgdGFjb3MgJiBmYWppdGFzICg2IGluY2g7IGZyb20gOC4yLW96IHBhY2thZ2UpLCBoZWF0ZWQgYXMgZGlyZWN0ZWQgb24gcGFja2FnZSIsIm9yaWdpbmFsTmFtZSI6Ik9sZCBFbCBQYXNvwq4gZmxvdXIgdG9ydGlsbGFzIGZvciBzb2Z0IHRhY29zICYgZmFqaXRhcyAoNiBpbmNoOyBmcm9tIDguMi1veiBwYWNrYWdlKSwgaGVhdGVkIGFzIGRpcmVjdGVkIG9uIHBhY2thZ2UiLCJhbW91bnQiOjguMCwidW5pdCI6IjYtaW5jaCIsIm1ldGEiOlsic29mdCIsImZvciAgdGFjb3MgJiBmYWppdGFzICg7IGZyb20gOC4yLW96IHBhY2thZ2UiLCJvbGQgZWwgcGFzb8KuIl0sIm1lYXN1cmVzIjp7InVzIjp7ImFtb3VudCI6OC4wLCJ1bml0U2hvcnQiOiI2LWluY2giLCJ1bml0TG9uZyI6IjYtaW5jaHMifSwibWV0cmljIjp7ImFtb3VudCI6OC4wLCJ1bml0U2hvcnQiOiI2LWluY2giLCJ1bml0TG9uZyI6IjYtaW5jaHMifX19LHsiaWQiOjExMjE1LCJhaXNsZSI6IlByb2R1Y2UiLCJpbWFnZSI6ImdhcmxpYy5wbmciLCJjb25zaXN0ZW5jeSI6IlNPTElEIiwibmFtZSI6ImdhcmxpYyIsIm5hbWVDbGVhbiI6ImdhcmxpYyIsIm9yaWdpbmFsIjoiMSBjbG92ZSBnYXJsaWMsIGZpbmVseSBjaG9wcGVkIiwib3JpZ2luYWxOYW1lIjoiZ2FybGljLCBmaW5lbHkgY2hvcHBlZCIsImFtb3VudCI6MS4wLCJ1bml0IjoiY2xvdmUiLCJtZXRhIjpbImZpbmVseSBjaG9wcGVkIl0sIm1lYXN1cmVzIjp7InVzIjp7ImFtb3VudCI6MS4wLCJ1bml0U2hvcnQiOiJjbG92ZSIsInVuaXRMb25nIjoiY2xvdmUifSwibWV0cmljIjp7ImFtb3VudCI6MS4wLCJ1bml0U2hvcnQiOiJjbG92ZSIsInVuaXRMb25nIjoiY2xvdmUifX19LHsiaWQiOjExMjkxLCJhaXNsZSI6IlByb2R1Y2UiLCJpbWFnZSI6InNwcmluZy1vbmlvbnMuanBnIiwiY29uc2lzdGVuY3kiOiJTT0xJRCIsIm5hbWUiOiJncmVlbiBvbmlvbnMiLCJuYW1lQ2xlYW4iOiJzcHJpbmcgb25pb25zIiwib3JpZ2luYWwiOiIxLzQgY3VwIGNob3BwZWQgZ3JlZW4gb25pb25zICg0IG1lZGl1bSkiLCJvcmlnaW5hbE5hbWUiOiJjaG9wcGVkIGdyZWVuIG9uaW9ucyAoNCBtZWRpdW0pIiwiYW1vdW50IjowLjI1LCJ1bml0IjoiY3VwIiwibWV0YSI6WyJjaG9wcGVkIiwiKDQgbWVkaXVtKSJdLCJtZWFzdXJlcyI6eyJ1cyI6eyJhbW91bnQiOjAuMjUsInVuaXRTaG9ydCI6ImN1cHMiLCJ1bml0TG9uZyI6ImN1cHMifSwibWV0cmljIjp7ImFtb3VudCI6NTkuMTQ3LCJ1bml0U2hvcnQiOiJtbCIsInVuaXRMb25nIjoibWlsbGlsaXRlcnMifX19LHsiaWQiOjQwMjUsImFpc2xlIjoiQ29uZGltZW50cyIsImltYWdlIjoibWF5b25uYWlzZS5wbmciLCJjb25zaXN0ZW5jeSI6IkxJUVVJRCIsIm5hbWUiOiJtYXlvbm5haXNlIiwibmFtZUNsZWFuIjoibWF5b25uYWlzZSIsIm9yaWdpbmFsIjoiMS80IGN1cCBtYXlvbm5haXNlIiwib3JpZ2luYWxOYW1lIjoibWF5b25uYWlzZSIsImFtb3VudCI6MC4yNSwidW5pdCI6ImN1cCIsIm1ldGEiOltdLCJtZWFzdXJlcyI6eyJ1cyI6eyJhbW91bnQiOjAuMjUsInVuaXRTaG9ydCI6ImN1cHMiLCJ1bml0TG9uZyI6ImN1cHMifSwibWV0cmljIjp7ImFtb3VudCI6NTkuMTQ3LCJ1bml0U2hvcnQiOiJtbCIsInVuaXRMb25nIjoibWlsbGlsaXRlcnMifX19LHsiaWQiOjQwNTMsImFpc2xlIjoiT2lsLCBWaW5lZ2FyLCBTYWxhZCBEcmVzc2luZyIsImltYWdlIjoib2xpdmUtb2lsLmpwZyIsImNvbnNpc3RlbmN5IjoiTElRVUlEIiwibmFtZSI6Im9saXZlIG9pbCIsIm5hbWVDbGVhbiI6Im9saXZlIG9pbCIsIm9yaWdpbmFsIjoiMSB0YWJsZXNwb29uIG9saXZlIG9pbCIsIm9yaWdpbmFsTmFtZSI6Im9saXZlIG9pbCIsImFtb3VudCI6MS4wLCJ1bml0IjoidGFibGVzcG9vbiIsIm1ldGEiOltdLCJtZWFzdXJlcyI6eyJ1cyI6eyJhbW91bnQiOjEuMCwidW5pdFNob3J0IjoiVGJzcCIsInVuaXRMb25nIjoiVGJzcCJ9LCJtZXRyaWMiOnsiYW1vdW50IjoxLjAsInVuaXRTaG9ydCI6IlRic3AiLCJ1bml0TG9uZyI6IlRic3AifX19LHsiaWQiOjExMjY1LCJhaXNsZSI6IlByb2R1Y2UiLCJpbWFnZSI6InBvcnRhYmVsbG8tbXVzaHJvb21zLmpwZyIsImNvbnNpc3RlbmN5IjoiU09MSUQiLCJuYW1lIjoicG9ydGFiZWxsYSBtdXNocm9vbSBjYXBzIiwibmFtZUNsZWFuIjoicG9ydG9iZWxsbyBtdXNocm9vbXMiLCJvcmlnaW5hbCI6IjQgcG9ydGFiZWxsYSBtdXNocm9vbSBjYXBzLCBzbGljZWQiLCJvcmlnaW5hbE5hbWUiOiJwb3J0YWJlbGxhIG11c2hyb29tIGNhcHMsIHNsaWNlZCIsImFtb3VudCI6NC4wLCJ1bml0IjoiIiwibWV0YSI6WyJzbGljZWQiXSwibWVhc3VyZXMiOnsidXMiOnsiYW1vdW50Ijo0LjAsInVuaXRTaG9ydCI6IiIsInVuaXRMb25nIjoiIn0sIm1ldHJpYyI6eyJhbW91bnQiOjQuMCwidW5pdFNob3J0IjoiIiwidW5pdExvbmciOiIifX19LHsiaWQiOjExNTI5LCJhaXNsZSI6IlByb2R1Y2UiLCJpbWFnZSI6InRvbWF0by5wbmciLCJjb25zaXN0ZW5jeSI6IlNPTElEIiwibmFtZSI6InRvbWF0b2VzIiwibmFtZUNsZWFuIjoidG9tYXRvIiwib3JpZ2luYWwiOiIxIGN1cCBjaG9wcGVkIHRvbWF0b2VzIiwib3JpZ2luYWxOYW1lIjoiY2hvcHBlZCB0b21hdG9lcyIsImFtb3VudCI6MS4wLCJ1bml0IjoiY3VwIiwibWV0YSI6WyJjaG9wcGVkIl0sIm1lYXN1cmVzIjp7InVzIjp7ImFtb3VudCI6MS4wLCJ1bml0U2hvcnQiOiJjdXAiLCJ1bml0TG9uZyI6ImN1cCJ9LCJtZXRyaWMiOnsiYW1vdW50IjoyMzYuNTg4LCJ1bml0U2hvcnQiOiJtbCIsInVuaXRMb25nIjoibWlsbGlsaXRlcnMifX19LHsiaWQiOjY5NzEsImFpc2xlIjoiQ29uZGltZW50cyIsImltYWdlIjoiZGFyay1zYXVjZS5qcGciLCJjb25zaXN0ZW5jeSI6IkxJUVVJRCIsIm5hbWUiOiJ3b3JjZXN0ZXJzaGlyZSBzYXVjZSIsIm5hbWVDbGVhbiI6IndvcmNlc3RlcnNoaXJlIHNhdWNlIiwib3JpZ2luYWwiOiIyIHRhYmxlc3Bvb25zIFdvcmNlc3RlcnNoaXJlIHNhdWNlIiwib3JpZ2luYWxOYW1lIjoiV29yY2VzdGVyc2hpcmUgc2F1Y2UiLCJhbW91bnQiOjIuMCwidW5pdCI6InRhYmxlc3Bvb25zIiwibWV0YSI6W10sIm1lYXN1cmVzIjp7InVzIjp7ImFtb3VudCI6Mi4wLCJ1bml0U2hvcnQiOiJUYnNwcyIsInVuaXRMb25nIjoiVGJzcHMifSwibWV0cmljIjp7ImFtb3VudCI6Mi4wLCJ1bml0U2hvcnQiOiJUYnNwcyIsInVuaXRMb25nIjoiVGJzcHMifX19XSwiaWQiOjE4MjU1MiwidGl0bGUiOiJQb3J0YWJlbGxhIFRhY29zIiwicmVhZHlJbk1pbnV0ZXMiOjI1LCJzZXJ2aW5ncyI6NCwic291cmNlVXJsIjoiaHR0cHM6Ly93d3cuYmV0dHljcm9ja2VyLmNvbS9yZWNpcGVzL3BvcnRhYmVsbGEtdGFjb3MvMTRlNDgzZTAtMWExOS00ZTUyLWI4N2MtZWU5MzE1MDNjY2M1IiwiaW1hZ2UiOiJodHRwczovL3Nwb29uYWN1bGFyLmNvbS9yZWNpcGVJbWFnZXMvMTgyNTUyLTU1NngzNzAuanBnIiwiaW1hZ2VUeXBlIjoianBnIiwic3VtbWFyeSI6IlRoZSByZWNpcGUgUG9ydGFiZWxsYSBUYWNvcyBjb3VsZCBzYXRpc2Z5IHlvdXIgTWV4aWNhbiBjcmF2aW5nIGluIGFwcHJveGltYXRlbHkgPGI+MjUgbWludXRlczwvYj4uIE9uZSBzZXJ2aW5nIGNvbnRhaW5zIDxiPjM1NyBjYWxvcmllczwvYj4sIDxiPjhnIG9mIHByb3RlaW48L2I+LCBhbmQgPGI+MTlnIG9mIGZhdDwvYj4uIEZvciA8Yj4kMS44NyBwZXIgc2VydmluZzwvYj4sIHRoaXMgcmVjaXBlIDxiPmNvdmVycyAxOCU8L2I+IG9mIHlvdXIgZGFpbHkgcmVxdWlyZW1lbnRzIG9mIHZpdGFtaW5zIGFuZCBtaW5lcmFscy4gVGhpcyByZWNpcGUgc2VydmVzIDQuIEl0IHdvcmtzIHdlbGwgYXMgYSBob3IgZCdvZXV2cmUuIDEgcGVyc29uIHdlcmUgaW1wcmVzc2VkIGJ5IHRoaXMgcmVjaXBlLiBJdCBpcyBicm91Z2h0IHRvIHlvdSBieSBCZXR0eSBDcm9ja2VyLiBJZiB5b3UgaGF2ZSBvbGl2ZSBvaWwsIGJhbHNhbWljIHZpbmVnYXIsIGdhcmxpYywgYW5kIGEgZmV3IG90aGVyIGluZ3JlZGllbnRzIG9uIGhhbmQsIHlvdSBjYW4gbWFrZSBpdC4gSXQgaXMgYSBnb29kIG9wdGlvbiBpZiB5b3UncmUgZm9sbG93aW5nIGEgPGI+ZGFpcnkgZnJlZTwvYj4gZGlldC4gT3ZlcmFsbCwgdGhpcyByZWNpcGUgZWFybnMgYSA8Yj5nb29kIHNwb29uYWN1bGFyIHNjb3JlIG9mIDUyJTwvYj4uIFNpbWlsYXIgcmVjaXBlcyBpbmNsdWRlIDxhIGhyZWY9XCJodHRwczovL3Nwb29uYWN1bGFyLmNvbS9yZWNpcGVzL3BvcnRhYmVsbGEtdGFjb3MtMTI5NDAzM1wiPlBvcnRhYmVsbGEgVGFjb3M8L2E+LCA8YSBocmVmPVwiaHR0cHM6Ly9zcG9vbmFjdWxhci5jb20vcmVjaXBlcy9wb3J0YWJlbGxhLWFuZC16dWNjaGluaS10YWNvcy05OTQxOFwiPlBvcnRhYmVsbGFuIGFuZCBadWNjaGluaSBUYWNvczwvYT4sIGFuZCA8YSBocmVmPVwiaHR0cHM6Ly9zcG9vbmFjdWxhci5jb20vcmVjaXBlcy9ncmlsbGVkLXBvcnRhYmVsbGEtYW5kLXBvYmxhbm8tdGFjb3MtMTM2NDM3M1wiPkdyaWxsZWQgUG9ydGFiZWxsYW4gYW5kIFBvYmxhbm8gVGFjb3M8L2E+LiIsImN1aXNpbmVzIjpbIk1leGljYW4iXSwiZGlzaFR5cGVzIjpbImFudGlwYXN0aSIsInN0YXJ0ZXIiLCJzbmFjayIsImFwcGV0aXplciIsImFudGlwYXN0byIsImhvciBkJ29ldXZyZSJdLCJkaWV0cyI6WyJkYWlyeSBmcmVlIl0sIm9jY2FzaW9ucyI6W10sIndpbmVQYWlyaW5nIjp7InBhaXJlZFdpbmVzIjpbInNwYXJrbGluZyB3aW5lIiwic3BhcmtsaW5nIHJvc2UiXSwicGFpcmluZ1RleHQiOiJTcGFya2xpbmcgV2luZSBhbmQgU3BhcmtsaW5nIHJvc8OpIGFyZSBncmVhdCBjaG9pY2VzIGZvciBBbnRpcGFzdGkuIElmIHlvdSdyZSBzZXJ2aW5nIGEgc2VsZWN0aW9uIG9mIGFwcGV0aXplcnMsIHlvdSBjYW4ndCBnbyB3cm9uZyB3aXRoIHRoZXNlLiBCb3RoIGFyZSB2ZXJ5IGZvb2QgZnJpZW5kbHkgYW5kIGNvbXBsZW1lbnQgYSB2YXJpZXR5IG9mIGZsYXZvcnMuIE9uZSB3aW5lIHlvdSBjb3VsZCB0cnkgaXMgTW9ldCAmIENoYW5kb24gSW1wZXJpYWwgKDMgTGl0ZXIgQm90dGxlIC0gSmVyb2JvYW0pLiBJdCBoYXMgNSBvdXQgb2YgNSBzdGFycyBhbmQgYSBib3R0bGUgY29zdHMgYWJvdXQgNjAwIGRvbGxhcnMuIiwicHJvZHVjdE1hdGNoZXMiOlt7ImlkIjo0OTI5OTAsInRpdGxlIjoiTW9ldCAmIENoYW5kb24gSW1wZXJpYWwgKDMgTGl0ZXIgQm90dGxlIC0gSmVyb2JvYW0pIiwiZGVzY3JpcHRpb24iOiJUaGUgY29sb3IgaXMgYW4gZWxlZ2FudCBnb2xkZW4gc3RyYXcgeWVsbG93IHdpdGggYW1iZXIgaGlnaGxpZ2h0cy5JdHMgYXJvbWFzIGFyZSByYWRpYW50LCByZXZlYWxpbmcgYnJpZ2h0IHllbGxvdy1mbGVzaGVkIGZydWl0cyAoYXBwbGUsIHBlYXIsIHllbGxvdyBwZWFjaCksIGhvbmV5LCBmbG9yYWwgbnVhbmNlcyAobGltZSBibG9zc29tKSBhbmQgZWxlZ2FudCBibG9uZCBub3RlcyAoYnJpb2NoZSBhbmQgZnJlc2ggbnV0cykuVGhlIHBhbGF0ZSBpcyBzZWR1Y3RpdmUsIHJpY2hseSBmbGF2b3JmdWwgYW5kIHNtb290aCBjb21iaW5pbmcgZ2VuZXJvc2l0eSBhbmQgc3VidGxldHksIGZ1bGxuZXNzIGFuZCB2aWdvciwgZm9sbG93ZWQgYnkgYSBkZWxpY2F0ZWx5IGZyZXNoIGNyaXNwaW5lc3MgKGZydWl0IHdpdGggc2VlZHMpLCB0byByZXZlYWwgdGhlIG1hZ2ljYWwgYmFsYW5jZSBvZiBjaGFtcGFnbmUuIiwicHJpY2UiOiIkNTk5Ljk3IiwiaW1hZ2VVcmwiOiJodHRwczovL3Nwb29uYWN1bGFyLmNvbS9wcm9kdWN0SW1hZ2VzLzQ5Mjk5MC0zMTJ4MjMxLmpwZyIsImF2ZXJhZ2VSYXRpbmciOjEuMCwicmF0aW5nQ291bnQiOjUuMCwic2NvcmUiOjAuOTM3NSwibGluayI6Imh0dHBzOi8vY2xpY2subGlua3N5bmVyZ3kuY29tL2RlZXBsaW5rP2lkPSpRQ2lJUzZ0NGdBJm1pZD0yMDI1Jm11cmw9aHR0cHMlM0ElMkYlMkZ3d3cud2luZS5jb20lMkZwcm9kdWN0JTJGbW9ldC1hbmQtY2hhbmRvbi1pbXBlcmlhbC0zLWxpdGVyLWJvdHRsZS1qZXJvYm9hbSUyRjEyNjE3MiJ9XX0sImluc3RydWN0aW9ucyI6IjEgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgSW4gc21hbGwgYm93bCwgbWl4IGdhcmxpYyBzYXVjZSBpbmdyZWRpZW50czsgc2V0IGFzaWRlLiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAyICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIEluIGxhcmdlIHNraWxsZXQsIGhlYXQgb2lsIG92ZXIgbWVkaXVtIGhlYXQuIEFkZCBtdXNocm9vbXMsIHZpbmVnYXIgYW5kIDIgdGFibGVzcG9vbnMgV29yY2VzdGVyc2hpcmUgc2F1Y2UuIENvb2ssIHN0aXJyaW5nIGZyZXF1ZW50bHksIHVudGlsIG11c2hyb29tcyBhcmUgdGVuZGVyIGFuZCBtaXh0dXJlIGlzIHRoaWNrZW5lZC4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDMgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgUGxhY2UgMS8yIGN1cCBhcnVndWxhIG9uIGVhY2ggaGVhdGVkIHRvcnRpbGxhOyB0b3Agd2l0aCBtdXNocm9vbSBtaXh0dXJlLCB0b21hdG9lcyBhbmQgb25pb25zLiBTcG9vbiBnYXJsaWMgc2F1Y2Ugb3ZlciB0YWNvcy4iLCJhbmFseXplZEluc3RydWN0aW9ucyI6W3sibmFtZSI6IiIsInN0ZXBzIjpbeyJudW1iZXIiOjEsInN0ZXAiOiJJbiBzbWFsbCBib3dsLCBtaXggZ2FybGljIHNhdWNlIGluZ3JlZGllbnRzOyBzZXQgYXNpZGUuIiwiaW5ncmVkaWVudHMiOlt7ImlkIjoxMTIxNSwibmFtZSI6ImdhcmxpYyIsImxvY2FsaXplZE5hbWUiOiJnYXJsaWMiLCJpbWFnZSI6ImdhcmxpYy5wbmcifSx7ImlkIjowLCJuYW1lIjoic2F1Y2UiLCJsb2NhbGl6ZWROYW1lIjoic2F1Y2UiLCJpbWFnZSI6IiJ9XSwiZXF1aXBtZW50IjpbeyJpZCI6NDA0NzgzLCJuYW1lIjoiYm93bCIsImxvY2FsaXplZE5hbWUiOiJib3dsIiwiaW1hZ2UiOiJib3dsLmpwZyJ9XX0seyJudW1iZXIiOjIsInN0ZXAiOiJJbiBsYXJnZSBza2lsbGV0LCBoZWF0IG9pbCBvdmVyIG1lZGl1bSBoZWF0LiIsImluZ3JlZGllbnRzIjpbeyJpZCI6NDU4MiwibmFtZSI6ImNvb2tpbmcgb2lsIiwibG9jYWxpemVkTmFtZSI6ImNvb2tpbmcgb2lsIiwiaW1hZ2UiOiJ2ZWdldGFibGUtb2lsLmpwZyJ9XSwiZXF1aXBtZW50IjpbeyJpZCI6NDA0NjQ1LCJuYW1lIjoiZnJ5aW5nIHBhbiIsImxvY2FsaXplZE5hbWUiOiJmcnlpbmcgcGFuIiwiaW1hZ2UiOiJwYW4ucG5nIn1dfSx7Im51bWJlciI6Mywic3RlcCI6IkFkZCBtdXNocm9vbXMsIHZpbmVnYXIgYW5kIDIgdGFibGVzcG9vbnMgV29yY2VzdGVyc2hpcmUgc2F1Y2UuIENvb2ssIHN0aXJyaW5nIGZyZXF1ZW50bHksIHVudGlsIG11c2hyb29tcyBhcmUgdGVuZGVyIGFuZCBtaXh0dXJlIGlzIHRoaWNrZW5lZC4iLCJpbmdyZWRpZW50cyI6W3siaWQiOjY5NzEsIm5hbWUiOiJ3b3JjZXN0ZXJzaGlyZSBzYXVjZSIsImxvY2FsaXplZE5hbWUiOiJ3b3JjZXN0ZXJzaGlyZSBzYXVjZSIsImltYWdlIjoiZGFyay1zYXVjZS5qcGcifSx7ImlkIjoxMTI2MCwibmFtZSI6Im11c2hyb29tcyIsImxvY2FsaXplZE5hbWUiOiJtdXNocm9vbXMiLCJpbWFnZSI6Im11c2hyb29tcy5wbmcifSx7ImlkIjoyMDUzLCJuYW1lIjoidmluZWdhciIsImxvY2FsaXplZE5hbWUiOiJ2aW5lZ2FyIiwiaW1hZ2UiOiJ2aW5lZ2FyLSh3aGl0ZSkuanBnIn1dLCJlcXVpcG1lbnQiOltdfSx7Im51bWJlciI6NCwic3RlcCI6IlBsYWNlIDEvMiBjdXAgYXJ1Z3VsYSBvbiBlYWNoIGhlYXRlZCB0b3J0aWxsYTsgdG9wIHdpdGggbXVzaHJvb20gbWl4dHVyZSwgdG9tYXRvZXMgYW5kIG9uaW9ucy4gU3Bvb24gZ2FybGljIHNhdWNlIG92ZXIgdGFjb3MuIiwiaW5ncmVkaWVudHMiOlt7ImlkIjoxMTI2MCwibmFtZSI6Im11c2hyb29tcyIsImxvY2FsaXplZE5hbWUiOiJtdXNocm9vbXMiLCJpbWFnZSI6Im11c2hyb29tcy5wbmcifSx7ImlkIjoxMTUyOSwibmFtZSI6InRvbWF0byIsImxvY2FsaXplZE5hbWUiOiJ0b21hdG8iLCJpbWFnZSI6InRvbWF0by5wbmcifSx7ImlkIjoxODM2NCwibmFtZSI6InRvcnRpbGxhIiwibG9jYWxpemVkTmFtZSI6InRvcnRpbGxhIiwiaW1hZ2UiOiJmbG91ci10b3J0aWxsYS5qcGcifSx7ImlkIjoxMTk1OSwibmFtZSI6ImFydWd1bGEiLCJsb2NhbGl6ZWROYW1lIjoiYXJ1Z3VsYSIsImltYWdlIjoiYXJ1Z3VsYS1vci1yb2NrZXQtc2FsYWQuanBnIn0seyJpZCI6MTEyMTUsIm5hbWUiOiJnYXJsaWMiLCJsb2NhbGl6ZWROYW1lIjoiZ2FybGljIiwiaW1hZ2UiOiJnYXJsaWMucG5nIn0seyJpZCI6MTEyODIsIm5hbWUiOiJvbmlvbiIsImxvY2FsaXplZE5hbWUiOiJvbmlvbiIsImltYWdlIjoiYnJvd24tb25pb24ucG5nIn0seyJpZCI6MCwibmFtZSI6InNhdWNlIiwibG9jYWxpemVkTmFtZSI6InNhdWNlIiwiaW1hZ2UiOiIifV0sImVxdWlwbWVudCI6W119XX1dLCJvcmlnaW5hbElkIjpudWxsfQ==
+  recorded_at: Thu, 20 Apr 2023 22:22:39 GMT
+- request:
+    method: get
+    uri: https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/172318/information
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Rapidapi-Key:
+      - 76fdb7e5d0msh48a690592566607p137418jsn84ec9de08957
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 20 Apr 2023 22:22:40 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '3524'
+      Connection:
+      - keep-alive
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Cf-Cache-Status:
+      - DYNAMIC
+      Allow-Control-Allow-Methods:
+      - GET, HEAD, POST, OPTIONS, DELETE, PUT
+      Access-Control-Allow-Origin:
+      - "*"
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=TD6uoFWfZrRnCykPpIBqDE2gAKzeBd%2B6DazfEBN3PxCRa%2Bj52jF4TaQqNZbFKP9eUaeTC9q8lU72ulq%2B9tri7RLoLFeF%2B4pRiNhCa8wRwbC2M0X0E0VfIBfeZz%2BORdVFAMKXx%2Bc%3D"}],"group":"cf-nel","max_age":604800}'
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, OPTIONS, DELETE, PUT
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+      Allow-Control-Allow-Origin:
+      - "*"
+      Cf-Ray:
+      - 7bb0c98b5bc513a2-SEA
+      Access-Control-Allow-Headers:
+      - Authorization, UserId, Hash, Name, Password, Accept, Accept-Language, x-api-key,
+        Content-Language, Content-Type, Cache-Control, Origin, X-Requested-With
+      X-Ratelimit-Tinyrequests-Limit:
+      - '500'
+      X-Ratelimit-Tinyrequests-Remaining:
+      - '500'
+      X-Ratelimit-Tinyrequests-Reset:
+      - '82418'
+      X-Ratelimit-Requests-Limit:
+      - '50'
+      X-Ratelimit-Requests-Remaining:
+      - '25'
+      X-Ratelimit-Requests-Reset:
+      - '82418'
+      X-Ratelimit-Results-Limit:
+      - '500'
+      X-Ratelimit-Results-Remaining:
+      - '485'
+      X-Ratelimit-Results-Reset:
+      - '82418'
+      Server:
+      - RapidAPI-1.2.8
+      X-Rapidapi-Version:
+      - 1.2.8
+      X-Rapidapi-Region:
+      - AWS - us-west-2
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJ2ZWdldGFyaWFuIjpmYWxzZSwidmVnYW4iOmZhbHNlLCJnbHV0ZW5GcmVlIjpmYWxzZSwiZGFpcnlGcmVlIjp0cnVlLCJ2ZXJ5SGVhbHRoeSI6ZmFsc2UsImNoZWFwIjpmYWxzZSwidmVyeVBvcHVsYXIiOmZhbHNlLCJzdXN0YWluYWJsZSI6ZmFsc2UsImxvd0ZvZG1hcCI6ZmFsc2UsIndlaWdodFdhdGNoZXJTbWFydFBvaW50cyI6MTAsImdhcHMiOiJubyIsInByZXBhcmF0aW9uTWludXRlcyI6MzUsImNvb2tpbmdNaW51dGVzIjoyMCwiYWdncmVnYXRlTGlrZXMiOjAsImhlYWx0aFNjb3JlIjoxMCwiY3JlZGl0c1RleHQiOiJCZXR0eSBDcm9ja2VyIiwic291cmNlTmFtZSI6IkJldHR5IENyb2NrZXIiLCJwcmljZVBlclNlcnZpbmciOjI2NC41LCJleHRlbmRlZEluZ3JlZGllbnRzIjpbeyJpZCI6MTkwNzgsImFpc2xlIjoiQmFraW5nIiwiaW1hZ2UiOiJiYWtpbmctY2hvY29sYXRlLmpwZyIsImNvbnNpc3RlbmN5IjoiU09MSUQiLCJuYW1lIjoic2VtaXN3ZWV0IGJha2luZyBjaG9jb2xhdGUiLCJuYW1lQ2xlYW4iOiJ1bnN3ZWV0ZW5lZCBiYWtpbmcgY2hvY29sYXRlIiwib3JpZ2luYWwiOiIyIG96IHNlbWlzd2VldCBiYWtpbmcgY2hvY29sYXRlIiwib3JpZ2luYWxOYW1lIjoic2VtaXN3ZWV0IGJha2luZyBjaG9jb2xhdGUiLCJhbW91bnQiOjIuMCwidW5pdCI6Im96IiwibWV0YSI6W10sIm1lYXN1cmVzIjp7InVzIjp7ImFtb3VudCI6Mi4wLCJ1bml0U2hvcnQiOiJveiIsInVuaXRMb25nIjoib3VuY2VzIn0sIm1ldHJpYyI6eyJhbW91bnQiOjU2LjY5OSwidW5pdFNob3J0IjoiZyIsInVuaXRMb25nIjoiZ3JhbXMifX19LHsiaWQiOjIwMDksImFpc2xlIjoiU3BpY2VzIGFuZCBTZWFzb25pbmdzIiwiaW1hZ2UiOiJjaGlsaS1wb3dkZXIuanBnIiwiY29uc2lzdGVuY3kiOiJTT0xJRCIsIm5hbWUiOiJjaGlsaSBwb3dkZXIiLCJuYW1lQ2xlYW4iOiJjaGlsaSBwb3dkZXIiLCJvcmlnaW5hbCI6IjEgdGFibGVzcG9vbiBjaGlsaSBwb3dkZXIiLCJvcmlnaW5hbE5hbWUiOiJjaGlsaSBwb3dkZXIiLCJhbW91bnQiOjEuMCwidW5pdCI6InRhYmxlc3Bvb24iLCJtZXRhIjpbXSwibWVhc3VyZXMiOnsidXMiOnsiYW1vdW50IjoxLjAsInVuaXRTaG9ydCI6IlRic3AiLCJ1bml0TG9uZyI6IlRic3AifSwibWV0cmljIjp7ImFtb3VudCI6MS4wLCJ1bml0U2hvcnQiOiJUYnNwIiwidW5pdExvbmciOiJUYnNwIn19fSx7ImlkIjoxMTE2NSwiYWlzbGUiOiJQcm9kdWNlIiwiaW1hZ2UiOiJjaWxhbnRyby5wbmciLCJjb25zaXN0ZW5jeSI6IlNPTElEIiwibmFtZSI6ImNpbGFudHJvIiwibmFtZUNsZWFuIjoiY2lsYW50cm8iLCJvcmlnaW5hbCI6IjEgdGFibGVzcG9vbiBjaG9wcGVkIGNpbGFudHJvLCBpZiBkZXNpcmVkIiwib3JpZ2luYWxOYW1lIjoiY2hvcHBlZCBjaWxhbnRybywgaWYgZGVzaXJlZCIsImFtb3VudCI6MS4wLCJ1bml0IjoidGFibGVzcG9vbiIsIm1ldGEiOlsiY2hvcHBlZCJdLCJtZWFzdXJlcyI6eyJ1cyI6eyJhbW91bnQiOjEuMCwidW5pdFNob3J0IjoiVGJzcCIsInVuaXRMb25nIjoiVGJzcCJ9LCJtZXRyaWMiOnsiYW1vdW50IjoxLjAsInVuaXRTaG9ydCI6IlRic3AiLCJ1bml0TG9uZyI6IlRic3AifX19LHsiaWQiOjM1MTM3LCJhaXNsZSI6IkV0aG5pYyBGb29kcztCYWtpbmciLCJpbWFnZSI6ImNvcm5tZWFsLnBuZyIsImNvbnNpc3RlbmN5IjoiU09MSUQiLCJuYW1lIjoiY29ybm1lYWwiLCJuYW1lQ2xlYW4iOiJjb3JubWVhbCIsIm9yaWdpbmFsIjoiMSB0YWJsZXNwb29uIGNvcm5tZWFsIiwib3JpZ2luYWxOYW1lIjoiY29ybm1lYWwiLCJhbW91bnQiOjEuMCwidW5pdCI6InRhYmxlc3Bvb24iLCJtZXRhIjpbXSwibWVhc3VyZXMiOnsidXMiOnsiYW1vdW50IjoxLjAsInVuaXRTaG9ydCI6IlRic3AiLCJ1bml0TG9uZyI6IlRic3AifSwibWV0cmljIjp7ImFtb3VudCI6MS4wLCJ1bml0U2hvcnQiOiJUYnNwIiwidW5pdExvbmciOiJUYnNwIn19fSx7ImlkIjo5ODg0OSwiYWlzbGUiOiJDYW5uZWQgYW5kIEphcnJlZCIsImltYWdlIjoidG9tYXRvZXMtY2FubmVkLnBuZyIsImNvbnNpc3RlbmN5IjoiU09MSUQiLCJuYW1lIjoiY2FubmVkIHRvbWF0b2VzIiwibmFtZUNsZWFuIjoiZmlyZSByb2FzdGVkIHRvbWF0b2VzIiwib3JpZ2luYWwiOiIxIGNhbiAoMjggb3opIG9yIDIgY2FucyAoMTQuNSBveiBlYWNoKSBNdWlyIG9yZ2FuaWMgZmlyZSByb2FzdGVkIGNydXNoZWQgdG9tYXRvZXMsIHVuZHJhaW5lZCIsIm9yaWdpbmFsTmFtZSI6ImNhbiBvciAyIGNhbnMgKDE0LjUgb3ogZWFjaCkgTXVpciBvcmdhbmljIGZpcmUgcm9hc3RlZCBjcnVzaGVkIHRvbWF0b2VzLCB1bmRyYWluZWQiLCJhbW91bnQiOjI4LjAsInVuaXQiOiJveiIsIm1ldGEiOlsiZmlyZSByb2FzdGVkIiwib3JnYW5pYyIsImNydXNoZWQiLCJ1bmRyYWluZWQiLCJjYW5uZWQiXSwibWVhc3VyZXMiOnsidXMiOnsiYW1vdW50IjoyOC4wLCJ1bml0U2hvcnQiOiJveiIsInVuaXRMb25nIjoib3VuY2VzIn0sIm1ldHJpYyI6eyJhbW91bnQiOjc5My43ODcsInVuaXRTaG9ydCI6ImciLCJ1bml0TG9uZyI6ImdyYW1zIn19fSx7ImlkIjoxMTIxNSwiYWlzbGUiOiJQcm9kdWNlIiwiaW1hZ2UiOiJnYXJsaWMucG5nIiwiY29uc2lzdGVuY3kiOiJTT0xJRCIsIm5hbWUiOiJnYXJsaWMiLCJuYW1lQ2xlYW4iOiJnYXJsaWMiLCJvcmlnaW5hbCI6IjIgY2xvdmVzIGdhcmxpYywgZmluZWx5IGNob3BwZWQiLCJvcmlnaW5hbE5hbWUiOiJnYXJsaWMsIGZpbmVseSBjaG9wcGVkIiwiYW1vdW50IjoyLjAsInVuaXQiOiJjbG92ZXMiLCJtZXRhIjpbImZpbmVseSBjaG9wcGVkIl0sIm1lYXN1cmVzIjp7InVzIjp7ImFtb3VudCI6Mi4wLCJ1bml0U2hvcnQiOiJjbG92ZXMiLCJ1bml0TG9uZyI6ImNsb3ZlcyJ9LCJtZXRyaWMiOnsiYW1vdW50IjoyLjAsInVuaXRTaG9ydCI6ImNsb3ZlcyIsInVuaXRMb25nIjoiY2xvdmVzIn19fSx7ImlkIjo1NjYyLCJhaXNsZSI6Ik1lYXQiLCJpbWFnZSI6Im1lYXQtZ3JvdW5kLmpwZyIsImNvbnNpc3RlbmN5IjoiU09MSUQiLCJuYW1lIjoiZ3JvdW5kIHR1cmtleSBicmVhc3QiLCJuYW1lQ2xlYW4iOiJncm91bmQgdHVya2V5Iiwib3JpZ2luYWwiOiIxIGxiIGdyb3VuZCB0dXJrZXkgYnJlYXN0Iiwib3JpZ2luYWxOYW1lIjoiZ3JvdW5kIHR1cmtleSBicmVhc3QiLCJhbW91bnQiOjEuMCwidW5pdCI6ImxiIiwibWV0YSI6W10sIm1lYXN1cmVzIjp7InVzIjp7ImFtb3VudCI6MS4wLCJ1bml0U2hvcnQiOiJsYiIsInVuaXRMb25nIjoicG91bmQifSwibWV0cmljIjp7ImFtb3VudCI6NDUzLjU5MiwidW5pdFNob3J0IjoiZyIsInVuaXRMb25nIjoiZ3JhbXMifX19LHsiaWQiOjExOTc5LCJhaXNsZSI6IkNhbm5lZCBhbmQgSmFycmVkO1Byb2R1Y2U7RXRobmljIEZvb2RzIiwiaW1hZ2UiOiJqYWxhcGVuby1wZXBwZXIucG5nIiwiY29uc2lzdGVuY3kiOiJTT0xJRCIsIm5hbWUiOiJ0byAyIGphbGFwZcOxbyBjaGlsZXMiLCJuYW1lQ2xlYW4iOiJqYWxhcGVubyBwZXBwZXIiLCJvcmlnaW5hbCI6IjEgdG8gMiBtZWRpdW0gamFsYXBlw7FvIGNoaWxlcywgc2VlZGVkLCBmaW5lbHkgY2hvcHBlZCIsIm9yaWdpbmFsTmFtZSI6InRvIDIgbWVkaXVtIGphbGFwZcOxbyBjaGlsZXMsIHNlZWRlZCwgZmluZWx5IGNob3BwZWQiLCJhbW91bnQiOjEuMCwidW5pdCI6Im1lZGl1bSIsIm1ldGEiOlsic2VlZGVkIiwiZmluZWx5IGNob3BwZWQiXSwibWVhc3VyZXMiOnsidXMiOnsiYW1vdW50IjoxLjAsInVuaXRTaG9ydCI6Im1lZGl1bSIsInVuaXRMb25nIjoibWVkaXVtIn0sIm1ldHJpYyI6eyJhbW91bnQiOjEuMCwidW5pdFNob3J0IjoibWVkaXVtIiwidW5pdExvbmciOiJtZWRpdW0ifX19LHsiaWQiOjEwMDIwMzAsImFpc2xlIjoiU3BpY2VzIGFuZCBTZWFzb25pbmdzIiwiaW1hZ2UiOiJwZXBwZXIuanBnIiwiY29uc2lzdGVuY3kiOiJTT0xJRCIsIm5hbWUiOiJwZXBwZXIiLCJuYW1lQ2xlYW4iOiJibGFjayBwZXBwZXIiLCJvcmlnaW5hbCI6IjEvNCB0ZWFzcG9vbiBwZXBwZXIiLCJvcmlnaW5hbE5hbWUiOiJwZXBwZXIiLCJhbW91bnQiOjAuMjUsInVuaXQiOiJ0ZWFzcG9vbiIsIm1ldGEiOltdLCJtZWFzdXJlcyI6eyJ1cyI6eyJhbW91bnQiOjAuMjUsInVuaXRTaG9ydCI6InRzcHMiLCJ1bml0TG9uZyI6InRlYXNwb29ucyJ9LCJtZXRyaWMiOnsiYW1vdW50IjowLjI1LCJ1bml0U2hvcnQiOiJ0c3BzIiwidW5pdExvbmciOiJ0ZWFzcG9vbnMifX19LHsiaWQiOjE2MDQ0LCJhaXNsZSI6IkNhbm5lZCBhbmQgSmFycmVkIiwiaW1hZ2UiOiJwaW50by1iZWFucy5qcGciLCJjb25zaXN0ZW5jeSI6IlNPTElEIiwibmFtZSI6InBpbnRvIGJlYW5zIiwibmFtZUNsZWFuIjoiY2FubmVkIHBpbnRvIGJlYW5zIiwib3JpZ2luYWwiOiIxIGNhbiAoMTUgdG8gMTYgb3opIHJlZCBraWRuZXkgb3IgcGludG8gYmVhbnMsIGRyYWluZWQiLCJvcmlnaW5hbE5hbWUiOiJjYW4gcmVkIGtpZG5leSBvciBwaW50byBiZWFucywgZHJhaW5lZCIsImFtb3VudCI6MTUuMCwidW5pdCI6Im96IiwibWV0YSI6WyJyZWQiLCJkcmFpbmVkIiwiY2FubmVkIl0sIm1lYXN1cmVzIjp7InVzIjp7ImFtb3VudCI6MTUuMCwidW5pdFNob3J0Ijoib3oiLCJ1bml0TG9uZyI6Im91bmNlcyJ9LCJtZXRyaWMiOnsiYW1vdW50Ijo0MjUuMjQzLCJ1bml0U2hvcnQiOiJnIiwidW5pdExvbmciOiJncmFtcyJ9fX0seyJpZCI6OTM2MTgsImFpc2xlIjoiUmVmcmlnZXJhdGVkIiwiaW1hZ2UiOiJjcmVzY2VudC1yb2xscy5qcGciLCJjb25zaXN0ZW5jeSI6IlNPTElEIiwibmFtZSI6ImNyZXNjZW50IGRpbm5lciByb2xscyIsIm5hbWVDbGVhbiI6InJlZnJpZ2VyYXRlZCBjcmVzY2VudCByb2xscyIsIm9yaWdpbmFsIjoiMSBjYW4gKDggb3opIHJlZnJpZ2VyYXRlZCBjcmVzY2VudCBkaW5uZXIgcm9sbHMiLCJvcmlnaW5hbE5hbWUiOiJjYW4gcmVmcmlnZXJhdGVkIGNyZXNjZW50IGRpbm5lciByb2xscyIsImFtb3VudCI6OC4wLCJ1bml0Ijoib3oiLCJtZXRhIjpbInJlZnJpZ2VyYXRlZCIsImNhbm5lZCJdLCJtZWFzdXJlcyI6eyJ1cyI6eyJhbW91bnQiOjguMCwidW5pdFNob3J0Ijoib3oiLCJ1bml0TG9uZyI6Im91bmNlcyJ9LCJtZXRyaWMiOnsiYW1vdW50IjoyMjYuNzk2LCJ1bml0U2hvcnQiOiJnIiwidW5pdExvbmciOiJncmFtcyJ9fX0seyJpZCI6MjA0NywiYWlzbGUiOiJTcGljZXMgYW5kIFNlYXNvbmluZ3MiLCJpbWFnZSI6InNhbHQuanBnIiwiY29uc2lzdGVuY3kiOiJTT0xJRCIsIm5hbWUiOiJzYWx0IiwibmFtZUNsZWFuIjoidGFibGUgc2FsdCIsIm9yaWdpbmFsIjoiMS8yIHRlYXNwb29uIHNhbHQiLCJvcmlnaW5hbE5hbWUiOiJzYWx0IiwiYW1vdW50IjowLjUsInVuaXQiOiJ0ZWFzcG9vbiIsIm1ldGEiOltdLCJtZWFzdXJlcyI6eyJ1cyI6eyJhbW91bnQiOjAuNSwidW5pdFNob3J0IjoidHNwcyIsInVuaXRMb25nIjoidGVhc3Bvb25zIn0sIm1ldHJpYyI6eyJhbW91bnQiOjAuNSwidW5pdFNob3J0IjoidHNwcyIsInVuaXRMb25nIjoidGVhc3Bvb25zIn19fV0sImlkIjoxNzIzMTgsInRpdGxlIjoiQ3Jlc2NlbnQtVG9wcGVkIFR1cmtleSBDaGlsaSBNb2xlIiwicmVhZHlJbk1pbnV0ZXMiOjU1LCJzZXJ2aW5ncyI6Niwic291cmNlVXJsIjoiaHR0cDovL3d3dy5iZXR0eWNyb2NrZXIuY29tL3JlY2lwZXMvY3Jlc2NlbnQtdG9wcGVkLXR1cmtleS1jaGlsaS1tb2xlLzJlNmFiNThjLTZjYTAtNDhlZS1hM2Q1LWRiOTJmMzA4NjUxNyIsImltYWdlIjoiaHR0cHM6Ly9zcG9vbmFjdWxhci5jb20vcmVjaXBlSW1hZ2VzLzE3MjMxOC01NTZ4MzcwLmpwZyIsImltYWdlVHlwZSI6ImpwZyIsInN1bW1hcnkiOiJOZWVkIGEgPGI+ZGFpcnkgZnJlZSBtYWluIGNvdXJzZTwvYj4/IENyZXNjZW50LVRvcHBlZCBUdXJrZXkgQ2hpbGkgTW9sZSBjb3VsZCBiZSBhbiBvdXRzdGFuZGluZyByZWNpcGUgdG8gdHJ5LiBPbmUgc2VydmluZyBjb250YWlucyA8Yj4zNjUgY2Fsb3JpZXM8L2I+LCA8Yj4yNWcgb2YgcHJvdGVpbjwvYj4sIGFuZCA8Yj4xNWcgb2YgZmF0PC9iPi4gRm9yIDxiPiQyLjY0IHBlciBzZXJ2aW5nPC9iPiwgdGhpcyByZWNpcGUgPGI+Y292ZXJzIDE3JTwvYj4gb2YgeW91ciBkYWlseSByZXF1aXJlbWVudHMgb2Ygdml0YW1pbnMgYW5kIG1pbmVyYWxzLiBUaGlzIHJlY2lwZSBzZXJ2ZXMgNi4gT25seSBhIGZldyBwZW9wbGUgbWFkZSB0aGlzIHJlY2lwZSwgYW5kIDEgd291bGQgc2F5IGl0IGhpdCB0aGUgc3BvdC4gSXQgd2lsbCBiZSBhIGhpdCBhdCB5b3VyIDxiPlRoZSBTdXBlciBCb3dsPC9iPiBldmVudC4gRnJvbSBwcmVwYXJhdGlvbiB0byB0aGUgcGxhdGUsIHRoaXMgcmVjaXBlIHRha2VzIGFyb3VuZCA8Yj41NSBtaW51dGVzPC9iPi4gVGhpcyByZWNpcGUgaXMgdHlwaWNhbCBvZiBBbWVyaWNhbiBjdWlzaW5lLiBJZiB5b3UgaGF2ZSBnYXJsaWMsIHBpbnRvIGJlYW5zLCBjb3JubWVhbCwgYW5kIGEgZmV3IG90aGVyIGluZ3JlZGllbnRzIG9uIGhhbmQsIHlvdSBjYW4gbWFrZSBpdC4gSXQgaXMgYnJvdWdodCB0byB5b3UgYnkgQmV0dHkgQ3JvY2tlci4gV2l0aCBhIHNwb29uYWN1bGFyIDxiPnNjb3JlIG9mIDUxJTwvYj4sIHRoaXMgZGlzaCBpcyBzb2xpZC4gSWYgeW91IGxpa2UgdGhpcyByZWNpcGUsIHRha2UgYSBsb29rIGF0IHRoZXNlIHNpbWlsYXIgcmVjaXBlczogPGEgaHJlZj1cImh0dHBzOi8vc3Bvb25hY3VsYXIuY29tL3JlY2lwZXMvY3Jlc2NlbnQtdG9wcGVkLXR1cmtleS1jaGlsaS0xNzA5MDNcIj5DcmVzY2VudC1Ub3BwZWQgVHVya2V5IENoaWxpPC9hPiwgPGEgaHJlZj1cImh0dHBzOi8vc3Bvb25hY3VsYXIuY29tL3JlY2lwZXMvY3Jlc2NlbnQtdG9wcGVkLXR1cmtleS1hbWFuZGluZS0zNzM2ODlcIj5DcmVzY2VudC1Ub3BwZWQgVHVya2V5IEFtYW5kaW5lPC9hPiwgYW5kIDxhIGhyZWY9XCJodHRwczovL3Nwb29uYWN1bGFyLmNvbS9yZWNpcGVzL3Nsb3ctY29va2VyLXR1cmtleS1tb2xlLWNoaWxpLTE3MTY0NFwiPlNsb3ctQ29va2VyIFR1cmtleSBNb2xlIENoaWxpPC9hPi4iLCJjdWlzaW5lcyI6WyJBbWVyaWNhbiJdLCJkaXNoVHlwZXMiOlsibHVuY2giLCJzb3VwIiwibWFpbiBjb3Vyc2UiLCJtYWluIGRpc2giLCJkaW5uZXIiXSwiZGlldHMiOlsiZGFpcnkgZnJlZSJdLCJvY2Nhc2lvbnMiOlsic3VwZXIgYm93bCJdLCJ3aW5lUGFpcmluZyI6eyJwYWlyZWRXaW5lcyI6WyJjYXZhIiwic2hpcmF6IiwiZ3JlbmFjaGUiXSwicGFpcmluZ1RleHQiOiJUdXJrZXkgQ2hpbGkgY2FuIGJlIHBhaXJlZCB3aXRoIENhdmEsIFNoaXJheiwgYW5kIEdyZW5hY2hlLiBUaGVzZSBqdWljeSByZWRzIGRvbid0IGhhdmUgdG9vIG11Y2ggdGFubmluIChpbXBvcnRhbnQgZm9yIHNwaWN5IGZvb2RzKSwgYnV0IGEgc3BhcmtsaW5nIHdpbmUgbGlrZSBjYXZhIGNhbiB0YW1lIHRoZSBoZWF0IGV2ZW4gYmV0dGVyLiBUaGUgTWFycXVlcyBkZSBDYWNlcmVzIENhdmEgd2l0aCBhIDUgb3V0IG9mIDUgc3RhciByYXRpbmcgc2VlbXMgbGlrZSBhIGdvb2QgbWF0Y2guIEl0IGNvc3RzIGFib3V0IDE2IGRvbGxhcnMgcGVyIGJvdHRsZS4iLCJwcm9kdWN0TWF0Y2hlcyI6W3siaWQiOjQ3MzU5OCwidGl0bGUiOiJNYXJxdWVzIGRlIENhY2VyZXMgQ2F2YSIsImRlc2NyaXB0aW9uIjoiUGFsZSBzdHJhdyBjb2xvciByZXZpdmVkIGJ5IGZpbmUgYnViYmxlcy4gQm91cXVldCBvZiBjaXRydXMgZnJ1aXRzIHdpdGggbm90ZXMgb2YgYnJpb2NoZS4gQ2hhcm1pbmcgYW5kIHJvdW5kIGluIHRoZSBtb3V0aCB3aXRoIGEgcmVmcmVzaGluZywgYmFsYW5jZWQgc3RydWN0dXJlLiBMaXZlbHkgZmluaXNoIHRoYXQgaGlnaGxpZ2h0cyBpdHMgZmluZSBidWJibGVzLkEgcmVmcmVzaGluZyBhcGVyaXRpZiwgdGhpcyBDYXZhIG1hcnJpZXMgd2VsbCB3aXRoIGZpc2ggYW5kIHNlYWZvb2QsIHBhc3RhLCByaWNlLCBzcGljeSBkaXNoZXMsIEFzaWFuIGN1aXNpbmUsIGFuZCBhbGwgdHlwZXMgb2YgZGVzc2VydHMuIiwicHJpY2UiOiIkMTUuOTkiLCJpbWFnZVVybCI6Imh0dHBzOi8vc3Bvb25hY3VsYXIuY29tL3Byb2R1Y3RJbWFnZXMvNDczNTk4LTMxMngyMzEuanBnIiwiYXZlcmFnZVJhdGluZyI6MS4wLCJyYXRpbmdDb3VudCI6NS4wLCJzY29yZSI6MC45Mzc1LCJsaW5rIjoiaHR0cHM6Ly9jbGljay5saW5rc3luZXJneS5jb20vZGVlcGxpbms/aWQ9KlFDaUlTNnQ0Z0EmbWlkPTIwMjUmbXVybD1odHRwcyUzQSUyRiUyRnd3dy53aW5lLmNvbSUyRnByb2R1Y3QlMkZtYXJxdWVzLWRlLWNhY2VyZXMtY2F2YSUyRjUyMDgxMSJ9XX0sImluc3RydWN0aW9ucyI6IjEgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgSW4gNC1xdWFydCBEdXRjaCBvdmVuLCBjb29rIHR1cmtleSwgY2hpbGVzIGFuZCBnYXJsaWMgb3ZlciBtZWRpdW0gaGVhdCA1IHRvIDggbWludXRlcywgc3RpcnJpbmcgb2NjYXNpb25hbGx5LCB1bnRpbCB0dXJrZXkgaXMgbm8gbG9uZ2VyIHBpbmsuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDIgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgU3RpciBpbiBjaGlsaSBwb3dkZXIsIHNhbHQsIHBlcHBlciwgY2hvY29sYXRlLCB0b21hdG9lcyBhbmQgYmVhbnMuIEhlYXQgdG8gYm9pbGluZywgc3RpcnJpbmcgb2NjYXNpb25hbGx5OyByZWR1Y2UgaGVhdC4gU2ltbWVyIHVuY292ZXJlZCAxNSBtaW51dGVzLCBzdGlycmluZyBvY2Nhc2lvbmFsbHkuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDMgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgTWVhbndoaWxlLCBoZWF0IG92ZW4gdG8gMzc1Ri4gTGlnaHRseSBzcHJheSAxMng4LWluY2ggKDItcXVhcnQpIGdsYXNzIGJha2luZyBkaXNoIHdpdGggY29va2luZyBzcHJheS4gVW5yb2xsIGRvdWdoIGFuZCBzZXBhcmF0ZSBpbnRvIDIgbG9uZyByZWN0YW5nbGVzOyBmaXJtbHkgcHJlc3MgcGVyZm9yYXRpb25zIHRvIHNlYWwuIFNwcmlua2xlIGJvdGggc2lkZXMgd2l0aCBjb3JubWVhbCwgZ2VudGx5IHByZXNzaW5nIGluIHdpdGggcGFsbSBvZiBoYW5kLiBTcG9vbiBjaGlsaSBtaXh0dXJlIGludG8gYmFraW5nIGRpc2guIFBsYWNlIGRvdWdoIHJlY3RhbmdsZXMgb3ZlciBjaGlsaSwgbGVhdmluZyBjZW50ZXIgb3BlbiBmb3Igc3RlYW0gdG8gZXNjYXBlLiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA0ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIEJha2UgMTUgdG8gMjAgbWludXRlcyBvciB1bnRpbCBjcnVzdCBpcyBnb2xkZW4gYnJvd24uIFNwcmlua2xlIHdpdGggY2lsYW50cm8uIiwiYW5hbHl6ZWRJbnN0cnVjdGlvbnMiOlt7Im5hbWUiOiIiLCJzdGVwcyI6W3sibnVtYmVyIjoxLCJzdGVwIjoiSW4gNC1xdWFydCBEdXRjaCBvdmVuLCBjb29rIHR1cmtleSwgY2hpbGVzIGFuZCBnYXJsaWMgb3ZlciBtZWRpdW0gaGVhdCA1IHRvIDggbWludXRlcywgc3RpcnJpbmcgb2NjYXNpb25hbGx5LCB1bnRpbCB0dXJrZXkgaXMgbm8gbG9uZ2VyIHBpbmsuIiwiaW5ncmVkaWVudHMiOlt7ImlkIjoxMTgxOSwibmFtZSI6ImNoaWxpIHBlcHBlciIsImxvY2FsaXplZE5hbWUiOiJjaGlsaSBwZXBwZXIiLCJpbWFnZSI6InJlZC1jaGlsaS5qcGcifSx7ImlkIjoxMTIxNSwibmFtZSI6ImdhcmxpYyIsImxvY2FsaXplZE5hbWUiOiJnYXJsaWMiLCJpbWFnZSI6ImdhcmxpYy5wbmcifSx7ImlkIjo1MTY1LCJuYW1lIjoid2hvbGUgdHVya2V5IiwibG9jYWxpemVkTmFtZSI6Indob2xlIHR1cmtleSIsImltYWdlIjoidHVya2V5LXJhdy13aG9sZS5qcGcifV0sImVxdWlwbWVudCI6W3siaWQiOjQwNDY2NywibmFtZSI6ImR1dGNoIG92ZW4iLCJsb2NhbGl6ZWROYW1lIjoiZHV0Y2ggb3ZlbiIsImltYWdlIjoiZHV0Y2gtb3Zlbi5qcGcifV0sImxlbmd0aCI6eyJudW1iZXIiOjUsInVuaXQiOiJtaW51dGVzIn19LHsibnVtYmVyIjoyLCJzdGVwIjoiU3RpciBpbiBjaGlsaSBwb3dkZXIsIHNhbHQsIHBlcHBlciwgY2hvY29sYXRlLCB0b21hdG9lcyBhbmQgYmVhbnMuIiwiaW5ncmVkaWVudHMiOlt7ImlkIjoyMDA5LCJuYW1lIjoiY2hpbGkgcG93ZGVyIiwibG9jYWxpemVkTmFtZSI6ImNoaWxpIHBvd2RlciIsImltYWdlIjoiY2hpbGktcG93ZGVyLmpwZyJ9LHsiaWQiOjE5MDgxLCJuYW1lIjoiY2hvY29sYXRlIiwibG9jYWxpemVkTmFtZSI6ImNob2NvbGF0ZSIsImltYWdlIjoibWlsay1jaG9jb2xhdGUuanBnIn0seyJpZCI6MTE1MjksIm5hbWUiOiJ0b21hdG8iLCJsb2NhbGl6ZWROYW1lIjoidG9tYXRvIiwiaW1hZ2UiOiJ0b21hdG8ucG5nIn0seyJpZCI6MTAwMjAzMCwibmFtZSI6InBlcHBlciIsImxvY2FsaXplZE5hbWUiOiJwZXBwZXIiLCJpbWFnZSI6InBlcHBlci5qcGcifSx7ImlkIjowLCJuYW1lIjoiYmVhbnMiLCJsb2NhbGl6ZWROYW1lIjoiYmVhbnMiLCJpbWFnZSI6ImtpZG5leS1iZWFucy5qcGcifSx7ImlkIjoyMDQ3LCJuYW1lIjoic2FsdCIsImxvY2FsaXplZE5hbWUiOiJzYWx0IiwiaW1hZ2UiOiJzYWx0LmpwZyJ9XSwiZXF1aXBtZW50IjpbXX0seyJudW1iZXIiOjMsInN0ZXAiOiJIZWF0IHRvIGJvaWxpbmcsIHN0aXJyaW5nIG9jY2FzaW9uYWxseTsgcmVkdWNlIGhlYXQuIFNpbW1lciB1bmNvdmVyZWQgMTUgbWludXRlcywgc3RpcnJpbmcgb2NjYXNpb25hbGx5LiIsImluZ3JlZGllbnRzIjpbXSwiZXF1aXBtZW50IjpbXSwibGVuZ3RoIjp7Im51bWJlciI6MTUsInVuaXQiOiJtaW51dGVzIn19LHsibnVtYmVyIjo0LCJzdGVwIjoiTWVhbndoaWxlLCBoZWF0IG92ZW4gdG8gMzc1Ri4gTGlnaHRseSBzcHJheSAxMng4LWluY2ggKDItcXVhcnQpIGdsYXNzIGJha2luZyBkaXNoIHdpdGggY29va2luZyBzcHJheS4gVW5yb2xsIGRvdWdoIGFuZCBzZXBhcmF0ZSBpbnRvIDIgbG9uZyByZWN0YW5nbGVzOyBmaXJtbHkgcHJlc3MgcGVyZm9yYXRpb25zIHRvIHNlYWwuIiwiaW5ncmVkaWVudHMiOlt7ImlkIjo0Njc5LCJuYW1lIjoiY29va2luZyBzcHJheSIsImxvY2FsaXplZE5hbWUiOiJjb29raW5nIHNwcmF5IiwiaW1hZ2UiOiJjb29raW5nLXNwcmF5LnBuZyJ9LHsiaWQiOjAsIm5hbWUiOiJkb3VnaCIsImxvY2FsaXplZE5hbWUiOiJkb3VnaCIsImltYWdlIjoicGl6emEtZG91Z2gifV0sImVxdWlwbWVudCI6W3siaWQiOjQwNjkyMSwibmFtZSI6ImdsYXNzIGJha2luZyBwYW4iLCJsb2NhbGl6ZWROYW1lIjoiZ2xhc3MgYmFraW5nIHBhbiIsImltYWdlIjoiZ2xhc3MtYmFraW5nLXRyYXkuanBnIn0seyJpZCI6NDA0Nzg0LCJuYW1lIjoib3ZlbiIsImxvY2FsaXplZE5hbWUiOiJvdmVuIiwiaW1hZ2UiOiJvdmVuLmpwZyIsInRlbXBlcmF0dXJlIjp7Im51bWJlciI6Mzc1LjAsInVuaXQiOiJGYWhyZW5oZWl0In19XX0seyJudW1iZXIiOjUsInN0ZXAiOiJTcHJpbmtsZSBib3RoIHNpZGVzIHdpdGggY29ybm1lYWwsIGdlbnRseSBwcmVzc2luZyBpbiB3aXRoIHBhbG0gb2YgaGFuZC4gU3Bvb24gY2hpbGkgbWl4dHVyZSBpbnRvIGJha2luZyBkaXNoLiIsImluZ3JlZGllbnRzIjpbeyJpZCI6MzUxMzcsIm5hbWUiOiJjb3JubWVhbCIsImxvY2FsaXplZE5hbWUiOiJjb3JubWVhbCIsImltYWdlIjoiY29ybm1lYWwucG5nIn0seyJpZCI6MTE4MTksIm5hbWUiOiJjaGlsaSBwZXBwZXIiLCJsb2NhbGl6ZWROYW1lIjoiY2hpbGkgcGVwcGVyIiwiaW1hZ2UiOiJyZWQtY2hpbGkuanBnIn1dLCJlcXVpcG1lbnQiOlt7ImlkIjo0MDQ2NDYsIm5hbWUiOiJiYWtpbmcgcGFuIiwibG9jYWxpemVkTmFtZSI6ImJha2luZyBwYW4iLCJpbWFnZSI6InJvYXN0aW5nLXBhbi5qcGcifV19LHsibnVtYmVyIjo2LCJzdGVwIjoiUGxhY2UgZG91Z2ggcmVjdGFuZ2xlcyBvdmVyIGNoaWxpLCBsZWF2aW5nIGNlbnRlciBvcGVuIGZvciBzdGVhbSB0byBlc2NhcGUuIiwiaW5ncmVkaWVudHMiOlt7ImlkIjoxMTgxOSwibmFtZSI6ImNoaWxpIHBlcHBlciIsImxvY2FsaXplZE5hbWUiOiJjaGlsaSBwZXBwZXIiLCJpbWFnZSI6InJlZC1jaGlsaS5qcGcifSx7ImlkIjowLCJuYW1lIjoiZG91Z2giLCJsb2NhbGl6ZWROYW1lIjoiZG91Z2giLCJpbWFnZSI6InBpenphLWRvdWdoIn1dLCJlcXVpcG1lbnQiOltdfSx7Im51bWJlciI6Nywic3RlcCI6IkJha2UgMTUgdG8gMjAgbWludXRlcyBvciB1bnRpbCBjcnVzdCBpcyBnb2xkZW4gYnJvd24uIiwiaW5ncmVkaWVudHMiOlt7ImlkIjowLCJuYW1lIjoiY3J1c3QiLCJsb2NhbGl6ZWROYW1lIjoiY3J1c3QiLCJpbWFnZSI6IiJ9XSwiZXF1aXBtZW50IjpbeyJpZCI6NDA0Nzg0LCJuYW1lIjoib3ZlbiIsImxvY2FsaXplZE5hbWUiOiJvdmVuIiwiaW1hZ2UiOiJvdmVuLmpwZyJ9XSwibGVuZ3RoIjp7Im51bWJlciI6MTUsInVuaXQiOiJtaW51dGVzIn19LHsibnVtYmVyIjo4LCJzdGVwIjoiU3ByaW5rbGUgd2l0aCBjaWxhbnRyby4iLCJpbmdyZWRpZW50cyI6W3siaWQiOjExMTY1LCJuYW1lIjoiY2lsYW50cm8iLCJsb2NhbGl6ZWROYW1lIjoiY2lsYW50cm8iLCJpbWFnZSI6ImNpbGFudHJvLnBuZyJ9XSwiZXF1aXBtZW50IjpbXX1dfV0sIm9yaWdpbmFsSWQiOm51bGx9
+  recorded_at: Thu, 20 Apr 2023 22:22:40 GMT
+- request:
+    method: get
+    uri: https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/956561/information
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Rapidapi-Key:
+      - 76fdb7e5d0msh48a690592566607p137418jsn84ec9de08957
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 20 Apr 2023 22:22:41 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '3182'
+      Connection:
+      - keep-alive
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Cf-Cache-Status:
+      - DYNAMIC
+      Allow-Control-Allow-Methods:
+      - GET, HEAD, POST, OPTIONS, DELETE, PUT
+      Access-Control-Allow-Origin:
+      - "*"
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=CqhCp28BAvBFqNsvhUK04l73h0%2Bhlaxdobcn3G%2FK%2FYcK3NpUYZSIfyUhX6kpM%2FPNanBneb34FZ2OqIVD238mMGFe8GIdA0Z0MZ%2FMjhIqrLhttj5fUfcFL60d%2FzGYkOBlu%2FSLFfE%3D"}],"group":"cf-nel","max_age":604800}'
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, OPTIONS, DELETE, PUT
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+      Allow-Control-Allow-Origin:
+      - "*"
+      Cf-Ray:
+      - 7bb0c9910f6f16d8-SEA
+      Access-Control-Allow-Headers:
+      - Authorization, UserId, Hash, Name, Password, Accept, Accept-Language, x-api-key,
+        Content-Language, Content-Type, Cache-Control, Origin, X-Requested-With
+      X-Ratelimit-Tinyrequests-Limit:
+      - '500'
+      X-Ratelimit-Tinyrequests-Remaining:
+      - '500'
+      X-Ratelimit-Tinyrequests-Reset:
+      - '82417'
+      X-Ratelimit-Requests-Limit:
+      - '50'
+      X-Ratelimit-Requests-Remaining:
+      - '24'
+      X-Ratelimit-Requests-Reset:
+      - '82417'
+      X-Ratelimit-Results-Limit:
+      - '500'
+      X-Ratelimit-Results-Remaining:
+      - '485'
+      X-Ratelimit-Results-Reset:
+      - '82417'
+      Server:
+      - RapidAPI-1.2.8
+      X-Rapidapi-Version:
+      - 1.2.8
+      X-Rapidapi-Region:
+      - AWS - us-west-2
+    body:
+      encoding: ASCII-8BIT
+      string: '{"vegetarian":true,"vegan":true,"glutenFree":false,"dairyFree":true,"veryHealthy":false,"cheap":false,"veryPopular":false,"sustainable":false,"lowFodmap":false,"weightWatcherSmartPoints":8,"gaps":"no","preparationMinutes":-1,"cookingMinutes":-1,"aggregateLikes":9,"healthScore":4,"creditsText":"Kirbie
+        Cravings","sourceName":"Kirbie Cravings","pricePerServing":82.9,"extendedIngredients":[{"id":19719,"aisle":"Nut
+        butters, Jams, and Honey","image":"apricot-jam.jpg","consistency":"SOLID","name":"apricot
+        preserves","nameClean":"apricot jam","original":"4 tbsp apricot preserves
+        + 1 tbsp water","originalName":"apricot preserves + 1 tbsp water","amount":4.0,"unit":"tbsp","meta":[],"measures":{"us":{"amount":4.0,"unitShort":"Tbsps","unitLong":"Tbsps"},"metric":{"amount":4.0,"unitShort":"Tbsps","unitLong":"Tbsps"}}},{"id":9152,"aisle":"Produce","image":"lemon-juice.jpg","consistency":"LIQUID","name":"juice
+        of lemon","nameClean":"lemon juice","original":"juice from half a lemon","originalName":"juice
+        from half a lemon","amount":12.0,"unit":"","meta":[],"measures":{"us":{"amount":12.0,"unitShort":"","unitLong":""},"metric":{"amount":12.0,"unitShort":"","unitLong":""}}},{"id":1079003,"aisle":"Produce","image":"red-delicious-apples.png","consistency":"SOLID","name":"pink","nameClean":"red
+        apple","original":"2 medium pink or red apples (like pink lady or fuji)","originalName":"pink
+        or red apples (like pink lady or fuji)","amount":2.0,"unit":"medium","meta":["red","(like
+        pink lady or fuji)"],"measures":{"us":{"amount":2.0,"unitShort":"medium","unitLong":"mediums"},"metric":{"amount":2.0,"unitShort":"medium","unitLong":"mediums"}}},{"id":18337,"aisle":"Refrigerated;Frozen","image":"puff-pastry.png","consistency":"SOLID","name":"puff
+        pastry","nameClean":"puff pastry dough","original":"2 sheets frozen puff pastry
+        (1 box of Pepperidge Farm puff pastry)","originalName":"frozen puff pastry
+        (1 box of Pepperidge Farm puff pastry)","amount":2.0,"unit":"sheets","meta":["frozen","(1
+        box of Pepperidge Farm puff pastry)"],"measures":{"us":{"amount":2.0,"unitShort":"sheets","unitLong":"sheets"},"metric":{"amount":2.0,"unitShort":"sheets","unitLong":"sheets"}}}],"id":956561,"title":"Apple
+        Rose Tarts","readyInMinutes":45,"servings":12,"sourceUrl":"https://kirbiecravings.com/2017/12/apple-rose-tarts.html","image":"https://spoonacular.com/recipeImages/956561-556x370.jpg","imageType":"jpg","summary":"The
+        recipe Apple Rose Tarts can be made <b>in about 45 minutes</b>. This dairy
+        free, lacto ovo vegetarian, and vegan recipe serves 12 and costs <b>83 cents
+        per serving</b>. One serving contains <b>263 calories</b>, <b>3g of protein</b>,
+        and <b>16g of fat</b>. Head to the store and pick up apricot preserves, juice
+        of lemon, pink, and a few other things to make it today. 9 people have tried
+        and liked this recipe. It is brought to you by Kirbie Cravings. Taking all
+        factors into account, this recipe <b>earns a spoonacular score of 42%</b>,
+        which is good. If you like this recipe, take a look at these similar recipes:
+        <a href=\"https://spoonacular.com/recipes/apple-rose-pie-1553497\">Apple Rose
+        Pie</a>, <a href=\"https://spoonacular.com/recipes/apple-rose-tart-689662\">Apple
+        Rose Tart</a>, and <a href=\"https://spoonacular.com/recipes/apple-rose-tart-1087202\">Apple
+        rose tart</a>.","cuisines":[],"dishTypes":[],"diets":["dairy free","lacto
+        ovo vegetarian","vegan"],"occasions":[],"winePairing":{"pairedWines":["cream
+        sherry","port","moscato dasti"],"pairingText":"Cream Sherry, Port, and Moscato
+        d''Asti are my top picks for Tart. A common wine pairing rule is to make sure
+        your wine is sweeter than your food. Delicate desserts go well with Moscato
+        d''Asti, nutty desserts with cream sherry, and caramel or chocolate desserts
+        pair well with port. The NV Solera Cream Sherry with a 4.5 out of 5 star rating
+        seems like a good match. It costs about 17 dollars per bottle.","productMatches":[{"id":428475,"title":"NV
+        Solera Cream Sherry","description":"The Solera Cream Sherry has a brilliant
+        amber and deep copper hue. With butterscotch and pecan aromas, the sweet salted
+        nut and brown spice aromas carry a complex caramel accent. A sweet entry leads
+        to a rounded, lush, moderately full-bodied palate with a lengthy, flavorful
+        finish.","price":"$16.99","imageUrl":"https://spoonacular.com/productImages/428475-312x231.jpg","averageRating":0.9,"ratingCount":4.0,"score":0.823076923076923,"link":"https://www.amazon.com/NV-Solera-Cream-Sherry-750/dp/B00HSME8OW?tag=spoonacular-20"}]},"instructions":"Thaw
+        puff pastry sheets at room temperature (this should take about 1 hour). Preheat
+        oven to 350F. Grease a 12-cup muffin pan. Remove core from apples and using
+        a mandoline slicer or food processor with a slicer attachment, slice apples
+        as paper-thin as possible. The thinner the apples, the more pliable they will
+        be which will prevent them from breaking when rolling. Place apple slices
+        into a medium bowl. Fill bowl with water enough to cover apple slices. Mix
+        in lemon juice to prevent apples from browning. Heat bowl of apples for about
+        1-2 minutes in the microwave or until apples are soft and pliable. Lightly
+        flour a pastry board. Place puff pastry sheets on board and slice each sheet
+        into six equal strips. In a small bowl, add apricot preserves and 1 tbsp water.
+        Stir together and then heat in the microwave for about 20 seconds, or until
+        warm and easy to spread. Spread a thin layer of preserve on one side of each
+        strip of dough. Line apple slices on the upper half of each strip of dough,
+        so that they are sticking out partially, with the skin part of the slices
+        sticking out above the dough. (You don''t want too much of the apple sticking
+        out above the dough otherwise this part of the apple will overcook in the
+        oven. You just want about 1/3 sticking out.) Overlap the apple slices when
+        lining them on the strip of dough. Fold up the bottom half of the dough. Starting
+        at one end, carefully roll up the strip of dough, forming a tight spiral.
+        Stretch the end of the dough and and pinch to close. Place into greased muffin
+        pan. Repeat with remaining dough. Place muffin pan into the lower half of
+        the oven (this will prevent the apples from browning too fast). Bake for about
+        40 minutes or until puff pastry is fully cooked and golden brown. Dust apple
+        roses with powdered sugar right before serving.","analyzedInstructions":[{"name":"","steps":[{"number":1,"step":"Thaw
+        puff pastry sheets at room temperature (this should take about 1 hour). Preheat
+        oven to 350F. Grease a 12-cup muffin pan.","ingredients":[{"id":18337,"name":"puff
+        pastry sheets","localizedName":"puff pastry sheets","image":"puff-pastry.png"}],"equipment":[{"id":404671,"name":"muffin
+        tray","localizedName":"muffin tray","image":"muffin-tray.jpg"},{"id":404784,"name":"oven","localizedName":"oven","image":"oven.jpg","temperature":{"number":350.0,"unit":"Fahrenheit"}}],"length":{"number":60,"unit":"minutes"}},{"number":2,"step":"Remove
+        core from apples and using a mandoline slicer or food processor with a slicer
+        attachment, slice apples as paper-thin as possible. The thinner the apples,
+        the more pliable they will be which will prevent them from breaking when rolling.","ingredients":[{"id":9003,"name":"apple","localizedName":"apple","image":"apple.jpg"}],"equipment":[{"id":404687,"name":"mandoline","localizedName":"mandoline","image":"mandoline-slicer.png"},{"id":404771,"name":"food
+        processor","localizedName":"food processor","image":"food-processor.png"}]},{"number":3,"step":"Place
+        apple slices into a medium bowl. Fill bowl with water enough to cover apple
+        slices.","ingredients":[{"id":9003,"name":"apple","localizedName":"apple","image":"apple.jpg"},{"id":14412,"name":"water","localizedName":"water","image":"water.png"}],"equipment":[{"id":404783,"name":"bowl","localizedName":"bowl","image":"bowl.jpg"}]},{"number":4,"step":"Mix
+        in lemon juice to prevent apples from browning.","ingredients":[{"id":9152,"name":"lemon
+        juice","localizedName":"lemon juice","image":"lemon-juice.jpg"},{"id":9003,"name":"apple","localizedName":"apple","image":"apple.jpg"}],"equipment":[]},{"number":5,"step":"Heat
+        bowl of apples for about 1-2 minutes in the microwave or until apples are
+        soft and pliable. Lightly flour a pastry board.","ingredients":[{"id":9003,"name":"apple","localizedName":"apple","image":"apple.jpg"},{"id":20081,"name":"all
+        purpose flour","localizedName":"all purpose flour","image":"flour.png"}],"equipment":[{"id":404762,"name":"microwave","localizedName":"microwave","image":"microwave.jpg"},{"id":404783,"name":"bowl","localizedName":"bowl","image":"bowl.jpg"}],"length":{"number":2,"unit":"minutes"}},{"number":6,"step":"Place
+        puff pastry sheets on board and slice each sheet into six equal strips. In
+        a small bowl, add apricot preserves and 1 tbsp water. Stir together and then
+        heat in the microwave for about 20 seconds, or until warm and easy to spread.","ingredients":[{"id":18337,"name":"puff
+        pastry sheets","localizedName":"puff pastry sheets","image":"puff-pastry.png"},{"id":19719,"name":"apricot
+        preserves","localizedName":"apricot preserves","image":"apricot-jam.jpg"},{"id":0,"name":"spread","localizedName":"spread","image":""},{"id":14412,"name":"water","localizedName":"water","image":"water.png"}],"equipment":[{"id":404762,"name":"microwave","localizedName":"microwave","image":"microwave.jpg"},{"id":404783,"name":"bowl","localizedName":"bowl","image":"bowl.jpg"}]},{"number":7,"step":"Spread
+        a thin layer of preserve on one side of each strip of dough. Line apple slices
+        on the upper half of each strip of dough, so that they are sticking out partially,
+        with the skin part of the slices sticking out above the dough. (You don''t
+        want too much of the apple sticking out above the dough otherwise this part
+        of the apple will overcook in the oven. You just want about 1/3 sticking out.)
+        Overlap the apple slices when lining them on the strip of dough. Fold up the
+        bottom half of the dough. Starting at one end, carefully roll up the strip
+        of dough, forming a tight spiral. Stretch the end of the dough and and pinch
+        to close.","ingredients":[{"id":0,"name":"spread","localizedName":"spread","image":""},{"id":9003,"name":"apple","localizedName":"apple","image":"apple.jpg"},{"id":0,"name":"dough","localizedName":"dough","image":"pizza-dough"},{"id":0,"name":"roll","localizedName":"roll","image":"dinner-yeast-rolls.jpg"}],"equipment":[{"id":404784,"name":"oven","localizedName":"oven","image":"oven.jpg"}]},{"number":8,"step":"Place
+        into greased muffin pan. Repeat with remaining dough.","ingredients":[{"id":0,"name":"dough","localizedName":"dough","image":"pizza-dough"}],"equipment":[{"id":404671,"name":"muffin
+        tray","localizedName":"muffin tray","image":"muffin-tray.jpg"}]},{"number":9,"step":"Place
+        muffin pan into the lower half of the oven (this will prevent the apples from
+        browning too fast).","ingredients":[{"id":9003,"name":"apple","localizedName":"apple","image":"apple.jpg"}],"equipment":[{"id":404671,"name":"muffin
+        tray","localizedName":"muffin tray","image":"muffin-tray.jpg"},{"id":404784,"name":"oven","localizedName":"oven","image":"oven.jpg"}]},{"number":10,"step":"Bake
+        for about 40 minutes or until puff pastry is fully cooked and golden brown.
+        Dust apple roses with powdered sugar right before serving.","ingredients":[{"id":19336,"name":"powdered
+        sugar","localizedName":"powdered sugar","image":"powdered-sugar.jpg"},{"id":18337,"name":"puff
+        pastry sheets","localizedName":"puff pastry sheets","image":"puff-pastry.png"},{"id":9003,"name":"apple","localizedName":"apple","image":"apple.jpg"}],"equipment":[{"id":404784,"name":"oven","localizedName":"oven","image":"oven.jpg"}],"length":{"number":40,"unit":"minutes"}}]}],"originalId":null}'
+  recorded_at: Thu, 20 Apr 2023 22:22:41 GMT
+- request:
+    method: post
+    uri: http://localhost:4000/api/v1/recipes
+    body:
+      encoding: UTF-8
+      string: image=https%3A%2F%2Fspoonacular.com%2FrecipeImages%2F182552-556x370.jpg&name=Portabella+Tacos&spoonacular_id=182552
     headers:
       User-Agent:
       - Faraday v2.7.4
@@ -39,37 +583,37 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - c9017e1a-e094-427f-a354-b208e02a39c4
+      - 4227f456-623d-4807-8498-9d64e6c1fca5
       X-Runtime:
-      - '1.865241'
+      - '0.009483'
       Server-Timing:
-      - start_processing.action_controller;dur=4.63, sql.active_record;dur=80.03,
-        instantiation.active_record;dur=12.86, unpermitted_parameters.action_controller;dur=7.98,
-        process_action.action_controller;dur=1669.21
+      - start_processing.action_controller;dur=0.15, process_action.action_controller;dur=1.18
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"errors":[{"status":"404","title":"Validation failed: Date has already
-        been taken"}]}'
-  recorded_at: Thu, 20 Apr 2023 02:56:39 GMT
+      string: '{"errors":[{"status":"404","title":"unknown attribute ''spoonacular_id''
+        for Recipe.\n\n          raise UnknownAttributeError.new(self, k.to_s)\n          ^^^^^"}]}'
+  recorded_at: Thu, 20 Apr 2023 22:22:41 GMT
 - request:
-    method: get
-    uri: http://localhost:4000/api/v1/users/5/day_plans?q=upcoming
+    method: post
+    uri: http://localhost:4000/api/v1/recipes
     body:
-      encoding: US-ASCII
-      string: ''
+      encoding: UTF-8
+      string: image=https%3A%2F%2Fspoonacular.com%2FrecipeImages%2F172318-556x370.jpg&name=Crescent-Topped+Turkey+Chili+Mole&spoonacular_id=172318
     headers:
       User-Agent:
       - Faraday v2.7.4
+      Content-Type:
+      - application/x-www-form-urlencoded
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
       - "*/*"
   response:
     status:
-      code: 200
-      message: OK
+      code: 404
+      message: Not Found
     headers:
       X-Frame-Options:
       - SAMEORIGIN
@@ -87,21 +631,70 @@ http_interactions:
       - application/json; charset=utf-8
       Vary:
       - Accept
-      Etag:
-      - W/"a23a3395f671ac7d4b83cb8ae1d6605f"
       Cache-Control:
-      - max-age=0, private, must-revalidate
+      - no-cache
       X-Request-Id:
-      - 5b2094ba-c2a7-4cbb-b06b-9f3883d52c51
+      - b1e60b68-3aed-4f83-91de-144de789593b
       X-Runtime:
-      - '0.096514'
+      - '0.008920'
       Server-Timing:
-      - start_processing.action_controller;dur=0.12, sql.active_record;dur=82.59,
-        instantiation.active_record;dur=0.19, process_action.action_controller;dur=86.02
+      - start_processing.action_controller;dur=0.15, process_action.action_controller;dur=0.88
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"19","type":"day_plan","attributes":{"user_id":5,"date":"2023-04-22","recipes":[]}}]}'
-  recorded_at: Thu, 20 Apr 2023 02:56:40 GMT
+      string: '{"errors":[{"status":"404","title":"unknown attribute ''spoonacular_id''
+        for Recipe.\n\n          raise UnknownAttributeError.new(self, k.to_s)\n          ^^^^^"}]}'
+  recorded_at: Thu, 20 Apr 2023 22:22:41 GMT
+- request:
+    method: post
+    uri: http://localhost:4000/api/v1/recipes
+    body:
+      encoding: UTF-8
+      string: image=https%3A%2F%2Fspoonacular.com%2FrecipeImages%2F956561-556x370.jpg&name=Apple+Rose+Tarts&spoonacular_id=956561
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 399a1787-e6b5-478b-b18c-9e25fcb547c6
+      X-Runtime:
+      - '0.006820'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.10, process_action.action_controller;dur=0.70
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"errors":[{"status":"404","title":"unknown attribute ''spoonacular_id''
+        for Recipe.\n\n          raise UnknownAttributeError.new(self, k.to_s)\n          ^^^^^"}]}'
+  recorded_at: Thu, 20 Apr 2023 22:22:41 GMT
 recorded_with: VCR 6.1.0

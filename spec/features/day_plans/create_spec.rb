@@ -2,9 +2,9 @@ require 'rails_helper'
 
 RSpec.describe "Day Plan Create Page" do
   before do
-    current_user = {"google_id"=>"100378230956154024998",
-      "name"=>"Dawson Timmons",
-      "email"=>"dawsontimmons@gmail.com",
+    current_user = {"google_id"=>"107188876398467643415",
+      "name"=>"Caleb",
+      "email"=>"cjthomas2839@gmail.com",
       "intolerances"=>nil,
       "likes"=>nil,
       "dislikes"=>nil,
@@ -13,7 +13,7 @@ RSpec.describe "Day Plan Create Page" do
   
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(current_user)
 
-    data = {:data=>{:id=>"5", :type=>"user", :attributes=>{:email=>"dawsontimmons@gmail.com", :name=>"Dawson Timmons", :google_id=>"100378230956154024998", :id=>5, :intolerances=>nil, :likes=>nil, :dislikes=>nil, :dietary_restrictions=>nil}}}
+    data = {:data=>{:id=>"4", :type=>"user", :attributes=>{:email=>"cjthomas2839@gmail.com", :name=>"Caleb", :google_id=>"107188876398467643415", :id=>4, :intolerances=>nil, :likes=>nil, :dislikes=>nil, :dietary_restrictions=>nil}}}
     @user = User.new(data)
     allow(UserFacade).to receive(:find_user_by_google_id).with(current_user["google_id"]).and_return(@user)
     VCR.use_cassette('created_meal_plan_dashbaord') do
