@@ -1,0 +1,212 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:4000/api/v1/users/100378230956154024998
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"bd3fcf37b1b9b17ff982c8c51316ad54"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 1e732342-6ab9-4a32-b9e3-48fc41d47df9
+      X-Runtime:
+      - '0.143927'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.41, sql.active_record;dur=28.41,
+        instantiation.active_record;dur=2.11, process_action.action_controller;dur=109.44
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"5","type":"user","attributes":{"email":"dawsontimmons@gmail.com","name":"Dawson
+        Timmons","google_id":"100378230956154024998","id":5,"intolerances":null,"likes":"","dislikes":"","dietary_restrictions":null}}}'
+  recorded_at: Thu, 20 Apr 2023 03:08:18 GMT
+- request:
+    method: patch
+    uri: http://localhost:4000/api/v1/users/5
+    body:
+      encoding: UTF-8
+      string: dietary_restrictions=Vegan&dislikes=irish&intolerances=dairy&likes=chinese
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8f4359f25ffe3a19e6d0b3da718a641f"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - ab2bd7a5-17d5-43ce-8671-08b342276436
+      X-Runtime:
+      - '0.342204'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.21, unpermitted_parameters.action_controller;dur=4.02,
+        sql.active_record;dur=211.93, instantiation.active_record;dur=0.05, process_action.action_controller;dur=307.51
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"5","type":"user","attributes":{"email":"dawsontimmons@gmail.com","name":"Dawson
+        Timmons","google_id":"100378230956154024998","id":5,"intolerances":"dairy","likes":"chinese","dislikes":"irish","dietary_restrictions":"Vegan"}}}'
+  recorded_at: Thu, 20 Apr 2023 03:08:18 GMT
+- request:
+    method: get
+    uri: http://localhost:4000/api/v1/users/100378230956154024998
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8f4359f25ffe3a19e6d0b3da718a641f"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 604fe3e9-1d63-4056-9e9a-054033583149
+      X-Runtime:
+      - '0.043474'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.12, sql.active_record;dur=28.94,
+        instantiation.active_record;dur=0.09, process_action.action_controller;dur=32.90
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"5","type":"user","attributes":{"email":"dawsontimmons@gmail.com","name":"Dawson
+        Timmons","google_id":"100378230956154024998","id":5,"intolerances":"dairy","likes":"chinese","dislikes":"irish","dietary_restrictions":"Vegan"}}}'
+  recorded_at: Thu, 20 Apr 2023 03:08:18 GMT
+- request:
+    method: get
+    uri: http://localhost:4000/api/v1/users/5/day_plans?q=upcoming
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"a23a3395f671ac7d4b83cb8ae1d6605f"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - dac4e4e6-6e1c-4818-88cc-f9361076cd28
+      X-Runtime:
+      - '0.093366'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.42, sql.active_record;dur=51.78,
+        instantiation.active_record;dur=3.56, process_action.action_controller;dur=78.23
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"19","type":"day_plan","attributes":{"user_id":5,"date":"2023-04-22","recipes":[]}}]}'
+  recorded_at: Thu, 20 Apr 2023 03:08:18 GMT
+recorded_with: VCR 6.1.0

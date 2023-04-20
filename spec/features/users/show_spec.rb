@@ -28,7 +28,7 @@ describe "User dashboard page" do
     user = User.new(data)
     allow(UserFacade).to receive(:find_user_by_google_id).with(current_user["google_id"]).and_return(user)
 
-    VCR.use_cassette('user_dashboard') do
+    VCR.use_cassette('user_dashboard_return') do
       visit '/dashboard'
       expect(current_path).to eq('/dashboard')
     end

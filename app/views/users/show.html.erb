@@ -48,18 +48,20 @@
                 <div class="col h6">
                   <p> Meal Plan for: <%= day_plan.date %> </p>
                   <br>
-                  <p> Meal 1:
-                    <%= day_plan.recipes.first[:name] %>
-                  </p>
-                  <br>
-                  <p> Meal 2:
-                    <%= day_plan.recipes.second[:name] %>
-                  </p>
-                  <br>
-                  <p> Meal 3:
-                    <%= day_plan.recipes.third[:name] %>
-                  </p>
-                  <br>
+                  <% if day_plan.recipes != [] %>
+                    <p> Meal 1:
+                      <%= day_plan.recipes.first[:name] %>
+                    </p>
+                    <br>
+                    <p> Meal 2:
+                      <%= day_plan.recipes.second[:name] %>
+                    </p>
+                    <br>
+                    <p> Meal 3:
+                      <%= day_plan.recipes.third[:name] %>
+                    </p>
+                    <br>
+                  <% end %>
                 </div>
               <% end %>
             <% end %>
