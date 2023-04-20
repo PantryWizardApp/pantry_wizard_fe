@@ -9,8 +9,9 @@ class DayPlanFacade
     breakfast_recipe = RecipeFacade.recipe(x)
     main_recipe1 = RecipeFacade.recipe(y)
     main_recipe2 = RecipeFacade.recipe(z)
-    DayPlanService.add_meal_to_day_plan(day_plan[:data], {meal: "breakfast", recipe_id: breakfast_recipe.id})
-    DayPlanService.add_meal_to_day_plan(day_plan[:data], {meal: "main1", recipe_id: main_recipe1.id})
-    DayPlanService.add_meal_to_day_plan(day_plan[:data], {meal: "main2", recipe_id: main_recipe2.id})
+    require 'pry'; binding.pry
+    DayPlanService.add_recipe_to_day_plan(day_plan, breakfast_recipe)
+    DayPlanService.add_recipe_to_day_plan(day_plan, main_recipe1)
+    DayPlanService.add_recipe_to_day_plan(day_plan, main_recipe2)
   end
 end
