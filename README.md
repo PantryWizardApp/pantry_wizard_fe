@@ -223,14 +223,22 @@ Change to:
     - 3 random meals will be assigned (1 breakfast and 2 main courses) based on your preferences.
     - You'll be routed to `/dashboard` where you'll see today's meal plan, and a button to edit it (if you've created one).
     - Below that you'll see the plans for the upcoming 7 days (if you've created them).
-1. View a Recipe
+
+  <br>
+
+  ![Screen Recording Gif](https://user-images.githubusercontent.com/116330317/233492056-7375e897-f452-4703-b620-253c370eff3f.gif)
+
+  <br>
+
+
+2. View a Recipe
     - From the `/dashboard` select an upcomming meal plan, or select the name of a recipe.
     - On that recipes show page you'll see the meals `ingredients`, `instructions`, and a picture of the dish.
     - If you would like a different meal, then select either `Generate New Breakfast Recipe`, `Generate New Lunch Recipe`, or `Generate New Dinner Recipe`. That will replace the existing meal with another that adheres to your preferences.
 
   <br>
 
-  ![Screen Recording Gif](https://user-images.githubusercontent.com/116330317/233492056-7375e897-f452-4703-b620-253c370eff3f.gif)
+  ![Screen Recording Gif](https://user-images.githubusercontent.com/116330317/233493591-9430e039-aa4c-4866-a662-033d91e2d071.gif)
 
   <br>
 
