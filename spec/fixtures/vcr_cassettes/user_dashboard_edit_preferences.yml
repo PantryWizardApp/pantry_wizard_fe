@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:4000/api/v1/users/100378230956154024998
+    uri: http://localhost:4000/api/v1/users/106048413854356122337
     body:
       encoding: US-ASCII
       string: ''
@@ -15,8 +15,8 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 200
-      message: OK
+      code: 404
+      message: Not Found
     headers:
       X-Frame-Options:
       - SAMEORIGIN
@@ -34,22 +34,20 @@ http_interactions:
       - application/json; charset=utf-8
       Vary:
       - Accept
-      Etag:
-      - W/"bd3fcf37b1b9b17ff982c8c51316ad54"
       Cache-Control:
-      - max-age=0, private, must-revalidate
+      - no-cache
       X-Request-Id:
-      - f6432db3-9a9e-4d64-a6cb-c0e1f84ebebf
+      - 94f1de57-b42b-43d7-a390-a7a0ffbfdaf2
       X-Runtime:
-      - '0.016829'
+      - '0.409960'
       Server-Timing:
-      - start_processing.action_controller;dur=0.16, sql.active_record;dur=2.04, instantiation.active_record;dur=0.10,
-        process_action.action_controller;dur=7.71
+      - start_processing.action_controller;dur=6.87, sql.active_record;dur=76.09,
+        instantiation.active_record;dur=0.10, process_action.action_controller;dur=287.41
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"5","type":"user","attributes":{"email":"dawsontimmons@gmail.com","name":"Dawson
-        Timmons","google_id":"100378230956154024998","id":5,"intolerances":null,"likes":"","dislikes":"","dietary_restrictions":null}}}'
-  recorded_at: Thu, 20 Apr 2023 03:05:53 GMT
+      string: '{"errors":[{"status":"404","title":"undefined method `id'' for nil:NilClass\n\n      render
+        json: UserSerializer.new(User.find(user.id))\n                                                    ^^^"}]}'
+  recorded_at: Wed, 19 Apr 2023 23:45:14 GMT
 recorded_with: VCR 6.1.0

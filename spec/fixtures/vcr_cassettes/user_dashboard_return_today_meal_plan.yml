@@ -1,0 +1,57 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:4000/api/v1/users/5/day_plans?q=upcoming
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"c0f89ab08fa9b298a76291255ceab2dd"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - f289ad26-a76c-43a1-b675-9f24697e1915
+      X-Runtime:
+      - '0.190482'
+      Server-Timing:
+      - start_processing.action_controller;dur=1.55, sql.active_record;dur=60.04,
+        instantiation.active_record;dur=1.87, process_action.action_controller;dur=135.10
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"22","type":"day_plan","attributes":{"user_id":5,"date":"2023-04-20","recipes":[{"id":23,"spoonacular_id":1234215343,"name":"oatmeal","ingredients":"oatmeal,
+        water","instructions":"idk mannn, JUST THROw IT IN THE WATER","image":"https://spoonacular.com/recipeImages/595736-556x370.jpg","created_at":"2023-04-20T17:40:18.492Z","updated_at":"2023-04-20T17:40:18.492Z"},{"id":24,"spoonacular_id":1234215353,"name":"noodles","ingredients":"noodles,
+        water","instructions":"idk mannn, JUST THROw IT IN THE WATER","image":"https://spoonacular.com/recipeImages/595736-556x370.jpg","created_at":"2023-04-20T17:40:49.017Z","updated_at":"2023-04-20T17:40:49.017Z"},{"id":25,"spoonacular_id":1234215363,"name":"spaghetti","ingredients":"spaghetti,
+        water","instructions":"idk mannn, JUST THROw IT IN THE WATER","image":"https://spoonacular.com/recipeImages/595736-556x370.jpg","created_at":"2023-04-20T17:41:43.080Z","updated_at":"2023-04-20T17:41:43.080Z"}]}}]}'
+  recorded_at: Thu, 20 Apr 2023 17:47:57 GMT
+recorded_with: VCR 6.1.0

@@ -16,7 +16,9 @@ RSpec.describe "Day Plan Create Page" do
     data = {:data=>{:id=>"5", :type=>"user", :attributes=>{:email=>"dawsontimmons@gmail.com", :name=>"Dawson Timmons", :google_id=>"100378230956154024998", :id=>5, :intolerances=>nil, :likes=>nil, :dislikes=>nil, :dietary_restrictions=>nil}}}
     @user = User.new(data)
     allow(UserFacade).to receive(:find_user_by_google_id).with(current_user["google_id"]).and_return(@user)
-    visit '/dashboard'
+    VCR.use_cassette('created_meal_plan_dashbaord') do
+      visit '/dashboard'
+    end
   end
 
   context 'as a user when I visit the day plan creation page' do 

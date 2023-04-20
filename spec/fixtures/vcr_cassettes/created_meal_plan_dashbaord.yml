@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:4000/api/v1/users/100378230956154024998
+    uri: http://localhost:4000/api/v1/users/5/day_plans?q=upcoming
     body:
       encoding: US-ASCII
       string: ''
@@ -35,21 +35,20 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"bd3fcf37b1b9b17ff982c8c51316ad54"
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - f6432db3-9a9e-4d64-a6cb-c0e1f84ebebf
+      - '09b4f417-2e45-4049-8ec0-b1a462ddbb37'
       X-Runtime:
-      - '0.016829'
+      - '0.979067'
       Server-Timing:
-      - start_processing.action_controller;dur=0.16, sql.active_record;dur=2.04, instantiation.active_record;dur=0.10,
-        process_action.action_controller;dur=7.71
+      - start_processing.action_controller;dur=3.89, sql.active_record;dur=259.61,
+        instantiation.active_record;dur=13.64, process_action.action_controller;dur=784.62
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"5","type":"user","attributes":{"email":"dawsontimmons@gmail.com","name":"Dawson
-        Timmons","google_id":"100378230956154024998","id":5,"intolerances":null,"likes":"","dislikes":"","dietary_restrictions":null}}}'
-  recorded_at: Thu, 20 Apr 2023 03:05:53 GMT
+      string: '{"data":[]}'
+  recorded_at: Thu, 20 Apr 2023 02:52:50 GMT
 recorded_with: VCR 6.1.0
