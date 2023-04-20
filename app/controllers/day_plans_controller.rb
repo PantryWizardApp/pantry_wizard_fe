@@ -8,4 +8,7 @@ class DayPlansController < ApplicationController
     day_plan = DayPlanFacade.create_day_plan_with_meals(user, {date: params[:date_of_meal_plan]})
     redirect_to "/dashboard"
   end
+
+  def show
+  end
 end
