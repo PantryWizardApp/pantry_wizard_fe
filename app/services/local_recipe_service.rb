@@ -1,7 +1,7 @@
 class LocalRecipeService
 
-  def self.user_recipes(user_id)
-    response = conn.get("/api/v1/users/#{user_id}/recipes")
+  def self.recipes
+    response = conn.get("/api/v1/recipes")
     JSON.parse(response.body, symbolize_names: true)
   end
 
@@ -10,7 +10,7 @@ class LocalRecipeService
     JSON.parse(response.body, symbolize_names: true)
   end
 
-  def self.delete_user_recipe(recipe_id)
+  def self.delete_recipe(recipe_id)
     response = conn.delete("/api/v1/recipes/#{recipe_id}")
     JSON.parse(response.body, symbolize_names: true)
   end

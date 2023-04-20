@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: delete
-    uri: http://localhost:4000/api/v1/recipes/7
+    uri: http://localhost:4000/api/v1/recipes/40
     body:
       encoding: US-ASCII
       string: ''
@@ -35,21 +35,22 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"05ee0f9b396aacf967e29e3ed3b43efc"
+      - W/"806fa898dad47c26419c5c45f85bc03a"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - d9f0e5ab-5014-4ed1-abb9-15baeb6f502b
+      - 74264356-9bf2-4bcd-9421-d9beca221856
       X-Runtime:
-      - '0.357801'
+      - '1.237863'
       Server-Timing:
-      - start_processing.action_controller;dur=1.60, sql.active_record;dur=134.49,
-        instantiation.active_record;dur=5.28, process_action.action_controller;dur=277.45
+      - start_processing.action_controller;dur=2.21, sql.active_record;dur=1037.01,
+        instantiation.active_record;dur=7.39, process_action.action_controller;dur=1199.53
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"7","type":"recipe","attributes":{"spoonacular_id":1234215343,"name":"oatmeal","ingredients":"oats,
-        water","instructions":"idk mannn, JUST THROw IT IN THE WATER","image":"https://spoonacular.com/recipeImages/595736-556x370.jpg"}}}'
-  recorded_at: Thu, 20 Apr 2023 22:55:54 GMT
+      string: '{"data":{"id":"40","type":"recipe","attributes":{"spoonacular_id":2345678901,"name":"brownies","ingredients":"sugar,
+        chocolate, flour","instructions":"just throw it all in a bowl and mix, spread
+        it out over a baking pan, bake unitl it no longer looks weird","image":"https://spoonacular.com/recipeImages/595736-556x370.jpg"}}}'
+  recorded_at: Thu, 20 Apr 2023 23:12:32 GMT
 recorded_with: VCR 6.1.0
