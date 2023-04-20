@@ -19,4 +19,6 @@ Rails.application.routes.draw do
 
   get "/create_meal_plan", to: "day_plans#new"
   post "/create_meal_plan", to: "day_plans#create"
+
+  get "/meal_plan/:id", to: "day_plans#show"
 end

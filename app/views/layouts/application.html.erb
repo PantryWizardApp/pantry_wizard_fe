@@ -14,7 +14,13 @@
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
 
-  <body class= "bg-white">
+<body class="bg-peach-light">
+
+<style>
+  .bg-peach-light {
+    background-color: #FFE5B4; /* This is a light peach color, feel free to adjust as needed */
+  }
+</style>
   <%= render partial: "/shared/navbar"%>
       <% flash.each do |type, msg| %>
 			  <h3><b><%= msg %></b></h3>
