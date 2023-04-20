@@ -18,7 +18,7 @@ class LocalRecipeService
   private 
   
   def self.conn 
-    Faraday.new(url: "http://localhost:4000")
+    Faraday.new(url: ENV["HOST_URL"])
   end
 
 end
