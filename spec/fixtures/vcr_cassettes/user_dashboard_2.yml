@@ -1,24 +1,22 @@
 ---
 http_interactions:
 - request:
-    method: post
-    uri: http://localhost:4000/api/v1/users/5/day_plans
+    method: get
+    uri: http://localhost:4000/api/v1/users/100378230956154024998
     body:
-      encoding: UTF-8
-      string: date
+      encoding: US-ASCII
+      string: ''
     headers:
       User-Agent:
       - Faraday v2.7.4
-      Content-Type:
-      - application/x-www-form-urlencoded
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
       - "*/*"
   response:
     status:
-      code: 404
-      message: Not Found
+      code: 200
+      message: OK
     headers:
       X-Frame-Options:
       - SAMEORIGIN
@@ -36,23 +34,24 @@ http_interactions:
       - application/json; charset=utf-8
       Vary:
       - Accept
+      Etag:
+      - W/"bd3fcf37b1b9b17ff982c8c51316ad54"
       Cache-Control:
-      - no-cache
+      - max-age=0, private, must-revalidate
       X-Request-Id:
-      - e265d2f9-5153-4eed-9d7c-147bbbe3ed11
+      - 9b394c72-f0f1-49c0-964c-cd9863652477
       X-Runtime:
-      - '0.398202'
+      - '0.185644'
       Server-Timing:
-      - start_processing.action_controller;dur=1.92, sql.active_record;dur=72.79,
-        instantiation.active_record;dur=1.68, unpermitted_parameters.action_controller;dur=3.73,
-        process_action.action_controller;dur=278.09
+      - start_processing.action_controller;dur=1.05, sql.active_record;dur=23.11,
+        instantiation.active_record;dur=1.02, process_action.action_controller;dur=151.14
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"errors":[{"status":"404","title":"Validation failed: Date can''t
-        be blank"}]}'
-  recorded_at: Thu, 20 Apr 2023 03:00:18 GMT
+      string: '{"data":{"id":"5","type":"user","attributes":{"email":"dawsontimmons@gmail.com","name":"Dawson
+        Timmons","google_id":"100378230956154024998","id":5,"intolerances":null,"likes":"","dislikes":"","dietary_restrictions":null}}}'
+  recorded_at: Thu, 20 Apr 2023 03:05:52 GMT
 - request:
     method: get
     uri: http://localhost:4000/api/v1/users/5/day_plans?q=upcoming
@@ -92,16 +91,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - fec48328-76d5-414b-a5c3-659ac71b0a36
+      - 7e17cb2e-76b1-4b0d-ad54-4baed9085e62
       X-Runtime:
-      - '0.063560'
+      - '0.119390'
       Server-Timing:
-      - start_processing.action_controller;dur=0.16, sql.active_record;dur=45.92,
-        instantiation.active_record;dur=0.31, process_action.action_controller;dur=55.49
+      - start_processing.action_controller;dur=0.18, sql.active_record;dur=64.85,
+        instantiation.active_record;dur=4.03, process_action.action_controller;dur=109.95
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":[{"id":"19","type":"day_plan","attributes":{"user_id":5,"date":"2023-04-22","recipes":[]}}]}'
-  recorded_at: Thu, 20 Apr 2023 03:00:18 GMT
+  recorded_at: Thu, 20 Apr 2023 03:05:52 GMT
 recorded_with: VCR 6.1.0

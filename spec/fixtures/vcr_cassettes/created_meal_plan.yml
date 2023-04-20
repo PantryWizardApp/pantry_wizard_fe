@@ -17,6 +17,57 @@ http_interactions:
       - "*/*"
   response:
     status:
+      code: 404
+      message: Not Found
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - c9017e1a-e094-427f-a354-b208e02a39c4
+      X-Runtime:
+      - '1.865241'
+      Server-Timing:
+      - start_processing.action_controller;dur=4.63, sql.active_record;dur=80.03,
+        instantiation.active_record;dur=12.86, unpermitted_parameters.action_controller;dur=7.98,
+        process_action.action_controller;dur=1669.21
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"errors":[{"status":"404","title":"Validation failed: Date has already
+        been taken"}]}'
+  recorded_at: Thu, 20 Apr 2023 02:56:39 GMT
+- request:
+    method: get
+    uri: http://localhost:4000/api/v1/users/5/day_plans?q=upcoming
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
       code: 200
       message: OK
     headers:
@@ -37,21 +88,20 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"9efb34bdd6cb4add21a677d5bc8c238b"
+      - W/"a23a3395f671ac7d4b83cb8ae1d6605f"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 333d7d28-ff5f-4d22-baf2-30d1cea6f4f6
+      - 5b2094ba-c2a7-4cbb-b06b-9f3883d52c51
       X-Runtime:
-      - '0.128333'
+      - '0.096514'
       Server-Timing:
-      - start_processing.action_controller;dur=0.25, sql.active_record;dur=56.15,
-        instantiation.active_record;dur=0.29, unpermitted_parameters.action_controller;dur=0.38,
-        process_action.action_controller;dur=97.67
+      - start_processing.action_controller;dur=0.12, sql.active_record;dur=82.59,
+        instantiation.active_record;dur=0.19, process_action.action_controller;dur=86.02
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"3","type":"day_plan","attributes":{"user_id":5,"date":"2023-04-22"}}}'
-  recorded_at: Wed, 19 Apr 2023 16:54:09 GMT
+      string: '{"data":[{"id":"19","type":"day_plan","attributes":{"user_id":5,"date":"2023-04-22","recipes":[]}}]}'
+  recorded_at: Thu, 20 Apr 2023 02:56:40 GMT
 recorded_with: VCR 6.1.0

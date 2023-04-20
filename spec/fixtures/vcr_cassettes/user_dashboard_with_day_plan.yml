@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:4000/api/v1/users/100378230956154024998
+    uri: http://localhost:4000/api/v1/users/5/day_plans
     body:
       encoding: US-ASCII
       string: ''
@@ -35,21 +35,21 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"bd3fcf37b1b9b17ff982c8c51316ad54"
+      - W/"da84e48b7d2eaba034dba8a662244171"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - f6432db3-9a9e-4d64-a6cb-c0e1f84ebebf
+      - 94d1092b-bcbe-40c0-ad04-05279ae3ac5d
       X-Runtime:
-      - '0.016829'
+      - '0.388279'
       Server-Timing:
-      - start_processing.action_controller;dur=0.16, sql.active_record;dur=2.04, instantiation.active_record;dur=0.10,
-        process_action.action_controller;dur=7.71
+      - sql.active_record;dur=213.38, start_processing.action_controller;dur=0.30,
+        instantiation.active_record;dur=32.05, process_action.action_controller;dur=187.30
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"5","type":"user","attributes":{"email":"dawsontimmons@gmail.com","name":"Dawson
-        Timmons","google_id":"100378230956154024998","id":5,"intolerances":null,"likes":"","dislikes":"","dietary_restrictions":null}}}'
-  recorded_at: Thu, 20 Apr 2023 03:05:53 GMT
+      string: '{"data":[{"id":"11","type":"day_plan","attributes":{"user_id":5,"date":"2023-04-21","recipes":[{"id":5,"spoonacular_id":1234215343,"name":"oatmeal","ingredients":"oats,
+        water","instructions":"idk mannn, JUST THROw IT IN THE WATER","image":"https://spoonacular.com/recipeImages/595736-556x370.jpg","created_at":"2023-04-19T21:00:57.510Z","updated_at":"2023-04-19T21:00:57.510Z"}]}},{"id":"12","type":"day_plan","attributes":{"user_id":5,"date":"2023-04-22","recipes":[]}}]}'
+  recorded_at: Wed, 19 Apr 2023 23:37:24 GMT
 recorded_with: VCR 6.1.0

@@ -2,10 +2,10 @@ require 'rails_helper'
 
 describe 'As a user, when I visit /preferences page' do
   before :each do
-    current_user = {"google_id"=>"106048413854356122337",
-    "name"=>"Conner Van Loan",
-    "email"=>"cdvanloan@gmail.com",
-    "id"=>1,
+    current_user = {"google_id"=>"100378230956154024998",
+    "name"=>"Dawson Timmons",
+    "email"=>"dawsontimmons@gmail.com",
+    "id"=>5,
     "intolerances"=>nil,
     "likes"=>nil,
     "dislikes"=>nil,
@@ -13,7 +13,7 @@ describe 'As a user, when I visit /preferences page' do
 
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(current_user)
 
-    VCR.use_cassette('user_dashboard') do
+    VCR.use_cassette('user_dashboard_2') do
       visit '/dashboard'
     end
   end
@@ -45,7 +45,7 @@ describe 'As a user, when I visit /preferences page' do
     irish_select = find("select[name='user[cuisines][irish][]']")
     irish_select.select("Dislike")
 
-    VCR.use_cassette('user_editted_preferences') do
+    VCR.use_cassette('user_preference_edit_spec_2') do
       click_button "Save Preferences"
     end
 
