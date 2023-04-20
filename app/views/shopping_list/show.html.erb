@@ -17,6 +17,7 @@ body {
   padding: 50px;
  
 }
+
 #sidebar {
   flex-basis: 5rem;
   flex-grow: 1;
@@ -89,12 +90,13 @@ button:disabled {
 
 </style>
   </head>
-    <script>
+    <script> 
     function initMap() {
-      var pyrmont = new google.maps.LatLng(-33.866, 151.196);
+      var denver = new google.maps.LatLng(39.747108, -105.046326);
     
         map = new google.maps.Map(document.getElementById("map"),{
-          center: pyrmont,
+          center: denver,
+
         zoom: 17
       })
 
@@ -107,10 +109,10 @@ button:disabled {
       let marker = new google.maps.Marker({ 
         map:map
       })
-      
+
       google.maps.event.addListener(autocomplete, 'place_changed',() => {
         let place = autocomplete.getPlace()
-      
+
         console.log(place)
 
         if(place.geometry.viewport){
@@ -146,6 +148,7 @@ button:disabled {
           for (var i = 0; i < results.length; i++) {
             var place = results[i];
             createMarker(results[i]);
+
             addPlaces(results)
           }
         }
@@ -163,6 +166,7 @@ button:disabled {
           li.addEventListener("click", () => {
             map.setCenter(place.geometry.location)
            });
+
           }
         }
       }
@@ -178,8 +182,6 @@ button:disabled {
         });
       }
       
-
-
 window.initMap = initMap; </script>
 
     <!-- 
@@ -189,11 +191,13 @@ window.initMap = initMap; </script>
       See https://developers.google.com/maps/documentation/javascript/load-maps-js-api
       for more information.
       -->
+
   <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_MAPS_API_KEY'] %>&callback=initMap&libraries=places&v=weekly" asnyc defer data-turbolinks-eval="false"></script>
         <body>
             <input id="searchTextField" type="text" size="50">
           <div id="container">
             <div id="map"></div>
+
               <div id="sidebar">
         <h2>Results</h2>
         <ul id="places"></ul>

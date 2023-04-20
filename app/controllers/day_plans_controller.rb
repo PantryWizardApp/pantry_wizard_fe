@@ -5,7 +5,7 @@ class DayPlansController < ApplicationController
 
   def create
     user = UserFacade.find_user_by_google_id(current_user["google_id"])
-    day_plan = DayPlanService.create_user_day_plan(user.id, {date: params[:date_of_meal_plan]})
+    day_plan = DayPlanFacade.create_day_plan_with_meals(user, {date: params[:date_of_meal_plan]})
     redirect_to "/dashboard"
   end
 end

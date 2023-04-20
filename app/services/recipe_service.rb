@@ -16,10 +16,10 @@ class RecipeService
   def self.get_preferred_recipes(user)
     params = {
       query: "*",
-      cuisine: user.likes.join(","),
-      excludeCuisine: user.dislikes.join(","),
+      cuisine: user&.likes&.empty? ? user&.likes : "",
+      excludeCuisine: user&.dislikes&.empty? ? user&.dislikes : "",
       intolerances: user.intolerances.join(","),
-      diet: user.dietary_restrictions 
+      diet: user&.dietary_restrictions.nil? ? "" : user&.dietary_restrictions,
       }
   
     get_url("/recipes/search?#{params}&number=5")
@@ -28,17 +28,12 @@ class RecipeService
   def self.get_preferred_breakfast_recipes(user)
     params = {
       query: "*",
-      cuisine: user&.likes&.any? ? user&.likes.join(",") : "",
-      excludeCuisine: user&.dislikes&.any? ? user&.dislikes.join(",") : "",
-      intolerances: user&.intolerances&.any? ? user&.intolerances.join(",") : "",
-      diet: user&.dietary_restrictions,
+      cuisine: user&.likes&.empty? ? user&.likes : "",
+      excludeCuisine: user&.dislikes&.empty? ? user&.dislikes : "",
+      intolerances: user&.intolerances&.empty? ? user&.intolerances : "",
+      diet: user&.dietary_restrictions.nil? ? "" : user&.dietary_restrictions,
       type: "breakfast"
       }
-      # query: "*",
-      # cuisine: user.likes.any? ? user.likes.join(",") : "",
-      # excludeCuisine: user.dislikes.any? ? user.dislikes.join(",") : "",
-      # intolerances: user.intolerances.any? ? user.intolerances.join(",") : "",
-      # diet: user.dietary_restrictions,
       
   
     get_url("/recipes/search?#{params}&number=1&offset=#{self.offset}&instructionsRequired=True")
@@ -47,15 +42,28 @@ class RecipeService
   def self.get_preferred_main_recipes(user)
     params = {
       query: "*",
-      cuisine: user&.likes&.any? ? user&.likes.join(",") : "",
-      excludeCuisine: user&.dislikes&.any? ? user&.dislikes.join(",") : "",
-      intolerances: user&.intolerances&.any? ? user&.intolerances.join(",") : "",
-      diet: user&.dietary_restrictions,
+      cuisine: user&.likes&.empty? ? user&.likes : "",
+      excludeCuisine: user&.dislikes&.empty? ? user&.dislikes : "",
+      intolerances: user&.intolerances&.empty? ? user&.intolerances : "",
+      diet: user&.dietary_restrictions.nil? ? "" : user&.dietary_restrictions,
       type: "main course"
       }
 
       get_url("/recipes/search?#{params}&number=1&offset=#{self.offset}&instructionsRequired=True")
-    end
+  end
+
+  def self.get_preferred_lunch_dinner_recipes(user)
+    params = {
+      query: "*",
+      cuisine: user&.likes&.empty? ? user&.likes : "",
+      excludeCuisine: user&.dislikes&.empty? ? user&.dislikes : "",
+      intolerances: user&.intolerances&.empty? ? user&.intolerances : "",
+      diet: user&.dietary_restrictions.nil? ? "" : user&.dietary_restrictions,
+      type: "main course"
+      }
+
+      get_url("/recipes/search?#{params}&number=2&offset=#{self.offset}&instructionsRequired=True")
+  end
     
     private 
     

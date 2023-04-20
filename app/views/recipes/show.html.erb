@@ -45,14 +45,14 @@
         <div class="card">
           <div class="card-body">
             <h5 class="card-title"><%= @recipe.name%> </h5>
-              <%= image_tag ("https://spoonacular.com/recipeImages/#{@recipe.id}-556x370.jpg"), class: "img-fluid", style: "width: 100%"%>
+              <%= image_tag ("https://spoonacular.com/recipeImages/#{@recipe.spoonacular_id}-556x370.jpg"), class: "img-fluid", style: "width: 100%"%>
           </div>
         </div>
     </div>
 </div>
   <div class="text-center d-grid gap-2 d-md-block">
     <br>
-      <%= button_to "Add to My Meal Plan", "/create_meal_plan", method: :post, class: "btn btn-success"%>
+      <%= button_to "Add to My Meal Plan", "/create_meal_plan", method: :patch, class: "btn btn-success"%>
       <br>
       <%= button_to "Generate New Breakfast Recipe", "/meals/new_breakfast", method: :get, class: "btn btn-warning"%>
       <br>

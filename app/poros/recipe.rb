@@ -1,5 +1,5 @@
 class Recipe
-  attr_reader :id, 
+  attr_reader :spoonacular_id, 
               :name,
               :summary, 
               :ingredients,
@@ -9,7 +9,7 @@ class Recipe
               :cook_time
 
   def initialize(recipe_data)
-    @id = recipe_data[:id]
+    @spoonacular_id = recipe_data[:id]
     @name = recipe_data[:title]
     @summary = recipe_data[:summary]
     @ingredients = ingredient_info(recipe_data[:extendedIngredients])
@@ -31,5 +31,13 @@ class Recipe
         { step: step[:number], instruction: step[:step] }
       end
     end
+  end
+
+  def recipe_poro_to_json
+    {
+      name: self.name,
+      image: self.image,
+      spoonacular_id: self.spoonacular_id
+    }
   end
 end

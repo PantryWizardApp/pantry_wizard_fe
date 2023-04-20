@@ -9,7 +9,7 @@ class RecipesController < ApplicationController
     recipe = RecipeService.get_preferred_breakfast_recipes(user)
     x = recipe[:results].first[:id]
     new_recipe = RecipeFacade.recipe(x)
-    redirect_to "/meals/#{new_recipe.id}"
+    redirect_to "/meals/#{new_recipe.spoonacular_id}"
   end
 
   def new_main
@@ -17,6 +17,6 @@ class RecipesController < ApplicationController
     recipe = RecipeService.get_preferred_main_recipes(user)
     x = recipe[:results].first[:id]
     new_recipe = RecipeFacade.recipe(x)
-    redirect_to "/meals/#{new_recipe.id}"
+    redirect_to "/meals/#{new_recipe.spoonacular_id}"
   end
 end
