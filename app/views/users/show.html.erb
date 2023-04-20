@@ -39,38 +39,39 @@
       <% end %>
       <br>
         <div class="row align-items-start">
-        <% if @user_day_plans != [] %>
-            <% @user_day_plans.each do |day_plan| %>
-              <% if day_plan.date != Date.today.strftime("%Y-%m-%e") %>
-                <div class="container text-center">
-                  <h3> My Upcoming Meal Plans: </h3>
-                </div>
-                <br>
-                <div class="col h6">
-                  <p> Meal Plan for: <%= day_plan.date %> </p>
-                  <br>
-                  <% if day_plan.recipes != [] %>
-                    <p> Meal 1:
-                      <%= day_plan.recipes.first[:name] %>
-                    </p>
+          <div class="container text-center">
+            <% if @user_day_plans != [] %>
+              <h3> My Upcoming Meal Plans: </h3>
+                <% @user_day_plans.each do |day_plan| %>
+                  <% if day_plan.date != Date.today.strftime("%Y-%m-%e") %>
+                    </div>
                     <br>
-                    <p> Meal 2:
-                      <%= day_plan.recipes.second[:name] %>
-                    </p>
-                    <br>
-                    <p> Meal 3:
-                      <%= day_plan.recipes.third[:name] %>
-                    </p>
-                    <br>
+                    <div class="col h6">
+                      <p> Meal Plan for: <%= day_plan.date %> </p>
+                      <br>
+                      <% if day_plan.recipes != [] %>
+                        <p> Meal 1:
+                          <%= day_plan.recipes.first[:name] %>
+                        </p>
+                        <br>
+                        <p> Meal 2:
+                          <%= day_plan.recipes.second[:name] %>
+                        </p>
+                        <br>
+                        <p> Meal 3:
+                          <%= day_plan.recipes.third[:name] %>
+                        </p>
+                        <br>
+                      <% end %>
                   <% end %>
-                </div>
-              <% end %>
+                <% end %>
             <% end %>
-        <% end %>
+          </div>
         </div>
       </div>
       <div class="text-center">
         <br>
+        <%= link_to "Create Shopping List", "/shopping_list", method: :get, class: 'btn btn-success ms-auto' %>
         <%= link_to "Create New Meal Plan", "/create_meal_plan", method: :get, class: 'btn btn-success ms-auto' %>
         <%= link_to "View 5 Snacks! ;)", "/about", method: :get, class: 'btn btn-success' %>
         <br>
