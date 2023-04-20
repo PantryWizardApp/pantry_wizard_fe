@@ -116,14 +116,17 @@ This is a Ruby on Rails application that's used together with the <a href="https
 <br>
 
 ### API Key Setup
-In order to use this application you will API keys from both <a href="https://rapidapi.com/spoonacular/api/recipe-food-nutrition/"> `RapidAPI` </a> and <a href="https://developers.google.com/maps"> `Google Maps Platform` </a>.
+In order to use this application you will API keys from both <a href="https://rapidapi.com/spoonacular/api/recipe-food-nutrition/"> `RapidAPI` </a> and <a href="https://cloud.google.com/"> `Google Cloud Platform` </a>. You will have to enable the google places API and the google maps javascript API.
 
 Once you have these keys, they will be stored in files that you create.
 
-1. Create a `.env` file within the app. This file should appear next to the .gitattributes foler and should not be nested. Add your `GOOGLE_CLIENT_ID` and `GOOGLE_CLIENT_SECRET` to this file.
+1. Create a `.env` file within the app. This file should appear next to the .gitattributes foler and should not be nested. Add your `GOOGLE_CLIENT_ID` and `GOOGLE_CLIENT_SECRET` to this file. You will also need to add a `HOST_URL`.
+
 ```bash
     GOOGLE_CLIENT_ID=xxxxxxxxxxxxxxx-xxxxxxxxxxxxxxx.apps.googleusercontent.com
     GOOGLE_CLIENT_SECRET=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+    GOOGLE_MAPS_API_KEY=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+    HOST_URL=http://localhost:4000
 ```
 
 1. Run `bundle exec figaro install`, then open the `application.yml` file. Here you'll add your `X-RapidAPI-Key`.
@@ -194,6 +197,11 @@ Change to:
   - You'll be asked to sign-in using Google OAuth, so a Google account is required.
   - Once logged in, you'll be redirected to the `/dashboard`
 
+    <br>
+
+
+  ![Screen Recording Gif](https://user-images.githubusercontent.com/116330317/233482176-4f34e94e-71d0-4f52-9fed-ada7ab9b6b03.gif)
+
   <br>
 
 ### User Preferences
@@ -201,6 +209,13 @@ Change to:
 - Select up to one `Dietary Restriction` if you have one.
 - Next to each cuisine type there is a drop down menu, which you can select your `Likes and Dislikes`
 - When the form looks right to you, press submit at the bottom of the page. You can change these preferences later if you want.
+
+  <br>
+
+  ![Screen Recording Gif](https://user-images.githubusercontent.com/116330317/233484509-0ec523c1-ddd4-4855-919e-226169b030a3.gif)
+
+  <br>
+
 
 ### Meal Plans
 1. Select `Create Meal Plan`
@@ -213,6 +228,11 @@ Change to:
     - On that recipes show page you'll see the meals `ingredients`, `instructions`, and a picture of the dish.
     - If you would like a different meal, then select either `Generate New Breakfast Recipe`, `Generate New Lunch Recipe`, or `Generate New Dinner Recipe`. That will replace the existing meal with another that adheres to your preferences.
 
+  <br>
+
+  ![Screen Recording Gif](https://user-images.githubusercontent.com/116330317/233492056-7375e897-f452-4703-b620-253c370eff3f.gif)
+
+  <br>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
