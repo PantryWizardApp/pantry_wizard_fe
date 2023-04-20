@@ -4,7 +4,7 @@ RSpec.describe LocalRecipeService do
   context "get requests" do 
     it "can get a user's recipies by google id" do 
       VCR.use_cassette('user_recipes') do
-        user_id = '1'
+        user_id = '5'
         recipes = LocalRecipeService.user_recipes(user_id)
         data = recipes[:data]
 
@@ -25,11 +25,9 @@ RSpec.describe LocalRecipeService do
   context "post requests" do
     it "can create a new recipe asocciated with the user" do
       VCR.use_cassette('user_recipe_creation') do
-        user_id = '1'
         recipe_params = { name: 'brownies', ingredients: "sugar, chocolate, flour", instructions: "just throw it all in a bowl and mix, spread it out over a baking pan, bake unitl it no longer looks weird", spoonacular_id: "2345678901", image: "https://spoonacular.com/recipeImages/595736-556x370.jpg", day_plan_id: 1 }
         recipe = LocalRecipeService.create_recipe(recipe_params)
         data = recipe[:data]
-
         expect(data[:attributes][:name]).to eq(recipe_params[:name])
         expect(data[:attributes][:ingredients]).to eq(recipe_params[:ingredients])
         expect(data[:attributes][:instructions]).to eq(recipe_params[:instructions])
@@ -55,10 +53,9 @@ RSpec.describe LocalRecipeService do
   end
   context "delete requests" do
     it "deletes the given recipe" do
-      VCR.use_cassette('user_recipe_deletion') do
-        user_id = '1'
+      VCR.use_cassette('recipe_deletion') do
         recipe_id = '7'
-        recipe = LocalRecipeService.delete_user_recipe(user_id, recipe_id)
+        recipe = LocalRecipeService.delete_user_recipe(recipe_id)
         data = recipe[:data]
 
         expect(data[:attributes][:name]).to eq('brownies')
@@ -68,8 +65,7 @@ RSpec.describe LocalRecipeService do
         expect(data[:attributes][:image]).to eq("https://spoonacular.com/recipeImages/595736-556x370.jpg")
       end
 
-      VCR.use_cassette('user_recipes_after_deletion') do
-        user_id = '1'
+      VCR.use_cassette('recipes_after_deletion') do
         recipes = LocalRecipeService.user_recipes(user_id)
         data = recipes[:data]
 

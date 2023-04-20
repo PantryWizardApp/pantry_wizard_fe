@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:4000/api/v1/users/4/day_plans?q=upcoming
+    uri: http://localhost:4000/api/v1/users/5/day_plans?q=upcoming
     body:
       encoding: US-ASCII
       string: ''
@@ -35,20 +35,26 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"a92d7014867ba27065caad322933e7c5"
+      - W/"d8a98d271e9208aa1ab3949a44a471ee"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - fd20b6c4-6cc4-4b84-bf00-c7b2134dff3a
+      - 8a22c9df-b855-4578-bde2-a1ad3e2f1147
       X-Runtime:
-      - '0.038862'
+      - '0.163433'
       Server-Timing:
-      - start_processing.action_controller;dur=0.28, sql.active_record;dur=5.00, instantiation.active_record;dur=0.39,
-        process_action.action_controller;dur=24.74
+      - start_processing.action_controller;dur=0.40, sql.active_record;dur=72.99,
+        instantiation.active_record;dur=2.92, process_action.action_controller;dur=132.01
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"12","type":"day_plan","attributes":{"user_id":4,"date":"2023-04-20","recipes":[]}}]}'
-  recorded_at: Thu, 20 Apr 2023 22:22:35 GMT
+      string: '{"data":[{"id":"26","type":"day_plan","attributes":{"user_id":5,"date":"2023-04-20","recipes":[]}},{"id":"25","type":"day_plan","attributes":{"user_id":5,"date":"2023-04-21","recipes":[{"id":31,"spoonacular_id":604942,"name":"Feta
+        Cheese and Avocado Hummus Dip","ingredients":"spaghetti, water","instructions":"idk
+        mannn, JUST THROw IT IN THE WATER","image":"https://spoonacular.com/recipeImages/604942-556x370.jpg","created_at":"2023-04-20T22:38:03.257Z","updated_at":"2023-04-20T22:38:03.257Z"},{"id":32,"spoonacular_id":712392,"name":"Winter
+        Vegetable Hash","ingredients":"spaghetti, water","instructions":"idk mannn,
+        JUST THROw IT IN THE WATER","image":"https://spoonacular.com/recipeImages/712392-556x370.jpg","created_at":"2023-04-20T22:39:39.053Z","updated_at":"2023-04-20T22:39:39.053Z"},{"id":33,"spoonacular_id":153925,"name":"Roast
+        Chicken with Pancetta and Olives","ingredients":"spaghetti, water","instructions":"idk
+        mannn, JUST THROw IT IN THE WATER","image":"https://spoonacular.com/recipeImages/153925-556x370.jpg","created_at":"2023-04-20T22:40:30.308Z","updated_at":"2023-04-20T22:40:30.308Z"}]}}]}'
+  recorded_at: Thu, 20 Apr 2023 22:46:39 GMT
 recorded_with: VCR 6.1.0
