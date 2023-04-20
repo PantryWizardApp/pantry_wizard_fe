@@ -1,0 +1,91 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:4000/api/v1/recipes
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"c686d279ade915a8b2260f525a483f88"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - e0a2cda2-16cc-4b92-9e94-705ff6401ebd
+      X-Runtime:
+      - '0.377975'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.33, sql.active_record;dur=106.83,
+        instantiation.active_record;dur=4.62, process_action.action_controller;dur=315.11
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"3","type":"recipe","attributes":{"spoonacular_id":1234215343,"name":"oatmeal","ingredients":"oats,
+        water","instructions":"idk mannn, JUST THROw IT IN THE WATER","image":"https://spoonacular.com/recipeImages/595736-556x370.jpg"}},{"id":"5","type":"recipe","attributes":{"spoonacular_id":1234215343,"name":"oatmeal","ingredients":"oats,
+        water","instructions":"idk mannn, JUST THROw IT IN THE WATER","image":"https://spoonacular.com/recipeImages/595736-556x370.jpg"}},{"id":"6","type":"recipe","attributes":{"spoonacular_id":1234215343,"name":"oatmeal","ingredients":"oats,
+        water","instructions":"idk mannn, JUST THROw IT IN THE WATER","image":"https://spoonacular.com/recipeImages/595736-556x370.jpg"}},{"id":"8","type":"recipe","attributes":{"spoonacular_id":1234215343,"name":"oatmeal","ingredients":"oats,
+        water","instructions":"idk mannn, JUST THROw IT IN THE WATER","image":"https://spoonacular.com/recipeImages/595736-556x370.jpg"}},{"id":"9","type":"recipe","attributes":{"spoonacular_id":1234215343,"name":"oatmeal","ingredients":"oats,
+        water","instructions":"idk mannn, JUST THROw IT IN THE WATER","image":"https://spoonacular.com/recipeImages/595736-556x370.jpg"}},{"id":"10","type":"recipe","attributes":{"spoonacular_id":1234215343,"name":"oatmeal","ingredients":"oats,
+        water","instructions":"idk mannn, JUST THROw IT IN THE WATER","image":"https://spoonacular.com/recipeImages/595736-556x370.jpg"}},{"id":"11","type":"recipe","attributes":{"spoonacular_id":1234215343,"name":"oatmeal","ingredients":"oats,
+        water","instructions":"idk mannn, JUST THROw IT IN THE WATER","image":"https://spoonacular.com/recipeImages/595736-556x370.jpg"}},{"id":"12","type":"recipe","attributes":{"spoonacular_id":1234215343,"name":"oatmeal","ingredients":"oats,
+        water","instructions":"idk mannn, JUST THROw IT IN THE WATER","image":"https://spoonacular.com/recipeImages/595736-556x370.jpg"}},{"id":"13","type":"recipe","attributes":{"spoonacular_id":1234215343,"name":"oatmeal","ingredients":"oats,
+        water","instructions":"idk mannn, JUST THROw IT IN THE WATER","image":"https://spoonacular.com/recipeImages/595736-556x370.jpg"}},{"id":"14","type":"recipe","attributes":{"spoonacular_id":1234215343,"name":"oatmeal","ingredients":"oats,
+        water","instructions":"idk mannn, JUST THROw IT IN THE WATER","image":"https://spoonacular.com/recipeImages/595736-556x370.jpg"}},{"id":"15","type":"recipe","attributes":{"spoonacular_id":1234215343,"name":"oatmeal","ingredients":"oats,
+        water","instructions":"idk mannn, JUST THROw IT IN THE WATER","image":"https://spoonacular.com/recipeImages/595736-556x370.jpg"}},{"id":"16","type":"recipe","attributes":{"spoonacular_id":1234215343,"name":"oatmeal","ingredients":"oats,
+        water","instructions":"idk mannn, JUST THROw IT IN THE WATER","image":"https://spoonacular.com/recipeImages/595736-556x370.jpg"}},{"id":"20","type":"recipe","attributes":{"spoonacular_id":1234215343,"name":"oatmeal","ingredients":"oats,
+        water","instructions":"idk mannn, JUST THROw IT IN THE WATER","image":"https://spoonacular.com/recipeImages/595736-556x370.jpg"}},{"id":"21","type":"recipe","attributes":{"spoonacular_id":1234215353,"name":"noodles","ingredients":"noodles,
+        water","instructions":"idk mannn, JUST THROw IT IN THE WATER","image":"https://spoonacular.com/recipeImages/595736-556x370.jpg"}},{"id":"22","type":"recipe","attributes":{"spoonacular_id":1234215363,"name":"spaghetti","ingredients":"spaghetti,
+        water","instructions":"idk mannn, JUST THROw IT IN THE WATER","image":"https://spoonacular.com/recipeImages/595736-556x370.jpg"}},{"id":"23","type":"recipe","attributes":{"spoonacular_id":1234215343,"name":"oatmeal","ingredients":"oatmeal,
+        water","instructions":"idk mannn, JUST THROw IT IN THE WATER","image":"https://spoonacular.com/recipeImages/595736-556x370.jpg"}},{"id":"24","type":"recipe","attributes":{"spoonacular_id":1234215353,"name":"noodles","ingredients":"noodles,
+        water","instructions":"idk mannn, JUST THROw IT IN THE WATER","image":"https://spoonacular.com/recipeImages/595736-556x370.jpg"}},{"id":"25","type":"recipe","attributes":{"spoonacular_id":1234215363,"name":"spaghetti","ingredients":"spaghetti,
+        water","instructions":"idk mannn, JUST THROw IT IN THE WATER","image":"https://spoonacular.com/recipeImages/595736-556x370.jpg"}},{"id":"26","type":"recipe","attributes":{"spoonacular_id":1234215363,"name":"spaghetti","ingredients":"spaghetti,
+        water","instructions":"idk mannn, JUST THROw IT IN THE WATER","image":"https://spoonacular.com/recipeImages/595736-556x370.jpg"}},{"id":"27","type":"recipe","attributes":{"spoonacular_id":1234215363,"name":"spaghetti","ingredients":"spaghetti,
+        water","instructions":"idk mannn, JUST THROw IT IN THE WATER","image":"https://spoonacular.com/recipeImages/595736-556x370.jpg"}},{"id":"28","type":"recipe","attributes":{"spoonacular_id":1234215363,"name":"spaghetti","ingredients":"spaghetti,
+        water","instructions":"idk mannn, JUST THROw IT IN THE WATER","image":"https://spoonacular.com/recipeImages/595736-556x370.jpg"}},{"id":"29","type":"recipe","attributes":{"spoonacular_id":1234215363,"name":"spaghetti","ingredients":"spaghetti,
+        water","instructions":"idk mannn, JUST THROw IT IN THE WATER","image":"https://spoonacular.com/recipeImages/595736-556x370.jpg"}},{"id":"30","type":"recipe","attributes":{"spoonacular_id":1234215363,"name":"spaghetti","ingredients":"spaghetti,
+        water","instructions":"idk mannn, JUST THROw IT IN THE WATER","image":"https://spoonacular.com/recipeImages/595736-556x370.jpg"}},{"id":"31","type":"recipe","attributes":{"spoonacular_id":604942,"name":"Feta
+        Cheese and Avocado Hummus Dip","ingredients":"spaghetti, water","instructions":"idk
+        mannn, JUST THROw IT IN THE WATER","image":"https://spoonacular.com/recipeImages/604942-556x370.jpg"}},{"id":"32","type":"recipe","attributes":{"spoonacular_id":712392,"name":"Winter
+        Vegetable Hash","ingredients":"spaghetti, water","instructions":"idk mannn,
+        JUST THROw IT IN THE WATER","image":"https://spoonacular.com/recipeImages/712392-556x370.jpg"}},{"id":"33","type":"recipe","attributes":{"spoonacular_id":153925,"name":"Roast
+        Chicken with Pancetta and Olives","ingredients":"spaghetti, water","instructions":"idk
+        mannn, JUST THROw IT IN THE WATER","image":"https://spoonacular.com/recipeImages/153925-556x370.jpg"}},{"id":"34","type":"recipe","attributes":{"spoonacular_id":471089,"name":"Grilled
+        Spicy Lamb Burgers","ingredients":null,"instructions":null,"image":"https://spoonacular.com/recipeImages/471089-556x370.jpg"}},{"id":"35","type":"recipe","attributes":{"spoonacular_id":497064,"name":"Pizza
+        Bianca {with Zucchini}","ingredients":null,"instructions":null,"image":"https://spoonacular.com/recipeImages/497064-556x370.jpg"}},{"id":"36","type":"recipe","attributes":{"spoonacular_id":1005688,"name":"Cheesy
+        rarebit topped Glamorgan burgers","ingredients":null,"instructions":null,"image":"https://spoonacular.com/recipeImages/1005688-556x370.jpg"}},{"id":"37","type":"recipe","attributes":{"spoonacular_id":1686095,"name":"Black
+        Masala Chai (Dairy-Free Tea Latte)","ingredients":null,"instructions":null,"image":"https://spoonacular.com/recipeImages/1686095-556x370.jpg"}},{"id":"38","type":"recipe","attributes":{"spoonacular_id":1473697,"name":"Chicken
+        and Black Bean Enchilada Casserole","ingredients":null,"instructions":null,"image":"https://spoonacular.com/recipeImages/1473697-556x370.jpg"}},{"id":"39","type":"recipe","attributes":{"spoonacular_id":199405,"name":"Sweet
+        Chipotle Snack Mix","ingredients":null,"instructions":null,"image":"https://spoonacular.com/recipeImages/199405-556x370.jpg"}},{"id":"40","type":"recipe","attributes":{"spoonacular_id":2345678901,"name":"brownies","ingredients":"sugar,
+        chocolate, flour","instructions":"just throw it all in a bowl and mix, spread
+        it out over a baking pan, bake unitl it no longer looks weird","image":"https://spoonacular.com/recipeImages/595736-556x370.jpg"}}]}'
+  recorded_at: Thu, 20 Apr 2023 23:10:16 GMT
+recorded_with: VCR 6.1.0

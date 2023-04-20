@@ -17,8 +17,8 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 404
-      message: Not Found
+      code: 200
+      message: OK
     headers:
       X-Frame-Options:
       - SAMEORIGIN
@@ -36,20 +36,23 @@ http_interactions:
       - application/json; charset=utf-8
       Vary:
       - Accept
+      Etag:
+      - W/"806fa898dad47c26419c5c45f85bc03a"
       Cache-Control:
-      - no-cache
+      - max-age=0, private, must-revalidate
       X-Request-Id:
-      - bd0c7151-6dc2-459f-b2cb-588998ee0413
+      - 52b07e2b-8bee-416a-a216-f2d844b6d386
       X-Runtime:
-      - '0.010548'
+      - '1.154999'
       Server-Timing:
-      - start_processing.action_controller;dur=0.12, unpermitted_parameters.action_controller;dur=0.85,
-        process_action.action_controller;dur=2.03
+      - start_processing.action_controller;dur=7.59, unpermitted_parameters.action_controller;dur=16.12,
+        sql.active_record;dur=452.18, process_action.action_controller;dur=900.61
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"errors":[{"status":"404","title":"unknown attribute ''spoonacular_id''
-        for Recipe.\n\n          raise UnknownAttributeError.new(self, k.to_s)\n          ^^^^^"}]}'
-  recorded_at: Thu, 20 Apr 2023 21:47:26 GMT
+      string: '{"data":{"id":"40","type":"recipe","attributes":{"spoonacular_id":2345678901,"name":"brownies","ingredients":"sugar,
+        chocolate, flour","instructions":"just throw it all in a bowl and mix, spread
+        it out over a baking pan, bake unitl it no longer looks weird","image":"https://spoonacular.com/recipeImages/595736-556x370.jpg"}}}'
+  recorded_at: Thu, 20 Apr 2023 23:09:24 GMT
 recorded_with: VCR 6.1.0
