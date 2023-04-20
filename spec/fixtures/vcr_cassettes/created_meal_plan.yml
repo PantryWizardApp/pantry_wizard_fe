@@ -5,7 +5,7 @@ http_interactions:
     uri: http://localhost:4000/api/v1/users/5/day_plans
     body:
       encoding: UTF-8
-      string: date=2023-04-22
+      string: date=2023-04-27
     headers:
       User-Agent:
       - Faraday v2.7.4
@@ -17,8 +17,8 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 404
-      message: Not Found
+      code: 200
+      message: OK
     headers:
       X-Frame-Options:
       - SAMEORIGIN
@@ -36,23 +36,933 @@ http_interactions:
       - application/json; charset=utf-8
       Vary:
       - Accept
+      Etag:
+      - W/"19c45b8ba06d13dc6778b4c95b096009"
       Cache-Control:
-      - no-cache
+      - max-age=0, private, must-revalidate
       X-Request-Id:
-      - c9017e1a-e094-427f-a354-b208e02a39c4
+      - 84fd4cbd-bc3d-4a2d-b985-5e9ed7e4426c
       X-Runtime:
-      - '1.865241'
+      - '0.472154'
       Server-Timing:
-      - start_processing.action_controller;dur=4.63, sql.active_record;dur=80.03,
-        instantiation.active_record;dur=12.86, unpermitted_parameters.action_controller;dur=7.98,
-        process_action.action_controller;dur=1669.21
+      - start_processing.action_controller;dur=0.27, sql.active_record;dur=395.93,
+        instantiation.active_record;dur=0.15, unpermitted_parameters.action_controller;dur=3.09,
+        process_action.action_controller;dur=450.35
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"errors":[{"status":"404","title":"Validation failed: Date has already
-        been taken"}]}'
-  recorded_at: Thu, 20 Apr 2023 02:56:39 GMT
+      string: '{"data":{"id":"27","type":"day_plan","attributes":{"user_id":5,"date":"2023-04-27","recipes":[]}}}'
+  recorded_at: Thu, 20 Apr 2023 22:46:42 GMT
+- request:
+    method: get
+    uri: https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/search?instructionsRequired=True&number=1&offset=290&%7B:query=%3E%22*%22,%20:cuisine=%3E%22%22,%20:excludeCuisine=%3E%22%22,%20:intolerances=%3E%22%22,%20:diet=%3E%22Gluten%22,%20:type=%3E%22breakfast%22%7D
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Rapidapi-Key:
+      - 49a4882f2emsh349cc6514f6f885p1c379cjsnddef264a4c49
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 20 Apr 2023 22:46:43 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '278'
+      Connection:
+      - keep-alive
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Cf-Cache-Status:
+      - DYNAMIC
+      Allow-Control-Allow-Methods:
+      - GET, HEAD, POST, OPTIONS, DELETE, PUT
+      Access-Control-Allow-Origin:
+      - "*"
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=095ZPxqd6czJOxkhd9C0aU%2BH1cr7Z4foeDJd22wsMvdtUOwwcflsbSvyakot0sejVGyNrJwmbKVplMpb06wGU3PF8FMF0sJs2R6dZwUT2PWmM5EHOkFqseyfQ4T%2Fh9yTJaaMNf4%3D"}],"group":"cf-nel","max_age":604800}'
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, OPTIONS, DELETE, PUT
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+      Allow-Control-Allow-Origin:
+      - "*"
+      Cf-Ray:
+      - 7bb0ecc60ca93076-SEA
+      Access-Control-Allow-Headers:
+      - Authorization, UserId, Hash, Name, Password, Accept, Accept-Language, x-api-key,
+        Content-Language, Content-Type, Cache-Control, Origin, X-Requested-With
+      X-Ratelimit-Tinyrequests-Limit:
+      - '500'
+      X-Ratelimit-Tinyrequests-Remaining:
+      - '500'
+      X-Ratelimit-Tinyrequests-Reset:
+      - '64531'
+      X-Ratelimit-Requests-Limit:
+      - '50'
+      X-Ratelimit-Requests-Remaining:
+      - '49'
+      X-Ratelimit-Requests-Reset:
+      - '64531'
+      X-Ratelimit-Results-Limit:
+      - '500'
+      X-Ratelimit-Results-Remaining:
+      - '499'
+      X-Ratelimit-Results-Reset:
+      - '64531'
+      Server:
+      - RapidAPI-1.2.8
+      X-Rapidapi-Version:
+      - 1.2.8
+      X-Rapidapi-Region:
+      - AWS - us-west-2
+    body:
+      encoding: ASCII-8BIT
+      string: '{"results":[{"readyInMinutes":25,"sourceUrl":"http://allrecipes.com/Recipe/Grilled-Spicy-Lamb-Burgers/Detail.aspx?src=rss","image":"Grilled-Spicy-Lamb-Burgers-471089.jpg","servings":4,"id":471089,"title":"Grilled
+        Spicy Lamb Burgers"}],"baseUri":"https://spoonacular.com/recipeImages/","offset":290,"number":1,"totalResults":385626,"processingTimeMs":238,"expires":1682290003229}'
+  recorded_at: Thu, 20 Apr 2023 22:46:43 GMT
+- request:
+    method: get
+    uri: https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/search?instructionsRequired=True&number=2&offset=288&%7B:query=%3E%22*%22,%20:cuisine=%3E%22%22,%20:excludeCuisine=%3E%22%22,%20:intolerances=%3E%22%22,%20:diet=%3E%22Gluten%22,%20:type=%3E%22main%20course%22%7D
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Rapidapi-Key:
+      - 49a4882f2emsh349cc6514f6f885p1c379cjsnddef264a4c49
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 20 Apr 2023 22:46:43 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '367'
+      Connection:
+      - keep-alive
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Cf-Cache-Status:
+      - DYNAMIC
+      Allow-Control-Allow-Methods:
+      - GET, HEAD, POST, OPTIONS, DELETE, PUT
+      Access-Control-Allow-Origin:
+      - "*"
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=87zsOPiDY6mSHK03D4mHdjf9Gb5nq%2FBT3XMfskYCaZytftxLzI5R38RoBvWR1BYJ4wJbF53mpsBYXo%2FdsfrpfVYwBzP3H2AcUz6ZSbBiD4jPwlYvcE74qc5qWxUTeARgL42YCrE%3D"}],"group":"cf-nel","max_age":604800}'
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, OPTIONS, DELETE, PUT
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+      Allow-Control-Allow-Origin:
+      - "*"
+      Cf-Ray:
+      - 7bb0ecca7d11c6e5-SEA
+      Access-Control-Allow-Headers:
+      - Authorization, UserId, Hash, Name, Password, Accept, Accept-Language, x-api-key,
+        Content-Language, Content-Type, Cache-Control, Origin, X-Requested-With
+      X-Ratelimit-Tinyrequests-Limit:
+      - '500'
+      X-Ratelimit-Tinyrequests-Remaining:
+      - '500'
+      X-Ratelimit-Tinyrequests-Reset:
+      - '64531'
+      X-Ratelimit-Requests-Limit:
+      - '50'
+      X-Ratelimit-Requests-Remaining:
+      - '48'
+      X-Ratelimit-Requests-Reset:
+      - '64531'
+      X-Ratelimit-Results-Limit:
+      - '500'
+      X-Ratelimit-Results-Remaining:
+      - '497'
+      X-Ratelimit-Results-Reset:
+      - '64531'
+      Server:
+      - RapidAPI-1.2.8
+      X-Rapidapi-Version:
+      - 1.2.8
+      X-Rapidapi-Region:
+      - AWS - us-west-2
+    body:
+      encoding: ASCII-8BIT
+      string: '{"results":[{"readyInMinutes":45,"sourceUrl":"http://kitchenconfidante.com/white-pizza-bianca-with-zucchini-recipe","image":"Pizza-Bianca-{with-Zucchini}-497064.jpg","servings":4,"id":497064,"title":"Pizza
+        Bianca {with Zucchini}"},{"readyInMinutes":50,"sourceUrl":"https://www.amuse-your-bouche.com/rarebit-glamorgan-burgers/","image":"cheesy-rarebit-topped-glamorgan-burgers-1005688.jpg","servings":5,"id":1005688,"title":"Cheesy
+        rarebit topped Glamorgan burgers"}],"baseUri":"https://spoonacular.com/recipeImages/","offset":288,"number":2,"totalResults":385626,"processingTimeMs":181,"expires":1682290003883}'
+  recorded_at: Thu, 20 Apr 2023 22:46:43 GMT
+- request:
+    method: get
+    uri: https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/471089/information
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Rapidapi-Key:
+      - 49a4882f2emsh349cc6514f6f885p1c379cjsnddef264a4c49
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 20 Apr 2023 22:46:45 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '3424'
+      Connection:
+      - keep-alive
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Cf-Cache-Status:
+      - DYNAMIC
+      Allow-Control-Allow-Methods:
+      - GET, HEAD, POST, OPTIONS, DELETE, PUT
+      Access-Control-Allow-Origin:
+      - "*"
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=GvIx70hi2SrGWwGvoRxSrBnX1DtcIKdHI1XtqZe7doB2%2BwhcVIc%2B8BbhZrAmpJgQ2c9S4c6r7V9et5MINd%2BqSHmfHwX7ZWktx7edZe3GYwX84KwscaynFyMNlpLM%2B%2FQ4ip8%2F5nE%3D"}],"group":"cf-nel","max_age":604800}'
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, OPTIONS, DELETE, PUT
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+      Allow-Control-Allow-Origin:
+      - "*"
+      Cf-Ray:
+      - 7bb0ecce7d40283a-SEA
+      Access-Control-Allow-Headers:
+      - Authorization, UserId, Hash, Name, Password, Accept, Accept-Language, x-api-key,
+        Content-Language, Content-Type, Cache-Control, Origin, X-Requested-With
+      X-Ratelimit-Tinyrequests-Limit:
+      - '500'
+      X-Ratelimit-Tinyrequests-Remaining:
+      - '500'
+      X-Ratelimit-Tinyrequests-Reset:
+      - '64529'
+      X-Ratelimit-Requests-Limit:
+      - '50'
+      X-Ratelimit-Requests-Remaining:
+      - '47'
+      X-Ratelimit-Requests-Reset:
+      - '64529'
+      X-Ratelimit-Results-Limit:
+      - '500'
+      X-Ratelimit-Results-Remaining:
+      - '497'
+      X-Ratelimit-Results-Reset:
+      - '64529'
+      Server:
+      - RapidAPI-1.2.8
+      X-Rapidapi-Version:
+      - 1.2.8
+      X-Rapidapi-Region:
+      - AWS - us-west-2
+    body:
+      encoding: ASCII-8BIT
+      string: '{"vegetarian":false,"vegan":false,"glutenFree":false,"dairyFree":false,"veryHealthy":false,"cheap":false,"veryPopular":false,"sustainable":false,"lowFodmap":false,"weightWatcherSmartPoints":18,"gaps":"no","preparationMinutes":15,"cookingMinutes":10,"aggregateLikes":0,"healthScore":18,"creditsText":"Allrecipes","sourceName":"Allrecipes","pricePerServing":302.57,"extendedIngredients":[{"id":1019,"aisle":"Cheese","image":"feta.png","consistency":"SOLID","name":"feta
+        cheese","nameClean":"feta cheese","original":"4 ounces feta cheese, crumbled","originalName":"feta
+        cheese, crumbled","amount":4.0,"unit":"ounces","meta":["crumbled"],"measures":{"us":{"amount":4.0,"unitShort":"oz","unitLong":"ounces"},"metric":{"amount":113.398,"unitShort":"g","unitLong":"grams"}}},{"id":11165,"aisle":"Produce","image":"cilantro.png","consistency":"SOLID","name":"cilantro","nameClean":"cilantro","original":"2
+        tablespoons chopped fresh cilantro","originalName":"chopped fresh cilantro","amount":2.0,"unit":"tablespoons","meta":["fresh","chopped"],"measures":{"us":{"amount":2.0,"unitShort":"Tbsps","unitLong":"Tbsps"},"metric":{"amount":2.0,"unitShort":"Tbsps","unitLong":"Tbsps"}}},{"id":2064,"aisle":"Produce;Spices
+        and Seasonings","image":"mint.jpg","consistency":"SOLID","name":"mint leaves","nameClean":"mint","original":"2
+        tablespoons chopped fresh mint leaves","originalName":"chopped fresh mint
+        leaves","amount":2.0,"unit":"tablespoons","meta":["fresh","chopped"],"measures":{"us":{"amount":2.0,"unitShort":"Tbsps","unitLong":"Tbsps"},"metric":{"amount":2.0,"unitShort":"Tbsps","unitLong":"Tbsps"}}},{"id":11215,"aisle":"Produce","image":"garlic.png","consistency":"SOLID","name":"garlic","nameClean":"garlic","original":"1
+        tablespoon garlic, chopped","originalName":"garlic, chopped","amount":1.0,"unit":"tablespoon","meta":["chopped"],"measures":{"us":{"amount":1.0,"unitShort":"Tbsp","unitLong":"Tbsp"},"metric":{"amount":1.0,"unitShort":"Tbsp","unitLong":"Tbsp"}}},{"id":1022001,"aisle":"Spices
+        and Seasonings","image":"allspice-ground.jpg","consistency":"SOLID","name":"ground
+        allspice","nameClean":"ground allspice","original":"1/4 teaspoon ground allspice","originalName":"ground
+        allspice","amount":0.25,"unit":"teaspoon","meta":[],"measures":{"us":{"amount":0.25,"unitShort":"tsps","unitLong":"teaspoons"},"metric":{"amount":0.25,"unitShort":"tsps","unitLong":"teaspoons"}}},{"id":1012014,"aisle":"Spices
+        and Seasonings","image":"ground-cumin.jpg","consistency":"SOLID","name":"ground
+        cumin","nameClean":"ground cumin","original":"1 teaspoon ground cumin","originalName":"ground
+        cumin","amount":1.0,"unit":"teaspoon","meta":[],"measures":{"us":{"amount":1.0,"unitShort":"tsp","unitLong":"teaspoon"},"metric":{"amount":1.0,"unitShort":"tsp","unitLong":"teaspoon"}}},{"id":17224,"aisle":"Meat","image":"meat-ground.jpg","consistency":"SOLID","name":"ground
+        lamb","nameClean":"ground lamb","original":"1 pound ground lamb","originalName":"ground
+        lamb","amount":1.0,"unit":"pound","meta":[],"measures":{"us":{"amount":1.0,"unitShort":"lb","unitLong":"pound"},"metric":{"amount":453.592,"unitShort":"g","unitLong":"grams"}}},{"id":1002030,"aisle":"Spices
+        and Seasonings","image":"pepper.jpg","consistency":"SOLID","name":"ground
+        pepper","nameClean":"black pepper","original":"1/2 teaspoon ground black pepper","originalName":"ground
+        black pepper","amount":0.5,"unit":"teaspoon","meta":["black"],"measures":{"us":{"amount":0.5,"unitShort":"tsps","unitLong":"teaspoons"},"metric":{"amount":0.5,"unitShort":"tsps","unitLong":"teaspoons"}}},{"id":19304,"aisle":"Baking","image":"molasses.jpg","consistency":"SOLID","name":"molasses","nameClean":"molasses","original":"1
+        teaspoon molasses","originalName":"molasses","amount":1.0,"unit":"teaspoon","meta":[],"measures":{"us":{"amount":1.0,"unitShort":"tsp","unitLong":"teaspoon"},"metric":{"amount":1.0,"unitShort":"tsp","unitLong":"teaspoon"}}},{"id":2027,"aisle":"Produce;Spices
+        and Seasonings","image":"oregano.jpg","consistency":"SOLID","name":"oregano","nameClean":"oregano","original":"2
+        tablespoons chopped fresh oregano","originalName":"chopped fresh oregano","amount":2.0,"unit":"tablespoons","meta":["fresh","chopped"],"measures":{"us":{"amount":2.0,"unitShort":"Tbsps","unitLong":"Tbsps"},"metric":{"amount":2.0,"unitShort":"Tbsps","unitLong":"Tbsps"}}},{"id":18413,"aisle":"Bakery/Bread","image":"pita-bread.jpg","consistency":"SOLID","name":"pita
+        bread rounds","nameClean":"pita","original":"4 pita bread rounds","originalName":"pita
+        bread rounds","amount":4.0,"unit":"","meta":[],"measures":{"us":{"amount":4.0,"unitShort":"","unitLong":""},"metric":{"amount":4.0,"unitShort":"","unitLong":""}}},{"id":1032009,"aisle":"Spices
+        and Seasonings","image":"red-pepper-flakes.jpg","consistency":"SOLID","name":"pepper
+        flakes","nameClean":"red pepper flakes","original":"1/2 teaspoon red pepper
+        flakes","originalName":"red pepper flakes","amount":0.5,"unit":"teaspoon","meta":["red"],"measures":{"us":{"amount":0.5,"unitShort":"tsps","unitLong":"teaspoons"},"metric":{"amount":0.5,"unitShort":"tsps","unitLong":"teaspoons"}}},{"id":2047,"aisle":"Spices
+        and Seasonings","image":"salt.jpg","consistency":"SOLID","name":"salt","nameClean":"table
+        salt","original":"1/2 teaspoon salt","originalName":"salt","amount":0.5,"unit":"teaspoon","meta":[],"measures":{"us":{"amount":0.5,"unitShort":"tsps","unitLong":"teaspoons"},"metric":{"amount":0.5,"unitShort":"tsps","unitLong":"teaspoons"}}},{"id":10214106,"aisle":"Alcoholic
+        Beverages","image":"dry-sherry.png","consistency":"LIQUID","name":"sherry","nameClean":"sherry","original":"1
+        teaspoon sherry","originalName":"sherry","amount":1.0,"unit":"teaspoon","meta":[],"measures":{"us":{"amount":1.0,"unitShort":"tsp","unitLong":"teaspoon"},"metric":{"amount":1.0,"unitShort":"tsp","unitLong":"teaspoon"}}},{"id":1002068,"aisle":"Oil,
+        Vinegar, Salad Dressing","image":"vinegar-(white).jpg","consistency":"LIQUID","name":"white
+        wine vinegar","nameClean":"white wine vinegar","original":"1 teaspoon white
+        wine vinegar","originalName":"white wine vinegar","amount":1.0,"unit":"teaspoon","meta":[],"measures":{"us":{"amount":1.0,"unitShort":"tsp","unitLong":"teaspoon"},"metric":{"amount":1.0,"unitShort":"tsp","unitLong":"teaspoon"}}}],"id":471089,"title":"Grilled
+        Spicy Lamb Burgers","readyInMinutes":25,"servings":4,"sourceUrl":"http://allrecipes.com/Recipe/Grilled-Spicy-Lamb-Burgers/Detail.aspx?src=rss","image":"https://spoonacular.com/recipeImages/471089-556x370.jpg","imageType":"jpg","summary":"Forget
+        going out to eat or ordering takeout every time you crave American food. Try
+        making Grilled Spicy Lamb Burgers at home. This recipe makes 4 servings with
+        <b>570 calories</b>, <b>29g of protein</b>, and <b>34g of fat</b> each. For
+        <b>$3.03 per serving</b>, this recipe <b>covers 21%</b> of your daily requirements
+        of vitamins and minerals. It will be a hit at your <b>The Fourth Of July</b>
+        event. A mixture of molasses, ground allspice, sherry, and a handful of other
+        ingredients are all it takes to make this recipe so delicious. 1 person has
+        made this recipe and would make it again. It works well as a main course.
+        From preparation to the plate, this recipe takes around <b>25 minutes</b>.
+        It is brought to you by Allrecipes. Taking all factors into account, this
+        recipe <b>earns a spoonacular score of 57%</b>, which is pretty good. Similar
+        recipes are <a href=\"https://spoonacular.com/recipes/grilled-spicy-lamb-burgers-1288891\">Grilled
+        Spicy Lamb Burgers</a>, <a href=\"https://spoonacular.com/recipes/lamb-bacon-burgers-with-spicy-aioli-1229553\">Lamb-Bacon
+        Burgers with Spicy Aioli</a>, and <a href=\"https://spoonacular.com/recipes/lamb-bacon-burgers-with-spicy-aioli-716447\">Lamb-Bacon
+        Burgers with Spicy Aioli</a>.","cuisines":["American"],"dishTypes":["lunch","main
+        course","main dish","dinner"],"diets":[],"occasions":["father''s day","4th
+        of july","summer"],"winePairing":{"pairedWines":["merlot","malbec","zinfandel"],"pairingText":"Merlot,
+        Malbec, and Zinfandel are great choices for Burger. Merlot will be perfectly
+        adequate for a classic burger with standard toppings. Bolder toppings call
+        for bolder wines, such as a malbec or peppery zinfandel. You could try Sterling
+        Three Palms Vineyard Merlot. Reviewers quite like it with a 4.2 out of 5 star
+        rating and a price of about 56 dollars per bottle.","productMatches":[{"id":451142,"title":"Sterling
+        Three Palms Vineyard Merlot","description":"With great structure, depth and
+        concentration, our 2006 Three Palms Vineyard Merlot tells the story of an
+        unusual vineyard in Napa Valley. The wine''s intense, ripe black cherry aromas
+        and expansive flavors slowly unfold to reveal complex notes of mineral, mocha,
+        spice, rose and toasty oak. This beautifully balanced expression of Merlot
+        comes from vines that struggle in rocky, volcanic soils along the eastern
+        flank of Napa Valley. Winemaker Michael Westrick attributes the wine''s distinctive
+        mineral character and remarkable weight on the palate to the vineyard''s unique
+        terroir. Structured with tannins that combine power with suppleness, this
+        wine delivers luscious, complex flavors now, yet promises cellar-worthiness.","price":"$55.99","imageUrl":"https://spoonacular.com/productImages/451142-312x231.jpg","averageRating":0.8400000000000001,"ratingCount":11.0,"score":0.8105882352941177,"link":"https://click.linksynergy.com/deeplink?id=*QCiIS6t4gA&mid=2025&murl=https%3A%2F%2Fwww.wine.com%2Fproduct%2Fsterling-three-palms-vineyard-merlot-2006%2F108141"}]},"instructions":"Preheat
+        grill for medium heat.                            Place the lamb in a large
+        bowl, and mix with the mint, cilantro, oregano, garlic, sherry, vinegar, and
+        molasses. Season with cumin, allspice, red pepper flakes, salt, and black
+        pepper, and mix well. Shape into 4 patties.                            Brush
+        grill grate with oil. Grill burgers 5 minutes on each side, or until well
+        done. Heat the pita pocket briefly on the grill. Serve burgers wrapped in
+        pitas with feta cheese.                                                Kitchen-Friendly
+        View","analyzedInstructions":[{"name":"","steps":[{"number":1,"step":"Preheat
+        grill for medium heat.","ingredients":[],"equipment":[{"id":404706,"name":"grill","localizedName":"grill","image":"grill.jpg"}]},{"number":2,"step":"Place
+        the lamb in a large bowl, and mix with the mint, cilantro, oregano, garlic,
+        sherry, vinegar, and molasses. Season with cumin, allspice, red pepper flakes,
+        salt, and black pepper, and mix well. Shape into 4 patties.","ingredients":[{"id":1032009,"name":"red
+        pepper flakes","localizedName":"red pepper flakes","image":"red-pepper-flakes.jpg"},{"id":1002030,"name":"black
+        pepper","localizedName":"black pepper","image":"pepper.jpg"},{"id":2001,"name":"allspice","localizedName":"allspice","image":"allspice-ground.jpg"},{"id":11165,"name":"cilantro","localizedName":"cilantro","image":"cilantro.png"},{"id":19304,"name":"molasses","localizedName":"molasses","image":"molasses.jpg"},{"id":2027,"name":"oregano","localizedName":"oregano","image":"oregano.jpg"},{"id":2053,"name":"vinegar","localizedName":"vinegar","image":"vinegar-(white).jpg"},{"id":11215,"name":"garlic","localizedName":"garlic","image":"garlic.png"},{"id":10214106,"name":"sherry","localizedName":"sherry","image":"dry-sherry.png"},{"id":1002014,"name":"cumin","localizedName":"cumin","image":"ground-cumin.jpg"},{"id":10017224,"name":"lamb","localizedName":"lamb","image":"lamb-shanks.jpg"},{"id":2064,"name":"mint","localizedName":"mint","image":"mint.jpg"},{"id":2047,"name":"salt","localizedName":"salt","image":"salt.jpg"}],"equipment":[{"id":404783,"name":"bowl","localizedName":"bowl","image":"bowl.jpg"}]},{"number":3,"step":"Brush
+        grill grate with oil. Grill burgers 5 minutes on each side, or until well
+        done.","ingredients":[{"id":4582,"name":"cooking oil","localizedName":"cooking
+        oil","image":"vegetable-oil.jpg"}],"equipment":[{"id":404706,"name":"grill","localizedName":"grill","image":"grill.jpg"}],"length":{"number":5,"unit":"minutes"}},{"number":4,"step":"Heat
+        the pita pocket briefly on the grill.","ingredients":[{"id":18413,"name":"pita","localizedName":"pita","image":"pita-bread.jpg"}],"equipment":[{"id":404706,"name":"grill","localizedName":"grill","image":"grill.jpg"}]},{"number":5,"step":"Serve
+        burgers wrapped in pitas with feta cheese.","ingredients":[{"id":1019,"name":"feta
+        cheese","localizedName":"feta cheese","image":"feta.png"},{"id":18413,"name":"pita","localizedName":"pita","image":"pita-bread.jpg"}],"equipment":[]}]}],"originalId":null}'
+  recorded_at: Thu, 20 Apr 2023 22:46:45 GMT
+- request:
+    method: get
+    uri: https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/497064/information
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Rapidapi-Key:
+      - 49a4882f2emsh349cc6514f6f885p1c379cjsnddef264a4c49
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 20 Apr 2023 22:46:46 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '2583'
+      Connection:
+      - keep-alive
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Cf-Cache-Status:
+      - DYNAMIC
+      Allow-Control-Allow-Methods:
+      - GET, HEAD, POST, OPTIONS, DELETE, PUT
+      Access-Control-Allow-Origin:
+      - "*"
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=NRF5DRrKlyqjA01Fr7ENnjnmec%2BRnNkStT%2FB8gWWzK5omHFg3Y9RIOdiLliSmg8d3ijxwcGhW0YjqeWRuXvaIhxnnKQ4HaCo6WMl3BkUxQTEY70monPjAvCgD11I%2FRlYCyQHrdw%3D"}],"group":"cf-nel","max_age":604800}'
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, OPTIONS, DELETE, PUT
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+      Allow-Control-Allow-Origin:
+      - "*"
+      Cf-Ray:
+      - 7bb0ecd6387127ad-SEA
+      Access-Control-Allow-Headers:
+      - Authorization, UserId, Hash, Name, Password, Accept, Accept-Language, x-api-key,
+        Content-Language, Content-Type, Cache-Control, Origin, X-Requested-With
+      X-Ratelimit-Tinyrequests-Limit:
+      - '500'
+      X-Ratelimit-Tinyrequests-Remaining:
+      - '500'
+      X-Ratelimit-Tinyrequests-Reset:
+      - '64528'
+      X-Ratelimit-Requests-Limit:
+      - '50'
+      X-Ratelimit-Requests-Remaining:
+      - '46'
+      X-Ratelimit-Requests-Reset:
+      - '64528'
+      X-Ratelimit-Results-Limit:
+      - '500'
+      X-Ratelimit-Results-Remaining:
+      - '497'
+      X-Ratelimit-Results-Reset:
+      - '64528'
+      Server:
+      - RapidAPI-1.2.8
+      X-Rapidapi-Version:
+      - 1.2.8
+      X-Rapidapi-Region:
+      - AWS - us-west-2
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJ2ZWdldGFyaWFuIjp0cnVlLCJ2ZWdhbiI6ZmFsc2UsImdsdXRlbkZyZWUiOnRydWUsImRhaXJ5RnJlZSI6ZmFsc2UsInZlcnlIZWFsdGh5IjpmYWxzZSwiY2hlYXAiOmZhbHNlLCJ2ZXJ5UG9wdWxhciI6dHJ1ZSwic3VzdGFpbmFibGUiOmZhbHNlLCJsb3dGb2RtYXAiOmZhbHNlLCJ3ZWlnaHRXYXRjaGVyU21hcnRQb2ludHMiOjEzLCJnYXBzIjoibm8iLCJwcmVwYXJhdGlvbk1pbnV0ZXMiOi0xLCJjb29raW5nTWludXRlcyI6LTEsImFnZ3JlZ2F0ZUxpa2VzIjoxMDA3LCJoZWFsdGhTY29yZSI6NiwiY3JlZGl0c1RleHQiOiJLaXRjaGVuIENvbmZpZGFudGUiLCJzb3VyY2VOYW1lIjoiS2l0Y2hlbiBDb25maWRhbnRlIiwicHJpY2VQZXJTZXJ2aW5nIjoxNTMuMzksImV4dGVuZGVkSW5ncmVkaWVudHMiOlt7ImlkIjoxMDAyMDMwLCJhaXNsZSI6IlNwaWNlcyBhbmQgU2Vhc29uaW5ncyIsImltYWdlIjoicGVwcGVyLmpwZyIsImNvbnNpc3RlbmN5IjoiU09MSUQiLCJuYW1lIjoicGVwcGVyIiwibmFtZUNsZWFuIjoiYmxhY2sgcGVwcGVyIiwib3JpZ2luYWwiOiJmcmVzaGx5IGdyb3VuZCBibGFjayBwZXBwZXIiLCJvcmlnaW5hbE5hbWUiOiJmcmVzaGx5IGdyb3VuZCBibGFjayBwZXBwZXIiLCJhbW91bnQiOjQuMCwidW5pdCI6InNlcnZpbmdzIiwibWV0YSI6WyJibGFjayIsImZyZXNobHkgZ3JvdW5kIl0sIm1lYXN1cmVzIjp7InVzIjp7ImFtb3VudCI6NC4wLCJ1bml0U2hvcnQiOiJzZXJ2aW5ncyIsInVuaXRMb25nIjoic2VydmluZ3MifSwibWV0cmljIjp7ImFtb3VudCI6NC4wLCJ1bml0U2hvcnQiOiJzZXJ2aW5ncyIsInVuaXRMb25nIjoic2VydmluZ3MifX19LHsiaWQiOjEwMjAsImFpc2xlIjoiQ2hlZXNlIiwiaW1hZ2UiOiJmb250aW5hLmpwZyIsImNvbnNpc3RlbmN5IjoiU09MSUQiLCJuYW1lIjoiZm9udGluYSBjaGVlc2UiLCJuYW1lQ2xlYW4iOiJmb250aW5hIGNoZWVzZSIsIm9yaWdpbmFsIjoiNCBveiBmb250aW5hIGNoZWVzZSwgc2xpY2VkIiwib3JpZ2luYWxOYW1lIjoiZm9udGluYSBjaGVlc2UsIHNsaWNlZCIsImFtb3VudCI6NC4wLCJ1bml0Ijoib3oiLCJtZXRhIjpbInNsaWNlZCJdLCJtZWFzdXJlcyI6eyJ1cyI6eyJhbW91bnQiOjQuMCwidW5pdFNob3J0Ijoib3oiLCJ1bml0TG9uZyI6Im91bmNlcyJ9LCJtZXRyaWMiOnsiYW1vdW50IjoxMTMuMzk4LCJ1bml0U2hvcnQiOiJnIiwidW5pdExvbmciOiJncmFtcyJ9fX0seyJpZCI6MTEyMTUsImFpc2xlIjoiUHJvZHVjZSIsImltYWdlIjoiZ2FybGljLnBuZyIsImNvbnNpc3RlbmN5IjoiU09MSUQiLCJuYW1lIjoiZ2FybGljIiwibmFtZUNsZWFuIjoiZ2FybGljIiwib3JpZ2luYWwiOiI0IGNsb3ZlcyBnYXJsaWMsIGZpbmVseSBtaW5jZWQiLCJvcmlnaW5hbE5hbWUiOiJnYXJsaWMsIGZpbmVseSBtaW5jZWQiLCJhbW91bnQiOjQuMCwidW5pdCI6ImNsb3ZlcyIsIm1ldGEiOlsiZmluZWx5IG1pbmNlZCJdLCJtZWFzdXJlcyI6eyJ1cyI6eyJhbW91bnQiOjQuMCwidW5pdFNob3J0IjoiY2xvdmVzIiwidW5pdExvbmciOiJjbG92ZXMifSwibWV0cmljIjp7ImFtb3VudCI6NC4wLCJ1bml0U2hvcnQiOiJjbG92ZXMiLCJ1bml0TG9uZyI6ImNsb3ZlcyJ9fX0seyJpZCI6MTA4MjA0NywiYWlzbGUiOiJTcGljZXMgYW5kIFNlYXNvbmluZ3MiLCJpbWFnZSI6InNhbHQuanBnIiwiY29uc2lzdGVuY3kiOiJTT0xJRCIsIm5hbWUiOiJrb3NoZXIgc2FsdCIsIm5hbWVDbGVhbiI6Imtvc2hlciBzYWx0Iiwib3JpZ2luYWwiOiJrb3NoZXIgc2FsdCIsIm9yaWdpbmFsTmFtZSI6Imtvc2hlciBzYWx0IiwiYW1vdW50Ijo0LjAsInVuaXQiOiJzZXJ2aW5ncyIsIm1ldGEiOltdLCJtZWFzdXJlcyI6eyJ1cyI6eyJhbW91bnQiOjQuMCwidW5pdFNob3J0Ijoic2VydmluZ3MiLCJ1bml0TG9uZyI6InNlcnZpbmdzIn0sIm1ldHJpYyI6eyJhbW91bnQiOjQuMCwidW5pdFNob3J0Ijoic2VydmluZ3MiLCJ1bml0TG9uZyI6InNlcnZpbmdzIn19fSx7ImlkIjoxMDI2LCJhaXNsZSI6IkNoZWVzZSIsImltYWdlIjoibW96emFyZWxsYS5wbmciLCJjb25zaXN0ZW5jeSI6IlNPTElEIiwibmFtZSI6Im1venphcmVsbGEgY2hlZXNlIiwibmFtZUNsZWFuIjoibW96emFyZWxsYSIsIm9yaWdpbmFsIjoiNiBveiBtb3p6YXJlbGxhIGNoZWVzZSwgc2xpY2VkIiwib3JpZ2luYWxOYW1lIjoibW96emFyZWxsYSBjaGVlc2UsIHNsaWNlZCIsImFtb3VudCI6Ni4wLCJ1bml0Ijoib3oiLCJtZXRhIjpbInNsaWNlZCJdLCJtZWFzdXJlcyI6eyJ1cyI6eyJhbW91bnQiOjYuMCwidW5pdFNob3J0Ijoib3oiLCJ1bml0TG9uZyI6Im91bmNlcyJ9LCJtZXRyaWMiOnsiYW1vdW50IjoxNzAuMDk3LCJ1bml0U2hvcnQiOiJnIiwidW5pdExvbmciOiJncmFtcyJ9fX0seyJpZCI6NDA1MywiYWlzbGUiOiJPaWwsIFZpbmVnYXIsIFNhbGFkIERyZXNzaW5nIiwiaW1hZ2UiOiJvbGl2ZS1vaWwuanBnIiwiY29uc2lzdGVuY3kiOiJMSVFVSUQiLCJuYW1lIjoib2xpdmUgb2lsIiwibmFtZUNsZWFuIjoib2xpdmUgb2lsIiwib3JpZ2luYWwiOiJvbGl2ZSBvaWwgZm9yIGJydXNoaW5nIiwib3JpZ2luYWxOYW1lIjoib2xpdmUgb2lsIGZvciBicnVzaGluZyIsImFtb3VudCI6NC4wLCJ1bml0Ijoic2VydmluZ3MiLCJtZXRhIjpbImZvciBicnVzaGluZyJdLCJtZWFzdXJlcyI6eyJ1cyI6eyJhbW91bnQiOjQuMCwidW5pdFNob3J0Ijoic2VydmluZ3MiLCJ1bml0TG9uZyI6InNlcnZpbmdzIn0sIm1ldHJpYyI6eyJhbW91bnQiOjQuMCwidW5pdFNob3J0Ijoic2VydmluZ3MiLCJ1bml0TG9uZyI6InNlcnZpbmdzIn19fSx7ImlkIjoxMTQ3NywiYWlzbGUiOiJQcm9kdWNlIiwiaW1hZ2UiOiJ6dWNjaGluaS5qcGciLCJjb25zaXN0ZW5jeSI6IlNPTElEIiwibmFtZSI6Inp1Y2NoaW5pcyIsIm5hbWVDbGVhbiI6Inp1Y2NoaW5pIiwib3JpZ2luYWwiOiIxLTIgenVjY2hpbmlzLCB0aGlubHkgc2xpY2VkIiwib3JpZ2luYWxOYW1lIjoienVjY2hpbmlzLCB0aGlubHkgc2xpY2VkIiwiYW1vdW50IjoxLjAsInVuaXQiOiIiLCJtZXRhIjpbInRoaW5seSBzbGljZWQiXSwibWVhc3VyZXMiOnsidXMiOnsiYW1vdW50IjoxLjAsInVuaXRTaG9ydCI6IiIsInVuaXRMb25nIjoiIn0sIm1ldHJpYyI6eyJhbW91bnQiOjEuMCwidW5pdFNob3J0IjoiIiwidW5pdExvbmciOiIifX19XSwiaWQiOjQ5NzA2NCwidGl0bGUiOiJQaXp6YSBCaWFuY2Ege3dpdGggWnVjY2hpbml9IiwicmVhZHlJbk1pbnV0ZXMiOjQ1LCJzZXJ2aW5ncyI6NCwic291cmNlVXJsIjoiaHR0cDovL2tpdGNoZW5jb25maWRhbnRlLmNvbS93aGl0ZS1waXp6YS1iaWFuY2Etd2l0aC16dWNjaGluaS1yZWNpcGUiLCJpbWFnZSI6Imh0dHBzOi8vc3Bvb25hY3VsYXIuY29tL3JlY2lwZUltYWdlcy80OTcwNjQtNTU2eDM3MC5qcGciLCJpbWFnZVR5cGUiOiJqcGciLCJzdW1tYXJ5IjoiUGl6emEgQmlhbmNhIHt3aXRoIFp1Y2NoaW5pfSBpcyBhIG1haW4gY291cnNlIHRoYXQgc2VydmVzIDQuIFdhdGNoaW5nIHlvdXIgZmlndXJlPyBUaGlzIGdsdXRlbiBmcmVlLCBsYWN0byBvdm8gdmVnZXRhcmlhbiwgcHJpbWFsLCBhbmQga2V0b2dlbmljIHJlY2lwZSBoYXMgPGI+Mzc1IGNhbG9yaWVzPC9iPiwgPGI+MTdnIG9mIHByb3RlaW48L2I+LCBhbmQgPGI+MzJnIG9mIGZhdDwvYj4gcGVyIHNlcnZpbmcuIEZvciA8Yj4kMS41MyBwZXIgc2VydmluZzwvYj4sIHRoaXMgcmVjaXBlIDxiPmNvdmVycyAxMSU8L2I+IG9mIHlvdXIgZGFpbHkgcmVxdWlyZW1lbnRzIG9mIHZpdGFtaW5zIGFuZCBtaW5lcmFscy4gVGhpcyByZWNpcGUgZnJvbSBLaXRjaGVuIENvbmZpZGFudGUgcmVxdWlyZXMgb2xpdmUgb2lsLCBmb250aW5hIGNoZWVzZSwgbW96emFyZWxsYSBjaGVlc2UsIGFuZCB6dWNjaGluaXMuIFBsZW50eSBvZiBwZW9wbGUgcmVhbGx5IGxpa2VkIHRoaXMgTWVkaXRlcnJhbmVhbiBkaXNoLiBGcm9tIHByZXBhcmF0aW9uIHRvIHRoZSBwbGF0ZSwgdGhpcyByZWNpcGUgdGFrZXMgYXJvdW5kIDxiPjQ1IG1pbnV0ZXM8L2I+LiAxMDA3IHBlb3BsZSB3ZXJlIGltcHJlc3NlZCBieSB0aGlzIHJlY2lwZS4gV2l0aCBhIHNwb29uYWN1bGFyIDxiPnNjb3JlIG9mIDg4JTwvYj4sIHRoaXMgZGlzaCBpcyBvdXRzdGFuZGluZy4gVHJ5IDxhIGhyZWY9XCJodHRwczovL3Nwb29uYWN1bGFyLmNvbS9yZWNpcGVzL3BpenphLWJpYW5jYS13aXRoLXp1Y2NoaW5pLTEzODA4MzFcIj5QaXp6YSBCaWFuY2Ege3dpdGggWnVjY2hpbml9PC9hPiwgPGEgaHJlZj1cImh0dHBzOi8vc3Bvb25hY3VsYXIuY29tL3JlY2lwZXMvcGl6emEtYmlhbmNhLXdpdGgtenVjY2hpbmktMTU0MzE5MVwiPlBpenphIEJpYW5jYSB7d2l0aCBadWNjaGluaX08L2E+LCBhbmQgPGEgaHJlZj1cImh0dHBzOi8vc3Bvb25hY3VsYXIuY29tL3JlY2lwZXMvcGl6emEtYmlhbmNhLXdpdGgtenVjY2hpbmktMTI3OTM2MVwiPlBpenphIEJpYW5jYSB7d2l0aCBadWNjaGluaX08L2E+IGZvciBzaW1pbGFyIHJlY2lwZXMuIiwiY3Vpc2luZXMiOlsiTWVkaXRlcnJhbmVhbiIsIkl0YWxpYW4iLCJFdXJvcGVhbiJdLCJkaXNoVHlwZXMiOlsibHVuY2giLCJtYWluIGNvdXJzZSIsIm1haW4gZGlzaCIsImRpbm5lciJdLCJkaWV0cyI6WyJnbHV0ZW4gZnJlZSIsImxhY3RvIG92byB2ZWdldGFyaWFuIiwicHJpbWFsIiwia2V0b2dlbmljIl0sIm9jY2FzaW9ucyI6W10sIndpbmVQYWlyaW5nIjp7InBhaXJlZFdpbmVzIjpbInNhbmdpb3Zlc2UiLCJzaGlyYXoiLCJiYXJiZXJhIHdpbmUiXSwicGFpcmluZ1RleHQiOiJTYW5naW92ZXNlLCBTaGlyYXosIGFuZCBCYXJiZXJhIFdpbmUgYXJlIGdyZWF0IGNob2ljZXMgZm9yIFBpenphLiBUaGUgYmVzdCB3aW5lIGZvciBwaXp6YSBkZXBlbmRzIG9uIHRoZSB0b3BwaW5ncyEgUmVkIHNhdWNlIHBpenphIHdpbGwgY2FsbCBmb3IgYSByZWQgd2luZSB3aXRoIHNvbWUgYWNpZGl0eSwgc3VjaCBhcyBhIGJhcmJlcmFuIG9yIHNhbmdpb3Zlc2UuIEFkZCBwZXBwZXJvbmkgb3Igc2F1c2FnZSBhbmQgeW91IGNhbiBnbyBib2xkZXIgd2l0aCBhIHN5cmFoLiBPbmUgd2luZSB5b3UgY291bGQgdHJ5IGlzIENhc3RlbGxvIGRpIE1vbnNhbnRvIElsIFBvZ2dpbyBDaGlhbnRpIENsYXNzaWNvIEdyYW4gU2VsZXppb25lLiBJdCBoYXMgNC44IG91dCBvZiA1IHN0YXJzIGFuZCBhIGJvdHRsZSBjb3N0cyBhYm91dCA1OCBkb2xsYXJzLiIsInByb2R1Y3RNYXRjaGVzIjpbeyJpZCI6NDk2NDQ0LCJ0aXRsZSI6IkNhc3RlbGxvIGRpIE1vbnNhbnRvIElsIFBvZ2dpbyBDaGlhbnRpIENsYXNzaWNvIEdyYW4gU2VsZXppb25lIiwiZGVzY3JpcHRpb24iOiIiLCJwcmljZSI6IiQ1Ny45OSIsImltYWdlVXJsIjoiaHR0cHM6Ly9zcG9vbmFjdWxhci5jb20vcHJvZHVjdEltYWdlcy80OTY0NDQtMzEyeDIzMS5qcGciLCJhdmVyYWdlUmF0aW5nIjowLjk2LCJyYXRpbmdDb3VudCI6Ni4wLCJzY29yZSI6MC45MDczNjg0MjEwNTI2MzE2LCJsaW5rIjoiaHR0cHM6Ly9jbGljay5saW5rc3luZXJneS5jb20vZGVlcGxpbms/aWQ9KlFDaUlTNnQ0Z0EmbWlkPTIwMjUmbXVybD1odHRwcyUzQSUyRiUyRnd3dy53aW5lLmNvbSUyRnByb2R1Y3QlMkZjYXN0ZWxsby1kaS1tb25zYW50by1pbC1wb2dnaW8tY2hpYW50aS1jbGFzc2ljby1ncmFuLXNlbGV6aW9uZS0yMDE0JTJGNTkwMTgyIn1dfSwiaW5zdHJ1Y3Rpb25zIjoiUHJlaGVhdCBvdmVuIHRvIDQ1MMKwRi4gQnJ1c2ggYSBiYWtpbmcgdHJheSB3aXRoIG9saXZlIG9pbC5Sb2xsIG91dCB0aGUgcGl6emEgZG91Z2ggdG8gZGVzaXJlZCBzaGFwZSBhbmQgc2l6ZSBvbiBhIGZsb3VyZWQgc3VyZmFjZS4gVHJhbnNmZXIgdGhlIGRvdWdoIHRvIHRoZSBwcmVwYXJlZCB0cmF5LiBQcmVzcyBkaW1wbGVzIGludG8gdGhlIGRvdWdoLCBhcyB3ZWxsIGFzIGEgcmlkZ2UgYXJvdW5kIHRoZSBwZXJpbWV0ZXIgdG8gcHJldmVudCB0aGUgY2hlZXNlcyBmcm9tIG9vemluZy4gQnJ1c2ggbGlnaHRseSB3aXRoIG9saXZlIG9pbCBhbmQgc3ByaW5rbGUgd2l0aCB0aGUgZnJlc2ggZ2FybGljLiBBcnJhbmdlIHRoZSBtb3p6YXJlbGxhIGFuZCBmb250aW5hIGNoZWVzZXMuIEFycmFuZ2UgenVjY2hpbmkgc2xpY2VzLiBCcnVzaCB6dWNjaGluaSBsaWdodGx5IHdpdGggb2xpdmUgb2lsIGFuZCBzZWFzb24gd2l0aCBzYWx0IGFuZCBwZXBwZXIuQmFrZSBmb3IgMTUtMTcgbWludXRlcywgb3IgdW50aWwgdGhlIHBpenphcyBhcmUgYnViYmxpbmcgYW5kIHRoZSBkb3VnaCBpcyBnb2xkZW4uIFNsaWNlIGFuZCBzZXJ2ZSBpbW1lZGlhdGVseS4gRW5qb3khIiwiYW5hbHl6ZWRJbnN0cnVjdGlvbnMiOlt7Im5hbWUiOiIiLCJzdGVwcyI6W3sibnVtYmVyIjoxLCJzdGVwIjoiUHJlaGVhdCBvdmVuIHRvIDQ1MMKwRi4iLCJpbmdyZWRpZW50cyI6W10sImVxdWlwbWVudCI6W3siaWQiOjQwNDc4NCwibmFtZSI6Im92ZW4iLCJsb2NhbGl6ZWROYW1lIjoib3ZlbiIsImltYWdlIjoib3Zlbi5qcGciLCJ0ZW1wZXJhdHVyZSI6eyJudW1iZXIiOjQ1MC4wLCJ1bml0IjoiRmFocmVuaGVpdCJ9fV19LHsibnVtYmVyIjoyLCJzdGVwIjoiQnJ1c2ggYSBiYWtpbmcgdHJheSB3aXRoIG9saXZlIG9pbC4iLCJpbmdyZWRpZW50cyI6W3siaWQiOjQwNTMsIm5hbWUiOiJvbGl2ZSBvaWwiLCJsb2NhbGl6ZWROYW1lIjoib2xpdmUgb2lsIiwiaW1hZ2UiOiJvbGl2ZS1vaWwuanBnIn1dLCJlcXVpcG1lbnQiOlt7ImlkIjo0MDQ2NDYsIm5hbWUiOiJiYWtpbmcgcGFuIiwibG9jYWxpemVkTmFtZSI6ImJha2luZyBwYW4iLCJpbWFnZSI6InJvYXN0aW5nLXBhbi5qcGcifV19LHsibnVtYmVyIjozLCJzdGVwIjoiUm9sbCBvdXQgdGhlIHBpenphIGRvdWdoIHRvIGRlc2lyZWQgc2hhcGUgYW5kIHNpemUgb24gYSBmbG91cmVkIHN1cmZhY2UuIiwiaW5ncmVkaWVudHMiOlt7ImlkIjo5MzYxMCwibmFtZSI6InBpenphIGRvdWdoIiwibG9jYWxpemVkTmFtZSI6InBpenphIGRvdWdoIiwiaW1hZ2UiOiJwaXp6YS1kb3VnaC5qcGcifSx7ImlkIjowLCJuYW1lIjoicm9sbCIsImxvY2FsaXplZE5hbWUiOiJyb2xsIiwiaW1hZ2UiOiJkaW5uZXIteWVhc3Qtcm9sbHMuanBnIn1dLCJlcXVpcG1lbnQiOltdfSx7Im51bWJlciI6NCwic3RlcCI6IlRyYW5zZmVyIHRoZSBkb3VnaCB0byB0aGUgcHJlcGFyZWQgdHJheS4gUHJlc3MgZGltcGxlcyBpbnRvIHRoZSBkb3VnaCwgYXMgd2VsbCBhcyBhIHJpZGdlIGFyb3VuZCB0aGUgcGVyaW1ldGVyIHRvIHByZXZlbnQgdGhlIGNoZWVzZXMgZnJvbSBvb3ppbmcuIiwiaW5ncmVkaWVudHMiOlt7ImlkIjowLCJuYW1lIjoiZG91Z2giLCJsb2NhbGl6ZWROYW1lIjoiZG91Z2giLCJpbWFnZSI6InBpenphLWRvdWdoIn1dLCJlcXVpcG1lbnQiOltdfSx7Im51bWJlciI6NSwic3RlcCI6IkJydXNoIGxpZ2h0bHkgd2l0aCBvbGl2ZSBvaWwgYW5kIHNwcmlua2xlIHdpdGggdGhlIGZyZXNoIGdhcmxpYy4gQXJyYW5nZSB0aGUgbW96emFyZWxsYSBhbmQgZm9udGluYSBjaGVlc2VzLiBBcnJhbmdlIHp1Y2NoaW5pIHNsaWNlcy4iLCJpbmdyZWRpZW50cyI6W3siaWQiOjEwMjYsIm5hbWUiOiJtb3p6YXJlbGxhIiwibG9jYWxpemVkTmFtZSI6Im1venphcmVsbGEiLCJpbWFnZSI6Im1venphcmVsbGEucG5nIn0seyJpZCI6NDA1MywibmFtZSI6Im9saXZlIG9pbCIsImxvY2FsaXplZE5hbWUiOiJvbGl2ZSBvaWwiLCJpbWFnZSI6Im9saXZlLW9pbC5qcGcifSx7ImlkIjoxMTQ3NywibmFtZSI6Inp1Y2NoaW5pIiwibG9jYWxpemVkTmFtZSI6Inp1Y2NoaW5pIiwiaW1hZ2UiOiJ6dWNjaGluaS5qcGcifSx7ImlkIjoxMTIxNSwibmFtZSI6ImdhcmxpYyIsImxvY2FsaXplZE5hbWUiOiJnYXJsaWMiLCJpbWFnZSI6ImdhcmxpYy5wbmcifV0sImVxdWlwbWVudCI6W119LHsibnVtYmVyIjo2LCJzdGVwIjoiQnJ1c2ggenVjY2hpbmkgbGlnaHRseSB3aXRoIG9saXZlIG9pbCBhbmQgc2Vhc29uIHdpdGggc2FsdCBhbmQgcGVwcGVyLiIsImluZ3JlZGllbnRzIjpbeyJpZCI6MTEwMjA0NywibmFtZSI6InNhbHQgYW5kIHBlcHBlciIsImxvY2FsaXplZE5hbWUiOiJzYWx0IGFuZCBwZXBwZXIiLCJpbWFnZSI6InNhbHQtYW5kLXBlcHBlci5qcGcifSx7ImlkIjo0MDUzLCJuYW1lIjoib2xpdmUgb2lsIiwibG9jYWxpemVkTmFtZSI6Im9saXZlIG9pbCIsImltYWdlIjoib2xpdmUtb2lsLmpwZyJ9LHsiaWQiOjExNDc3LCJuYW1lIjoienVjY2hpbmkiLCJsb2NhbGl6ZWROYW1lIjoienVjY2hpbmkiLCJpbWFnZSI6Inp1Y2NoaW5pLmpwZyJ9XSwiZXF1aXBtZW50IjpbXX0seyJudW1iZXIiOjcsInN0ZXAiOiJCYWtlIGZvciAxNS0xNyBtaW51dGVzLCBvciB1bnRpbCB0aGUgcGl6emFzIGFyZSBidWJibGluZyBhbmQgdGhlIGRvdWdoIGlzIGdvbGRlbi4gU2xpY2UgYW5kIHNlcnZlIGltbWVkaWF0ZWx5LiBFbmpveSEiLCJpbmdyZWRpZW50cyI6W3siaWQiOjAsIm5hbWUiOiJkb3VnaCIsImxvY2FsaXplZE5hbWUiOiJkb3VnaCIsImltYWdlIjoicGl6emEtZG91Z2gifV0sImVxdWlwbWVudCI6W3siaWQiOjQwNDc4NCwibmFtZSI6Im92ZW4iLCJsb2NhbGl6ZWROYW1lIjoib3ZlbiIsImltYWdlIjoib3Zlbi5qcGcifV0sImxlbmd0aCI6eyJudW1iZXIiOjE3LCJ1bml0IjoibWludXRlcyJ9fV19XSwib3JpZ2luYWxJZCI6bnVsbH0=
+  recorded_at: Thu, 20 Apr 2023 22:46:46 GMT
+- request:
+    method: get
+    uri: https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/1005688/information
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Rapidapi-Key:
+      - 49a4882f2emsh349cc6514f6f885p1c379cjsnddef264a4c49
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 20 Apr 2023 22:46:47 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '4007'
+      Connection:
+      - keep-alive
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Cf-Cache-Status:
+      - DYNAMIC
+      Allow-Control-Allow-Methods:
+      - GET, HEAD, POST, OPTIONS, DELETE, PUT
+      Access-Control-Allow-Origin:
+      - "*"
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=f0LV%2FL4OAoZEAWvOq2P1dBA5HxZPWEWu9pX1f4cN9%2BRMRAgRZb7etOnKYqilcnGlS29AtFeY408PusA8GQQQFVbBITBfS55vvsQW5Ob99aBMEWEauEgpL4lJSEE8vKYInOGdefU%3D"}],"group":"cf-nel","max_age":604800}'
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, OPTIONS, DELETE, PUT
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+      Allow-Control-Allow-Origin:
+      - "*"
+      Cf-Ray:
+      - 7bb0ecdc880e08e7-SEA
+      Access-Control-Allow-Headers:
+      - Authorization, UserId, Hash, Name, Password, Accept, Accept-Language, x-api-key,
+        Content-Language, Content-Type, Cache-Control, Origin, X-Requested-With
+      X-Ratelimit-Tinyrequests-Limit:
+      - '500'
+      X-Ratelimit-Tinyrequests-Remaining:
+      - '500'
+      X-Ratelimit-Tinyrequests-Reset:
+      - '64527'
+      X-Ratelimit-Requests-Limit:
+      - '50'
+      X-Ratelimit-Requests-Remaining:
+      - '45'
+      X-Ratelimit-Requests-Reset:
+      - '64527'
+      X-Ratelimit-Results-Limit:
+      - '500'
+      X-Ratelimit-Results-Remaining:
+      - '497'
+      X-Ratelimit-Results-Reset:
+      - '64527'
+      Server:
+      - RapidAPI-1.2.8
+      X-Rapidapi-Version:
+      - 1.2.8
+      X-Rapidapi-Region:
+      - AWS - us-west-2
+    body:
+      encoding: ASCII-8BIT
+      string: '{"vegetarian":true,"vegan":false,"glutenFree":false,"dairyFree":false,"veryHealthy":false,"cheap":false,"veryPopular":false,"sustainable":false,"lowFodmap":false,"weightWatcherSmartPoints":14,"gaps":"no","preparationMinutes":25,"cookingMinutes":25,"aggregateLikes":1,"healthScore":12,"creditsText":"Amuse
+        Your Bouche","sourceName":"Amuse Your Bouche","pricePerServing":127.0,"extendedIngredients":[{"id":1002030,"aisle":"Spices
+        and Seasonings","image":"pepper.jpg","consistency":"SOLID","name":"bell pepper","nameClean":"black
+        pepper","original":"Black pepper","originalName":"Black pepper","amount":5.0,"unit":"servings","meta":["black"],"measures":{"us":{"amount":5.0,"unitShort":"servings","unitLong":"servings"},"metric":{"amount":5.0,"unitShort":"servings","unitLong":"servings"}}},{"id":18350,"aisle":"Bakery/Bread","image":"hamburger-bun.jpg","consistency":"SOLID","name":"burger
+        buns","nameClean":"hamburger bun","original":"Burger buns, lettuce, sliced
+        tomato, etc.","originalName":"Burger buns, lettuce, sliced tomato, etc","amount":5.0,"unit":"servings","meta":["sliced"],"measures":{"us":{"amount":5.0,"unitShort":"servings","unitLong":"servings"},"metric":{"amount":5.0,"unitShort":"servings","unitLong":"servings"}}},{"id":1001,"aisle":"Milk,
+        Eggs, Other Dairy","image":"butter-sliced.jpg","consistency":"SOLID","name":"butter","nameClean":"butter","original":"1/2
+        tbsp butter","originalName":"butter","amount":0.5,"unit":"tbsp","meta":[],"measures":{"us":{"amount":0.5,"unitShort":"Tbsps","unitLong":"Tbsps"},"metric":{"amount":0.5,"unitShort":"Tbsps","unitLong":"Tbsps"}}},{"id":1009,"aisle":"Cheese","image":"cheddar-cheese.png","consistency":"SOLID","name":"cheddar
+        cheese","nameClean":"cheddar cheese","original":"50 g cheddar cheese, grated
+        ( - 1/2 cup when grated)","originalName":"cheddar cheese, grated ( - 1/2 cup
+        when grated)","amount":50.0,"unit":"g","meta":["grated","( -)"],"measures":{"us":{"amount":1.764,"unitShort":"oz","unitLong":"ounces"},"metric":{"amount":50.0,"unitShort":"g","unitLong":"grams"}}},{"id":1009,"aisle":"Cheese","image":"cheddar-cheese.png","consistency":"SOLID","name":"cheddar
+        cheese","nameClean":"cheddar cheese","original":"130 g cheddar cheese, grated
+        ( - 1 1/3 cups when grated)","originalName":"cheddar cheese, grated ( - 1
+        1/3 cups when grated)","amount":130.0,"unit":"g","meta":["grated","()"],"measures":{"us":{"amount":4.586,"unitShort":"oz","unitLong":"ounces"},"metric":{"amount":130.0,"unitShort":"g","unitLong":"grams"}}},{"id":16058,"aisle":"Canned
+        and Jarred","image":"chickpeas.png","consistency":"SOLID","name":"chickpeas","nameClean":"canned
+        chickpeas","original":"400 g tin chickpeas, drained (240g, or - 1 1/4 cups,
+        when drained)","originalName":"tinned chickpeas, drained (240g, or - 1 1/4
+        cups, when drained)","amount":400.0,"unit":"g","meta":["drained","canned","tinned","(240g,
+        or)"],"measures":{"us":{"amount":14.11,"unitShort":"oz","unitLong":"ounces"},"metric":{"amount":400.0,"unitShort":"g","unitLong":"grams"}}},{"id":1032046,"aisle":"Condiments","image":"dijon-mustard.jpg","consistency":"LIQUID","name":"dijon
+        mustard","nameClean":"dijon mustard","original":"1/2 tsp dijon mustard","originalName":"dijon
+        mustard","amount":0.5,"unit":"tsp","meta":[],"measures":{"us":{"amount":0.5,"unitShort":"tsps","unitLong":"teaspoons"},"metric":{"amount":0.5,"unitShort":"tsps","unitLong":"teaspoons"}}},{"id":1123,"aisle":"Milk,
+        Eggs, Other Dairy","image":"egg.png","consistency":"SOLID","name":"egg","nameClean":"egg","original":"1
+        egg","originalName":"egg","amount":1.0,"unit":"","meta":[],"measures":{"us":{"amount":1.0,"unitShort":"","unitLong":""},"metric":{"amount":1.0,"unitShort":"","unitLong":""}}},{"id":10511297,"aisle":"Produce","image":"parsley.jpg","consistency":"SOLID","name":"parsley","nameClean":"fresh
+        parsley","original":"Small handful fresh parsley","originalName":"Small fresh
+        parsley","amount":1.0,"unit":"handful","meta":["fresh"],"measures":{"us":{"amount":1.0,"unitShort":"handful","unitLong":"handful"},"metric":{"amount":1.0,"unitShort":"handful","unitLong":"handful"}}},{"id":11215,"aisle":"Produce","image":"garlic.png","consistency":"SOLID","name":"garlic","nameClean":"garlic","original":"2
+        cloves garlic, minced","originalName":"garlic, minced","amount":2.0,"unit":"cloves","meta":["minced"],"measures":{"us":{"amount":2.0,"unitShort":"cloves","unitLong":"cloves"},"metric":{"amount":2.0,"unitShort":"cloves","unitLong":"cloves"}}},{"id":11246,"aisle":"Produce","image":"leeks.jpg","consistency":"SOLID","name":"leek","nameClean":"leek","original":"1
+        large leek (or 2 small), halved lengthwise then sliced","originalName":"leek
+        (or 2 small), halved lengthwise then sliced","amount":1.0,"unit":"large","meta":["halved
+        lengthwise","sliced","(or 2 small)"],"measures":{"us":{"amount":1.0,"unitShort":"large","unitLong":"large"},"metric":{"amount":1.0,"unitShort":"large","unitLong":"large"}}},{"id":1077,"aisle":"Milk,
+        Eggs, Other Dairy","image":"milk.png","consistency":"LIQUID","name":"milk","nameClean":"milk","original":"80
+        ml ( - 1/3 cup) milk","originalName":"80 ml milk","amount":0.33333334,"unit":"cup","meta":[],"measures":{"us":{"amount":0.333,"unitShort":"cups","unitLong":"cups"},"metric":{"amount":78.863,"unitShort":"ml","unitLong":"milliliters"}}},{"id":4582,"aisle":"Oil,
+        Vinegar, Salad Dressing","image":"vegetable-oil.jpg","consistency":"LIQUID","name":"oil","nameClean":"cooking
+        oil","original":"2 tbsp oil, divided","originalName":"oil, divided","amount":2.0,"unit":"tbsp","meta":["divided"],"measures":{"us":{"amount":2.0,"unitShort":"Tbsps","unitLong":"Tbsps"},"metric":{"amount":2.0,"unitShort":"Tbsps","unitLong":"Tbsps"}}},{"id":20081,"aisle":"Baking","image":"flour.png","consistency":"SOLID","name":"flour","nameClean":"wheat
+        flour","original":"1/2 tbsp plain flour","originalName":"plain flour","amount":0.5,"unit":"tbsp","meta":["plain"],"measures":{"us":{"amount":0.5,"unitShort":"Tbsps","unitLong":"Tbsps"},"metric":{"amount":0.5,"unitShort":"Tbsps","unitLong":"Tbsps"}}},{"id":2047,"aisle":"Spices
+        and Seasonings","image":"salt.jpg","consistency":"SOLID","name":"salt","nameClean":"table
+        salt","original":"Salt","originalName":"Salt","amount":5.0,"unit":"servings","meta":[],"measures":{"us":{"amount":5.0,"unitShort":"servings","unitLong":"servings"},"metric":{"amount":5.0,"unitShort":"servings","unitLong":"servings"}}},{"id":18075,"aisle":"Bakery/Bread","image":"whole-wheat-bread.jpg","consistency":"SOLID","name":"bread
+        - i used wholemeal","nameClean":"whole wheat bread","original":"40 g bread
+        ( - 1 medium slice) - I used wholemeal","originalName":"bread ( - 1 medium
+        slice) - I used wholemeal","amount":40.0,"unit":"g","meta":["( - 1 medium
+        slice)"],"measures":{"us":{"amount":1.411,"unitShort":"oz","unitLong":"ounces"},"metric":{"amount":40.0,"unitShort":"g","unitLong":"grams"}}}],"id":1005688,"title":"Cheesy
+        rarebit topped Glamorgan burgers","readyInMinutes":50,"servings":5,"sourceUrl":"https://www.amuse-your-bouche.com/rarebit-glamorgan-burgers/","image":"https://spoonacular.com/recipeImages/1005688-556x370.jpg","imageType":"jpg","summary":"Need
+        a <b>lacto ovo vegetarian main course</b>? Cheesy rarebit topped Glamorgan
+        burgers could be an awesome recipe to try. This recipe makes 5 servings with
+        <b>456 calories</b>, <b>20g of protein</b>, and <b>24g of fat</b> each. For
+        <b>$1.27 per serving</b>, this recipe <b>covers 20%</b> of your daily requirements
+        of vitamins and minerals. This recipe is typical of American cuisine. This
+        recipe from Amuse Your Bouche requires bell pepper, dijon mustard, garlic,
+        and cheddar cheese. From preparation to the plate, this recipe takes roughly
+        <b>50 minutes</b>. 1 person has tried and liked this recipe. With a spoonacular
+        <b>score of 81%</b>, this dish is outstanding. Try <a href=\"https://spoonacular.com/recipes/easy-cheesy-topped-burgers-146685\">Easy
+        Cheesy Topped Burgers</a>, <a href=\"https://spoonacular.com/recipes/welsh-rarebit-burgers-506772\">Welsh
+        Rarebit Burgers</a>, and <a href=\"https://spoonacular.com/recipes/welsh-rarebit-burgers-14066\">Welsh
+        Rarebit Burgers</a> for similar recipes.","cuisines":["American"],"dishTypes":["lunch","main
+        course","main dish","dinner"],"diets":["lacto ovo vegetarian"],"occasions":[],"winePairing":{"pairedWines":["merlot","malbec","zinfandel"],"pairingText":"Merlot,
+        Malbec, and Zinfandel are my top picks for Burger. Merlot will be perfectly
+        adequate for a classic burger with standard toppings. Bolder toppings call
+        for bolder wines, such as a malbec or peppery zinfandel. One wine you could
+        try is Peju Province Merlot. It has 4.5 out of 5 stars and a bottle costs
+        about 38 dollars.","productMatches":[{"id":447335,"title":"Peju Province Merlot","description":"The
+        2010 vintage showcases Merlot''s stylish and alluring characteristics with
+        vivid flavors of plum and black currant. Hints of anise and vanilla on the
+        nose open up to complex, integrated layers of raspberry, cherry and cocoa
+        flavors that impart a striking impression on the palate.","price":"$37.99","imageUrl":"https://spoonacular.com/productImages/447335-312x231.jpg","averageRating":0.9,"ratingCount":5.0,"score":0.8375,"link":"https://click.linksynergy.com/deeplink?id=*QCiIS6t4gA&mid=2025&murl=https%3A%2F%2Fwww.wine.com%2Fproduct%2Fpeju-province-merlot-2010%2F133456"}]},"instructions":"Instructions\n\n\n\nHeat
+        1 tbsp oil in a frying pan, and add the sliced leeks and garlic. Cook for
+        5 minutes over a medium heat, until soft and fragrant. Set aside to cool.\n\n\nAdd
+        the drained chickpeas, bread and parsley to a food processor, and blitz until
+        well chopped.\n\n\nTransfer the chickpea mixture to a bowl, and add the cooked
+        leeks, grated cheese, egg, and a good pinch of salt and pepper. Mix thoroughly.\n\n\nForm
+        the mixture into thick burger shapes - I ended up with 5 Glamorgan burgers,
+        but you could make 4 or 6 if you adjust their size.\n\n\nHeat another dash
+        of oil in a frying pan, and add the burgers (or you may need to spread them
+        out over two pans to give yourself more room to flip them over). Cook over
+        a medium-high heat for a few minutes each side, until golden brown and crispy.\n\n\nPlace
+        on a lightly greased baking tray, and bake at 190C (Gas Mark 5 / 375F) for
+        around 20 minutes, until firm.\n\n\nTo make the rarebit topping, melt the
+        butter in a small saucepan, and add the flour. Cook for a minute or so, stirring
+        regularly, to cook the flour. Add the milk a little at a time, stirring until
+        smooth each time before adding more. When you''ve used all of the milk and
+        you have a smooth sauce, add the mustard and grated cheese, and mix again
+        until the cheese has melted.\n\n\nAdd a couple of spoonfuls of the rarebit
+        sauce to the top of each burger, and place under a hot grill (broiler) for
+        a minute or so, to brown the cheese.\n\n\nServe the rarebit topped Glamorgan
+        burgers in buns with salad.","analyzedInstructions":[{"name":"","steps":[{"number":1,"step":"Heat
+        1 tbsp oil in a frying pan, and add the sliced leeks and garlic. Cook for
+        5 minutes over a medium heat, until soft and fragrant. Set aside to cool.","ingredients":[{"id":11215,"name":"garlic","localizedName":"garlic","image":"garlic.png"},{"id":11246,"name":"leek","localizedName":"leek","image":"leeks.jpg"},{"id":4582,"name":"cooking
+        oil","localizedName":"cooking oil","image":"vegetable-oil.jpg"}],"equipment":[{"id":404645,"name":"frying
+        pan","localizedName":"frying pan","image":"pan.png"}],"length":{"number":5,"unit":"minutes"}},{"number":2,"step":"Add
+        the drained chickpeas, bread and parsley to a food processor, and blitz until
+        well chopped.","ingredients":[{"id":16057,"name":"chickpeas","localizedName":"chickpeas","image":"chickpeas.png"},{"id":11297,"name":"parsley","localizedName":"parsley","image":"parsley.jpg"},{"id":18064,"name":"bread","localizedName":"bread","image":"white-bread.jpg"}],"equipment":[{"id":404771,"name":"food
+        processor","localizedName":"food processor","image":"food-processor.png"}]},{"number":3,"step":"Transfer
+        the chickpea mixture to a bowl, and add the cooked leeks, grated cheese, egg,
+        and a good pinch of salt and pepper.","ingredients":[{"id":1102047,"name":"salt
+        and pepper","localizedName":"salt and pepper","image":"salt-and-pepper.jpg"},{"id":16057,"name":"chickpeas","localizedName":"chickpeas","image":"chickpeas.png"},{"id":1041009,"name":"cheese","localizedName":"cheese","image":"cheddar-cheese.png"},{"id":11246,"name":"leek","localizedName":"leek","image":"leeks.jpg"},{"id":1123,"name":"egg","localizedName":"egg","image":"egg.png"}],"equipment":[{"id":404783,"name":"bowl","localizedName":"bowl","image":"bowl.jpg"}]},{"number":4,"step":"Mix
+        thoroughly.","ingredients":[],"equipment":[]},{"number":5,"step":"Form the
+        mixture into thick burger shapes - I ended up with 5 Glamorgan burgers, but
+        you could make 4 or 6 if you adjust their size.","ingredients":[],"equipment":[]},{"number":6,"step":"Heat
+        another dash of oil in a frying pan, and add the burgers (or you may need
+        to spread them out over two pans to give yourself more room to flip them over).
+        Cook over a medium-high heat for a few minutes each side, until golden brown
+        and crispy.","ingredients":[{"id":0,"name":"spread","localizedName":"spread","image":""},{"id":4582,"name":"cooking
+        oil","localizedName":"cooking oil","image":"vegetable-oil.jpg"}],"equipment":[{"id":404645,"name":"frying
+        pan","localizedName":"frying pan","image":"pan.png"}]},{"number":7,"step":"Place
+        on a lightly greased baking tray, and bake at 190C (Gas Mark 5 / 375F) for
+        around 20 minutes, until firm.","ingredients":[],"equipment":[{"id":404646,"name":"baking
+        pan","localizedName":"baking pan","image":"roasting-pan.jpg"},{"id":404784,"name":"oven","localizedName":"oven","image":"oven.jpg","temperature":{"number":190.0,"unit":"Celsius"}}],"length":{"number":20,"unit":"minutes"}},{"number":8,"step":"To
+        make the rarebit topping, melt the butter in a small saucepan, and add the
+        flour. Cook for a minute or so, stirring regularly, to cook the flour.","ingredients":[{"id":1001,"name":"butter","localizedName":"butter","image":"butter-sliced.jpg"},{"id":20081,"name":"all
+        purpose flour","localizedName":"all purpose flour","image":"flour.png"}],"equipment":[{"id":404669,"name":"sauce
+        pan","localizedName":"sauce pan","image":"sauce-pan.jpg"}]},{"number":9,"step":"Add
+        the milk a little at a time, stirring until smooth each time before adding
+        more. When you''ve used all of the milk and you have a smooth sauce, add the
+        mustard and grated cheese, and mix again until the cheese has melted.","ingredients":[{"id":2046,"name":"mustard","localizedName":"mustard","image":"regular-mustard.jpg"},{"id":1041009,"name":"cheese","localizedName":"cheese","image":"cheddar-cheese.png"},{"id":0,"name":"sauce","localizedName":"sauce","image":""},{"id":1077,"name":"milk","localizedName":"milk","image":"milk.png"}],"equipment":[]},{"number":10,"step":"Add
+        a couple of spoonfuls of the rarebit sauce to the top of each burger, and
+        place under a hot grill (broiler) for a minute or so, to brown the cheese.","ingredients":[{"id":1041009,"name":"cheese","localizedName":"cheese","image":"cheddar-cheese.png"},{"id":0,"name":"sauce","localizedName":"sauce","image":""}],"equipment":[{"id":405914,"name":"broiler","localizedName":"broiler","image":"oven.jpg"},{"id":404706,"name":"grill","localizedName":"grill","image":"grill.jpg"}]},{"number":11,"step":"Serve
+        the rarebit topped Glamorgan burgers in buns with salad.","ingredients":[{"id":0,"name":"roll","localizedName":"roll","image":"dinner-yeast-rolls.jpg"}],"equipment":[]}]}],"originalId":null}'
+  recorded_at: Thu, 20 Apr 2023 22:46:47 GMT
+- request:
+    method: post
+    uri: http://localhost:4000/api/v1/recipes
+    body:
+      encoding: UTF-8
+      string: image=https%3A%2F%2Fspoonacular.com%2FrecipeImages%2F471089-556x370.jpg&name=Grilled+Spicy+Lamb+Burgers&spoonacular_id=471089
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"64531a6043101d184c975ac5c2b47398"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 6663b4d8-0bce-400e-a69f-f40fcf90fe69
+      X-Runtime:
+      - '0.045155'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.27, sql.active_record;dur=25.18,
+        process_action.action_controller;dur=34.01
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"34","type":"recipe","attributes":{"spoonacular_id":471089,"name":"Grilled
+        Spicy Lamb Burgers","ingredients":null,"instructions":null,"image":"https://spoonacular.com/recipeImages/471089-556x370.jpg"}}}'
+  recorded_at: Thu, 20 Apr 2023 22:46:47 GMT
+- request:
+    method: post
+    uri: http://localhost:4000/api/v1/recipes
+    body:
+      encoding: UTF-8
+      string: image=https%3A%2F%2Fspoonacular.com%2FrecipeImages%2F497064-556x370.jpg&name=Pizza+Bianca+%7Bwith+Zucchini%7D&spoonacular_id=497064
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"d5727049f9571c747d789608ccae174b"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 9914936d-2d78-419e-990a-6e44948a5c68
+      X-Runtime:
+      - '0.010902'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.28, sql.active_record;dur=3.22, process_action.action_controller;dur=5.19
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"35","type":"recipe","attributes":{"spoonacular_id":497064,"name":"Pizza
+        Bianca {with Zucchini}","ingredients":null,"instructions":null,"image":"https://spoonacular.com/recipeImages/497064-556x370.jpg"}}}'
+  recorded_at: Thu, 20 Apr 2023 22:46:47 GMT
+- request:
+    method: post
+    uri: http://localhost:4000/api/v1/recipes
+    body:
+      encoding: UTF-8
+      string: image=https%3A%2F%2Fspoonacular.com%2FrecipeImages%2F1005688-556x370.jpg&name=Cheesy+rarebit+topped+Glamorgan+burgers&spoonacular_id=1005688
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"ab744a4d5b0e46313ebb04380e96c82d"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 7ff0059b-c21f-44bf-945d-03949d0ff744
+      X-Runtime:
+      - '0.023058'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.15, sql.active_record;dur=14.23,
+        process_action.action_controller;dur=16.25
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"36","type":"recipe","attributes":{"spoonacular_id":1005688,"name":"Cheesy
+        rarebit topped Glamorgan burgers","ingredients":null,"instructions":null,"image":"https://spoonacular.com/recipeImages/1005688-556x370.jpg"}}}'
+  recorded_at: Thu, 20 Apr 2023 22:46:47 GMT
+- request:
+    method: post
+    uri: http://localhost:4000/api/v1/day_plan_recipes
+    body:
+      encoding: UTF-8
+      string: day_plan_id=27&recipe_id=34
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"e69c678c011534d60ca326fa44f3389c"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 04320cb8-78d3-4414-842b-511e505fccd3
+      X-Runtime:
+      - '0.029282'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.11, sql.active_record;dur=17.32,
+        instantiation.active_record;dur=0.12, process_action.action_controller;dur=23.46
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"37","type":"day_plan_recipe","attributes":{"day_plan_id":27,"recipe_id":34}}}'
+  recorded_at: Thu, 20 Apr 2023 22:46:47 GMT
+- request:
+    method: post
+    uri: http://localhost:4000/api/v1/day_plan_recipes
+    body:
+      encoding: UTF-8
+      string: day_plan_id=27&recipe_id=35
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"41013ffc508460f9a40d53d5f41944bc"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 0f867761-69ac-49da-be89-125899cf43f6
+      X-Runtime:
+      - '0.028735'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.63, sql.active_record;dur=20.08,
+        instantiation.active_record;dur=0.07, process_action.action_controller;dur=22.78
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"38","type":"day_plan_recipe","attributes":{"day_plan_id":27,"recipe_id":35}}}'
+  recorded_at: Thu, 20 Apr 2023 22:46:47 GMT
+- request:
+    method: post
+    uri: http://localhost:4000/api/v1/day_plan_recipes
+    body:
+      encoding: UTF-8
+      string: day_plan_id=27&recipe_id=36
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"80e82409257bbe2c5bbf84f422bba8ac"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 5a769b8b-f09c-42d8-96fa-ccaa6c4a58e8
+      X-Runtime:
+      - '0.022758'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.13, sql.active_record;dur=12.82,
+        instantiation.active_record;dur=0.09, process_action.action_controller;dur=18.17
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"39","type":"day_plan_recipe","attributes":{"day_plan_id":27,"recipe_id":36}}}'
+  recorded_at: Thu, 20 Apr 2023 22:46:47 GMT
 - request:
     method: get
     uri: http://localhost:4000/api/v1/users/5/day_plans?q=upcoming
@@ -88,20 +998,29 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"a23a3395f671ac7d4b83cb8ae1d6605f"
+      - W/"102025119e60af2398c06249d1fb5082"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 5b2094ba-c2a7-4cbb-b06b-9f3883d52c51
+      - 6d7c4708-a19f-4bab-a153-3621a1f73f78
       X-Runtime:
-      - '0.096514'
+      - '0.043339'
       Server-Timing:
-      - start_processing.action_controller;dur=0.12, sql.active_record;dur=82.59,
-        instantiation.active_record;dur=0.19, process_action.action_controller;dur=86.02
+      - start_processing.action_controller;dur=0.11, sql.active_record;dur=27.54,
+        instantiation.active_record;dur=0.38, process_action.action_controller;dur=38.26
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"19","type":"day_plan","attributes":{"user_id":5,"date":"2023-04-22","recipes":[]}}]}'
-  recorded_at: Thu, 20 Apr 2023 02:56:40 GMT
+      string: '{"data":[{"id":"26","type":"day_plan","attributes":{"user_id":5,"date":"2023-04-20","recipes":[]}},{"id":"25","type":"day_plan","attributes":{"user_id":5,"date":"2023-04-21","recipes":[{"id":31,"spoonacular_id":604942,"name":"Feta
+        Cheese and Avocado Hummus Dip","ingredients":"spaghetti, water","instructions":"idk
+        mannn, JUST THROw IT IN THE WATER","image":"https://spoonacular.com/recipeImages/604942-556x370.jpg","created_at":"2023-04-20T22:38:03.257Z","updated_at":"2023-04-20T22:38:03.257Z"},{"id":32,"spoonacular_id":712392,"name":"Winter
+        Vegetable Hash","ingredients":"spaghetti, water","instructions":"idk mannn,
+        JUST THROw IT IN THE WATER","image":"https://spoonacular.com/recipeImages/712392-556x370.jpg","created_at":"2023-04-20T22:39:39.053Z","updated_at":"2023-04-20T22:39:39.053Z"},{"id":33,"spoonacular_id":153925,"name":"Roast
+        Chicken with Pancetta and Olives","ingredients":"spaghetti, water","instructions":"idk
+        mannn, JUST THROw IT IN THE WATER","image":"https://spoonacular.com/recipeImages/153925-556x370.jpg","created_at":"2023-04-20T22:40:30.308Z","updated_at":"2023-04-20T22:40:30.308Z"}]}},{"id":"27","type":"day_plan","attributes":{"user_id":5,"date":"2023-04-27","recipes":[{"id":34,"spoonacular_id":471089,"name":"Grilled
+        Spicy Lamb Burgers","ingredients":null,"instructions":null,"image":"https://spoonacular.com/recipeImages/471089-556x370.jpg","created_at":"2023-04-20T22:46:47.157Z","updated_at":"2023-04-20T22:46:47.157Z"},{"id":35,"spoonacular_id":497064,"name":"Pizza
+        Bianca {with Zucchini}","ingredients":null,"instructions":null,"image":"https://spoonacular.com/recipeImages/497064-556x370.jpg","created_at":"2023-04-20T22:46:47.234Z","updated_at":"2023-04-20T22:46:47.234Z"},{"id":36,"spoonacular_id":1005688,"name":"Cheesy
+        rarebit topped Glamorgan burgers","ingredients":null,"instructions":null,"image":"https://spoonacular.com/recipeImages/1005688-556x370.jpg","created_at":"2023-04-20T22:46:47.300Z","updated_at":"2023-04-20T22:46:47.300Z"}]}}]}'
+  recorded_at: Thu, 20 Apr 2023 22:46:47 GMT
 recorded_with: VCR 6.1.0

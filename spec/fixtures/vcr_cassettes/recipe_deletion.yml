@@ -1,16 +1,14 @@
 ---
 http_interactions:
 - request:
-    method: post
-    uri: http://localhost:4000/api/v1/recipes
+    method: delete
+    uri: http://localhost:4000/api/v1/recipes/40
     body:
-      encoding: UTF-8
-      string: day_plan_id=1&image=https%3A%2F%2Fspoonacular.com%2FrecipeImages%2F595736-556x370.jpg&ingredients=sugar%2C+chocolate%2C+flour&instructions=just+throw+it+all+in+a+bowl+and+mix%2C+spread+it+out+over+a+baking+pan%2C+bake+unitl+it+no+longer+looks+weird&name=brownies&spoonacular_id=2345678901
+      encoding: US-ASCII
+      string: ''
     headers:
       User-Agent:
       - Faraday v2.7.4
-      Content-Type:
-      - application/x-www-form-urlencoded
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -41,12 +39,12 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 52b07e2b-8bee-416a-a216-f2d844b6d386
+      - 74264356-9bf2-4bcd-9421-d9beca221856
       X-Runtime:
-      - '1.154999'
+      - '1.237863'
       Server-Timing:
-      - start_processing.action_controller;dur=7.59, unpermitted_parameters.action_controller;dur=16.12,
-        sql.active_record;dur=452.18, process_action.action_controller;dur=900.61
+      - start_processing.action_controller;dur=2.21, sql.active_record;dur=1037.01,
+        instantiation.active_record;dur=7.39, process_action.action_controller;dur=1199.53
       Transfer-Encoding:
       - chunked
     body:
@@ -54,5 +52,5 @@ http_interactions:
       string: '{"data":{"id":"40","type":"recipe","attributes":{"spoonacular_id":2345678901,"name":"brownies","ingredients":"sugar,
         chocolate, flour","instructions":"just throw it all in a bowl and mix, spread
         it out over a baking pan, bake unitl it no longer looks weird","image":"https://spoonacular.com/recipeImages/595736-556x370.jpg"}}}'
-  recorded_at: Thu, 20 Apr 2023 23:09:24 GMT
+  recorded_at: Thu, 20 Apr 2023 23:12:32 GMT
 recorded_with: VCR 6.1.0

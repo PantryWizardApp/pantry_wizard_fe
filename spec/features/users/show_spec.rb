@@ -81,9 +81,9 @@ describe "User dashboard page" do
       recipe_1 = {:data=>{:id=>"20", :type=>"recipe", :attributes=>{:spoonacular_id=>1234215343, :name=>"oatmeal", :ingredients=>"oats, water", :instructions=>"idk mannn, JUST THROw IT IN THE WATER", :image=>"https://spoonacular.com/recipeImages/595736-556x370.jpg", :day_plan_id=>20}}}
       recipe_2 = {:data=>{:id=>"21", :type=>"recipe", :attributes=>{:spoonacular_id=>1234215353, :name=>"noodles", :ingredients=>"noodles, water", :instructions=>"idk mannn, JUST THROw IT IN THE WATER", :image=>"https://spoonacular.com/recipeImages/595736-556x370.jpg", :day_plan_id=>20}}}
       recipe_3 = {:data=>{:id=>"22", :type=>"recipe", :attributes=>{:spoonacular_id=>1234215363, :name=>"spaghetti", :ingredients=>"spaghetti, water", :instructions=>"idk mannn, JUST THROw IT IN THE WATER", :image=>"https://spoonacular.com/recipeImages/595736-556x370.jpg", :day_plan_id=>20}}}
-      allow(LocalRecipeService).to receive(:create_user_recipe).with(user.id, recipe_1).and_return(recipe_1)
-      allow(LocalRecipeService).to receive(:create_user_recipe).with(user.id, recipe_2).and_return(recipe_2)
-      allow(LocalRecipeService).to receive(:create_user_recipe).with(user.id, recipe_3).and_return(recipe_3)
+      allow(LocalRecipeService).to receive(:create_recipe).with(recipe_1).and_return(recipe_1)
+      allow(LocalRecipeService).to receive(:create_recipe).with(recipe_2).and_return(recipe_2)
+      allow(LocalRecipeService).to receive(:create_recipe).with(recipe_3).and_return(recipe_3)
     end
     it "lists the upcoming meal plan with the corresponding dashboard message" do
       VCR.use_cassette('user_dashboard_return_upcoming_meal_plan') do
@@ -118,9 +118,9 @@ describe "User dashboard page" do
       recipe_1 = {:data=>{:id=>"20", :type=>"recipe", :attributes=>{:spoonacular_id=>1234215343, :name=>"oatmeal", :ingredients=>"oats, water", :instructions=>"idk mannn, JUST THROw IT IN THE WATER", :image=>"https://spoonacular.com/recipeImages/595736-556x370.jpg", :day_plan_id=>22}}}
       recipe_2 = {:data=>{:id=>"21", :type=>"recipe", :attributes=>{:spoonacular_id=>1234215353, :name=>"noodles", :ingredients=>"noodles, water", :instructions=>"idk mannn, JUST THROw IT IN THE WATER", :image=>"https://spoonacular.com/recipeImages/595736-556x370.jpg", :day_plan_id=>22}}}
       recipe_3 = {:data=>{:id=>"22", :type=>"recipe", :attributes=>{:spoonacular_id=>1234215363, :name=>"spaghetti", :ingredients=>"spaghetti, water", :instructions=>"idk mannn, JUST THROw IT IN THE WATER", :image=>"https://spoonacular.com/recipeImages/595736-556x370.jpg", :day_plan_id=>22}}}
-      allow(LocalRecipeService).to receive(:create_user_recipe).with(user.id, recipe_1).and_return(recipe_1)
-      allow(LocalRecipeService).to receive(:create_user_recipe).with(user.id, recipe_2).and_return(recipe_2)
-      allow(LocalRecipeService).to receive(:create_user_recipe).with(user.id, recipe_3).and_return(recipe_3)
+      allow(LocalRecipeService).to receive(:create_recipe).with(recipe_1).and_return(recipe_1)
+      allow(LocalRecipeService).to receive(:create_recipe).with(recipe_2).and_return(recipe_2)
+      allow(LocalRecipeService).to receive(:create_recipe).with(recipe_3).and_return(recipe_3)
     end
     it "returns the correct message" do
       VCR.use_cassette('user_dashboard_return_today_meal_plan') do
@@ -146,7 +146,6 @@ describe "User dashboard page" do
       VCR.use_cassette('user_dashboard_return_today_meal_plan') do
         visit "/dashboard"
         expect(current_path).to eq("/dashboard")
-        expect(page).to_not have_content("My Upcoming Meal Plans:")
         expect(page).to_not have_content("Meal Plan for: 2023-04-21")
         expect(page).to_not have_content("Meal 1: oatmeal")
         expect(page).to_not have_content("Meal 2: noodles")

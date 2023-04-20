@@ -5,15 +5,15 @@ RSpec.describe "Day Plan Create Page" do
     current_user = {"google_id"=>"100378230956154024998",
       "name"=>"Dawson Timmons",
       "email"=>"dawsontimmons@gmail.com",
-      "intolerances"=>nil,
-      "likes"=>nil,
-      "dislikes"=>nil,
-      "dietary_restrictions"=>nil
+      "intolerances"=>"peanut, soy, gluten, sesame",
+      "likes"=>"african, vietnamese, french",
+      "dislikes"=>"irish, cajun, nordic",
+      "dietary_restrictions"=>"Gluten"
     }
   
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(current_user)
 
-    data = {:data=>{:id=>"5", :type=>"user", :attributes=>{:email=>"dawsontimmons@gmail.com", :name=>"Dawson Timmons", :google_id=>"100378230956154024998", :id=>5, :intolerances=>nil, :likes=>nil, :dislikes=>nil, :dietary_restrictions=>nil}}}
+    data = {:data=>{:id=>"5", :type=>"user", :attributes=>{:email=>"dawsontimmons@gmail.com", :name=>"Dawson Timmons", :google_id=>"100378230956154024998", :id=>5, :intolerances=>"african, vietnamese, french", :likes=>"irish, cajun, nordic", :dislikes=>"irish, cajun, nordic", :dietary_restrictions=>"Gluten"}}}
     @user = User.new(data)
     allow(UserFacade).to receive(:find_user_by_google_id).with(current_user["google_id"]).and_return(@user)
     VCR.use_cassette('created_meal_plan_dashbaord') do
@@ -34,8 +34,8 @@ RSpec.describe "Day Plan Create Page" do
       click_link "Create New Meal Plan"
       expect(page).to have_content("Date of meal plan:")
       expect(page).to have_field(:date_of_meal_plan)
-      fill_in "date_of_meal_plan", with: "2023-04-22"
-      VCR.use_cassette('created_meal_plan') do
+      fill_in "date_of_meal_plan", with: "2023-04-29"
+      VCR.use_cassette('created_meal_plan_2') do
         click_button "Create New Meal Plan"
         expect(current_path).to eq("/dashboard")
       end

@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: get
-    uri: https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/search?instructionsRequired=True&number=1&offset=348&%7B:query=%3E%22*%22,%20:cuisine=%3E%22american,italian%22,%20:excludeCuisine=%3E%22greek%22,%20:intolerances=%3E%22dairy,egg%22,%20:diet=%3E%22null%22,%20:type=%3E%22main%20course%22%7D
+    uri: https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/search?instructionsRequired=True&number=1&offset=348&%7B:query=%3E%22*%22,%20:cuisine=%3E%22%22,%20:excludeCuisine=%3E%22%22,%20:intolerances=%3E%22%22,%20:diet=%3E%22null%22,%20:type=%3E%22main%20course%22%7D
     body:
       encoding: US-ASCII
       string: ''
     headers:
       X-Rapidapi-Key:
-      - 94534da646mshde7e120c9bce392p139c9ejsnaf50e90c38bb
+      - 76fdb7e5d0msh48a690592566607p137418jsn84ec9de08957
       User-Agent:
       - Faraday v2.7.4
       Accept-Encoding:
@@ -21,11 +21,11 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 19 Apr 2023 16:54:27 GMT
+      - Thu, 20 Apr 2023 21:45:34 GMT
       Content-Type:
       - application/json
       Content-Length:
-      - '303'
+      - '302'
       Connection:
       - keep-alive
       Nel:
@@ -37,7 +37,7 @@ http_interactions:
       Access-Control-Allow-Origin:
       - "*"
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=WVLZQiwq11sevQ5zMKIcfjOhlYZpfLLdPRnb9VTU%2Bm9DyMTWW9TpGOiO9KhJ46rDO92ZvXm41x5pKD3vSI193pEXVamlZp62AAJ8NuhSIAeR6AroO0ftlkuDxUD%2FeeShiLKY1yg%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=Hvzc%2Bk40qZYymshNzNQkx8KZFVbe7iO7n8%2FuYLXRPMIbYEFyGgUFw2ftasdJi3d8GxfbyYz%2Br5s%2FYByFNt7m1EgZ%2BmfKo1RbbQdQ6B9WLyFcttwpIwd%2Fwg%2BDHk3o6AV71BjHeXE%3D"}],"group":"cf-nel","max_age":604800}'
       Access-Control-Allow-Methods:
       - GET, HEAD, POST, OPTIONS, DELETE, PUT
       Alt-Svc:
@@ -45,7 +45,7 @@ http_interactions:
       Allow-Control-Allow-Origin:
       - "*"
       Cf-Ray:
-      - 7ba6ab5ec9e5c390-SEA
+      - 7bb093329943c48b-SEA
       Access-Control-Allow-Headers:
       - Authorization, UserId, Hash, Name, Password, Accept, Accept-Language, x-api-key,
         Content-Language, Content-Type, Cache-Control, Origin, X-Requested-With
@@ -54,19 +54,19 @@ http_interactions:
       X-Ratelimit-Tinyrequests-Remaining:
       - '500'
       X-Ratelimit-Tinyrequests-Reset:
-      - '85683'
+      - '84644'
       X-Ratelimit-Requests-Limit:
       - '50'
       X-Ratelimit-Requests-Remaining:
-      - '32'
+      - '47'
       X-Ratelimit-Requests-Reset:
-      - '85683'
+      - '84644'
       X-Ratelimit-Results-Limit:
       - '500'
       X-Ratelimit-Results-Remaining:
-      - '485'
+      - '493'
       X-Ratelimit-Results-Reset:
-      - '85683'
+      - '84644'
       Server:
       - RapidAPI-1.2.8
       X-Rapidapi-Version:
@@ -76,6 +76,6 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: '{"results":[{"readyInMinutes":565,"sourceUrl":"https://www.bettycrocker.com/recipes/do-ahead-sausage-breakfast-bake/584789b6-de3f-4583-848a-cd65145d58be","image":"Do-Ahead-Sausage-Breakfast-Bake-175216.jpg","servings":12,"id":175216,"title":"Do-Ahead
-        Sausage Breakfast Bake"}],"baseUri":"https://spoonacular.com/recipeImages/","offset":348,"number":1,"totalResults":385626,"processingTimeMs":414,"expires":1682182467167}'
-  recorded_at: Wed, 19 Apr 2023 16:54:27 GMT
+        Sausage Breakfast Bake"}],"baseUri":"https://spoonacular.com/recipeImages/","offset":348,"number":1,"totalResults":385626,"processingTimeMs":261,"expires":1682286334237}'
+  recorded_at: Thu, 20 Apr 2023 21:45:34 GMT
 recorded_with: VCR 6.1.0

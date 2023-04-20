@@ -1,0 +1,695 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:4000/api/v1/users/5/day_plans
+    body:
+      encoding: UTF-8
+      string: date=2023-04-29
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"6c88ad54bef4bf6ced6c4d85d8a73092"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - cb45d342-63c2-4163-903c-0e4847d8e761
+      X-Runtime:
+      - '0.043748'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.23, sql.active_record;dur=21.17,
+        instantiation.active_record;dur=0.35, unpermitted_parameters.action_controller;dur=0.26,
+        process_action.action_controller;dur=30.41
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"15","type":"day_plan","attributes":{"user_id":5,"date":"2023-04-29","recipes":[]}}}'
+  recorded_at: Thu, 20 Apr 2023 23:17:14 GMT
+- request:
+    method: get
+    uri: https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/search?instructionsRequired=True&number=1&offset=446&%7B:query=%3E%22*%22,%20:cuisine=%3E%22%22,%20:excludeCuisine=%3E%22%22,%20:intolerances=%3E%22%22,%20:diet=%3E%22Gluten%22,%20:type=%3E%22breakfast%22%7D
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Rapidapi-Key:
+      - 76fdb7e5d0msh48a690592566607p137418jsn84ec9de08957
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 20 Apr 2023 23:17:15 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '277'
+      Connection:
+      - keep-alive
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Cf-Cache-Status:
+      - DYNAMIC
+      Allow-Control-Allow-Methods:
+      - GET, HEAD, POST, OPTIONS, DELETE, PUT
+      Access-Control-Allow-Origin:
+      - "*"
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=H%2FiDH98HbLYC74zPWXOFXAeXdjahPcRTATCKzVn3MSRqoSS9AimtU2anVCYriZkfZIbMB76DAehMCMYBxkHOI%2Fan4bqiDMXcIuI8irDAcHgu2b3UkXQH480bWx1mz41bOcDp34E%3D"}],"group":"cf-nel","max_age":604800}'
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, OPTIONS, DELETE, PUT
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+      Allow-Control-Allow-Origin:
+      - "*"
+      Cf-Ray:
+      - 7bb1198088ea82ce-IAD
+      Access-Control-Allow-Headers:
+      - Authorization, UserId, Hash, Name, Password, Accept, Accept-Language, x-api-key,
+        Content-Language, Content-Type, Cache-Control, Origin, X-Requested-With
+      X-Ratelimit-Tinyrequests-Limit:
+      - '500'
+      X-Ratelimit-Tinyrequests-Remaining:
+      - '500'
+      X-Ratelimit-Tinyrequests-Reset:
+      - '79143'
+      X-Ratelimit-Requests-Limit:
+      - '50'
+      X-Ratelimit-Requests-Remaining:
+      - "-3"
+      X-Ratelimit-Requests-Reset:
+      - '79143'
+      X-Ratelimit-Results-Limit:
+      - '500'
+      X-Ratelimit-Results-Remaining:
+      - '468'
+      X-Ratelimit-Results-Reset:
+      - '79143'
+      Server:
+      - RapidAPI-1.2.8
+      X-Rapidapi-Version:
+      - 1.2.8
+      X-Rapidapi-Region:
+      - AWS - us-east-1
+    body:
+      encoding: ASCII-8BIT
+      string: '{"results":[{"readyInMinutes":25,"sourceUrl":"https://damndelicious.net/2014/08/11/easy-homemade-mini-corn-dogs/","image":"easy-homemade-mini-corn-dogs-989658.jpg","servings":6,"id":989658,"title":"Easy
+        Homemade Mini Corn Dogs"}],"baseUri":"https://spoonacular.com/recipeImages/","offset":446,"number":1,"totalResults":385626,"processingTimeMs":251,"expires":1682291835304}'
+  recorded_at: Thu, 20 Apr 2023 23:17:15 GMT
+- request:
+    method: get
+    uri: https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/search?instructionsRequired=True&number=2&offset=422&%7B:query=%3E%22*%22,%20:cuisine=%3E%22%22,%20:excludeCuisine=%3E%22%22,%20:intolerances=%3E%22%22,%20:diet=%3E%22Gluten%22,%20:type=%3E%22main%20course%22%7D
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Rapidapi-Key:
+      - 76fdb7e5d0msh48a690592566607p137418jsn84ec9de08957
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 20 Apr 2023 23:17:16 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '347'
+      Connection:
+      - keep-alive
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Cf-Cache-Status:
+      - DYNAMIC
+      Allow-Control-Allow-Methods:
+      - GET, HEAD, POST, OPTIONS, DELETE, PUT
+      Access-Control-Allow-Origin:
+      - "*"
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=W0CoRNTdh%2BXBtCxxJj9RBBsAOmJuWJcZH8pDcTeCxjS36lQ8SEk46VQz1v6fNnQT%2Fff6nbktHTbUZjenIfhyxHD%2FZhhM%2Fyl3cI1ftC2F5AlHXy26v%2F8vwzYGxIYjy%2B8P%2FwQDk4E%3D"}],"group":"cf-nel","max_age":604800}'
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, OPTIONS, DELETE, PUT
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+      Allow-Control-Allow-Origin:
+      - "*"
+      Cf-Ray:
+      - 7bb119853bef39af-IAD
+      Access-Control-Allow-Headers:
+      - Authorization, UserId, Hash, Name, Password, Accept, Accept-Language, x-api-key,
+        Content-Language, Content-Type, Cache-Control, Origin, X-Requested-With
+      X-Ratelimit-Tinyrequests-Limit:
+      - '500'
+      X-Ratelimit-Tinyrequests-Remaining:
+      - '500'
+      X-Ratelimit-Tinyrequests-Reset:
+      - '79142'
+      X-Ratelimit-Requests-Limit:
+      - '50'
+      X-Ratelimit-Requests-Remaining:
+      - "-4"
+      X-Ratelimit-Requests-Reset:
+      - '79142'
+      X-Ratelimit-Results-Limit:
+      - '500'
+      X-Ratelimit-Results-Remaining:
+      - '466'
+      X-Ratelimit-Results-Reset:
+      - '79142'
+      Server:
+      - RapidAPI-1.2.8
+      X-Rapidapi-Version:
+      - 1.2.8
+      X-Rapidapi-Region:
+      - AWS - us-east-1
+    body:
+      encoding: ASCII-8BIT
+      string: '{"results":[{"readyInMinutes":44,"sourceUrl":"http://www.godairyfree.org/recipes/baked-vegan-onion-rings","image":"omg-oven-baked-vegan-onion-rings-703698.jpg","servings":4,"id":703698,"title":"OMG
+        Oven-Baked Vegan Onion Rings"},{"readyInMinutes":45,"sourceUrl":"http://www.myrecipes.com/recipe/all-star-berry-tart-10000001875621/","image":"all-star-berry-tart-124838.jpg","servings":8,"id":124838,"title":"All-Star
+        Berry Tart"}],"baseUri":"https://spoonacular.com/recipeImages/","offset":422,"number":2,"totalResults":385626,"processingTimeMs":193,"expires":1682291836161}'
+  recorded_at: Thu, 20 Apr 2023 23:17:16 GMT
+- request:
+    method: get
+    uri: https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/989658/information
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Rapidapi-Key:
+      - 76fdb7e5d0msh48a690592566607p137418jsn84ec9de08957
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 20 Apr 2023 23:17:17 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '3152'
+      Connection:
+      - keep-alive
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Cf-Cache-Status:
+      - DYNAMIC
+      Allow-Control-Allow-Methods:
+      - GET, HEAD, POST, OPTIONS, DELETE, PUT
+      Access-Control-Allow-Origin:
+      - "*"
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=Y%2F7qnq6X46Cn%2BWscGSuAil31%2BlOtl5g7Ys48Z5Sj4A%2Fw2FkXCiKYQ4VODuLpwfoZS2M36k5xV7MnwGxArRc0cZzo3TOQI8SPhmdWd4Y99kDwmcj%2BkZmgKRSA96o8ejoNnn9dk2Q%3D"}],"group":"cf-nel","max_age":604800}'
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, OPTIONS, DELETE, PUT
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+      Allow-Control-Allow-Origin:
+      - "*"
+      Cf-Ray:
+      - 7bb1198a7bb4821b-IAD
+      Access-Control-Allow-Headers:
+      - Authorization, UserId, Hash, Name, Password, Accept, Accept-Language, x-api-key,
+        Content-Language, Content-Type, Cache-Control, Origin, X-Requested-With
+      X-Ratelimit-Tinyrequests-Limit:
+      - '500'
+      X-Ratelimit-Tinyrequests-Remaining:
+      - '500'
+      X-Ratelimit-Tinyrequests-Reset:
+      - '79141'
+      X-Ratelimit-Requests-Limit:
+      - '50'
+      X-Ratelimit-Requests-Remaining:
+      - "-5"
+      X-Ratelimit-Requests-Reset:
+      - '79141'
+      X-Ratelimit-Results-Limit:
+      - '500'
+      X-Ratelimit-Results-Remaining:
+      - '466'
+      X-Ratelimit-Results-Reset:
+      - '79141'
+      Server:
+      - RapidAPI-1.2.8
+      X-Rapidapi-Version:
+      - 1.2.8
+      X-Rapidapi-Region:
+      - AWS - us-east-1
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJ2ZWdldGFyaWFuIjpmYWxzZSwidmVnYW4iOmZhbHNlLCJnbHV0ZW5GcmVlIjpmYWxzZSwiZGFpcnlGcmVlIjpmYWxzZSwidmVyeUhlYWx0aHkiOmZhbHNlLCJjaGVhcCI6ZmFsc2UsInZlcnlQb3B1bGFyIjp0cnVlLCJzdXN0YWluYWJsZSI6ZmFsc2UsImxvd0ZvZG1hcCI6ZmFsc2UsIndlaWdodFdhdGNoZXJTbWFydFBvaW50cyI6MTMsImdhcHMiOiJubyIsInByZXBhcmF0aW9uTWludXRlcyI6MTUsImNvb2tpbmdNaW51dGVzIjoxMCwiYWdncmVnYXRlTGlrZXMiOjY5NiwiaGVhbHRoU2NvcmUiOjIsImNyZWRpdHNUZXh0IjoiRGFtbiBEZWxpY2lvdXMiLCJzb3VyY2VOYW1lIjoiRGFtbiBEZWxpY2lvdXMiLCJwcmljZVBlclNlcnZpbmciOjkyLjA1LCJleHRlbmRlZEluZ3JlZGllbnRzIjpbeyJpZCI6MTgzNjksImFpc2xlIjoiQmFraW5nIiwiaW1hZ2UiOiJ3aGl0ZS1wb3dkZXIuanBnIiwiY29uc2lzdGVuY3kiOiJTT0xJRCIsIm5hbWUiOiJiYWtpbmcgcG93ZGVyIiwibmFtZUNsZWFuIjoiYmFraW5nIHBvd2RlciIsIm9yaWdpbmFsIjoiMiB0ZWFzcG9vbnMgYmFraW5nIHBvd2RlciIsIm9yaWdpbmFsTmFtZSI6ImJha2luZyBwb3dkZXIiLCJhbW91bnQiOjIuMCwidW5pdCI6InRlYXNwb29ucyIsIm1ldGEiOltdLCJtZWFzdXJlcyI6eyJ1cyI6eyJhbW91bnQiOjIuMCwidW5pdFNob3J0IjoidHNwcyIsInVuaXRMb25nIjoidGVhc3Bvb25zIn0sIm1ldHJpYyI6eyJhbW91bnQiOjIuMCwidW5pdFNob3J0IjoidHNwcyIsInVuaXRMb25nIjoidGVhc3Bvb25zIn19fSx7ImlkIjo3MjQxLCJhaXNsZSI6Ik1lYXQiLCJpbWFnZSI6ImhvdGRvZ3MucG5nIiwiY29uc2lzdGVuY3kiOiJTT0xJRCIsIm5hbWUiOiJiZWVmIGZyYW5rcyIsIm5hbWVDbGVhbiI6ImJlZWYgZnJhbmtzIiwib3JpZ2luYWwiOiIxICgxMi1vdW5jZSkgcGFja2FnZSBIZWJyZXcgTmF0aW9uYWzCriBCZWVmIEZyYW5rcywgaGFsdmVkIiwib3JpZ2luYWxOYW1lIjoicGFja2FnZSBIZWJyZXcgTmF0aW9uYWzCriBCZWVmIEZyYW5rcywgaGFsdmVkIiwiYW1vdW50IjoxMi4wLCJ1bml0Ijoib3VuY2UiLCJtZXRhIjpbImhhbHZlZCIsImhlYnJldyBuYXRpb25hbMKuIl0sIm1lYXN1cmVzIjp7InVzIjp7ImFtb3VudCI6MTIuMCwidW5pdFNob3J0Ijoib3oiLCJ1bml0TG9uZyI6Im91bmNlcyJ9LCJtZXRyaWMiOnsiYW1vdW50IjozNDAuMTk0LCJ1bml0U2hvcnQiOiJnIiwidW5pdExvbmciOiJncmFtcyJ9fX0seyJpZCI6MTEyMywiYWlzbGUiOiJNaWxrLCBFZ2dzLCBPdGhlciBEYWlyeSIsImltYWdlIjoiZWdnLnBuZyIsImNvbnNpc3RlbmN5IjoiU09MSUQiLCJuYW1lIjoiZWdnIiwibmFtZUNsZWFuIjoiZWdnIiwib3JpZ2luYWwiOiIxIGxhcmdlIGVnZyIsIm9yaWdpbmFsTmFtZSI6ImVnZyIsImFtb3VudCI6MS4wLCJ1bml0IjoibGFyZ2UiLCJtZXRhIjpbXSwibWVhc3VyZXMiOnsidXMiOnsiYW1vdW50IjoxLjAsInVuaXRTaG9ydCI6ImxhcmdlIiwidW5pdExvbmciOiJsYXJnZSJ9LCJtZXRyaWMiOnsiYW1vdW50IjoxLjAsInVuaXRTaG9ydCI6ImxhcmdlIiwidW5pdExvbmciOiJsYXJnZSJ9fX0seyJpZCI6MjAwODEsImFpc2xlIjoiQmFraW5nIiwiaW1hZ2UiOiJmbG91ci5wbmciLCJjb25zaXN0ZW5jeSI6IlNPTElEIiwibmFtZSI6ImZsb3VyIiwibmFtZUNsZWFuIjoid2hlYXQgZmxvdXIiLCJvcmlnaW5hbCI6IjEvMiBjdXAgYWxsLXB1cnBvc2UgZmxvdXIiLCJvcmlnaW5hbE5hbWUiOiJhbGwtcHVycG9zZSBmbG91ciIsImFtb3VudCI6MC41LCJ1bml0IjoiY3VwIiwibWV0YSI6WyJhbGwtcHVycG9zZSJdLCJtZWFzdXJlcyI6eyJ1cyI6eyJhbW91bnQiOjAuNSwidW5pdFNob3J0IjoiY3VwcyIsInVuaXRMb25nIjoiY3VwcyJ9LCJtZXRyaWMiOnsiYW1vdW50IjoxMTguMjk0LCJ1bml0U2hvcnQiOiJtbCIsInVuaXRMb25nIjoibWlsbGlsaXRlcnMifX19LHsiaWQiOjEwMDIwMzAsImFpc2xlIjoiU3BpY2VzIGFuZCBTZWFzb25pbmdzIiwiaW1hZ2UiOiJwZXBwZXIuanBnIiwiY29uc2lzdGVuY3kiOiJTT0xJRCIsIm5hbWUiOiJrb3NoZXIgc2FsdCBhbmQgcGVwcGVyIiwibmFtZUNsZWFuIjoiYmxhY2sgcGVwcGVyIiwib3JpZ2luYWwiOiJLb3NoZXIgc2FsdCBhbmQgZnJlc2hseSBncm91bmQgYmxhY2sgcGVwcGVyLCB0byB0YXN0ZSIsIm9yaWdpbmFsTmFtZSI6Iktvc2hlciBzYWx0IGFuZCBmcmVzaGx5IGdyb3VuZCBibGFjayBwZXBwZXIsIHRvIHRhc3RlIiwiYW1vdW50Ijo2LjAsInVuaXQiOiJzZXJ2aW5ncyIsIm1ldGEiOlsiYmxhY2siLCJmcmVzaGx5IGdyb3VuZCIsInRvIHRhc3RlIl0sIm1lYXN1cmVzIjp7InVzIjp7ImFtb3VudCI6Ni4wLCJ1bml0U2hvcnQiOiJzZXJ2aW5ncyIsInVuaXRMb25nIjoic2VydmluZ3MifSwibWV0cmljIjp7ImFtb3VudCI6Ni4wLCJ1bml0U2hvcnQiOiJzZXJ2aW5ncyIsInVuaXRMb25nIjoic2VydmluZ3MifX19LHsiaWQiOjEwNzcsImFpc2xlIjoiTWlsaywgRWdncywgT3RoZXIgRGFpcnkiLCJpbWFnZSI6Im1pbGsucG5nIiwiY29uc2lzdGVuY3kiOiJMSVFVSUQiLCJuYW1lIjoibWlsayIsIm5hbWVDbGVhbiI6Im1pbGsiLCJvcmlnaW5hbCI6IjEvMiBjdXAgbWlsayIsIm9yaWdpbmFsTmFtZSI6Im1pbGsiLCJhbW91bnQiOjAuNSwidW5pdCI6ImN1cCIsIm1ldGEiOltdLCJtZWFzdXJlcyI6eyJ1cyI6eyJhbW91bnQiOjAuNSwidW5pdFNob3J0IjoiY3VwcyIsInVuaXRMb25nIjoiY3VwcyJ9LCJtZXRyaWMiOnsiYW1vdW50IjoxMTguMjk0LCJ1bml0U2hvcnQiOiJtbCIsInVuaXRMb25nIjoibWlsbGlsaXRlcnMifX19LHsiaWQiOjE5MzM1LCJhaXNsZSI6IkJha2luZyIsImltYWdlIjoic3VnYXItaW4tYm93bC5wbmciLCJjb25zaXN0ZW5jeSI6IlNPTElEIiwibmFtZSI6InN1Z2FyIiwibmFtZUNsZWFuIjoic3VnYXIiLCJvcmlnaW5hbCI6IjIgdGFibGVzcG9vbnMgc3VnYXIiLCJvcmlnaW5hbE5hbWUiOiJzdWdhciIsImFtb3VudCI6Mi4wLCJ1bml0IjoidGFibGVzcG9vbnMiLCJtZXRhIjpbXSwibWVhc3VyZXMiOnsidXMiOnsiYW1vdW50IjoyLjAsInVuaXRTaG9ydCI6IlRic3BzIiwidW5pdExvbmciOiJUYnNwcyJ9LCJtZXRyaWMiOnsiYW1vdW50IjoyLjAsInVuaXRTaG9ydCI6IlRic3BzIiwidW5pdExvbmciOiJUYnNwcyJ9fX0seyJpZCI6NDY2OSwiYWlzbGUiOiJPaWwsIFZpbmVnYXIsIFNhbGFkIERyZXNzaW5nIiwiaW1hZ2UiOiJ2ZWdldGFibGUtb2lsLmpwZyIsImNvbnNpc3RlbmN5IjoiTElRVUlEIiwibmFtZSI6InZlZ2V0YWJsZSBvaWwiLCJuYW1lQ2xlYW4iOiJ2ZWdldGFibGUgb2lsIiwib3JpZ2luYWwiOiIxIGN1cCB2ZWdldGFibGUgb2lsIiwib3JpZ2luYWxOYW1lIjoidmVnZXRhYmxlIG9pbCIsImFtb3VudCI6MS4wLCJ1bml0IjoiY3VwIiwibWV0YSI6W10sIm1lYXN1cmVzIjp7InVzIjp7ImFtb3VudCI6MS4wLCJ1bml0U2hvcnQiOiJjdXAiLCJ1bml0TG9uZyI6ImN1cCJ9LCJtZXRyaWMiOnsiYW1vdW50IjoyMzYuNTg4LCJ1bml0U2hvcnQiOiJtbCIsInVuaXRMb25nIjoibWlsbGlsaXRlcnMifX19LHsiaWQiOjM1MTM3LCJhaXNsZSI6IkV0aG5pYyBGb29kcztCYWtpbmciLCJpbWFnZSI6ImNvcm5tZWFsLnBuZyIsImNvbnNpc3RlbmN5IjoiU09MSUQiLCJuYW1lIjoiY29ybm1lYWwiLCJuYW1lQ2xlYW4iOiJjb3JubWVhbCIsIm9yaWdpbmFsIjoiMS8yIGN1cCB5ZWxsb3cgY29ybm1lYWwiLCJvcmlnaW5hbE5hbWUiOiJ5ZWxsb3cgY29ybm1lYWwiLCJhbW91bnQiOjAuNSwidW5pdCI6ImN1cCIsIm1ldGEiOlsieWVsbG93Il0sIm1lYXN1cmVzIjp7InVzIjp7ImFtb3VudCI6MC41LCJ1bml0U2hvcnQiOiJjdXBzIiwidW5pdExvbmciOiJjdXBzIn0sIm1ldHJpYyI6eyJhbW91bnQiOjExOC4yOTQsInVuaXRTaG9ydCI6Im1sIiwidW5pdExvbmciOiJtaWxsaWxpdGVycyJ9fX1dLCJpZCI6OTg5NjU4LCJ0aXRsZSI6IkVhc3kgSG9tZW1hZGUgTWluaSBDb3JuIERvZ3MiLCJyZWFkeUluTWludXRlcyI6MjUsInNlcnZpbmdzIjo2LCJzb3VyY2VVcmwiOiJodHRwczovL2RhbW5kZWxpY2lvdXMubmV0LzIwMTQvMDgvMTEvZWFzeS1ob21lbWFkZS1taW5pLWNvcm4tZG9ncy8iLCJpbWFnZSI6Imh0dHBzOi8vc3Bvb25hY3VsYXIuY29tL3JlY2lwZUltYWdlcy85ODk2NTgtNTU2eDM3MC5qcGciLCJpbWFnZVR5cGUiOiJqcGciLCJzdW1tYXJ5IjoiRWFzeSBIb21lbWFkZSBNaW5pIENvcm4gRG9ncyBpcyBhbiBBbWVyaWNhbiBob3IgZCdvZXV2cmUuIFRoaXMgcmVjaXBlIG1ha2VzIDYgc2VydmluZ3Mgd2l0aCA8Yj4zNzkgY2Fsb3JpZXM8L2I+LCA8Yj4xMWcgb2YgcHJvdGVpbjwvYj4sIGFuZCA8Yj4yN2cgb2YgZmF0PC9iPiBlYWNoLiBGb3IgPGI+OTIgY2VudHMgcGVyIHNlcnZpbmc8L2I+LCB0aGlzIHJlY2lwZSA8Yj5jb3ZlcnMgOSU8L2I+IG9mIHlvdXIgZGFpbHkgcmVxdWlyZW1lbnRzIG9mIHZpdGFtaW5zIGFuZCBtaW5lcmFscy4gQSBtaXh0dXJlIG9mIHN1Z2FyLCBrb3NoZXIgc2FsdCBhbmQgcGVwcGVyLCBjb3JubWVhbCwgYW5kIGEgaGFuZGZ1bCBvZiBvdGhlciBpbmdyZWRpZW50cyBhcmUgYWxsIGl0IHRha2VzIHRvIG1ha2UgdGhpcyByZWNpcGUgc28gZmxhdm9yZnVsLiBQbGVudHkgb2YgcGVvcGxlIG1hZGUgdGhpcyByZWNpcGUsIGFuZCA2OTYgd291bGQgc2F5IGl0IGhpdCB0aGUgc3BvdC4gRnJvbSBwcmVwYXJhdGlvbiB0byB0aGUgcGxhdGUsIHRoaXMgcmVjaXBlIHRha2VzIGFwcHJveGltYXRlbHkgPGI+MjUgbWludXRlczwvYj4uIEl0IGlzIGJyb3VnaHQgdG8geW91IGJ5IERhbW4gRGVsaWNpb3VzLiBUYWtpbmcgYWxsIGZhY3RvcnMgaW50byBhY2NvdW50LCB0aGlzIHJlY2lwZSA8Yj5lYXJucyBhIHNwb29uYWN1bGFyIHNjb3JlIG9mIDQ1JTwvYj4sIHdoaWNoIGlzIGdvb2QuIElmIHlvdSBsaWtlIHRoaXMgcmVjaXBlLCB5b3UgbWlnaHQgYWxzbyBsaWtlIHJlY2lwZXMgc3VjaCBhcyA8YSBocmVmPVwiaHR0cHM6Ly9zcG9vbmFjdWxhci5jb20vcmVjaXBlcy9lYXN5LWhvbWVtYWRlLW1pbmktY29ybi1kb2dzLTEzNDY5OTVcIj5FYXN5IEhvbWVtYWRlIE1pbmkgQ29ybiBEb2dzPC9hPiwgPGEgaHJlZj1cImh0dHBzOi8vc3Bvb25hY3VsYXIuY29tL3JlY2lwZXMvZWFzeS1ob21lbWFkZS1taW5pLWNvcm4tZG9ncy0xMzUzNTQ3XCI+RWFzeSBIb21lbWFkZSBNaW5pIENvcm4gRG9nczwvYT4sIGFuZCA8YSBocmVmPVwiaHR0cHM6Ly9zcG9vbmFjdWxhci5jb20vcmVjaXBlcy9lYXN5LWhvbWVtYWRlLW1pbmktY29ybi1kb2dzLTEzNTY1MjdcIj5FYXN5IEhvbWVtYWRlIE1pbmkgQ29ybiBEb2dzPC9hPi4iLCJjdWlzaW5lcyI6WyJBbWVyaWNhbiJdLCJkaXNoVHlwZXMiOlsiZmluZ2VyZm9vZCIsImFudGlwYXN0aSIsInN0YXJ0ZXIiLCJzbmFjayIsImFwcGV0aXplciIsImFudGlwYXN0byIsImhvciBkJ29ldXZyZSJdLCJkaWV0cyI6W10sIm9jY2FzaW9ucyI6W10sIndpbmVQYWlyaW5nIjp7InBhaXJlZFdpbmVzIjpbInJpZXNsaW5nIiwicm9zZSB3aW5lIiwiZ2V3dXJ6dHJhbWluZXIiXSwicGFpcmluZ1RleHQiOiJIb3QgRG9ncyB3b3JrcyByZWFsbHkgd2VsbCB3aXRoIFJpZXNsaW5nLCByb3PDqSBXaW5lLCBhbmQgR2V3dXJ6dHJhbWluZXIuIEEgR2V3w7xyenRyYW1pbmVyIHdpbGwgYmUgZ3JlYXQgd2l0aCB5b3VyIGJhc2ljIE5ldyBZb3JrIHN0eWxlIGhvdCBkb2cgd2l0aCBtdXN0YXJkIGFuZCBzYXVlcmtyYXV0LiBGb3IgYSBDaGljYWdvLXN0eWxlIGRvZyB3aXRoIHNvdXIgcGlja2xlcyBhbmQgaG90IHBlcHBlcnMsIHlvdSBtaWdodCBvcHQgZm9yIGEgY3Jpc3AgUmllc2xpbmcuIE5vIG1hdHRlciB5b3VyIHRvcHBpbmdzLCBhIGRyeSByb3PDqSBhbG1vc3QgYWx3YXlzIHdvcmtzLiBZb3UgY291bGQgdHJ5IEtydWdlci1SdW1wZiBNdW5zdGVyZXIgUmhlaW5iZXJnIEthYmluZXR0IFJpZXNsaW5nLiBSZXZpZXdlcnMgcXVpdGUgbGlrZSBpdCB3aXRoIGEgNC41IG91dCBvZiA1IHN0YXIgcmF0aW5nIGFuZCBhIHByaWNlIG9mIGFib3V0IDIyIGRvbGxhcnMgcGVyIGJvdHRsZS4iLCJwcm9kdWN0TWF0Y2hlcyI6W3siaWQiOjQ1ODU3MSwidGl0bGUiOiJLcnVnZXItUnVtcGYgTXVuc3RlcmVyIFJoZWluYmVyZyBLYWJpbmV0dCBSaWVzbGluZyIsImRlc2NyaXB0aW9uIjoiUmhlaW5iZXJnIGlzIHRoZSBzdGVlcGVzdCBvZiB0aGUgdGhyZWUgR0cgc2l0ZXMsIG9uIHdlYXRoZXJlZCBxdWFydHppdGUgYW5kIGR1c3R5IGxvYW0uIFN3ZWV0IGFwcGxlcyBhbmQgeWVsbG93IGZydWl0cyBhcmUgcGFyYW1vdW50IGhlcmUsIHRob3VnaCB0aGUgbWluZXJhbGx5IHRlcnJvaXIgbm90ZXMgZ2l2ZSBhIGZpcm0gZm91bmRhdGlvbi4gVGhlc2UgYXJlIHdpbmVzIG9mIHRydWUgY2hhcm0sIG5vdCBtZXJlbHkgd2lubmluZyB3YXlzLiIsInByaWNlIjoiJDIxLjk5IiwiaW1hZ2VVcmwiOiJodHRwczovL3Nwb29uYWN1bGFyLmNvbS9wcm9kdWN0SW1hZ2VzLzQ1ODU3MS0zMTJ4MjMxLmpwZyIsImF2ZXJhZ2VSYXRpbmciOjAuOSwicmF0aW5nQ291bnQiOjUuMCwic2NvcmUiOjAuODM3NSwibGluayI6Imh0dHBzOi8vY2xpY2subGlua3N5bmVyZ3kuY29tL2RlZXBsaW5rP2lkPSpRQ2lJUzZ0NGdBJm1pZD0yMDI1Jm11cmw9aHR0cHMlM0ElMkYlMkZ3d3cud2luZS5jb20lMkZwcm9kdWN0JTJGa3J1Z2VyLXJ1bXBmLW11bnN0ZXJlci1yaGVpbmJlcmcta2FiaW5ldHQtcmllc2xpbmctMjAxNSUyRjE1OTUwNyJ9XX0sImluc3RydWN0aW9ucyI6IkhlYXQgdmVnZXRhYmxlIG9pbCBpbiBhIGxhcmdlIER1dGNoIG92ZW4gb3Igc2tpbGxldCBvdmVyIG1lZGl1bSBoaWdoIGhlYXQuXG5UaHJlYWQgYmVlZiBmcmFua3Mgb250byBsb2xsaXBvcCBzdGlja3M7IHNldCBhc2lkZS5cbkluIGEgbGFyZ2UgYm93bCwgY29tYmluZSBmbG91ciwgY29ybm1lYWwsIHN1Z2FyLCBiYWtpbmcgcG93ZGVyLCBzYWx0IGFuZCBwZXBwZXIsIHRvIHRhc3RlLiBJbiBhIGxhcmdlIGdsYXNzIG1lYXN1cmluZyBjdXAgb3IgYW5vdGhlciBib3dsLCB3aGlzayB0b2dldGhlciBtaWxrIGFuZCBlZ2cuIFBvdXIgbWl4dHVyZSBvdmVyIGRyeSBpbmdyZWRpZW50cyBhbmQgc3RpciB1c2luZyBhIHJ1YmJlciBzcGF0dWxhIGp1c3QgdW50aWwgbW9pc3QuXG5Xb3JraW5nIGluIGJhdGNoZXMsIGRyZWRnZSBiZWVmIGZyYW5rcyBpbiB0aGUgYmF0dGVyIHVudGlsIGNvbXBsZXRlbHkgY292ZXJlZC5cbkFkZCBjb3JuIGRvZ3MgdG8gdGhlIHNraWxsZXQsIDQgb3IgNSBhdCBhIHRpbWUsIGFuZCBjb29rIHVudGlsIGV2ZW5seSBnb2xkZW4gYW5kIGNyaXNweSwgYWJvdXQgMi0zIG1pbnV0ZXMuIFRyYW5zZmVyIHRvIGEgcGFwZXIgdG93ZWwtbGluZWQgcGxhdGUuXG5TZXJ2ZSBpbW1lZGlhdGVseS4iLCJhbmFseXplZEluc3RydWN0aW9ucyI6W3sibmFtZSI6IiIsInN0ZXBzIjpbeyJudW1iZXIiOjEsInN0ZXAiOiJIZWF0IHZlZ2V0YWJsZSBvaWwgaW4gYSBsYXJnZSBEdXRjaCBvdmVuIG9yIHNraWxsZXQgb3ZlciBtZWRpdW0gaGlnaCBoZWF0LiIsImluZ3JlZGllbnRzIjpbeyJpZCI6NDY2OSwibmFtZSI6InZlZ2V0YWJsZSBvaWwiLCJsb2NhbGl6ZWROYW1lIjoidmVnZXRhYmxlIG9pbCIsImltYWdlIjoidmVnZXRhYmxlLW9pbC5qcGcifV0sImVxdWlwbWVudCI6W3siaWQiOjQwNDY2NywibmFtZSI6ImR1dGNoIG92ZW4iLCJsb2NhbGl6ZWROYW1lIjoiZHV0Y2ggb3ZlbiIsImltYWdlIjoiZHV0Y2gtb3Zlbi5qcGcifSx7ImlkIjo0MDQ2NDUsIm5hbWUiOiJmcnlpbmcgcGFuIiwibG9jYWxpemVkTmFtZSI6ImZyeWluZyBwYW4iLCJpbWFnZSI6InBhbi5wbmcifV19LHsibnVtYmVyIjoyLCJzdGVwIjoiVGhyZWFkIGJlZWYgZnJhbmtzIG9udG8gbG9sbGlwb3Agc3RpY2tzOyBzZXQgYXNpZGUuIiwiaW5ncmVkaWVudHMiOlt7ImlkIjo3MjQxLCJuYW1lIjoiYmVlZiBmcmFua3MiLCJsb2NhbGl6ZWROYW1lIjoiYmVlZiBmcmFua3MiLCJpbWFnZSI6ImhvdGRvZ3MucG5nIn1dLCJlcXVpcG1lbnQiOlt7ImlkIjo0NzAzNTUsIm5hbWUiOiJsb2xsaXBvcCBzdGlja3MiLCJsb2NhbGl6ZWROYW1lIjoibG9sbGlwb3Agc3RpY2tzIiwiaW1hZ2UiOiIifV19LHsibnVtYmVyIjozLCJzdGVwIjoiSW4gYSBsYXJnZSBib3dsLCBjb21iaW5lIGZsb3VyLCBjb3JubWVhbCwgc3VnYXIsIGJha2luZyBwb3dkZXIsIHNhbHQgYW5kIHBlcHBlciwgdG8gdGFzdGUuIEluIGEgbGFyZ2UgZ2xhc3MgbWVhc3VyaW5nIGN1cCBvciBhbm90aGVyIGJvd2wsIHdoaXNrIHRvZ2V0aGVyIG1pbGsgYW5kIGVnZy4iLCJpbmdyZWRpZW50cyI6W3siaWQiOjExMDIwNDcsIm5hbWUiOiJzYWx0IGFuZCBwZXBwZXIiLCJsb2NhbGl6ZWROYW1lIjoic2FsdCBhbmQgcGVwcGVyIiwiaW1hZ2UiOiJzYWx0LWFuZC1wZXBwZXIuanBnIn0seyJpZCI6MTgzNjksIm5hbWUiOiJiYWtpbmcgcG93ZGVyIiwibG9jYWxpemVkTmFtZSI6ImJha2luZyBwb3dkZXIiLCJpbWFnZSI6IndoaXRlLXBvd2Rlci5qcGcifSx7ImlkIjozNTEzNywibmFtZSI6ImNvcm5tZWFsIiwibG9jYWxpemVkTmFtZSI6ImNvcm5tZWFsIiwiaW1hZ2UiOiJjb3JubWVhbC5wbmcifSx7ImlkIjoyMDA4MSwibmFtZSI6ImFsbCBwdXJwb3NlIGZsb3VyIiwibG9jYWxpemVkTmFtZSI6ImFsbCBwdXJwb3NlIGZsb3VyIiwiaW1hZ2UiOiJmbG91ci5wbmcifSx7ImlkIjoxOTMzNSwibmFtZSI6InN1Z2FyIiwibG9jYWxpemVkTmFtZSI6InN1Z2FyIiwiaW1hZ2UiOiJzdWdhci1pbi1ib3dsLnBuZyJ9LHsiaWQiOjEwNzcsIm5hbWUiOiJtaWxrIiwibG9jYWxpemVkTmFtZSI6Im1pbGsiLCJpbWFnZSI6Im1pbGsucG5nIn0seyJpZCI6MTEyMywibmFtZSI6ImVnZyIsImxvY2FsaXplZE5hbWUiOiJlZ2ciLCJpbWFnZSI6ImVnZy5wbmcifV0sImVxdWlwbWVudCI6W3siaWQiOjQwNDc2NiwibmFtZSI6Im1lYXN1cmluZyBjdXAiLCJsb2NhbGl6ZWROYW1lIjoibWVhc3VyaW5nIGN1cCIsImltYWdlIjoibWVhc3VyaW5nLWN1cC5qcGcifSx7ImlkIjo0MDQ2NjEsIm5hbWUiOiJ3aGlzayIsImxvY2FsaXplZE5hbWUiOiJ3aGlzayIsImltYWdlIjoid2hpc2sucG5nIn0seyJpZCI6NDA0NzgzLCJuYW1lIjoiYm93bCIsImxvY2FsaXplZE5hbWUiOiJib3dsIiwiaW1hZ2UiOiJib3dsLmpwZyJ9XX0seyJudW1iZXIiOjQsInN0ZXAiOiJQb3VyIG1peHR1cmUgb3ZlciBkcnkgaW5ncmVkaWVudHMgYW5kIHN0aXIgdXNpbmcgYSBydWJiZXIgc3BhdHVsYSBqdXN0IHVudGlsIG1vaXN0LiIsImluZ3JlZGllbnRzIjpbXSwiZXF1aXBtZW50IjpbeyJpZCI6NDA0NjQyLCJuYW1lIjoic3BhdHVsYSIsImxvY2FsaXplZE5hbWUiOiJzcGF0dWxhIiwiaW1hZ2UiOiJzcGF0dWxhLW9yLXR1cm5lci5qcGcifV19LHsibnVtYmVyIjo1LCJzdGVwIjoiV29ya2luZyBpbiBiYXRjaGVzLCBkcmVkZ2UgYmVlZiBmcmFua3MgaW4gdGhlIGJhdHRlciB1bnRpbCBjb21wbGV0ZWx5IGNvdmVyZWQuIiwiaW5ncmVkaWVudHMiOlt7ImlkIjo3MjQxLCJuYW1lIjoiYmVlZiBmcmFua3MiLCJsb2NhbGl6ZWROYW1lIjoiYmVlZiBmcmFua3MiLCJpbWFnZSI6ImhvdGRvZ3MucG5nIn1dLCJlcXVpcG1lbnQiOltdfSx7Im51bWJlciI6Niwic3RlcCI6IkFkZCBjb3JuIGRvZ3MgdG8gdGhlIHNraWxsZXQsIDQgb3IgNSBhdCBhIHRpbWUsIGFuZCBjb29rIHVudGlsIGV2ZW5seSBnb2xkZW4gYW5kIGNyaXNweSwgYWJvdXQgMi0zIG1pbnV0ZXMuIiwiaW5ncmVkaWVudHMiOlt7ImlkIjoxMTE2OCwibmFtZSI6ImNvcm4iLCJsb2NhbGl6ZWROYW1lIjoiY29ybiIsImltYWdlIjoiY29ybi5wbmcifSx7ImlkIjoyMTExOCwibmFtZSI6ImhvdCBkb2dzIiwibG9jYWxpemVkTmFtZSI6ImhvdCBkb2dzIiwiaW1hZ2UiOiJob3Rkb2dzLnBuZyJ9XSwiZXF1aXBtZW50IjpbeyJpZCI6NDA0NjQ1LCJuYW1lIjoiZnJ5aW5nIHBhbiIsImxvY2FsaXplZE5hbWUiOiJmcnlpbmcgcGFuIiwiaW1hZ2UiOiJwYW4ucG5nIn1dLCJsZW5ndGgiOnsibnVtYmVyIjozLCJ1bml0IjoibWludXRlcyJ9fSx7Im51bWJlciI6Nywic3RlcCI6IlRyYW5zZmVyIHRvIGEgcGFwZXIgdG93ZWwtbGluZWQgcGxhdGUuIiwiaW5ncmVkaWVudHMiOltdLCJlcXVpcG1lbnQiOlt7ImlkIjo0MDU4OTUsIm5hbWUiOiJwYXBlciB0b3dlbHMiLCJsb2NhbGl6ZWROYW1lIjoicGFwZXIgdG93ZWxzIiwiaW1hZ2UiOiJwYXBlci10b3dlbHMuanBnIn1dfSx7Im51bWJlciI6OCwic3RlcCI6IlNlcnZlIGltbWVkaWF0ZWx5LiIsImluZ3JlZGllbnRzIjpbXSwiZXF1aXBtZW50IjpbXX1dfV0sIm9yaWdpbmFsSWQiOm51bGx9
+  recorded_at: Thu, 20 Apr 2023 23:17:17 GMT
+- request:
+    method: get
+    uri: https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/703698/information
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Rapidapi-Key:
+      - 76fdb7e5d0msh48a690592566607p137418jsn84ec9de08957
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 20 Apr 2023 23:17:18 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '3377'
+      Connection:
+      - keep-alive
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Cf-Cache-Status:
+      - DYNAMIC
+      Allow-Control-Allow-Methods:
+      - GET, HEAD, POST, OPTIONS, DELETE, PUT
+      Access-Control-Allow-Origin:
+      - "*"
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=3GRN5uIOSMJfzSLvnUNqWI0KtYNv%2BS7rr2NypCw7zbvOCRR2ZDyQPEAiQ8%2F7NzanwDAolhlgBbwE1FTbT4ASO0ImK0%2FXIghMgASODqt%2Bdgwn2R5hzF9ZxZ9S0k4vh30NFGpFGpk%3D"}],"group":"cf-nel","max_age":604800}'
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, OPTIONS, DELETE, PUT
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+      Allow-Control-Allow-Origin:
+      - "*"
+      Cf-Ray:
+      - 7bb1199068b439a0-IAD
+      Access-Control-Allow-Headers:
+      - Authorization, UserId, Hash, Name, Password, Accept, Accept-Language, x-api-key,
+        Content-Language, Content-Type, Cache-Control, Origin, X-Requested-With
+      X-Ratelimit-Tinyrequests-Limit:
+      - '500'
+      X-Ratelimit-Tinyrequests-Remaining:
+      - '500'
+      X-Ratelimit-Tinyrequests-Reset:
+      - '79140'
+      X-Ratelimit-Requests-Limit:
+      - '50'
+      X-Ratelimit-Requests-Remaining:
+      - "-6"
+      X-Ratelimit-Requests-Reset:
+      - '79140'
+      X-Ratelimit-Results-Limit:
+      - '500'
+      X-Ratelimit-Results-Remaining:
+      - '466'
+      X-Ratelimit-Results-Reset:
+      - '79140'
+      Server:
+      - RapidAPI-1.2.8
+      X-Rapidapi-Version:
+      - 1.2.8
+      X-Rapidapi-Region:
+      - AWS - us-east-1
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJ2ZWdldGFyaWFuIjpmYWxzZSwidmVnYW4iOmZhbHNlLCJnbHV0ZW5GcmVlIjpmYWxzZSwiZGFpcnlGcmVlIjp0cnVlLCJ2ZXJ5SGVhbHRoeSI6ZmFsc2UsImNoZWFwIjpmYWxzZSwidmVyeVBvcHVsYXIiOmZhbHNlLCJzdXN0YWluYWJsZSI6ZmFsc2UsImxvd0ZvZG1hcCI6ZmFsc2UsIndlaWdodFdhdGNoZXJTbWFydFBvaW50cyI6NywiZ2FwcyI6Im5vIiwicHJlcGFyYXRpb25NaW51dGVzIjozMCwiY29va2luZ01pbnV0ZXMiOjE0LCJhZ2dyZWdhdGVMaWtlcyI6MiwiaGVhbHRoU2NvcmUiOjYsImNyZWRpdHNUZXh0IjoiR28gRGFpcnkgRnJlZSIsInNvdXJjZU5hbWUiOiJHbyBEYWlyeSBGcmVlIiwicHJpY2VQZXJTZXJ2aW5nIjo5Mi45LCJleHRlbmRlZEluZ3JlZGllbnRzIjpbeyJpZCI6MjAwODEsImFpc2xlIjoiQmFraW5nIiwiaW1hZ2UiOiJmbG91ci5wbmciLCJjb25zaXN0ZW5jeSI6IlNPTElEIiwibmFtZSI6InRhYmxlc3Bvb25zIGFsbCBwdXJwb3NlIGZsb3VyIiwibmFtZUNsZWFuIjoid2hlYXQgZmxvdXIiLCJvcmlnaW5hbCI6IsK9IGN1cCArIDIgdGFibGVzcG9vbnMgYWxsIHB1cnBvc2UgZmxvdXIiLCJvcmlnaW5hbE5hbWUiOiIyIHRhYmxlc3Bvb25zIGFsbCBwdXJwb3NlIGZsb3VyIiwiYW1vdW50IjowLjUsInVuaXQiOiJjdXAiLCJtZXRhIjpbXSwibWVhc3VyZXMiOnsidXMiOnsiYW1vdW50IjowLjUsInVuaXRTaG9ydCI6ImN1cHMiLCJ1bml0TG9uZyI6ImN1cHMifSwibWV0cmljIjp7ImFtb3VudCI6MTE4LjI5NCwidW5pdFNob3J0IjoibWwiLCJ1bml0TG9uZyI6Im1pbGxpbGl0ZXJzIn19fSx7ImlkIjo5MzYwNywiYWlzbGUiOiJNaWxrLCBFZ2dzLCBPdGhlciBEYWlyeSIsImltYWdlIjoiYWxtb25kLW1pbGsucG5nIiwiY29uc2lzdGVuY3kiOiJMSVFVSUQiLCJuYW1lIjoiYWxtb25kIG1pbGsgYmV2ZXJhZ2UiLCJuYW1lQ2xlYW4iOiJhbG1vbmQgbWlsayIsIm9yaWdpbmFsIjoiMSBjdXAgY29sZCB1bnN3ZWV0ZW5lZCBhbG1vbmQgbWlsayBiZXZlcmFnZSIsIm9yaWdpbmFsTmFtZSI6ImNvbGQgdW5zd2VldGVuZWQgYWxtb25kIG1pbGsgYmV2ZXJhZ2UiLCJhbW91bnQiOjEuMCwidW5pdCI6ImN1cCIsIm1ldGEiOlsidW5zd2VldGVuZWQiLCJjb2xkIl0sIm1lYXN1cmVzIjp7InVzIjp7ImFtb3VudCI6MS4wLCJ1bml0U2hvcnQiOiJjdXAiLCJ1bml0TG9uZyI6ImN1cCJ9LCJtZXRyaWMiOnsiYW1vdW50IjoyMzYuNTg4LCJ1bml0U2hvcnQiOiJtbCIsInVuaXRMb25nIjoibWlsbGlsaXRlcnMifX19LHsiaWQiOjIwNDgsImFpc2xlIjoiT2lsLCBWaW5lZ2FyLCBTYWxhZCBEcmVzc2luZyIsImltYWdlIjoiYXBwbGUtY2lkZXItdmluZWdhci5qcGciLCJjb25zaXN0ZW5jeSI6IkxJUVVJRCIsIm5hbWUiOiJhcHBsZSBjaWRlciB2aW5lZ2FyIiwibmFtZUNsZWFuIjoiYXBwbGUgY2lkZXIgdmluZWdhciIsIm9yaWdpbmFsIjoiMSB0ZWFzcG9vbiBhcHBsZSBjaWRlciB2aW5lZ2FyIiwib3JpZ2luYWxOYW1lIjoiYXBwbGUgY2lkZXIgdmluZWdhciIsImFtb3VudCI6MS4wLCJ1bml0IjoidGVhc3Bvb24iLCJtZXRhIjpbXSwibWVhc3VyZXMiOnsidXMiOnsiYW1vdW50IjoxLjAsInVuaXRTaG9ydCI6InRzcCIsInVuaXRMb25nIjoidGVhc3Bvb24ifSwibWV0cmljIjp7ImFtb3VudCI6MS4wLCJ1bml0U2hvcnQiOiJ0c3AiLCJ1bml0TG9uZyI6InRlYXNwb29uIn19fSx7ImlkIjoyMDAyNywiYWlzbGUiOiJCYWtpbmciLCJpbWFnZSI6IndoaXRlLXBvd2Rlci5qcGciLCJjb25zaXN0ZW5jeSI6IlNPTElEIiwibmFtZSI6Im5vbi1nbW8gY29ybnN0YXJjaCIsIm5hbWVDbGVhbiI6ImNvcm4gc3RhcmNoIiwib3JpZ2luYWwiOiIyIHRhYmxlc3Bvb25zIG5vbi1HTU8gY29ybnN0YXJjaCIsIm9yaWdpbmFsTmFtZSI6Im5vbi1HTU8gY29ybnN0YXJjaCIsImFtb3VudCI6Mi4wLCJ1bml0IjoidGFibGVzcG9vbnMiLCJtZXRhIjpbXSwibWVhc3VyZXMiOnsidXMiOnsiYW1vdW50IjoyLjAsInVuaXRTaG9ydCI6IlRic3BzIiwidW5pdExvbmciOiJUYnNwcyJ9LCJtZXRyaWMiOnsiYW1vdW50IjoyLjAsInVuaXRTaG9ydCI6IlRic3BzIiwidW5pdExvbmciOiJUYnNwcyJ9fX0seyJpZCI6MTA4MjA0NywiYWlzbGUiOiJTcGljZXMgYW5kIFNlYXNvbmluZ3MiLCJpbWFnZSI6InNhbHQuanBnIiwiY29uc2lzdGVuY3kiOiJTT0xJRCIsIm5hbWUiOiJrb3NoZXIgc2FsdCIsIm5hbWVDbGVhbiI6Imtvc2hlciBzYWx0Iiwib3JpZ2luYWwiOiIxIHRlYXNwb29uIGtvc2hlciBzYWx0Iiwib3JpZ2luYWxOYW1lIjoia29zaGVyIHNhbHQiLCJhbW91bnQiOjEuMCwidW5pdCI6InRlYXNwb29uIiwibWV0YSI6W10sIm1lYXN1cmVzIjp7InVzIjp7ImFtb3VudCI6MS4wLCJ1bml0U2hvcnQiOiJ0c3AiLCJ1bml0TG9uZyI6InRlYXNwb29uIn0sIm1ldHJpYyI6eyJhbW91bnQiOjEuMCwidW5pdFNob3J0IjoidHNwIiwidW5pdExvbmciOiJ0ZWFzcG9vbiJ9fX0seyJpZCI6NDA1MywiYWlzbGUiOiJPaWwsIFZpbmVnYXIsIFNhbGFkIERyZXNzaW5nIiwiaW1hZ2UiOiJvbGl2ZS1vaWwuanBnIiwiY29uc2lzdGVuY3kiOiJMSVFVSUQiLCJuYW1lIjoib2xpdmUgb2lsIiwibmFtZUNsZWFuIjoib2xpdmUgb2lsIiwib3JpZ2luYWwiOiIyIHRlYXNwb29ucyBvbGl2ZSBvaWwiLCJvcmlnaW5hbE5hbWUiOiJvbGl2ZSBvaWwiLCJhbW91bnQiOjIuMCwidW5pdCI6InRlYXNwb29ucyIsIm1ldGEiOltdLCJtZWFzdXJlcyI6eyJ1cyI6eyJhbW91bnQiOjIuMCwidW5pdFNob3J0IjoidHNwcyIsInVuaXRMb25nIjoidGVhc3Bvb25zIn0sIm1ldHJpYyI6eyJhbW91bnQiOjIuMCwidW5pdFNob3J0IjoidHNwcyIsInVuaXRMb25nIjoidGVhc3Bvb25zIn19fSx7ImlkIjoxMTI5NCwiYWlzbGUiOiJQcm9kdWNlIiwiaW1hZ2UiOiJzd2VldC1vbmlvbi5wbmciLCJjb25zaXN0ZW5jeSI6IlNPTElEIiwibmFtZSI6InZpZGFsaWEgb25pb25zIiwibmFtZUNsZWFuIjoibWF1aSBvbmlvbiIsIm9yaWdpbmFsIjoiMiB2aWRhbGlhIG9uaW9ucyAoYWJvdXQgYSBwb3VuZCksIG9yIG90aGVyIHN3ZWV0IG9uaW9uIGxpa2UgV2FsbGEgV2FsbGEiLCJvcmlnaW5hbE5hbWUiOiJ2aWRhbGlhIG9uaW9ucyAoYWJvdXQgYSBwb3VuZCksIG9yIG90aGVyIHN3ZWV0IG9uaW9uIGxpa2UgV2FsbGEgV2FsbGEiLCJhbW91bnQiOjIuMCwidW5pdCI6IiIsIm1ldGEiOlsic3dlZXQiLCIoIGEgcG91bmQpIl0sIm1lYXN1cmVzIjp7InVzIjp7ImFtb3VudCI6Mi4wLCJ1bml0U2hvcnQiOiIiLCJ1bml0TG9uZyI6IiJ9LCJtZXRyaWMiOnsiYW1vdW50IjoyLjAsInVuaXRTaG9ydCI6IiIsInVuaXRMb25nIjoiIn19fSx7ImlkIjo5OTAyNSwiYWlzbGUiOiJQYXN0YSBhbmQgUmljZSIsImltYWdlIjoiYnJlYWRjcnVtYnMuanBnIiwiY29uc2lzdGVuY3kiOiJTT0xJRCIsIm5hbWUiOiJicmVhZCBjcnVtYnMiLCJuYW1lQ2xlYW4iOiJ3aG9sZSB3aGVhdCBicmVhZGNydW1icyIsIm9yaWdpbmFsIjoiMSBjdXAgd2hvbGUgd2hlYXQgYnJlYWQgY3J1bWJzIiwib3JpZ2luYWxOYW1lIjoid2hvbGUgd2hlYXQgYnJlYWQgY3J1bWJzIiwiYW1vdW50IjoxLjAsInVuaXQiOiJjdXAiLCJtZXRhIjpbIndob2xlIHdoZWF0Il0sIm1lYXN1cmVzIjp7InVzIjp7ImFtb3VudCI6MS4wLCJ1bml0U2hvcnQiOiJjdXAiLCJ1bml0TG9uZyI6ImN1cCJ9LCJtZXRyaWMiOnsiYW1vdW50IjoyMzYuNTg4LCJ1bml0U2hvcnQiOiJtbCIsInVuaXRMb25nIjoibWlsbGlsaXRlcnMifX19XSwiaWQiOjcwMzY5OCwidGl0bGUiOiJPTUcgT3Zlbi1CYWtlZCBWZWdhbiBPbmlvbiBSaW5ncyIsInJlYWR5SW5NaW51dGVzIjo0NCwic2VydmluZ3MiOjQsInNvdXJjZVVybCI6Imh0dHA6Ly93d3cuZ29kYWlyeWZyZWUub3JnL3JlY2lwZXMvYmFrZWQtdmVnYW4tb25pb24tcmluZ3MiLCJpbWFnZSI6Imh0dHBzOi8vc3Bvb25hY3VsYXIuY29tL3JlY2lwZUltYWdlcy83MDM2OTgtNTU2eDM3MC5qcGciLCJpbWFnZVR5cGUiOiJqcGciLCJzdW1tYXJ5IjoiVGhlIHJlY2lwZSBPTUcgT3Zlbi1CYWtlZCBWZWdhbiBPbmlvbiBSaW5ncyBjYW4gYmUgbWFkZSA8Yj5pbiBhcHByb3hpbWF0ZWx5IDQ0IG1pbnV0ZXM8L2I+LiBPbmUgcG9ydGlvbiBvZiB0aGlzIGRpc2ggY29udGFpbnMgYXBwcm94aW1hdGVseSA8Yj42ZyBvZiBwcm90ZWluPC9iPiwgPGI+NGcgb2YgZmF0PC9iPiwgYW5kIGEgdG90YWwgb2YgPGI+MjM0IGNhbG9yaWVzPC9iPi4gRm9yIDxiPjkzIGNlbnRzIHBlciBzZXJ2aW5nPC9iPiwgeW91IGdldCBhIGhvciBkJ29ldXZyZSB0aGF0IHNlcnZlcyA0LiBUaGlzIHJlY2lwZSBmcm9tIEdvIERhaXJ5IEZyZWUgcmVxdWlyZXMgYnJlYWQgY3J1bWJzLCBvbGl2ZSBvaWwsIGFwcGxlIGNpZGVyIHZpbmVnYXIsIGFuZCBub24tZ21vIGNvcm5zdGFyY2guIEl0IGlzIGEgZ29vZCBvcHRpb24gaWYgeW91J3JlIGZvbGxvd2luZyBhIDxiPmRhaXJ5IGZyZWU8L2I+IGRpZXQuIDIgcGVvcGxlIHdlcmUgZ2xhZCB0aGV5IHRyaWVkIHRoaXMgcmVjaXBlLiBXaXRoIGEgc3Bvb25hY3VsYXIgPGI+c2NvcmUgb2YgNDElPC9iPiwgdGhpcyBkaXNoIGlzIHNvbGlkLiBJZiB5b3UgbGlrZSB0aGlzIHJlY2lwZSwgdGFrZSBhIGxvb2sgYXQgdGhlc2Ugc2ltaWxhciByZWNpcGVzOiA8YSBocmVmPVwiaHR0cHM6Ly9zcG9vbmFjdWxhci5jb20vcmVjaXBlcy9vdmVuLWJha2VkLW9uaW9uLXJpbmdzLTQwNTMyOFwiPk92ZW4gQmFrZWQgT25pb24gUmluZ3M8L2E+LCA8YSBocmVmPVwiaHR0cHM6Ly9zcG9vbmFjdWxhci5jb20vcmVjaXBlcy9vdmVuLWJha2VkLW9uaW9uLXJpbmdzLTExNzQwMlwiPk92ZW4gQmFrZWQgT25pb24gUmluZ3M8L2E+LCBhbmQgPGEgaHJlZj1cImh0dHBzOi8vc3Bvb25hY3VsYXIuY29tL3JlY2lwZXMvb3Zlbi1iYWtlZC1vbmlvbi1yaW5ncy0xMjQ4MTgxXCI+T3ZlbiBCYWtlZCBPbmlvbiBSaW5nczwvYT4uIiwiY3Vpc2luZXMiOltdLCJkaXNoVHlwZXMiOlsiZmluZ2VyZm9vZCIsImFudGlwYXN0aSIsInN0YXJ0ZXIiLCJzbmFjayIsImFwcGV0aXplciIsImFudGlwYXN0byIsImhvciBkJ29ldXZyZSJdLCJkaWV0cyI6WyJkYWlyeSBmcmVlIl0sIm9jY2FzaW9ucyI6W10sIndpbmVQYWlyaW5nIjp7InBhaXJlZFdpbmVzIjpbInNwYXJrbGluZyB3aW5lIiwic3BhcmtsaW5nIHJvc2UiXSwicGFpcmluZ1RleHQiOiJPbmlvbiBSaW5ncyBvbiB0aGUgbWVudT8gVHJ5IHBhaXJpbmcgd2l0aCBTcGFya2xpbmcgV2luZSBhbmQgU3BhcmtsaW5nIHJvc8OpLiBJZiB5b3UncmUgc2VydmluZyBhIHNlbGVjdGlvbiBvZiBhcHBldGl6ZXJzLCB5b3UgY2FuJ3QgZ28gd3Jvbmcgd2l0aCB0aGVzZS4gQm90aCBhcmUgdmVyeSBmb29kIGZyaWVuZGx5IGFuZCBjb21wbGVtZW50IGEgdmFyaWV0eSBvZiBmbGF2b3JzLiBUaGUgR3JhaGFtIEJlY2sgQmxpc3MgTmVjdGFyIHdpdGggYSA0LjUgb3V0IG9mIDUgc3RhciByYXRpbmcgc2VlbXMgbGlrZSBhIGdvb2QgbWF0Y2guIEl0IGNvc3RzIGFib3V0IDIxIGRvbGxhcnMgcGVyIGJvdHRsZS4iLCJwcm9kdWN0TWF0Y2hlcyI6W3siaWQiOjIwNDY5NDQsInRpdGxlIjoiR3JhaGFtIEJlY2sgQmxpc3MgTmVjdGFyIiwiZGVzY3JpcHRpb24iOiJGb3IgdGhvc2Ugd2hvIGRvIG5vdCBsaWtlIGl0IGRyeSwgdGhlIEdyYWhhbSBCZWNrIERlbWktU2VjIGlzIGEgZmluZSBleGN1c2UgZm9yIHNlbGYtaW5kdWxnZW5jZSBhbmQgZnJpdm9saXR5LiBMaWdodCB5ZWFzdHkgYXJvbWFzLCB3aXRoIGhpbnRzIG9mIGJ1dHRlcnNjb3RjaCwgaG9uZXkgYW5kIHByYWxpbmUsIHRoaXMgZGVsZWN0YWJsZSBidWJibHkgd2lsbCBzdGltdWxhdGUgeW91ciBzd2VldGVyIHNlbnNlcy5CbGVuZDogMzklIENoYXJkb25uYXksIDYxJSBQaW5vdCBOb2lyIiwicHJpY2UiOiIkMjAuOTkiLCJpbWFnZVVybCI6Imh0dHBzOi8vc3Bvb25hY3VsYXIuY29tL3Byb2R1Y3RJbWFnZXMvMjA0Njk0NC0zMTJ4MjMxLmpwZyIsImF2ZXJhZ2VSYXRpbmciOjAuOSwicmF0aW5nQ291bnQiOjQyLjAsInNjb3JlIjowLjg5MjEyNTk4NDI1MTk2ODUsImxpbmsiOiJodHRwczovL2NsaWNrLmxpbmtzeW5lcmd5LmNvbS9kZWVwbGluaz9pZD0qUUNpSVM2dDRnQSZtaWQ9MjAyNSZtdXJsPWh0dHBzJTNBJTJGJTJGd3d3LndpbmUuY29tJTJGcHJvZHVjdCUyRmdyYWhhbS1iZWNrLWJsaXNzLW5lY3RhciUyRjE0ODI5MSJ9XX0sImluc3RydWN0aW9ucyI6IlNsaWNlIG9uaW9ucyBpbnRvICBpbmNoIHRoaWNrIHJpbmdzLiBTZXBhcmF0ZSB0aGUgcmluZ3MgYW5kIHBsYWNlIGluIGEgYm93bC4gQ292ZXIgd2l0aCBhIGtpdGNoZW4gdG93ZWwgb3Igc29tZXRoaW5nLCB0byBrZWVwIHRoZSBvbmlvbmluZXNzIG91dCBvZiB5b3VyIGV5ZXMuUHJlaGVhdCBvdmVuIHRvIDQ1MEYuIExpbmUgYSByaW1tZWQgMTIxOCBiYWtpbmcgc2hlZXQgd2l0aCBwYXJjaG1lbnQgcGFwZXIsIHNwcmF5IHdpdGggY29va2luZyBzcHJheS5Ob3cgeW91bGwgbmVlZCB0d28gYm93bHMgZm9yIGJhdHRlciBhbmQgYnJlYWRpbmcuIElmIHlvdXZlIGdvdCBsYXJnZSwgd2lkZSBjZXJlYWwgYm93bHMgdGhhdGxsIGRvIHRoZSB0cmljay4gSW4gb25lIGJvd2wsIGR1bXAgaW4gdGhlIGZsb3VyIGFuZCBjb3Juc3RhcmNoLiBBZGQgYWJvdXQgaGFsZiBvZiB0aGUgYWxtb25kIG1pbGsgYW5kIHN0aXIgdmlnb3JvdXNseSB3aXRoIGEgZm9yayB0byBkaXNzb2x2ZS4gQWRkIHRoZSByZXN0IG9mIHRoZSBhbG1vbmQgbWlsayBhbmQgdGhlIGFwcGxlIGNpZGVyIHZpbmVnYXIsIGFuZCBzdGlyIHRvIGluY29ycG9yYXRlLkluIHRoZSBvdGhlciBib3dsLCBtaXggdG9nZXRoZXIgdGhlIGJyZWFkIGNydW1icyBhbmQgc2FsdC4gRHJpenpsZSBpbiB0aGUgb2lsIGFuZCB1c2UgeW91ciBmaW5nZXJ0aXBzIHRvIG1peCBpdCB1cCB3ZWxsLkdldCBhIGNvbnZleW9yIGJlbHQgZ29pbmcuIEZyb20gbGVmdCB0byByaWdodCwgaGF2ZSB0aGUgb25pb25zLCB0aGUgZmxvdXIgbWl4dHVyZSwgdGhlIGJyZWFkY3J1bWJzIG1peHR1cmUgYW5kIGxhc3RseSB0aGUgYmFraW5nIHNoZWV0LiBEaXAgZWFjaCBvbmlvbiBzbGljZSBpbnRvIHRoZSB0aGUgZmxvdXIsIGxldHRpbmcgdGhlIGV4Y2VzcyBkcmlwIG9mZi4gVHJhbnNmZXIgdG8gdGhlIGJyZWFkY3J1bWJzIGJvd2wgYW5kIHVzZSB0aGUgb3RoZXIgaGFuZCB0byBzcHJpbmtsZSBhIGhhbmRmdWwgb2YgYnJlYWRjcnVtYnMgb3ZlciB0aGUgb25pb24sIHRvIGNvYXQgY29tcGxldGVseS4gVGhpcyBtYXkgdGFrZSBhIGJpdCBvZiBwcmFjdGljZS4gQ2FyZWZ1bGx5IHRyYW5zZmVyIGVhY2ggb25pb24gdG8gYSBzaW5nbGUgbGF5ZXIgb24gdGhlIGJha2luZyBzaGVldC4gTWFrZSBzdXJlIHlvdSB1c2Ugb25lIGhhbmQgZm9yIHRoZSB3ZXQgYmF0dGVyIGFuZCB0aGUgb3RoZXIgZm9yIHRoZSBkcnkgYmF0dGVyLCBvciB5b3VsbCBlbmQgdXAgd2l0aCBjbHViIGhhbmQuU3ByYXkgcmluZ3MgbGlnaHRseSB3aXRoIGNvb2tpbmcgc3ByYXkgYW5kIGJha2UgZm9yIDggbWludXRlcy4gRmxpcCwgYW5kIGJha2UgYW5vdGhlciA2IG1pbnV0ZXMuIFJpbmdzIHNob3VsZCBiZSB2YXJ5aW5nIHNoYWRlcyBvZiBicm93biBhbmQgY3Jpc3AuIFRhc3RlIG9uZSB0byBjaGVjayBmb3IgZG9uZW5lc3MuIFNlcnZlIGFzIHNvb24gYXMgcG9zc2libGUuIFdpdGgga2V0Y2h1cCBpZiB5b3UgbXVzdC4iLCJhbmFseXplZEluc3RydWN0aW9ucyI6W3sibmFtZSI6IiIsInN0ZXBzIjpbeyJudW1iZXIiOjEsInN0ZXAiOiJTbGljZSBvbmlvbnMgaW50byAgaW5jaCB0aGljayByaW5ncy4gU2VwYXJhdGUgdGhlIHJpbmdzIGFuZCBwbGFjZSBpbiBhIGJvd2wuIENvdmVyIHdpdGggYSBraXRjaGVuIHRvd2VsIG9yIHNvbWV0aGluZywgdG8ga2VlcCB0aGUgb25pb25pbmVzcyBvdXQgb2YgeW91ciBleWVzLlByZWhlYXQgb3ZlbiB0byA0NTBGLiBMaW5lIGEgcmltbWVkIDEyMTggYmFraW5nIHNoZWV0IHdpdGggcGFyY2htZW50IHBhcGVyLCBzcHJheSB3aXRoIGNvb2tpbmcgc3ByYXkuTm93IHlvdWxsIG5lZWQgdHdvIGJvd2xzIGZvciBiYXR0ZXIgYW5kIGJyZWFkaW5nLiBJZiB5b3V2ZSBnb3QgbGFyZ2UsIHdpZGUgY2VyZWFsIGJvd2xzIHRoYXRsbCBkbyB0aGUgdHJpY2suIEluIG9uZSBib3dsLCBkdW1wIGluIHRoZSBmbG91ciBhbmQgY29ybnN0YXJjaC4iLCJpbmdyZWRpZW50cyI6W3siaWQiOjQ2NzksIm5hbWUiOiJjb29raW5nIHNwcmF5IiwibG9jYWxpemVkTmFtZSI6ImNvb2tpbmcgc3ByYXkiLCJpbWFnZSI6ImNvb2tpbmctc3ByYXkucG5nIn0seyJpZCI6MjAwMjcsIm5hbWUiOiJjb3JuIHN0YXJjaCIsImxvY2FsaXplZE5hbWUiOiJjb3JuIHN0YXJjaCIsImltYWdlIjoid2hpdGUtcG93ZGVyLmpwZyJ9LHsiaWQiOjgwMjksIm5hbWUiOiJjZXJlYWwiLCJsb2NhbGl6ZWROYW1lIjoiY2VyZWFsIiwiaW1hZ2UiOiJyaWNlLWNyaXNweS1jZXJlYWwucG5nIn0seyJpZCI6MTEyODIsIm5hbWUiOiJvbmlvbiIsImxvY2FsaXplZE5hbWUiOiJvbmlvbiIsImltYWdlIjoiYnJvd24tb25pb24ucG5nIn0seyJpZCI6MjAwODEsIm5hbWUiOiJhbGwgcHVycG9zZSBmbG91ciIsImxvY2FsaXplZE5hbWUiOiJhbGwgcHVycG9zZSBmbG91ciIsImltYWdlIjoiZmxvdXIucG5nIn1dLCJlcXVpcG1lbnQiOlt7ImlkIjo0MDQ3NzAsIm5hbWUiOiJiYWtpbmcgcGFwZXIiLCJsb2NhbGl6ZWROYW1lIjoiYmFraW5nIHBhcGVyIiwiaW1hZ2UiOiJiYWtpbmctcGFwZXIuanBnIn0seyJpZCI6MjIxNDM5LCJuYW1lIjoia2l0Y2hlbiB0b3dlbHMiLCJsb2NhbGl6ZWROYW1lIjoia2l0Y2hlbiB0b3dlbHMiLCJpbWFnZSI6ImRpc2gtdG93ZWwuanBnIn0seyJpZCI6NDA0NzI3LCJuYW1lIjoiYmFraW5nIHNoZWV0IiwibG9jYWxpemVkTmFtZSI6ImJha2luZyBzaGVldCIsImltYWdlIjoiYmFraW5nLXNoZWV0LmpwZyJ9LHsiaWQiOjQwNDc4MywibmFtZSI6ImJvd2wiLCJsb2NhbGl6ZWROYW1lIjoiYm93bCIsImltYWdlIjoiYm93bC5qcGcifSx7ImlkIjo0MDQ3ODQsIm5hbWUiOiJvdmVuIiwibG9jYWxpemVkTmFtZSI6Im92ZW4iLCJpbWFnZSI6Im92ZW4uanBnIiwidGVtcGVyYXR1cmUiOnsibnVtYmVyIjo0NTAuMCwidW5pdCI6IkZhaHJlbmhlaXQifX1dfSx7Im51bWJlciI6Miwic3RlcCI6IkFkZCBhYm91dCBoYWxmIG9mIHRoZSBhbG1vbmQgbWlsayBhbmQgc3RpciB2aWdvcm91c2x5IHdpdGggYSBmb3JrIHRvIGRpc3NvbHZlLiIsImluZ3JlZGllbnRzIjpbeyJpZCI6OTM2MDcsIm5hbWUiOiJhbG1vbmQgbWlsayIsImxvY2FsaXplZE5hbWUiOiJhbG1vbmQgbWlsayIsImltYWdlIjoiYWxtb25kLW1pbGsucG5nIn1dLCJlcXVpcG1lbnQiOltdfSx7Im51bWJlciI6Mywic3RlcCI6IkFkZCB0aGUgcmVzdCBvZiB0aGUgYWxtb25kIG1pbGsgYW5kIHRoZSBhcHBsZSBjaWRlciB2aW5lZ2FyLCBhbmQgc3RpciB0byBpbmNvcnBvcmF0ZS5JbiB0aGUgb3RoZXIgYm93bCwgbWl4IHRvZ2V0aGVyIHRoZSBicmVhZCBjcnVtYnMgYW5kIHNhbHQuIiwiaW5ncmVkaWVudHMiOlt7ImlkIjoyMDQ4LCJuYW1lIjoiYXBwbGUgY2lkZXIgdmluZWdhciIsImxvY2FsaXplZE5hbWUiOiJhcHBsZSBjaWRlciB2aW5lZ2FyIiwiaW1hZ2UiOiJhcHBsZS1jaWRlci12aW5lZ2FyLmpwZyJ9LHsiaWQiOjE4MDc5LCJuYW1lIjoiYnJlYWRjcnVtYnMiLCJsb2NhbGl6ZWROYW1lIjoiYnJlYWRjcnVtYnMiLCJpbWFnZSI6ImJyZWFkY3J1bWJzLmpwZyJ9LHsiaWQiOjkzNjA3LCJuYW1lIjoiYWxtb25kIG1pbGsiLCJsb2NhbGl6ZWROYW1lIjoiYWxtb25kIG1pbGsiLCJpbWFnZSI6ImFsbW9uZC1taWxrLnBuZyJ9LHsiaWQiOjIwNDcsIm5hbWUiOiJzYWx0IiwibG9jYWxpemVkTmFtZSI6InNhbHQiLCJpbWFnZSI6InNhbHQuanBnIn1dLCJlcXVpcG1lbnQiOlt7ImlkIjo0MDQ3ODMsIm5hbWUiOiJib3dsIiwibG9jYWxpemVkTmFtZSI6ImJvd2wiLCJpbWFnZSI6ImJvd2wuanBnIn1dfSx7Im51bWJlciI6NCwic3RlcCI6IkRyaXp6bGUgaW4gdGhlIG9pbCBhbmQgdXNlIHlvdXIgZmluZ2VydGlwcyB0byBtaXggaXQgdXAgd2VsbC5HZXQgYSBjb252ZXlvciBiZWx0IGdvaW5nLiBGcm9tIGxlZnQgdG8gcmlnaHQsIGhhdmUgdGhlIG9uaW9ucywgdGhlIGZsb3VyIG1peHR1cmUsIHRoZSBicmVhZGNydW1icyBtaXh0dXJlIGFuZCBsYXN0bHkgdGhlIGJha2luZyBzaGVldC4gRGlwIGVhY2ggb25pb24gc2xpY2UgaW50byB0aGUgdGhlIGZsb3VyLCBsZXR0aW5nIHRoZSBleGNlc3MgZHJpcCBvZmYuIiwiaW5ncmVkaWVudHMiOlt7ImlkIjoxODA3OSwibmFtZSI6ImJyZWFkY3J1bWJzIiwibG9jYWxpemVkTmFtZSI6ImJyZWFkY3J1bWJzIiwiaW1hZ2UiOiJicmVhZGNydW1icy5qcGcifSx7ImlkIjoxMTI4MiwibmFtZSI6Im9uaW9uIiwibG9jYWxpemVkTmFtZSI6Im9uaW9uIiwiaW1hZ2UiOiJicm93bi1vbmlvbi5wbmcifSx7ImlkIjoyMDA4MSwibmFtZSI6ImFsbCBwdXJwb3NlIGZsb3VyIiwibG9jYWxpemVkTmFtZSI6ImFsbCBwdXJwb3NlIGZsb3VyIiwiaW1hZ2UiOiJmbG91ci5wbmcifSx7ImlkIjowLCJuYW1lIjoiZGlwIiwibG9jYWxpemVkTmFtZSI6ImRpcCIsImltYWdlIjoiIn0seyJpZCI6NDU4MiwibmFtZSI6ImNvb2tpbmcgb2lsIiwibG9jYWxpemVkTmFtZSI6ImNvb2tpbmcgb2lsIiwiaW1hZ2UiOiJ2ZWdldGFibGUtb2lsLmpwZyJ9XSwiZXF1aXBtZW50IjpbeyJpZCI6NDA0NzI3LCJuYW1lIjoiYmFraW5nIHNoZWV0IiwibG9jYWxpemVkTmFtZSI6ImJha2luZyBzaGVldCIsImltYWdlIjoiYmFraW5nLXNoZWV0LmpwZyJ9XX0seyJudW1iZXIiOjUsInN0ZXAiOiJUcmFuc2ZlciB0byB0aGUgYnJlYWRjcnVtYnMgYm93bCBhbmQgdXNlIHRoZSBvdGhlciBoYW5kIHRvIHNwcmlua2xlIGEgaGFuZGZ1bCBvZiBicmVhZGNydW1icyBvdmVyIHRoZSBvbmlvbiwgdG8gY29hdCBjb21wbGV0ZWx5LiBUaGlzIG1heSB0YWtlIGEgYml0IG9mIHByYWN0aWNlLiBDYXJlZnVsbHkgdHJhbnNmZXIgZWFjaCBvbmlvbiB0byBhIHNpbmdsZSBsYXllciBvbiB0aGUgYmFraW5nIHNoZWV0LiBNYWtlIHN1cmUgeW91IHVzZSBvbmUgaGFuZCBmb3IgdGhlIHdldCBiYXR0ZXIgYW5kIHRoZSBvdGhlciBmb3IgdGhlIGRyeSBiYXR0ZXIsIG9yIHlvdWxsIGVuZCB1cCB3aXRoIGNsdWIgaGFuZC5TcHJheSByaW5ncyBsaWdodGx5IHdpdGggY29va2luZyBzcHJheSBhbmQgYmFrZSBmb3IgOCBtaW51dGVzLiBGbGlwLCBhbmQgYmFrZSBhbm90aGVyIDYgbWludXRlcy4gUmluZ3Mgc2hvdWxkIGJlIHZhcnlpbmcgc2hhZGVzIG9mIGJyb3duIGFuZCBjcmlzcC4gVGFzdGUgb25lIHRvIGNoZWNrIGZvciBkb25lbmVzcy4iLCJpbmdyZWRpZW50cyI6W3siaWQiOjQ2NzksIm5hbWUiOiJjb29raW5nIHNwcmF5IiwibG9jYWxpemVkTmFtZSI6ImNvb2tpbmcgc3ByYXkiLCJpbWFnZSI6ImNvb2tpbmctc3ByYXkucG5nIn0seyJpZCI6MTgwNzksIm5hbWUiOiJicmVhZGNydW1icyIsImxvY2FsaXplZE5hbWUiOiJicmVhZGNydW1icyIsImltYWdlIjoiYnJlYWRjcnVtYnMuanBnIn0seyJpZCI6MTEyODIsIm5hbWUiOiJvbmlvbiIsImxvY2FsaXplZE5hbWUiOiJvbmlvbiIsImltYWdlIjoiYnJvd24tb25pb24ucG5nIn1dLCJlcXVpcG1lbnQiOlt7ImlkIjo0MDQ3MjcsIm5hbWUiOiJiYWtpbmcgc2hlZXQiLCJsb2NhbGl6ZWROYW1lIjoiYmFraW5nIHNoZWV0IiwiaW1hZ2UiOiJiYWtpbmctc2hlZXQuanBnIn0seyJpZCI6NDA0Nzg0LCJuYW1lIjoib3ZlbiIsImxvY2FsaXplZE5hbWUiOiJvdmVuIiwiaW1hZ2UiOiJvdmVuLmpwZyJ9LHsiaWQiOjQwNDc4MywibmFtZSI6ImJvd2wiLCJsb2NhbGl6ZWROYW1lIjoiYm93bCIsImltYWdlIjoiYm93bC5qcGcifV0sImxlbmd0aCI6eyJudW1iZXIiOjE0LCJ1bml0IjoibWludXRlcyJ9fSx7Im51bWJlciI6Niwic3RlcCI6IlNlcnZlIGFzIHNvb24gYXMgcG9zc2libGUuIFdpdGgga2V0Y2h1cCBpZiB5b3UgbXVzdC4iLCJpbmdyZWRpZW50cyI6W3siaWQiOjExOTM1LCJuYW1lIjoia2V0Y2h1cCIsImxvY2FsaXplZE5hbWUiOiJrZXRjaHVwIiwiaW1hZ2UiOiJrZXRjaHVwLnBuZyJ9XSwiZXF1aXBtZW50IjpbXX1dfV0sIm9yaWdpbmFsSWQiOm51bGx9
+  recorded_at: Thu, 20 Apr 2023 23:17:18 GMT
+- request:
+    method: get
+    uri: https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/124838/information
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Rapidapi-Key:
+      - 76fdb7e5d0msh48a690592566607p137418jsn84ec9de08957
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 20 Apr 2023 23:17:18 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '3453'
+      Connection:
+      - keep-alive
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Cf-Cache-Status:
+      - DYNAMIC
+      Allow-Control-Allow-Methods:
+      - GET, HEAD, POST, OPTIONS, DELETE, PUT
+      Access-Control-Allow-Origin:
+      - "*"
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=KZI%2BP93ei8B3kEBigA3Ohtc1SkGMwTgiCJbuQg%2BnXeWIqAEJuDy0FiCHIiXsgqM6A75S%2FchmoIJZ%2B%2FPtwvfXUPLOk2qm8EGrJ6jox1rDC19OTmX3Q2B8DFLxpXQf2zqjzu6Zun0%3D"}],"group":"cf-nel","max_age":604800}'
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, OPTIONS, DELETE, PUT
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+      Allow-Control-Allow-Origin:
+      - "*"
+      Cf-Ray:
+      - 7bb11996cc102d1e-IAD
+      Access-Control-Allow-Headers:
+      - Authorization, UserId, Hash, Name, Password, Accept, Accept-Language, x-api-key,
+        Content-Language, Content-Type, Cache-Control, Origin, X-Requested-With
+      X-Ratelimit-Tinyrequests-Limit:
+      - '500'
+      X-Ratelimit-Tinyrequests-Remaining:
+      - '500'
+      X-Ratelimit-Tinyrequests-Reset:
+      - '79140'
+      X-Ratelimit-Requests-Limit:
+      - '50'
+      X-Ratelimit-Requests-Remaining:
+      - "-7"
+      X-Ratelimit-Requests-Reset:
+      - '79140'
+      X-Ratelimit-Results-Limit:
+      - '500'
+      X-Ratelimit-Results-Remaining:
+      - '466'
+      X-Ratelimit-Results-Reset:
+      - '79140'
+      Server:
+      - RapidAPI-1.2.8
+      X-Rapidapi-Version:
+      - 1.2.8
+      X-Rapidapi-Region:
+      - AWS - us-east-1
+    body:
+      encoding: ASCII-8BIT
+      string: '{"vegetarian":false,"vegan":false,"glutenFree":false,"dairyFree":false,"veryHealthy":false,"cheap":false,"veryPopular":false,"sustainable":false,"lowFodmap":false,"weightWatcherSmartPoints":14,"gaps":"no","preparationMinutes":-1,"cookingMinutes":-1,"aggregateLikes":0,"healthScore":8,"creditsText":"My
+        Recipes","sourceName":"My Recipes","pricePerServing":354.44,"extendedIngredients":[{"id":19719,"aisle":"Nut
+        butters, Jams, and Honey","image":"apricot-jam.jpg","consistency":"SOLID","name":"apricot
+        jam","nameClean":"apricot jam","original":"1 cup apricot jam","originalName":"apricot
+        jam","amount":1.0,"unit":"cup","meta":[],"measures":{"us":{"amount":1.0,"unitShort":"cup","unitLong":"cup"},"metric":{"amount":236.588,"unitShort":"ml","unitLong":"milliliters"}}},{"id":9050,"aisle":"Produce","image":"blueberries.jpg","consistency":"SOLID","name":"blueberries","nameClean":"blueberries","original":"2
+        pints fresh blueberries","originalName":"fresh blueberries","amount":2.0,"unit":"pints","meta":["fresh"],"measures":{"us":{"amount":2.0,"unitShort":"pts","unitLong":"pints"},"metric":{"amount":2.0,"unitShort":"pts","unitLong":"pints"}}},{"id":20027,"aisle":"Baking","image":"white-powder.jpg","consistency":"SOLID","name":"cornstarch","nameClean":"corn
+        starch","original":"2 tablespoons cornstarch","originalName":"cornstarch","amount":2.0,"unit":"tablespoons","meta":[],"measures":{"us":{"amount":2.0,"unitShort":"Tbsps","unitLong":"Tbsps"},"metric":{"amount":2.0,"unitShort":"Tbsps","unitLong":"Tbsps"}}},{"id":1125,"aisle":"Milk,
+        Eggs, Other Dairy","image":"egg-yolk.jpg","consistency":"SOLID","name":"egg
+        yolks","nameClean":"egg yolk","original":"2 large egg yolks","originalName":"egg
+        yolks","amount":2.0,"unit":"large","meta":[],"measures":{"us":{"amount":2.0,"unitShort":"large","unitLong":"larges"},"metric":{"amount":2.0,"unitShort":"large","unitLong":"larges"}}},{"id":20081,"aisle":"Baking","image":"flour.png","consistency":"SOLID","name":"flour","nameClean":"wheat
+        flour","original":"2 tablespoons all-purpose flour","originalName":"all-purpose
+        flour","amount":2.0,"unit":"tablespoons","meta":["all-purpose"],"measures":{"us":{"amount":2.0,"unitShort":"Tbsps","unitLong":"Tbsps"},"metric":{"amount":2.0,"unitShort":"Tbsps","unitLong":"Tbsps"}}},{"id":9152,"aisle":"Produce","image":"lemon-juice.jpg","consistency":"LIQUID","name":"lemon
+        juice","nameClean":"lemon juice","original":"1 tablespoon lemon juice","originalName":"lemon
+        juice","amount":1.0,"unit":"tablespoon","meta":[],"measures":{"us":{"amount":1.0,"unitShort":"Tbsp","unitLong":"Tbsp"},"metric":{"amount":1.0,"unitShort":"Tbsp","unitLong":"Tbsp"}}},{"id":1077,"aisle":"Milk,
+        Eggs, Other Dairy","image":"milk.png","consistency":"LIQUID","name":"milk","nameClean":"milk","original":"2
+        cups milk","originalName":"milk","amount":2.0,"unit":"cups","meta":[],"measures":{"us":{"amount":2.0,"unitShort":"cups","unitLong":"cups"},"metric":{"amount":473.176,"unitShort":"ml","unitLong":"milliliters"}}},{"id":18334,"aisle":"Refrigerated","image":"pie-crust.jpg","consistency":"SOLID","name":"pie
+        crust","nameClean":"refrigerated pie crust","original":"1 homemade or store-bought
+        pie crust (not in pan)","originalName":"homemade or store-bought pie crust
+        (not in pan)","amount":1.0,"unit":"","meta":["homemade","store-bought","(not
+        in pan)"],"measures":{"us":{"amount":1.0,"unitShort":"","unitLong":""},"metric":{"amount":1.0,"unitShort":"","unitLong":""}}},{"id":9302,"aisle":"Produce","image":"raspberries.jpg","consistency":"SOLID","name":"raspberries","nameClean":"raspberries","original":"2
+        pints fresh raspberries","originalName":"fresh raspberries","amount":2.0,"unit":"pints","meta":["fresh"],"measures":{"us":{"amount":2.0,"unitShort":"pts","unitLong":"pints"},"metric":{"amount":2.0,"unitShort":"pts","unitLong":"pints"}}},{"id":19335,"aisle":"Baking","image":"sugar-in-bowl.png","consistency":"SOLID","name":"sugar","nameClean":"sugar","original":"1/2
+        cup sugar","originalName":"sugar","amount":0.5,"unit":"cup","meta":[],"measures":{"us":{"amount":0.5,"unitShort":"cups","unitLong":"cups"},"metric":{"amount":118.294,"unitShort":"ml","unitLong":"milliliters"}}},{"id":1145,"aisle":"Milk,
+        Eggs, Other Dairy","image":"butter-sliced.jpg","consistency":"SOLID","name":"butter","nameClean":"unsalted
+        butter","original":"3 tablespoons unsalted butter, softened","originalName":"unsalted
+        butter, softened","amount":3.0,"unit":"tablespoons","meta":["unsalted","softened"],"measures":{"us":{"amount":3.0,"unitShort":"Tbsps","unitLong":"Tbsps"},"metric":{"amount":3.0,"unitShort":"Tbsps","unitLong":"Tbsps"}}},{"id":2050,"aisle":"Baking","image":"vanilla-extract.jpg","consistency":"LIQUID","name":"vanilla
+        extract","nameClean":"vanilla extract","original":"1/2 teaspoon vanilla extract","originalName":"vanilla
+        extract","amount":0.5,"unit":"teaspoon","meta":[],"measures":{"us":{"amount":0.5,"unitShort":"tsps","unitLong":"teaspoons"},"metric":{"amount":0.5,"unitShort":"tsps","unitLong":"teaspoons"}}}],"id":124838,"title":"All-Star
+        Berry Tart","readyInMinutes":45,"servings":8,"sourceUrl":"http://www.myrecipes.com/recipe/all-star-berry-tart-10000001875621/","image":"https://spoonacular.com/recipeImages/124838-556x370.jpg","imageType":"jpg","summary":"All-Star
+        Berry Tart might be a good recipe to expand your dessert recipe box. This
+        recipe makes 8 servings with <b>449 calories</b>, <b>7g of protein</b>, and
+        <b>14g of fat</b> each. For <b>$3.54 per serving</b>, this recipe <b>covers
+        16%</b> of your daily requirements of vitamins and minerals. This recipe from
+        My Recipes requires milk, sugar, cornstarch, and egg yolks. 1 person has made
+        this recipe and would make it again. From preparation to the plate, this recipe
+        takes approximately <b>45 minutes</b>. Taking all factors into account, this
+        recipe <b>earns a spoonacular score of 43%</b>, which is solid. Similar recipes
+        include <a href=\"https://spoonacular.com/recipes/all-star-berry-tart-1310091\">All-Star
+        Berry Tart</a>, <a href=\"https://spoonacular.com/recipes/star-spangled-berry-tart-603708\">Star
+        Spangled Berry Tart</a>, and <a href=\"https://spoonacular.com/recipes/no-bake-cheesecake-triple-berry-star-tart-900352\">No
+        Bake Cheesecake Triple Berry Star Tart</a>.","cuisines":[],"dishTypes":["dessert"],"diets":[],"occasions":[],"winePairing":{"pairedWines":["cream
+        sherry","port","moscato dasti"],"pairingText":"Tart can be paired with Cream
+        Sherry, Port, and Moscato d''Asti. A common wine pairing rule is to make sure
+        your wine is sweeter than your food. Delicate desserts go well with Moscato
+        d''Asti, nutty desserts with cream sherry, and caramel or chocolate desserts
+        pair well with port. You could try NV Johnson Estate Cream Sherry. Reviewers
+        quite like it with a 5 out of 5 star rating and a price of about 19 dollars
+        per bottle.","productMatches":[{"id":430626,"title":"NV Johnson Estate Cream
+        Sherry","description":"Very aromatic with notes of hazelnut, vanilla, and
+        a touch of oak followed by sweet raisins and a touch of yeast. Clean lasting
+        finish. Good now but will reward those allow it to age\"\". A favorite pre-prandial
+        beverage. Consider it with nuts before dinner as an aperitif, or after dinner
+        with dessert, especially chocolates and fruit-based desserts. Also wonderful
+        on cold afternoons, served with biscotti to dip in \"\"Italian-style\"\".
+        \"","price":"$19.49","imageUrl":"https://spoonacular.com/productImages/430626-312x231.jpg","averageRating":1.0,"ratingCount":2.0,"score":0.8571428571428572,"link":"https://www.amazon.com/Johnson-Estate-Cream-Sherry-750/dp/B00D3GQSRW?tag=spoonacular-20"}]},"instructions":"Follow
+        package instructions to fit crust into a 9-inch tart pan with removable bottom,
+        and bake until light golden.                                                                                                Make
+        pastry cream: Mix flour, cornstarch and sugar in a bowl. Add 1/3 cup milk;
+        beat until smooth. Whisk in yolks. In a pan, bring remaining milk to a simmer.
+        Whisking constantly, pour hot milk into yolk mixture. Pour back into pan and
+        bring to a boil, stirring. Boil for 2 minutes, whisking. Remove from heat;
+        beat in butter and vanilla. Pour into a bowl; press plastic wrap directly
+        onto surface of pastry cream. Chill 1 hour.                                                                                                Finish
+        tart: Stir jam, lemon juice and 2 Tbsp. water in a pan over low heat until
+        jam melts; strain. Remove crust from tart pan; brush with jam glaze. Spread
+        pastry cream evenly. Arrange raspberries in center, forming a star. Fill in
+        remaining surface with blueberries. Brush tart with remaining glaze.","analyzedInstructions":[{"name":"","steps":[{"number":1,"step":"Follow
+        package instructions to fit crust into a 9-inch tart pan with removable bottom,
+        and bake until light golden.","ingredients":[{"id":0,"name":"crust","localizedName":"crust","image":""}],"equipment":[{"id":404784,"name":"oven","localizedName":"oven","image":"oven.jpg"},{"id":406922,"name":"tart
+        form","localizedName":"tart form","image":"tart-pan.jpg"}]}]},{"name":"Make
+        pastry cream","steps":[{"number":1,"step":"Mix flour, cornstarch and sugar
+        in a bowl.","ingredients":[{"id":20027,"name":"corn starch","localizedName":"corn
+        starch","image":"white-powder.jpg"},{"id":20081,"name":"all purpose flour","localizedName":"all
+        purpose flour","image":"flour.png"},{"id":19335,"name":"sugar","localizedName":"sugar","image":"sugar-in-bowl.png"}],"equipment":[{"id":404783,"name":"bowl","localizedName":"bowl","image":"bowl.jpg"}]},{"number":2,"step":"Add
+        1/3 cup milk; beat until smooth.","ingredients":[{"id":1077,"name":"milk","localizedName":"milk","image":"milk.png"}],"equipment":[]},{"number":3,"step":"Whisk
+        in yolks. In a pan, bring remaining milk to a simmer.","ingredients":[{"id":1125,"name":"egg
+        yolk","localizedName":"egg yolk","image":"egg-yolk.jpg"},{"id":1077,"name":"milk","localizedName":"milk","image":"milk.png"}],"equipment":[{"id":404661,"name":"whisk","localizedName":"whisk","image":"whisk.png"},{"id":404645,"name":"frying
+        pan","localizedName":"frying pan","image":"pan.png"}]},{"number":4,"step":"Whisking
+        constantly, pour hot milk into yolk mixture.","ingredients":[{"id":1077,"name":"milk","localizedName":"milk","image":"milk.png"},{"id":1125,"name":"egg
+        yolk","localizedName":"egg yolk","image":"egg-yolk.jpg"}],"equipment":[{"id":404661,"name":"whisk","localizedName":"whisk","image":"whisk.png"}]},{"number":5,"step":"Pour
+        back into pan and bring to a boil, stirring. Boil for 2 minutes, whisking.","ingredients":[],"equipment":[{"id":404661,"name":"whisk","localizedName":"whisk","image":"whisk.png"},{"id":404645,"name":"frying
+        pan","localizedName":"frying pan","image":"pan.png"}],"length":{"number":2,"unit":"minutes"}},{"number":6,"step":"Remove
+        from heat; beat in butter and vanilla.","ingredients":[{"id":1052050,"name":"vanilla","localizedName":"vanilla","image":"vanilla.jpg"},{"id":1001,"name":"butter","localizedName":"butter","image":"butter-sliced.jpg"}],"equipment":[]},{"number":7,"step":"Pour
+        into a bowl; press plastic wrap directly onto surface of pastry cream. Chill
+        1 hour.","ingredients":[{"id":10019170,"name":"pastry cream","localizedName":"pastry
+        cream","image":"vanilla-pudding.png"},{"id":10018364,"name":"wrap","localizedName":"wrap","image":"flour-tortilla.jpg"}],"equipment":[{"id":404730,"name":"plastic
+        wrap","localizedName":"plastic wrap","image":"plastic-wrap.jpg"},{"id":404783,"name":"bowl","localizedName":"bowl","image":"bowl.jpg"}],"length":{"number":60,"unit":"minutes"}},{"number":8,"step":"Finish
+        tart: Stir jam, lemon juice and 2 Tbsp. water in a pan over low heat until
+        jam melts; strain.","ingredients":[{"id":9152,"name":"lemon juice","localizedName":"lemon
+        juice","image":"lemon-juice.jpg"},{"id":14412,"name":"water","localizedName":"water","image":"water.png"},{"id":19297,"name":"jam","localizedName":"jam","image":"strawberry-jam.png"}],"equipment":[{"id":404645,"name":"frying
+        pan","localizedName":"frying pan","image":"pan.png"}]},{"number":9,"step":"Remove
+        crust from tart pan; brush with jam glaze.","ingredients":[{"id":0,"name":"crust","localizedName":"crust","image":""},{"id":0,"name":"glaze","localizedName":"glaze","image":""},{"id":19297,"name":"jam","localizedName":"jam","image":"strawberry-jam.png"}],"equipment":[{"id":406922,"name":"tart
+        form","localizedName":"tart form","image":"tart-pan.jpg"}]},{"number":10,"step":"Spread
+        pastry cream evenly. Arrange raspberries in center, forming a star. Fill in
+        remaining surface with blueberries.","ingredients":[{"id":10019170,"name":"pastry
+        cream","localizedName":"pastry cream","image":"vanilla-pudding.png"},{"id":9050,"name":"blueberries","localizedName":"blueberries","image":"blueberries.jpg"},{"id":9302,"name":"raspberries","localizedName":"raspberries","image":"raspberries.jpg"},{"id":0,"name":"spread","localizedName":"spread","image":""}],"equipment":[]},{"number":11,"step":"Brush
+        tart with remaining glaze.","ingredients":[{"id":0,"name":"glaze","localizedName":"glaze","image":""}],"equipment":[]}]}],"originalId":null}'
+  recorded_at: Thu, 20 Apr 2023 23:17:18 GMT
+- request:
+    method: post
+    uri: http://localhost:4000/api/v1/recipes
+    body:
+      encoding: UTF-8
+      string: image=https%3A%2F%2Fspoonacular.com%2FrecipeImages%2F989658-556x370.jpg&name=Easy+Homemade+Mini+Corn+Dogs&spoonacular_id=989658
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - b5f88d5d-cf34-4eb5-bee7-517846b91fc8
+      X-Runtime:
+      - '0.009962'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.21, process_action.action_controller;dur=1.38
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"errors":[{"status":"404","title":"unknown attribute ''spoonacular_id''
+        for Recipe.\n\n          raise UnknownAttributeError.new(self, k.to_s)\n          ^^^^^"}]}'
+  recorded_at: Thu, 20 Apr 2023 23:17:18 GMT
+- request:
+    method: post
+    uri: http://localhost:4000/api/v1/recipes
+    body:
+      encoding: UTF-8
+      string: image=https%3A%2F%2Fspoonacular.com%2FrecipeImages%2F703698-556x370.jpg&name=OMG+Oven-Baked+Vegan+Onion+Rings&spoonacular_id=703698
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 07f9db96-744b-43a0-bbbf-2171ea794471
+      X-Runtime:
+      - '0.007414'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.13, process_action.action_controller;dur=1.04
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"errors":[{"status":"404","title":"unknown attribute ''spoonacular_id''
+        for Recipe.\n\n          raise UnknownAttributeError.new(self, k.to_s)\n          ^^^^^"}]}'
+  recorded_at: Thu, 20 Apr 2023 23:17:19 GMT
+- request:
+    method: post
+    uri: http://localhost:4000/api/v1/recipes
+    body:
+      encoding: UTF-8
+      string: image=https%3A%2F%2Fspoonacular.com%2FrecipeImages%2F124838-556x370.jpg&name=All-Star+Berry+Tart&spoonacular_id=124838
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - f5c79788-d18d-426d-b039-d095f78013f4
+      X-Runtime:
+      - '0.007418'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.14, process_action.action_controller;dur=0.79
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"errors":[{"status":"404","title":"unknown attribute ''spoonacular_id''
+        for Recipe.\n\n          raise UnknownAttributeError.new(self, k.to_s)\n          ^^^^^"}]}'
+  recorded_at: Thu, 20 Apr 2023 23:17:19 GMT
+recorded_with: VCR 6.1.0

@@ -12,6 +12,7 @@ class DayPlanFacade
     a = LocalRecipeService.create_recipe(breakfast_recipe.recipe_poro_to_json)
     b = LocalRecipeService.create_recipe(main_recipe1.recipe_poro_to_json)
     c = LocalRecipeService.create_recipe(main_recipe2.recipe_poro_to_json)
+    require 'pry'; binding.pry
     DayPlanService.add_recipe_to_day_plan(day_plan[:data][:id], a[:data][:id])
     DayPlanService.add_recipe_to_day_plan(day_plan[:data][:id], b[:data][:id])
     DayPlanService.add_recipe_to_day_plan(day_plan[:data][:id], c[:data][:id])
