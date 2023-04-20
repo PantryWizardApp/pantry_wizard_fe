@@ -16,5 +16,4 @@ class DayPlanFacade
     DayPlanService.add_recipe_to_day_plan(day_plan[:data][:id], b[:data][:id])
     DayPlanService.add_recipe_to_day_plan(day_plan[:data][:id], c[:data][:id])
   end
-
 end
