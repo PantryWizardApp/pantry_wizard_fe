@@ -30,8 +30,8 @@ class DayPlanService
     day_plans = JSON.parse(response.body, symbolize_names: true)
   end
 
-  def self.add_recipe_to_day_plan(day_plan, recipe_params)
-    response = conn.post("/api/v1/users/#{day_plan[:data][:user_id]}/recipes?day_plan_id=#{day_plan[:data][:id]}", recipe_params)
+  def self.add_recipe_to_day_plan(day_plan_id, recipe_id)
+    response = conn.post("/api/v1/day_plan_recipes", {day_plan_id: day_plan_id, recipe_id: recipe_id})
     recipe_day_plan = JSON.parse(response.body, symbolize_names: true)
   end
 

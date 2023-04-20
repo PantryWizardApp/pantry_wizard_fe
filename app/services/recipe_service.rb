@@ -30,7 +30,7 @@ class RecipeService
       query: "*",
       cuisine: user&.likes&.empty? ? user&.likes : "",
       excludeCuisine: user&.dislikes&.empty? ? user&.dislikes : "",
-      intolerances: user&.intolerances&.any? ? user&.intolerances.join(",") : "",
+      intolerances: user&.intolerances&.empty? ? user&.intolerances : "",
       diet: user&.dietary_restrictions.nil? ? "" : user&.dietary_restrictions,
       type: "breakfast"
       }
@@ -44,7 +44,7 @@ class RecipeService
       query: "*",
       cuisine: user&.likes&.empty? ? user&.likes : "",
       excludeCuisine: user&.dislikes&.empty? ? user&.dislikes : "",
-      intolerances: user&.intolerances&.any? ? user&.intolerances.join(",") : "",
+      intolerances: user&.intolerances&.empty? ? user&.intolerances : "",
       diet: user&.dietary_restrictions.nil? ? "" : user&.dietary_restrictions,
       type: "main course"
       }
@@ -57,7 +57,7 @@ class RecipeService
       query: "*",
       cuisine: user&.likes&.empty? ? user&.likes : "",
       excludeCuisine: user&.dislikes&.empty? ? user&.dislikes : "",
-      intolerances: user&.intolerances&.any? ? user&.intolerances.join(",") : "",
+      intolerances: user&.intolerances&.empty? ? user&.intolerances : "",
       diet: user&.dietary_restrictions.nil? ? "" : user&.dietary_restrictions,
       type: "main course"
       }

@@ -387,33 +387,33 @@ RSpec.describe "New Recipe Page" do
     context "from the recipes show page" do
       it "I can click a button to generate a new breakfast recipe" do
         VCR.use_cassette("recipes_show_page") do
-          visit "meals/#{@recipe.id}"
+          visit "meals/#{@recipe.spoonacular_id}"
         end
 
         VCR.use_cassette("breakfast_show_page") do
           click_button "Generate New Breakfast Recipe"
-          expect(current_path).to_not eq("meals/#{@recipe.id}")
+          expect(current_path).to_not eq("meals/#{@recipe.spoonacular_id}")
           expect(current_path).to_not eq("meals/new")
         end
       end
 
       it " I can click a button to generate a new lunch recipe" do
         VCR.use_cassette("recipes_show_page") do
-          visit "meals/#{@recipe.id}"
+          visit "meals/#{@recipe.spoonacular_id}"
         end
         VCR.use_cassette("lunch_show_page") do
           click_button "Generate New Lunch Recipe"
-          expect(current_path).to_not eq("meals/#{@recipe.id}")
+          expect(current_path).to_not eq("meals/#{@recipe.spoonacular_id}")
         end
       end
 
       it " I can click a button to generate a new dinner recipe" do
         VCR.use_cassette("recipes_show_page") do
-          visit "meals/#{@recipe.id}"
+          visit "meals/#{@recipe.spoonacular_id}"
         end
         VCR.use_cassette("dinner_show_page") do
           click_button "Generate New Dinner Recipe"
-          expect(current_path).to_not eq("meals/#{@recipe.id}")
+          expect(current_path).to_not eq("meals/#{@recipe.spoonacular_id}")
         end
       end
     end

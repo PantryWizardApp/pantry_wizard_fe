@@ -5,8 +5,8 @@ class LocalRecipeService
     JSON.parse(response.body, symbolize_names: true)
   end
 
-  def self.create_user_recipe(user_id, recipe)
-    response = conn.post("/api/v1/users/#{user_id}/recipes", recipe)
+  def self.create_recipe(recipe)
+    response = conn.post("/api/v1/recipes", recipe)
     JSON.parse(response.body, symbolize_names: true)
   end
 
@@ -20,4 +20,5 @@ class LocalRecipeService
   def self.conn 
     Faraday.new(url: "http://localhost:4000")
   end
+
 end
