@@ -100,14 +100,14 @@ This is a Ruby on Rails application that's used together with the <a href="https
 ### Installation
 
 1. Clone the repo:
-   ```bash
-   git clone git@github.com:pantry-wizard/pantry_wizard_be.git
-   ```
+```bash
+   git clone git@github.com:pantry-wizard/pantry_wizard_fe.git
+```
 
 1. Install gems:
-   ```bash
+```bash
    bundle install
-   ```
+```
 
 <!-- 1. ==ADD SPECIFIC INSTRUCTIONS TO INSTALL FIGARO== -->
 
@@ -121,23 +121,15 @@ In order to use this application you will API keys from both <a href="https://ra
 Once you have these keys, they will be stored in files that you create.
 
 1. Create a `.env` file within the app. This file should appear next to the .gitattributes foler and should not be nested. Add your `GOOGLE_CLIENT_ID` and `GOOGLE_CLIENT_SECRET` to this file.
-    ```
+```bash
     GOOGLE_CLIENT_ID=xxxxxxxxxxxxxxx-xxxxxxxxxxxxxxx.apps.googleusercontent.com
     GOOGLE_CLIENT_SECRET=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-    ```
+```
 
 1. Run `bundle exec figaro install`, then open the `application.yml` file. Here you'll add your `X-RapidAPI-Key`.
-    ```
+```bash
     X-RapidAPI-Key: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-    ```
-
-<br>
-
-To establish a Postgres database, run:
-
-    `rails db:{create,migrate}`
-
-Note: This frontend is build in Rails, which is not traditionally used as a frontend language. Because of this, it requires an established database in order to function.
+```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -150,9 +142,9 @@ Once `pantry_wizard_fe` is correctly installed, run tests locally to ensure the 
 <br>
 
   To test the entire RSpec suite, run:
-   ```bash
+```bash
    bundle exec rspec
-   ```
+```
 
    <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -169,7 +161,25 @@ If any tests are not passing, please report which tests are not passing <a href=
 
 
 ### Local Server Setup
-To use PantryWizard locally, run `rails s` on both `pantry_wizard_be` and `pantry_wizard_fe`. The backend will be hosted on `localhost:4000` while the front end will use `localhost:3000`
+Since this application is deployed to heroku, if you want to use PantryWizard locally you'll need to make some changes in the `services` folder. In each service file you'll need to change the url in the following method.
+
+Current URL for heroku deployment:
+
+```bash
+    def self.conn 
+      Faraday.new(url: "https://pantrywizardbe.herokuapp.com")
+    end
+```
+
+Change to:
+
+```bash
+    def self.conn 
+      Faraday.new(url: "http://localhost:4000")
+    end
+```
+
+ run `rails s` on both `pantry_wizard_be` and `pantry_wizard_fe`. The backend will be hosted on `localhost:4000` while the front end will use `localhost:3000`
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -183,7 +193,6 @@ To use PantryWizard locally, run `rails s` on both `pantry_wizard_be` and `pantr
 - Using your preferred internet browser (chrome), visit `localhost:3000`.
   - You'll be asked to sign-in using Google OAuth, so a Google account is required.
   - Once logged in, you'll be redirected to the `/dashboard`
-  <!-- is there a mealplan prepopulated upon creation? are they actually directed to /preferences? -->
 
   <br>
 
@@ -195,15 +204,14 @@ To use PantryWizard locally, run `rails s` on both `pantry_wizard_be` and `pantr
 
 ### Meal Plans
 1. Select `Create Meal Plan`
-    - 
-
-<!-- 1. Login (Google)
-1. Dashboard
-1. User Preferences
-1. Meal Plans
-    1. New Meal Plan
-    1. Modify Meal Plan
-    1. Get New Recipes -->
+    - Select the date you would like to create a plan for and select `Create New Meal Plan`.
+    - 3 random meals will be assigned (1 breakfast and 2 main courses) based on your preferences.
+    - You'll be routed to `/dashboard` where you'll see today's meal plan, and a button to edit it (if you've created one).
+    - Below that you'll see the plans for the upcoming 7 days (if you've created them).
+1. View a Recipe
+    - From the `/dashboard` select an upcomming meal plan, or select the name of a recipe.
+    - On that recipes show page you'll see the meals `ingredients`, `instructions`, and a picture of the dish.
+    - If you would like a different meal, then select either `Generate New Breakfast Recipe`, `Generate New Lunch Recipe`, or `Generate New Dinner Recipe`. That will replace the existing meal with another that adheres to your preferences.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -232,9 +240,13 @@ See the official project requirements [here](https://backend.turing.edu/module3/
 - Integrating Swagger.
 - Integrating HoneyBadger for observability of backend queries.
 - Integrating Swagger to make endpoint testing easier.
+- `/preferences` rendering the form with the users current preferences (currently they're just stored on the backend).
+- New user directed to `/preferences` instead of `/dashboard`.
+- The ability to generate a new meal directly from the `/dashboard` instead of going into that meals show page.
 
 ### Known Issues
-<!-- - INSERT KNOWN ISSUES HERE -->
+- Needs more sad path testing and refactoring.
+- The spoonacular API only allows a total of 50 requests a day, and it's primary search endpoint counts as 3 requests.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
