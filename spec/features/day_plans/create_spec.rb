@@ -34,7 +34,7 @@ RSpec.describe "Day Plan Create Page" do
       click_link "Create New Meal Plan"
       expect(page).to have_content("Date of meal plan:")
       expect(page).to have_field(:date_of_meal_plan)
-      fill_in "date_of_meal_plan", with: "2023-04-27"
+      fill_in "date_of_meal_plan", with: "2023-04-29"
       VCR.use_cassette('created_meal_plan_2') do
         click_button "Create New Meal Plan"
         expect(current_path).to eq("/dashboard")
