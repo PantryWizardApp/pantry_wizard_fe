@@ -40,11 +40,12 @@
       <br>
         <div class="row align-items-start">
         <% if @user_day_plans != [] %>
-          <div class="container text-center">
-            <h3> My Upcoming Meal Plans: </h3>
-          </div>
             <% @user_day_plans.each do |day_plan| %>
               <% if day_plan.date != Date.today.strftime("%Y-%m-%e") %>
+                <div class="container text-center">
+                  <h3> My Upcoming Meal Plans: </h3>
+                </div>
+                <br>
                 <div class="col h6">
                   <p> Meal Plan for: <%= day_plan.date %> </p>
                   <br>
