@@ -35,20 +35,20 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"a23a3395f671ac7d4b83cb8ae1d6605f"
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - cae91234-6791-45db-94bd-32f090f453a8
+      - 7c04e5f4-4f0f-41b0-8a39-08fad166a053
       X-Runtime:
-      - '0.119869'
+      - '0.114139'
       Server-Timing:
-      - start_processing.action_controller;dur=0.47, sql.active_record;dur=33.82,
-        instantiation.active_record;dur=1.51, process_action.action_controller;dur=77.20
+      - start_processing.action_controller;dur=0.77, sql.active_record;dur=21.58,
+        instantiation.active_record;dur=1.26, process_action.action_controller;dur=67.94
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"19","type":"day_plan","attributes":{"user_id":5,"date":"2023-04-22","recipes":[]}}]}'
-  recorded_at: Thu, 20 Apr 2023 03:09:19 GMT
+      string: '{"data":[]}'
+  recorded_at: Thu, 20 Apr 2023 15:16:54 GMT
 recorded_with: VCR 6.1.0
