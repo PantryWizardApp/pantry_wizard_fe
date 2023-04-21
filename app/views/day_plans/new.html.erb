@@ -14,7 +14,7 @@
       <br>
       <%= form_with url: "/create_meal_plan", method: :post, local: true do |form| %>
         <%= form.label "Date of Meal Plan:"%>
-        <%= form.date_field :date_of_meal_plan %>
+        <%= form.date_field :date_of_meal_plan, min: Date.today.to_s %>
         <br>
         <%= form.submit "Create New Meal Plan" %>
       <% end %>
